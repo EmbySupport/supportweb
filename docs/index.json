@@ -256,8 +256,8 @@
   },
   "support/articles/Home.html": {
     "href": "support/articles/Home.html",
-    "title": "Contents | Emby Documentation",
-    "keywords": "Emby is a free personal media server. It is built with a number of popular open source technologies. To download Emby, visit: http://emby.media/ Contents See the menu on the right-hand side of this page for a complete listing. Some key areas are: Quick start System requirements Movie naming TV naming Music naming Subtitles Server installation Users Sync Community In addition to what's displayed here, the community forums is another great place for useful information. Emby Apps Android Mobile (Google Play) Android Mobile (Amazon) Android TV Amazon Fire TV Apple TV iPad iPhone Kodi Roku Web App Windows Desktop Windows Media Center Windows Phone Windows 8 XBOX One"
+    "title": "Home | Emby Documentation",
+    "keywords": "Home Emby is a free personal media server. It is built with a number of popular open source technologies. To download Emby, visit: http://emby.media/ Contents See the menu on the right-hand side of this page for a complete listing. Some key areas are: Quick start System requirements Movie naming TV naming Music naming Subtitles Server installation Users Sync Community In addition to what's displayed here, the community forums is another great place for useful information. Emby Apps Android Mobile (Google Play) Android Mobile (Amazon) Android TV Amazon Fire TV Apple TV iPad iPhone Kodi Roku Web App Windows Desktop Windows Media Center Windows Phone Windows 8 XBOX One"
   },
   "support/articles/Hosting-Settings.html": {
     "href": "support/articles/Hosting-Settings.html",
@@ -636,7 +636,7 @@
   },
   "support/index.html": {
     "href": "support/index.html",
-    "title": "TOP CATEGORIES | Emby Documentation",
-    "keywords": "Browse KB Articles Explore How-To's and other articles on Emby features Emby Community Direct support from Emby users and developers. Emby Premiere Emby Premiere subscription support. TOP CATEGORIES General Find articles on general topics like media preparation in this section of the Knowledge Base. Server Find articles about Emby Server in this section of the Knowledge Base. Apps Find articles about Emby's different applications in this section of the Knowledge Base. Browse all Categories"
+    "title": "Emby Support Home | Emby Documentation",
+    "keywords": "Emby Support Home Browse KB Articles Explore How-To's and other articles on Emby features Emby Community Direct support from Emby users and developers. Emby Premiere Emby Premiere subscription support. TOP CATEGORIES General Find articles on general topics like media preparation in this section of the Knowledge Base. Server Find articles about Emby Server in this section of the Knowledge Base. Apps Find articles about Emby's different applications in this section of the Knowledge Base. Browse all Categories TODO"
   }
 }

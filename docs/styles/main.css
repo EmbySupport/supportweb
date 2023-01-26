@@ -33,6 +33,11 @@ body {
 
 /* HIGHLIGHT COLOR */
 
+p {
+    margin: 0 0 12px;
+    text-align: justify;
+}
+
 button,
 a {
     color: var(--highlight-dark);
@@ -425,6 +430,7 @@ header {
     top: 150px;
     font-size: 13px;
     max-width: calc(12% - 5px);
+    margin-left: 5px;
 }
 
 .affix {
@@ -580,6 +586,7 @@ header {
     align-items: flex-start;
     gap: 1rem;
     margin: 1rem 1rem;
+    max-height: 12rem;
 }
 
 @media (min-width: 768px) {
@@ -588,7 +595,7 @@ header {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 990px) {
     .card.fw-horizontal:first-child {
         margin: 1rem;
         width: 25%;
@@ -650,11 +657,14 @@ header {
 
 .card.fw-horizontal .card-body {
     width: 75%;
+    overflow: hidden;
+    max-height: 100%;
 }
 
 .card-text {
     color: var(--font-color);
     font-size: 15px;
+    overflow: hidden;
 }
 
 H4.card-title {
@@ -675,20 +685,75 @@ H2.card-title {
     top: -50px;
     left: 0;
     right: 0;
-    height: 370px;
+    height: 350px;
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
     z-index: -1;
 }
 
-.landingBackground.searchResults {
-    height: 220px;
-}
+
+    .landingBackground.searchResults {
+        height: 220px;
+    }
 
 .landing-search {
     margin-top: 180px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 990px) {
+    .landingBackground {
+        top: 0px;
+        height: 410px;
+    }
+
+        .landingBackground.searchResults {
+            height: 180px;
+        }
+
+    .landing-search {
+        margin-top: 140px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .landing-search {
+        margin-top: 120px;
+        margin-bottom: 0;
+    }
+
+    .landingBackground {
+        top: -30px;
+        height: 420px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .landing-search {
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+
+    .landingBackground {
+        height: 440px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .landing-search {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .landingBackground.searchResults {
+        height: 250px;
+    }
+
+    .landingBackground {
+        height: 250px;
+    }
 }
 
 .search-form {
@@ -720,4 +785,16 @@ H2.card-title {
 
 .landingPage #search-results {
     margin-top: 60px;
+}
+
+.card.fw-horizontal .card-text {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+}
+
+.landingPage ARTICLE H1:first-child {
+    display: none;
+}
 }
