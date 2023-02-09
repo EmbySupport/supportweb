@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hardware Acceleration-on-Linux | Emby Documentation </title>
+    <title>Hardware Acceleration on Linux | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Hardware Acceleration-on-Linux | Emby Documentation ">
+    <meta name="title" content="Hardware Acceleration on Linux | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Hardware-Acceleration-on-Linux">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,8 +150,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Hardware Acceleration-on-Linux</h1>
+            <article class="content wrap" id="_content" data-uid="Hardware-Acceleration-on-Linux">
+<h1>Hardware Acceleration on Linux</h1>
+
+
 <p>Emby supports the following hardware acceleration variants on Linux</p>
 <ul>
 <li><p><strong><a href="#nvidia-nvdec-nvenc">Nvidia NVDEC &amp; NVENC</a></strong><br>
@@ -201,13 +203,17 @@ Kepler generation (e.g. GeForce GT 630) onwards, including both consumer and pro
 devices. Detailed information about supported hardware can be found in Nvidias
 <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a>.</p>
 <h4 id="required-setup-steps">Required Setup Steps</h4>
-<p>Install the latest drivers for your Nvidia hardware either directly from
-<a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a> page
-or from the driver repository of the respective Linux distribution.
-The procedure may vary by distribution.
-The minimum required driver version on Linux is <strong>390.25</strong></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Always follow the instructions on the Nvidia site, even when the installed driver version appears to be sufficient!</p>
+</div>
+<p>Install drivers from here:
+<a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a></p>
+<p><strong>Not from your distro</strong></p>
+<p>The minimum required driver version on Linux is <strong>470.57</strong></p>
 <h4 id="remarks">Remarks</h4>
 <ul>
+<li>Nvidia drivers which are included in or provided by Linux distributions, often include only a subset of the Nvidia drivers. It is always recommended to install the full Linux drivers from the Nvidia website.</li>
 <li>Emby supports headless operation for Nvidia<br>
 It is not required to connect a monitor</li>
 </ul>
@@ -271,6 +277,10 @@ and that not all hardware devices will support all accelerations.</p>
 <p>The latest Intel drivers are included with Emby server.</p>
 <h5 id="amd">AMD</h5>
 <p><a href="https://www.amd.com/en/support/kb/faq/amdgpu-installation">Radeon™ Software for Linux® Installation</a></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Do not choose &quot;headless mode&quot; during setup because this would skip the installation of graphics drivers.</p>
+</div>
 <h4 id="further-reading-1">Further Reading</h4>
 <p><a href="https://en.wikipedia.org/wiki/Video_Acceleration_API">Video Acceleration API</a>
 <a href="https://01.org/vaapi">Intel Video and Audio for Linux</a></p>
@@ -333,7 +343,7 @@ can be found under the following links:</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Hardware-Acceleration-on-Linux.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Hardware-Acceleration-on-Linux.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

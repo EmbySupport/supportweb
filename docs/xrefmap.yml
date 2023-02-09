@@ -1,6 +1,387 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: 3D-Videos
+  name: 3D Videos
+  href: support/articles/3D-Videos.html
+- uid: Admin-Password-Reset
+  name: Admin Password Reset
+  href: support/articles/Admin-Password-Reset.html
+- uid: Advanced-Menu
+  name: Advanced Menu
+  href: support/articles/Advanced-Menu.html
+- uid: Alexa
+  name: Amazon Alexa
+  href: support/articles/Alexa.html
+- uid: Android-File-Storage
+  name: Android TV Storage Attachment
+  href: support/articles/Android-File-Storage.html
+- uid: Android-Mobile
+  name: Android Mobile
+  href: support/articles/Android-Mobile.html
+- uid: Android-TV
+  name: Android TV
+  href: support/articles/Android-TV.html
+- uid: Apple-TV
+  name: Apple TV
+  href: support/articles/Apple-TV.html
+- uid: Audio-Book-Naming
+  name: Audio Book Naming
+  href: support/articles/Audio-Book-Naming.html
+- uid: AutoBoxSets
+  name: AutoBoxSets
+  href: support/articles/AutoBoxSets.html
+- uid: Automatic-Subtitle-Downloads
+  name: Automatic Subtitle Downloads
+  href: support/articles/Automatic-Subtitle-Downloads.html
+- uid: Backup
+  name: Configuration Backup
+  href: support/articles/Backup.html
+- uid: Book-Naming
+  name: Book Naming
+  href: support/articles/Book-naming.html
+- uid: Camera-Upload
+  name: Camera Upload
+  href: support/articles/Camera-upload.html
+- uid: Channels
+  name: Channels
+  href: support/articles/Channels.html
+- uid: Chromecast
+  name: Chromecast
+  href: support/articles/Chromecast.html
+- uid: Cinema-Intros
+  name: Cinema Intros
+  href: support/articles/Cinema-Intros.html
+- uid: Collections
+  name: Collections
+  href: support/articles/Collections.html
+- uid: Collections-Manual-Migration
+  name: Collections – Manual Migration
+  href: support/articles/Collections-Manual-Migration.html
+- uid: Collections-Pre46
+  name: Collections - Emby Server versions prior to 4.6
+  href: support/articles/Collections-Pre46.html
+- uid: Connectivity
+  name: Connectivity
+  href: support/articles/Connectivity.html
+- uid: Content-Access
+  name: Content Access
+  href: support/articles/Content-Access.html
+- uid: Convert-Media
+  name: Convert Media
+  href: support/articles/Convert-Media.html
+- uid: Corrupt-Database
+  name: Corrupt Database
+  href: support/articles/Corrupt-Database.html
+- uid: Device-Access
+  name: Device Access
+  href: support/articles/Device-Access.html
+- uid: Devices
+  name: Devices
+  href: support/articles/Devices.html
+- uid: DirectPlay-Stream-Transcoding
+  name: Direct Play, Stream & Transcoding
+  href: support/articles/DirectPlay-Stream-Transcoding.html
+- uid: DVR-Settings
+  name: DVR Settings
+  href: support/articles/DVR-Settings.html
+- uid: Emby-Connect
+  name: Emby Connect
+  href: support/articles/Emby-Connect.html
+- uid: Emby-for-Kodi
+  name: Emby for Kodi
+  href: support/articles/Emby-for-Kodi.html
+- uid: Emby-Guide-Data
+  name: Emby Guide Data
+  href: support/articles/Emby-Guide-Data.html
+- uid: Emby-Premiere
+  name: Emby Premiere
+  href: support/articles/Emby-Premiere.html
+- uid: Emby-Theater-for-Windows
+  name: Emby Theater for Windows
+  href: support/articles/Emby-Theater-for-Windows.html
+- uid: Excluding-Files-Folders
+  name: Excluding Files & Folders
+  href: support/articles/Excluding-Files-Folders.html
+- uid: Fire-TV
+  name: Fire TV
+  href: support/articles/Fire-TV.html
+- uid: Fire-TV-Manual-Install
+  name: Manual Install on Fire Tablets
+  href: support/articles/Fire-TV-Manual-Install.html
+- uid: Folder-based-Access-Control
+  name: Folder Based Access Control
+  href: support/articles/Folder-based-Access-Control.html
+- uid: Folder-Sync
+  name: Folder Sync
+  href: support/articles/Folder-Sync.html
+- uid: Google-Drive
+  name: Google Drive
+  href: support/articles/Google-Drive.html
+- uid: Google-Home
+  name: Google Home
+  href: support/articles/Google-Home.html
+- uid: Hardware-Acceleration-on-Android
+  name: Hardware Acceleration on Android
+  href: support/articles/Hardware-Acceleration-on-Android.html
+- uid: Hardware-Acceleration-on-Linux
+  name: Hardware Acceleration on Linux
+  href: support/articles/Hardware-Acceleration-on-Linux.html
+- uid: Hardware-Acceleration-on-Windows
+  name: Hardware Acceleration on Windows
+  href: support/articles/Hardware-Acceleration-on-Windows.html
+- uid: Hardware-Acceleration-Overview
+  name: Hardware Acceleration Overview
+  href: support/articles/Hardware-Acceleration-Overview.html
+- uid: HDHomeRun-Setup
+  name: HDHomeRun Setup
+  href: support/articles/HDHomeRun-Setup.html
+- uid: Home
+  name: Emby Support Home
+  href: support/articles/Home.html
+- uid: Hosting-Settings
+  name: Network (Hosting) Settings
+  href: support/articles/Hosting-Settings.html
+- uid: Hwa-Fails-with-RDP
+  name: HWA fails with RDP
+  href: support/articles/Hwa-Fails-with-RDP.html
+- uid: Identify
+  name: Identify
+  href: support/articles/Identify.html
+- uid: Image-Editing
+  name: Image Editing and Image Types
+  href: support/articles/Image-Editing.html
+- uid: Installation
+  name: Installation
+  href: support/articles/Installation.html
+- uid: Intro-Skip
+  name: Intro Skip
+  href: support/articles/Intro-Skip.html
+- uid: iOS
+  name: iOS
+  href: support/articles/iOS.html
+- uid: Keyboard-and-Remote-Support
+  name: Keyboard and Remote Support
+  href: support/articles/Keyboard-and-Remote-Support.html
+- uid: LG-Why-not-Atmos
+  name: Atmos on LG TV
+  href: support/articles/LG-Why-not-Atmos.html
+- uid: Library-Setup
+  name: Library Setup
+  href: support/articles/Library-Setup.html
+- uid: Linux
+  name: Linux
+  href: support/articles/Linux.html
+- uid: Linux-Unix-Permissions
+  name: Linux/Unix Permissions
+  href: support/articles/Linux-Unix-Permissions.html
+- uid: Live-TV
+  name: Live TV Setup
+  href: support/articles/Live-TV.html
+- uid: Live-TV-Channel-Mapping
+  name: Live TV Channel Mapping
+  href: support/articles/Live-TV-Channel-Mapping.html
+- uid: Live-TV-EPG-Other
+  name: Other Sources of EPG Guide Data
+  href: support/articles/Live-TV-EPG-Other.html
+- uid: Live-TV-HDHR-Channels
+  name: HDHomeRun Channels
+  href: support/articles/Live-TV-HDHR-Channels.html
+- uid: Live-TV-Manage-Channels
+  name: Manage Channels
+  href: support/articles/Live-TV-Manage-Channels.html
+- uid: Live-TV-NextPVR
+  name: NextPVR Tuner
+  href: support/articles/Live-TV-NextPVR.html
+- uid: Live-TV-Plugins
+  name: Live TV Plugins
+  href: support/articles/Live-TV-Plugins.html
+- uid: Live-TV-Vbox
+  name: VBox TV Gateway Tuner
+  href: support/articles/Live-TV-Vbox.html
+- uid: Log-Files
+  name: Log Files
+  href: support/articles/Log-Files.html
+- uid: M3U-Tuners
+  name: M3U Tuners
+  href: support/articles/M3U-Tuners.html
+- uid: Manual-Subtitle-Downloads
+  name: Manual Subtitle Downloads
+  href: support/articles/Manual-Subtitle-Downloads.html
+- uid: Media-Stubs
+  name: Media Stubs
+  href: support/articles/Media-stubs.html
+- uid: Metadata-Manager
+  name: Metadata Manager
+  href: support/articles/Metadata-manager.html
+- uid: Movie-Naming
+  name: Movie Naming
+  href: support/articles/Movie-Naming.html
+- uid: Music-Lyrics
+  name: Music Lyrics
+  href: support/articles/Music-Lyrics.html
+- uid: Music-Naming
+  name: Music Naming
+  href: support/articles/Music-naming.html
+- uid: New-Media-Date-Handling
+  name: New Media Date Handling
+  href: support/articles/New-Media-Date-Handling.html
+- uid: Notifications
+  name: Notifications
+  href: support/articles/Notifications.html
+- uid: Offline-Access
+  name: Offline Access
+  href: support/articles/Offline-Access.html
+- uid: Older-HDHomeRun-Support
+  name: Older HDHomeRun Support
+  href: support/articles/Older-HDHomeRun-Support.html
+- uid: Open-Subtitles
+  name: Open Subtitles
+  href: support/articles/Open-Subtitles.html
+- uid: Optional-Network-Paths
+  name: Optional Network Paths
+  href: support/articles/Optional-Network-Paths.html
+- uid: Ordering-TV-Specials
+  name: Ordering TV Show Special/Extras
+  href: support/articles/Ordering-TV-Specials.html
+- uid: Parental-Controls
+  name: Parental Controls
+  href: support/articles/Parental-Controls.html
+- uid: Password-Reset
+  name: Emby Connect Password Reset
+  href: support/articles/Password-Reset.html
+- uid: Passwords
+  name: Passwords
+  href: support/articles/Passwords.html
+- uid: Playlist-Manual-Migration
+  name: Playlist – Manual Migration
+  href: support/articles/Playlist-Manual-Migration.html
+- uid: Plugins
+  name: Plugins Overview
+  href: support/articles/Plugins.html
+- uid: Plugins-Duplicate
+  name: Plugins
+  href: support/articles/Plugins-Duplicate.html
+- uid: Premiere-Canceling
+  name: Cancel Subscription
+  href: support/articles/Premiere-Canceling.html
+- uid: Premiere-Change-Subscription
+  name: Change Payment Method
+  href: support/articles/Premiere-Change-Subscription.html
+- uid: Premiere-Feature-Matrix
+  name: Emby Premiere Feature Matrix
+  href: support/articles/Premiere-Feature-Matrix.html
+- uid: Premiere-Key-Delivery
+  name: Premiere Key Delivery
+  href: support/articles/Premiere-Key-Delivery.html
+- uid: Premiere-Key-Invalid
+  name: Key Invalid or Missing
+  href: support/articles/Premiere-Key-Invalid.html
+- uid: Premiere-Key-Validity
+  name: Keys Valid with Emby 4.0
+  href: support/articles/Premiere-Key-Validity.html
+- uid: Premiere-Limits
+  name: Premiere-Limits
+  href: support/articles/Premiere-Limits.html
+- uid: Premiere-Lost-Keys
+  name: Lost Premiere Keys
+  href: support/articles/Premiere-Lost-Keys.html
+- uid: Premiere-Membership-Options
+  name: Premiere Membership Options
+  href: support/articles/Premiere-Membership-Options.html
+- uid: Premiere-Multiple-Servers
+  name: Using Multiple Servers
+  href: support/articles/Premiere-Multiple-Servers.html
+- uid: Premiere-PriceDifferences
+  name: App Store Price Differences
+  href: support/articles/Premiere-PriceDifferences.html
+- uid: Premiere-Purchase
+  name: Purchasing Emby Premiere
+  href: support/articles/Premiere-Purchase.html
+- uid: Premiere-Update-Card
+  name: Update Credit Card
+  href: support/articles/Premiere-Update-Card.html
+- uid: Premiere-Upgrade
+  name: Upgrade Membership
+  href: support/articles/Premiere-Upgrade.html
+- uid: Quick-Start
+  name: Quick Start
+  href: support/articles/Quick-Start.html
+- uid: Remote-Setup
+  name: Remote Setup
+  href: support/articles/Remote-Setup.html
+- uid: Roku
+  name: Roku
+  href: support/articles/Roku.html
+- uid: Run-as-Windows-Service
+  name: Running as Windows Service
+  href: support/articles/Run-as-Windows-Service.html
+- uid: Scheduled-Tasks
+  name: Scheduled Tasks
+  href: support/articles/Scheduled-tasks.html
+- uid: Schedules-Direct
+  name: Schedules Direct
+  href: support/articles/Schedules-Direct.html
+- uid: Secure-Your-Server
+  name: Secure Your Server
+  href: support/articles/Secure-Your-Server.html
+- uid: Server-Installation-Shield
+  name: Server Installation on Shield TV
+  href: support/articles/Server-Installation-Shield.html
+- uid: Server-Settings
+  name: Server Settings
+  href: support/articles/Server-Settings.html
+- uid: ShieldTV-Direct-File-Access
+  name: Shield TV Direct File Access
+  href: support/articles/ShieldTV-Direct-File-Access.html
+- uid: Strm-Files
+  name: STRM Files
+  href: support/articles/Strm-Files.html
+- uid: Subtitles
+  name: Subtitles
+  href: support/articles/Subtitles.html
 - uid: Support.Index
-  name: TOP CATEGORIES
+  name: Support Home
   href: support/index.html
+- uid: Sync
+  name: Sync Types
+  href: support/articles/Sync.html
+- uid: Sync-Introduction
+  name: Sync Introduction
+  href: support/articles/Sync-Introduction.html
+- uid: Sync-Jobs
+  name: Sync Jobs
+  href: support/articles/Sync-Jobs.html
+- uid: Synology-NAS
+  name: Synology NAS
+  href: support/articles/Synology-NAS.html
+- uid: Synology-Set-Permissions
+  name: Synology Permissions
+  href: support/articles/Synology-Set-Permissions.html
+- uid: System-Requirements
+  name: System Requirements
+  href: support/articles/System-Requirements.html
+- uid: Theme-Songs-Videos
+  name: Theme Songs & Videos
+  href: support/articles/Theme-Songs-Videos.html
+- uid: Trailers
+  name: Trailers
+  href: support/articles/Trailers.html
+- uid: Transcoding
+  name: Transcoding
+  href: support/articles/Transcoding.html
+- uid: TV-Naming
+  name: TV Naming
+  href: support/articles/TV-Naming.html
+- uid: Users
+  name: Users
+  href: support/articles/Users.html
+- uid: Web-Client
+  name: Web Client
+  href: support/articles/Web-Client.html
+- uid: Webhooks
+  name: Webhooks
+  href: support/articles/Webhooks.html
+- uid: Xml-Tv
+  name: Xml TV
+  href: support/articles/Xml-Tv.html

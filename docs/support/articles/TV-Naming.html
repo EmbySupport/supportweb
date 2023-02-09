@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="TV-Naming">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,9 +150,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="TV-Naming">
 <h1>TV Naming</h1>
-<p>For a simple TV folder structure, the recommended folder layout is Series (year)\Season #\Episode or Series (year)\Episode. When setting up the library make sure to select <strong>TV</strong> as the content type.  Having the year in the series name is not strictly mandatory as Emby can usually match a series without it but it helps tremendously with rebooted series and those that have broadcast in different years such as Battlestar Galactica (1978) and Battlestar Galactica (2003).  The year is also very helpful for some series such as Africa (2013) which could potentially match to a few different shows without the year.</p>
+
+
+<p>For a simple TV folder structure, the recommended folder layout is Series (year)\Season #\Episode. The Episode name itself should contain the show name,  the season and the episode episode number which is covered below.</p>
+<p>When setting up the library make sure to select <strong>TV</strong> as the content type.  Having the year in the series name is not strictly mandatory as Emby can usually match a series without it but it helps tremendously with rebooted series and those that have broadcast in different years such as Battlestar Galactica (1978) and Battlestar Galactica (2003).  The year is also very helpful for some series such as Africa (2013) which could potentially match to a few different shows without the year.</p>
 <p>For example:</p>
 <pre><code> \TV
     \Glee (2009)
@@ -182,7 +185,7 @@
 </code></pre>
 <p>In the above example, the recommended setup is to create a TV media folder, and then add the <strong>A-M</strong> and <strong>N-Z</strong> library paths.</p>
 <p>For more information on setting up the library, see <a href="Library-Setup">Library Setup</a>.</p>
-<h3 id="dvd-and-blu-ray-episodes">Dvd and Blu-ray episodes</h3>
+<h3 id="dvd-and-blu-ray-episodes">DVD and Blu-ray episodes</h3>
 <p>Dvd and Blu-ray folder structures are also supported. The folders can have any name, but using episode numbers will improve the ability to download and display metadata.</p>
 <p>To be recognized as a dvd structure, the folder must contain either a VIDEO_TS subfolder, or a VIDEO_TS.ifo file. To be recognized as a blu-ray structure, the folder must contain a BDMV subfolder.</p>
 <pre><code> \TV
@@ -221,7 +224,7 @@
 <li>anything_1996-11-14.ext</li>
 <li>anything_14.11.1996.ext</li>
 </ul>
-<h2 id="multi-version-episode">Multi-Version Episode</h2>
+<h2 id="multi-version-episodes">Multi-Version Episodes</h2>
 <p>Multi-Version Episodes are best using the following format:</p>
 <ul>
 <li>show name - S01E01 - Display Name 1.ext</li>
@@ -231,7 +234,8 @@
 Star Trek, The Next Generation - S01E01 - Original Broadcast.mkv
 Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
 <p>anything following the &quot;-&quot; (dash) up to the file extension will be used in the drop down version selector in your Emby client. In this case the two versions show in the interface will be &quot;Original Broadcast&quot; &amp; &quot;Digital Remix&quot;.</p>
-<h2 id="multi-episode-files">Multi-episode files</h2>
+<h2 id="multi-episode-files">Multi-Episode files</h2>
+<p>All multi-episode files must be part of the same season.</p>
 <p>The following conventions are supported:</p>
 <ul>
 <li>01x02x03 episode name.ext</li>
@@ -242,7 +246,9 @@ Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
 <li>S01E02-X03 episode name.ext</li>
 <li>01x02 01x03 episode name.ext</li>
 <li>01x02 - 01x03 episode name.ext</li>
+<li>01x02 - 01x05 episode name.ext (includes episodes 2,3,4 and 5)</li>
 <li>01x02 - x03 episode name.ext</li>
+<li>01x02 - x05 episode name.ext</li>
 <li>S01x02.S01x03 episode name.ext</li>
 <li>S01x02 - S01x03 episode name.ext</li>
 <li>show name 01x02x03 episode name.ext</li>
@@ -250,7 +256,9 @@ Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
 <li>show name S01E02E03 episode name.ext</li>
 <li>show name S01xE02xE03 episode name.ext</li>
 <li>show name S01E02-E03 episode name.ext</li>
+<li>show name S01E02-E05 episode name.ext</li>
 <li>show name S01E02-X03 episode name.ext</li>
+<li>show name S01E02-X05 episode name.ext</li>
 <li>show name 01x02 01x03 episode name.ext</li>
 <li>show name 01x02 - 01x03 episode name.ext</li>
 <li>show name 01x02 - x03 episode name.ext</li>
@@ -271,6 +279,10 @@ Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
           Glee S00E01.mp4
 
 </code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Please see Ordering TV Show Special/Extras to learn how to place these specials in the proper timeline.</p>
+</div>
 <h2 id="series--season-images">Series &amp; Season Images</h2>
 <p>Images are supported in both series and season folders. Below is a table of the supported image file names. Supported image extensions are <strong>jpg</strong>, <strong>jpeg</strong>, <strong>png</strong> and <strong>tbn</strong>.</p>
 <p>Several image types support multiple file names. They are listed in the order that they're checked for.</p>
@@ -433,8 +445,6 @@ Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
           Glee S01E01-thumb.jpg
        \Season 2
           Glee S02E01.mp4
-          /metadata
-              Glee S02E01.jpg
 
 </code></pre>
 <h2 id="3d-episodes">3D episodes</h2>
@@ -453,7 +463,7 @@ Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/TV-Naming.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/TV-Naming.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

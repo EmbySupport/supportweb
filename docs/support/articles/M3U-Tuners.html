@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="M3U-Tuners">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,10 +150,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="M3U-Tuners">
 <h1>M3U Tuners</h1>
+<h4 class="long-title">How to add and configure an M3U Tuner</h4>
+
 <p>Emby Live TV supports setting up M3U files as TV Tuners. Each M3U file will contain a list of channels, along with information such as channel name, id, and how to play the channel.</p>
-<p>See examples of m3u files at <a href="http://xmtvplayer.com/build-m3u-file">http://xmtvplayer.com/build-m3u-file</a></p>
+<p>See examples of m3u files at <a href="http://xmtvplayer.com/build-m3u-file">http://xmtvplayer.com/build-m3u-file</a>
+(skip down to the HTTP Live Streaming &amp; ignore the top section)</p>
 <p>To add an M3U tuner, simply open the Emby Server dashboard, navigate to Live TV, then click Add underneath tuner devices.</p>
 <p><img src="images/server/livetvtuneradd.png" alt=""></p>
 <p>On the M3U Tuner setup screen, you'll need to enter the path to an M3U file.</p>
@@ -161,14 +164,15 @@
 <p>Emby will accept either:</p>
 <ul>
 <li>A file path to an M3U file</li>
-<li>A url to an M3U file that can be downloaded</li>
+<li>A URL to an M3U file that can be downloaded</li>
 </ul>
 <p>The following M3U properties are supported:</p>
 <ul>
 <li>tvg-name - Channel name</li>
-<li>tvg-id - Channel unique id</li>
+<li>tvg-id - Channel unique ID</li>
 <li>tvg-chno - Channel number</li>
-<li>tvg-shift - Number of hours to shift the epg (only used as needed)</li>
+<li>tvg-shift - Number of hours to shift the EPG (only used as needed)</li>
+<li>tvg-group - Group the channel belongs to for group management of the guide.  These groups will be imported as tags by Emby for use in parental filtering as well.</li>
 </ul>
 <p>If any are missing, Emby will attempt to automatically detect the information using whatever tags are available.</p>
 </article>
@@ -179,7 +183,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/M3U-Tuners.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/M3U-Tuners.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

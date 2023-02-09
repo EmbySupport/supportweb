@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Music naming | Emby Documentation </title>
+    <title>Music Naming | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Music naming | Emby Documentation ">
+    <meta name="title" content="Music Naming | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Music-Naming">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,8 +150,11 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Music naming</h1>
+            <article class="content wrap" id="_content" data-uid="Music-Naming">
+<h1>Music Naming</h1>
+
+
+<p>Emby is completely tag based which means all information is read from the tags embedded in your music tracks. Folder structure in Emby 4.6 and later versions is not mandatory but can be a useful way to organize you media.</p>
 <p>The recommended folder structure for music is Artist\Album\Song</p>
 <pre><code> \Music
     \Artist Name
@@ -171,6 +174,13 @@
     2- Song.mp3
 </code></pre>
 <p>Any naming convention for audio files is acceptable. Track numbers are retrieved using embedded ID3 tag information.</p>
+<p>Your first step in setting up a music library is to select your folder structure.</p>
+<p>Either of the perfectly organized structures will allow for existing disc-based images to be used.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Emby Server supports any folder structure for music libraries, but if you wish to save metadata files directly into your media folders such as nfo, images, etc, then then a structured folder layout is necessary to help Emby Server understand which folders correspond to your albums and artists.   Emby Server will happily read these metadata files from the directories in your media or from the global metadata area it manages.</p>
+</div>
+<p>If it's important to you to have these files written and stored next to your media, make sure to use one of the perfectly organized options above in the dropdown, preferably the artist\album option in the middle. What you choose in the dropdown needs to match the layout on disk. Having a hierarchy of both artists and albums provides the most flexible and organized solution.</p>
 <h2 id="music-images">Music Images</h2>
 <p>Images are supported in both artist and album folders, as well as images embedded within audio files. Below is a table of the supported image file names:</p>
 <p>Supported image extensions are <strong>jpg</strong>, <strong>jpeg</strong>, <strong>png</strong> and <strong>tbn</strong>.</p>
@@ -258,6 +268,17 @@
        backdrop3.ext
 
 </code></pre>
+<h2 id="tagging-your-tracks">Tagging Your Tracks</h2>
+<p>All music tracks should be tagged with whatever information you want displayed in Emby.  Emby should support all common tags written by Musicbrainz Picard. Other common software used to alter/write tags is Mp3tag and Tagscanner.</p>
+<p>Please make sure to write all tag version or to remove old tags. All tags should be written using unicode format.</p>
+<p>Tagging your albums and tracks should be straightforward with the possible exception of various artist or compilation albums.</p>
+<p>For these types of compilation albums if you want all tracks to show up as a single entity you want to make sure both the &quot;album&quot; and &quot;album artist&quot; fields are the same for all tracks. Otherwise the album will be split up for the various artists listed.</p>
+<p>Multiple artists can be listed for tracks and should be separated with a &quot;; &quot; (semicolon space) as shown below.</p>
+<p><img src="images/music-naming-multiple-artists.png" alt="Music Naming Multiple Artists"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>if you have an artist with two albums of the same name you will need to use mbzalbumids or slightly change one title to differentiate the albums or they will get combined. An example is artist Kim Wilde who has two albums name &quot;The Very Best Of Kim Wilde&quot;, one from 1984, one from 2001.</p>
+</div>
 <h2 id="music-videos">Music Videos</h2>
 <p>To add music videos, setup a library with the type &quot;Music Videos&quot;. The naming conventions for music videos are identical to <a href="Movie-naming">movies</a>.</p>
 <p>To identify the artists and albums of music videos, use the <a href="Metadata-manager">metadata manager</a>. Simply edit a music video:</p>
@@ -265,6 +286,12 @@
 <p>Then enter the artist(s) and/or album:</p>
 <p><img src="images/server/musicvideos2.png" alt=""></p>
 <p>Once complete, the artist and album pages will display links to the music videos.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You need to make sure your music files have been properly tagged using a 3rd party program. Emby uses these tags for identification.</p>
+</div>
+<p>For Music videos you need to name these files the same as on the meta-data provider website which is <a href="https://imvdb.com/">https://imvdb.com/</a></p>
+<p>Emby will use Album artwork that is local but will always pull down the Artist &amp; People from the MetaData providers.</p>
 </article>
           </div>
           
@@ -273,7 +300,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Music-naming.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Music-naming.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

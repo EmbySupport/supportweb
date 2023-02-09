@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Library-Setup">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,11 +150,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Library-Setup">
 <h1>Library Setup</h1>
+
+
 <p>Setting up the library is handled within the startup wizard and also within the server dashboard, located by clicking on the <strong>Library</strong> tab.</p>
 <h3 id="prepare-your-media">Prepare Your Media</h3>
-<p>It's important to first prepare your media. See other sections of the wiki for more information:</p>
+<p>It's important to first prepare your media. See other sections of the documentation for more information:</p>
 <ul>
 <li><a href="Movie-naming">Movie naming</a></li>
 <li><a href="TV-naming">TV naming</a></li>
@@ -177,17 +179,28 @@
 <p>Each media folder can have one or more physical library paths. When you supply more than one media path, the contents of each will be merged together into one virtual display.</p>
 <p><img src="images/server/librarysetup3.png" alt=""></p>
 <p>To add a library path, click the + button. A popup will be displayed allowing you to browse to the location in a visual manner.</p>
-<blockquote>
-<p><strong>Important</strong>: If you are going to use one of the HTPC apps (Classic, Theater, or Kodi) it is very important to use the Optional Network Path feature to translate the server's local paths to network ones or define your media locations with network UNC paths that those machines can see.</p>
-</blockquote>
-<p><strong>Note</strong>: On some networks the visual browser may fail to display network devices. If this occurs you can still complete the dialog by typing in the path manually and clicking OK.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If you are going to use one of the HTPC apps (Classic, Theater, or Kodi) it is very important to use the Optional Network Path feature to translate the server's local paths to network ones or define your media locations with network UNC paths that those machines can see.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If you have paths with more than 256 chars on Windows you may have a problem. Please refer to <a href="https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation">https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation</a> for help with this.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>On some networks the visual browser may fail to display network devices. If this occurs you can still complete the dialog by typing in the path manually and clicking OK.</p>
+</div>
 <p><img src="images/server/librarysetup4.png" alt=""></p>
 <h2 id="optional-network-paths">Optional Network Paths</h2>
 <p>By allowing Emby apps direct access to media folders on the server, they may be able to play them directly over the network and avoid using server resources to stream and transcode. Network Paths can help achieve this by mapping a path on the server to a network path that can be accessed by other devices.</p>
 <p>To learn more, see <a href="Optional-Network-Paths">Optional Network Paths</a>.</p>
 <h2 id="enable-real-time-monitoring">Enable real-time monitoring</h2>
 <p>To have Emby monitor changes to files and addition of content, real-time monitoring should be enabled.</p>
-<p>NB. This option is only available on supported filesystems.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This option is only available on supported file systems. You should restart your Emby Server after changing this option</p>
+</div>
 <h2 id="subtitles">Subtitles</h2>
 <p>If required, you can select the subtitle language that Emby server will attempt to download.</p>
 <p><img src="images/server/librarysetup2c.png" alt=""></p>
@@ -210,7 +223,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Library-Setup.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Library-Setup.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

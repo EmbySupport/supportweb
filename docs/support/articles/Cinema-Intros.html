@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Cinema-Intros">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,10 +150,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Cinema-Intros">
 <h1>Cinema Intros</h1>
+
+
 <p>Cinema Intros brings the theater experience straight to your living room with the ability to play trailers and custom intros before the main feature.</p>
-<p>Cinema Intros is configured in the server dashboard by navigating to <strong>Playback</strong> -&gt; <strong>Cinema Intros</strong>. By default it is disabled.</p>
+<p>Cinema Intros is configured in the server dashboard by navigating to the Cinema Intros menu. By default it is disabled.</p>
 <h2 id="choosing-when-to-enable-cinema-intros">Choosing when to enable Cinema Intros</h2>
 <p>The configuration page allows you to choose the types of videos that will trigger cinema intros. Currently, Movies and Episodes are supported. A video is determined to be a Movie or Episode based upon the content type chosen when setting up the library.</p>
 <p><img src="images/server/cinemamode1.png" alt=""></p>
@@ -181,25 +183,37 @@
 <li>Audio Profile</li>
 <li>Tags</li>
 </ul>
-<p>Here are some examples:</p>
+<p>Here are some examples: (extension doesn't matter)</p>
 <ul>
 <li>A movie has h264 video, intro file is named &quot;h264.mp4&quot;</li>
 <li>A movie has ac3 audio, intro file is named &quot;ac3.mkv&quot;</li>
+<li>A movie has eac3 audio, intro file is named eac3.mp4</li>
 <li>A movie has DTS-HD MA audio profile, intro file is named &quot;dts-hd ma.avi&quot;</li>
 <li>You've added a tag to a movie called &quot;waffle&quot;, intro file is named &quot;waffle.mpg&quot;.</li>
 </ul>
-<p><strong>Tip</strong>: To review the media information for one of your videos, visit the detail screen in the web app.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The file name (before extension) should be the same name as the codec shown when looking at a video for either audio codec or video codec. To review the media information for one of your videos, visit the detail screen in the web app.</p>
+</div>
 <p>Simply create a folder containing the videos, and enter the path in the codec intro field:</p>
 <p><img src="images/server/cinemamode5.png" alt=""></p>
-<p><strong>Important</strong>: Make sure to run a library scan after adding new intro files.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Make sure to run a library scan after adding new intro files.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>With the use of Custom Intro directories you can make use of Tags for each movie/episode such as &quot;HomeMovies&quot;.  These tags can be added using the MetaData Manager.<br>
+Make sure that Intros added to the custom directories above have proper tags in the files before adding them to Emby.  You can use Windows or other tag editor to assist with this. This allows Emby to display your custom Intro for any movie tagged with the same name.</p>
+</div>
 <h2 id="parental-control">Parental Control</h2>
 <p>Smart parental control will compare the ratings of trailers against the rating of the movie being played, and filter the trailers based on ratings of an equal or lower value. For example, you might be an adult watching The Goonies with your children. The Goonies is rated PG, so this setting will exclude any trailers with a higher rating than PG. Unrated trailers will also be excluded.</p>
 <p>The unwatched setting will prevent trailers that you've already seen from being used again, as well as trailers from movies that you've already seen. Note that enabling this setting may eventually result in no unwatched trailers being available.</p>
 <h2 id="user-control">User Control</h2>
 <p>Once you've enabled cinema intros in the server dashboard, they'll be turned on for all users by default. Each user can opt-out of cinema intros individually by disabling it in their user profile settings.</p>
-<p>This is accessed by clicking the user icon in the top right hand corner of the web interface, then selecting <strong>Preferences</strong>-&gt; <strong>Profile</strong>.</p>
+<p>This is accessed by clicking the user icon in the top right hand corner of the web interface, then selecting <strong>Preferences</strong>-&gt; <strong>Playback</strong>.</p>
 <p><img src="images/server/cinemamode6.png" alt=""></p>
-<p>As an administrator, if you would like to personally change this for a user, you can access this page from the <strong>Server Dashboard</strong> -&gt; <strong>Users</strong> -&gt; <strong>Click User</strong> -&gt; <strong>Edit this user's profile settings</strong>.</p>
+<p>As an administrator, if you would like to personally change this for a user, you can access this page from the <strong>Server Dashboard</strong> -&gt; <strong>Users</strong> -&gt; <strong>Click User</strong> -&gt; <strong>Edit this user's playback settings</strong>.</p>
 </article>
           </div>
           
@@ -208,7 +222,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Cinema-Intros.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Cinema-Intros.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

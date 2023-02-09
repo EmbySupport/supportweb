@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Movie-Naming">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,15 +150,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Movie-Naming">
 <h1>Movie Naming</h1>
+
+
 <p>This file naming guide applies to movies, home videos and music videos. For tv episode naming, see <a href="TV-naming">TV naming</a>.</p>
-<h3 id="library-setup">Library Setup</h3>
+<h2 id="library-setup">Library Setup</h2>
 <p>When setting up the library, make sure to select <strong>Movies</strong>, <strong>Home videos</strong>, or <strong>Music videos</strong> as the content type.</p>
 <p>Emby supports several different formats and naming conventions such as ISO copies of discs to DVD/Blu-Ray file formatted layouts which are both different types of disc copies. These formats work but are not an ideal way to build your library. Since neither of these are streaming formats they require more work by the server to transcode and stream to client apps. These formats and naming conventions are covered below.</p>
 <p>A much better way of building a large Emby library of content is to prepare you media ahead of time using a streaming friendly format such as MP4 or MKV containers featuring H.264 (or H.265) video with at least one 2 Channel AAC default audio track along side any other audio tracks such as Dolby Digital or DTS. Media prepared in this fashion will have the greatest compatibility with all Emby clients. The idea behind preparing your media ahead of time in this fashion is to reduce the need for the Server to have to transcode (convert) media on the fly. This is not a requirement but is strongly encouraged.</p>
 <h2 id="naming-your-media">Naming your media</h2>
-<p>Once you've prepared your media files, it's time to name your media in a way that allows Emby the best chance of determining what it is.  The best way to do this is to use the format: &quot;MovieName (year).extension&quot; such as &quot;Top Gun (1986).mp4&quot; or &quot;Avatar (2009).mkv&quot;.  Because Emby allows many other advanced functions that can be used with your media we want to create a folder structure that aids in this use.  The simplest method of doing this is to put all media related to a Movie in the same folder using a name &quot;MovieName (year). It will look like this:</p>
+<p>Once you've prepared your media files, it's time to name your media in a way that allows Emby the best chance of determining what it is.  The best way to do this is to use the format: &quot;MovieName (year).extension&quot; such as &quot;Top Gun (1986).mp4&quot; or &quot;Avatar (2009).mkv&quot;.  Because Emby allows many other advanced functions that can be used with your media we want to create a folder structure that aids in this use.  The simplest method of doing this is to put all media related to a Movie in the same folder using a name &quot;MovieName (year). Emby will then use the folder name to determine the movie.<br>
+It will look like this:</p>
 <pre><code>\Movies\Avatar (2009)\Avatar (2009).mkv
 \Movies\Pulp Fiction (1994)\Pulp Fiction (1994).mp4
 \Movies\Reservoir Dogs (1992)\Reservoir Dogs (1992).mp4
@@ -174,20 +177,41 @@
 \Movies\T\Top Gun (1986)\Top Gun (1986).mp4
 </code></pre>
 <p>When viewing your media outside of Emby using conventional tools such as Windows Explorer this allows you to navigate your library much quicker without having to wait for thousands of folders to load.  It saves you from scrolling through thousands of folders to get to your &quot;W&quot; movies for example. Emby will work just fine with or without this additional folder!</p>
+<h2 id="id-tags-in-folder--file-names">ID Tags in Folder &amp; File Names</h2>
+<p>Emby can also read a Meta-Data ID from the name.</p>
+<p>Format:</p>
+<pre><code>Name (Year) [tmdbid=xxxx]
+</code></pre>
+<p>Example:</p>
+<pre><code>Alone (2020) [tmdbid=509635]
+</code></pre>
+<p>Emby supports the following tags with the host website for lookup.</p>
+<ul>
+<li><p>tmdbid  (<a href="https://www.themoviedb.org/">https://www.themoviedb.org/</a>)</p>
+</li>
+<li><p>imdbid  (<a href="https://www.imdb.com/">https://www.imdb.com/</a>)</p>
+</li>
+<li><p>tvdbid  (<a href="https://thetvdb.com/">https://thetvdb.com/</a>)</p>
+</li>
+</ul>
+<p>Note:  tmdbid is the prefered tag to use for most uses</p>
 <h2 id="multi-version-movies">Multi-version movies</h2>
 <p>Multiple versions of the same content can be stored in a single movie folder.</p>
 <pre><code>/Movies
   /300 (2006)
-    /300 (2006) - 1080p.mkv
-    /300 (2006) - 4K.mkv
-    /300 (2006) - 720p.mp4
-    /300 (2006) - extended edition.mp4
-    /300 (2006) - directors cut.mp4
-    /300 (2006) - 3D.hsbs.mp4
+  /300 (2006)/300 (2006) - 1080p.mkv
+  /300 (2006)/300 (2006) - 4K.mkv
+  /300 (2006)/300 (2006) - 720p.mp4
+  /300 (2006)/300 (2006) - extended edition.mp4
+  /300 (2006)/300 (2006) - directors cut.mp4
+  /300 (2006)/300 (2006) - 3D.hsbs.mp4
 </code></pre>
 <p>Each version must begin with the folder name, followed by &quot; - &quot;.</p>
 <p>If using the dash method anything following the dash will be what you see in the Emby client app.</p>
-<p><strong>Note</strong>: The above example includes a 3D version, which is discussed in the <a href="3D-Videos">3D Video</a> naming guide.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The above example includes a 3D version, which is discussed in the <a href="3D-Videos">3D Video</a> naming guide.  Also, this feature is primarily designed for multiple qualities of the same item.  It can be used for different &quot;cuts&quot; but there may be some limitations in doing that.</p>
+</div>
 <h2 id="movie-extras">Movie extras</h2>
 <p>Special features for movies can be stored as video files in an extras folder under movie folders. Nested folders are not supported.</p>
 <p>In addition to extras, several other sub-folder names are supported:</p>
@@ -372,7 +396,7 @@ Or:
 \Movies\Scarface (1983)\Scarface (1983).iso
 </code></pre>
 <h2 id="split-video-files-file-stacking">Split video files (file stacking)</h2>
-<p>The following are default stacking extensions that can be added to file names. # can be 1 through 9 or A through D. Stacking is supported for video files as well as dvd and blu-ray folder structures.</p>
+<p>The following are default stacking extensions that can be added to file names. # can be 1 through 9 or A through D. Stacking is supported for video files (but only when each video is in its own folder as in the example below) as well as dvd and blu-ray folder structures. Split videos require all parts be in the same movie folder with no other videos present in that folder.</p>
 <ul>
 <li>​part#​</li>
 <li>​cd#​</li>
@@ -410,7 +434,7 @@ Or:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Movie-Naming.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Movie-Naming.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

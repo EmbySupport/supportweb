@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hardware Acceleration-Overview | Emby Documentation </title>
+    <title>Hardware Acceleration Overview | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Hardware Acceleration-Overview | Emby Documentation ">
+    <meta name="title" content="Hardware Acceleration Overview | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Hardware-Acceleration-Overview">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,8 +150,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Hardware Acceleration-Overview</h1>
+            <article class="content wrap" id="_content" data-uid="Hardware-Acceleration-Overview">
+<h1>Hardware Acceleration Overview</h1>
+
+
 <p>Emby supports a broad range of hardware accelerated video transcoding methods on its supported platforms:</p>
 <h2 id="windows">Windows</h2>
 <p>Emby supports the following <a href="Hardware-Acceleration-on-Windows">hardware acceleration variants on Windows</a></p>
@@ -200,9 +202,14 @@ OpenMax is an API specification covering various aspects of media acceleration. 
 <p><strong>I've enabled hardware acceleration but CPU usage is still very high when transcoding and PGS or DVD subtitles are enabled.</strong></p>
 <p>In many cases these subtitle formats will need to be burned into the video on the fly with transcoding. Most GPU's do not support this and as a result there will be some significant CPU involvement. This is a very taxing process for even a powerful server, and it's generally something you want to avoid. Here are the best ways to avoid burning in subtitles:</p>
 <ul>
-<li>Turn off the subtitles prior to playback using the pre-playback subtitle selection menu</li>
-<li>Use external text-based subtitles instead, such as .srt files. Emby Server's subtitle download features can help automate the process of acquiring these.</li>
-<li>Use an Emby app that can direct play these subtitle formats without transcoding, such as Emby Theater, Android, or iOS.</li>
+<li><p>Turn off the subtitles prior to playback using the pre-playback subtitle selection menu</p>
+</li>
+<li><p>Use external text-based subtitles instead, such as .srt files. Emby Server's subtitle download features can help automate the process of acquiring these.</p>
+</li>
+<li><p>Use an Emby app that can direct play these subtitle formats without transcoding, such as Emby Theater, Android, or iOS.</p>
+</li>
+<li><p>If you are using Windows with Remote Desktop and have trouble getting hardware acceleration please read <a href="https://support.emby.media/support/solutions/articles/44001894172-hardware-acceleration-fails-with-remote-desktop-rdp-on-windows">this article</a>.</p>
+</li>
 </ul>
 </article>
           </div>
@@ -212,7 +219,7 @@ OpenMax is an API specification covering various aspects of media acceleration. 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Hardware-Acceleration-Overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Hardware-Acceleration-Overview.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

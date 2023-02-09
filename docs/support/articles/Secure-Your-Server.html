@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Secure Your-Server | Emby Documentation </title>
+    <title>Secure Your Server | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Secure Your-Server | Emby Documentation ">
+    <meta name="title" content="Secure Your Server | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Secure-Your-Server">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,8 +150,9 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Secure Your-Server</h1>
+            <article class="content wrap" id="_content" data-uid="Secure-Your-Server">
+<h1>Secure Your Server</h1>
+
 
 <p>This is a quick tutorial on how to secure your Emby server for free. If you are opening your server to the world, securing it is a good idea. It is also useful to provide required secured streams to external services such as Amazon Alexa or Google Home. If you are interested in an even more secure setup, here is a community-written guide on <a href="https://emby.media/community/index.php?/topic/47508-how-to-nginx-reverse-proxy/">HOW TO: NGINX Reverse Proxy</a>.</p>
 <p>You'll need two things:</p>
@@ -159,9 +160,9 @@
 <li>A domain that supports TXT records</li>
 <li>A ssl certificate (PKCS #12)</li>
 </ul>
-<h4 id="get-your-domain">Get your domain</h4>
+<h3 id="get-your-domain">Get your domain</h3>
 <p>Sign up for a free domain of your choice. You could use <a href="https://my.freenom.com/">Freenom</a> or <a href="https://www.dynu.com/en-US/">Dynu</a>.</p>
-<h4 id="ssl-certificate">SSL certificate</h4>
+<h3 id="ssl-certificate">SSL certificate</h3>
 <p>We will now create Let's encrypt ssl certificates and add it to your domain. Here is a free service to help with this <a href="https://www.sslforfree.com/">SSL for free</a>.</p>
 <ol>
 <li><p>Enter your domain on the site. i.e. yourdomain.com and create a free SSL certificate</p>
@@ -182,7 +183,7 @@
 <li><p>Back to the SSL for free website. Look at step 3, you'll see a link or two to click. Click them. If it is successful, go ahead and click Download SSL certificate. If it is not successful, wait a little longer and retry.</p>
 </li>
 </ol>
-<h4 id="setup-emby-with-your-domain-and-ssl-certificate">Setup Emby with your domain and SSL certificate</h4>
+<h3 id="setup-emby-with-your-domain-and-ssl-certificate">Setup Emby with your domain and SSL certificate</h3>
 <p>Now you should have a domain and a folder of ssl certificate (ca_bundle.crt, certificate.crt, private.key).
 We are almost done. Your Emby server requires a PKCS #12 certificate (certificate.crt and private.key combined).</p>
 <ol>
@@ -212,7 +213,7 @@ Since this is all for free, it requires a bit more involvement. You will need to
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Secure-Your-Server.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Secure-Your-Server.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hosting Settings | Emby Documentation </title>
+    <title>Network (Hosting) Settings | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Hosting Settings | Emby Documentation ">
+    <meta name="title" content="Network (Hosting) Settings | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Hosting-Settings">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,11 +150,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Hosting Settings</h1>
-<p>Hosting settings allow you to configure Emby's built-in web server. These settings are accessed by opening the server dashboard and navigating to <strong>Advanced</strong> -&gt; <strong>Hosting</strong>.</p>
+            <article class="content wrap" id="_content" data-uid="Hosting-Settings">
+<h1>Network (Hosting) Settings</h1>
+
+
+<p>Hosting settings allow you to configure Emby's built-in web server. These settings are accessed by opening the server dashboard and navigating to <strong>Server</strong> -&gt; <strong>Network</strong>.</p>
 <p>For the purposes of this document we are defining local as within your home network, and external as outside your network away from home.</p>
-<h2 id="http-port">Http Port</h2>
+<h2 id="http-ports">Http Ports</h2>
 <p>The http port settings allow you to specify both the local, system port that the server should bind to, as well as the external port that the server should use when reporting it's external url to clients.</p>
 <p><img src="images/server/hosting1.png" alt=""></p>
 <p>Generally these two values will be the same, but they can be customized as needed.</p>
@@ -163,7 +165,7 @@
 <p>If for some reason you need to customize this value, or it is not detected properly, you can manually enter your external address here:</p>
 <p><img src="images/server/hosting2.png" alt=""></p>
 <p>Most users can leave this blank and rely on the server's automatic detection. If you are using a DDNS, or the Https feature with a self-signed certificate, then you may prefer to customize it.</p>
-<h2 id="https-port">Https Port</h2>
+<h2 id="https-ports">Https Ports</h2>
 <p>The local and public https ports can be configured in much the same way as regular http:</p>
 <p><img src="images/server/hosting3.png" alt=""></p>
 <p>In addition you can also supply your own custom SSL certificate. This is highly recommended for https usage. If omitted, the server will create a self-signed certificate.</p>
@@ -175,6 +177,8 @@
 <h2 id="automatic-port-mapping">Automatic Port Mapping</h2>
 <p>By default the server will attempt to automatically map public to local ports by configuring your router. You can disable this as necessary here.</p>
 <p><img src="images/server/hosting6.png" alt=""></p>
+<p>TODO TODO TODO:
+Please see this Knowledge Base article for extended help setting up for Remote Access</p>
 </article>
           </div>
           
@@ -183,7 +187,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Hosting-Settings.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Hosting-Settings.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

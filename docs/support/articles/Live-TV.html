@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Live TV | Emby Documentation </title>
+    <title>Live TV Setup | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Live TV | Emby Documentation ">
+    <meta name="title" content="Live TV Setup | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Live-TV">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,8 +150,9 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Live TV</h1>
+            <article class="content wrap" id="_content" data-uid="Live-TV">
+<h1>Live TV Setup</h1>
+
 
 <p>Emby provides a flexible and very powerful Live TV and DVR solution.  With Emby’s TV you will be able to stream Live or Recorded TV content to any device you have with an Emby client or web browser.</p>
 <p>You can use Emby to eliminate the need for cable STBs (Set Top Boxes) or you can eliminate your cable provider entirely by cutting the cord and switching to OTA (Over the Air) broadcasts for local channels.</p>
@@ -166,17 +167,20 @@
 <h2 id="configure-your-tv-tuner">Configure Your TV Tuner</h2>
 <p>Out of the box, Emby Server currently supports the following TV Tuners:</p>
 <ul>
-<li><a href="HDHomeRun-Setup">HDHomerun Network Tuner</a> (Models available for both OTA and Cable)</li>
-<li>Hauppauge TV Tuners (on Emby Server for Windows)</li>
-<li><a href="M3U-Tuners">M3U files (or urls)</a>. See examples of m3u files at <a href="http://xmtvplayer.com/build-m3u-file">http://xmtvplayer.com/build-m3u-file</a></li>
+<li><a class="xref" href="HDHomeRun-Setup.html">HDHomerun Network Tuner</a> (Models available for both OTA and Cable)</li>
+<li>Hauppauge TV Tuners (on Emby Server for Windows - Requires Win TV 8.5 or greater to be installed)</li>
+<li><a class="xref" href="M3U-Tuners.html">M3U Tuners</a><br>
+M3U files (or urls). See examples of m3u files at <a href="http://xmtvplayer.com/build-m3u-file">http://xmtvplayer.com/build-m3u-file</a></li>
 </ul>
 <p>Support for additional tuners can be added by installing a <a href="Live-TV-Plugins">Live TV Plugin</a>.</p>
 <p>In most cases, Emby Server will automatically discover your HDHomerun on your network with no configuration required. You can manually add a tuner as well.  Simply open the server dashboard, navigate to <strong>Live TV</strong>, then click <strong>Add</strong> underneath tuner devices.</p>
 <h2 id="add-a-tv-guide-data-source">Add a TV Guide Data Source</h2>
 <p>Out of the box, Emby Server currently supports the following TV Guide data sources:</p>
 <ul>
-<li><a href="Emby-Guide-Data">Emby Guide Data</a>  (United States, Canada and United Kingdom)</li>
-<li><a href="Schedules-Direct">Schedules Direct</a></li>
+<li><a href="Emby-Guide-Data">Emby Guide Data</a><br>
+(United States, Canada and United Kingdom)</li>
+<li><a href="Schedules-Direct">Schedules Direct</a><br>
+(Do not use on new setups. Will stop working June 1st, 2021)</li>
 <li><a href="Xml-Tv">Xml TV</a></li>
 </ul>
 <p>Support for additional sources can be added by installing a <a href="Live-TV-Plugins">Live TV Plugin</a>.</p>
@@ -207,7 +211,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Live-TV.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Live-TV.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Collections">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,12 +150,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Collections">
 <h1>Collections</h1>
-<p>Collections are simply a grouping of like content.  You could for example have a collection of James Bond Movies, a set of similar titles like &quot;Back to the Future&quot; or a collection of titles related to a director, actor or even awards.</p>
-<p>Collections are generally used to group movies together but can be used for TV Series and other library content as well.</p>
-<h2 id="how-to-create-a-manual-collection">How to Create a Manual Collection</h2>
-<p>To create a collection in the web interface, start with a Movie, Series, or other item in your Emby library. Open the context menu for that item using one of the following methods:</p>
+
+
+<p>Collections are the grouping of like media such as:</p>
+<p>Back to the Future Collection</p>
+<ul>
+<li>Back to the Future</li>
+<li>Back to the Future II</li>
+<li>Back to the Future III</li>
+</ul>
+<p>The Terminator Collection</p>
+<ul>
+<li>The Terminator</li>
+<li>Terminator 2: Judgment Day</li>
+<li>Terminator 3: Rise of the Machines</li>
+<li>Terminator Salvation</li>
+<li>Terminator Genisys</li>
+</ul>
+<p>Automatic Creation of Collections
+Collections for Movies can be created automatically by Emby Server by by configuring each movie library on your system.</p>
+<p>There are only two options that need to be set.  The first option is to either import collection information or not.</p>
+<p>The second option is the required number of movies your system must have to be considered a Collections.</p>
+<h2 id="how-to-create-a-collection-manually">How to Create a Collection Manually</h2>
+<p>To create a collection manually, start with a Movie, Series, or any other item in your Emby library. Open the context menu for that item using one of the following methods:</p>
 <ul>
 <li>Right click on the poster</li>
 <li>Use the 3-Dot menu on the detail screen</li>
@@ -164,7 +183,14 @@
 <p><img src="images/server/collections1.png" alt="collections1.png"></p>
 <p>When the context menu appears, select &quot;Add to Collection&quot;. You'll then be presented with a popup where you can add the item to an existing collection, or create a new one.</p>
 <p><img src="images/server/collections2.png" alt="collections2.png"></p>
-<p>Here is an example of a collection useful for grouping movies to a particular artist such as Charlie Chaplin.</p>
+<p>The easiest way to automatically download image art and meta-data is to use the same name as the collection found on TheMovieDb.Org.</p>
+<p>You can check the name on TheMovieDb.Org by doing a “collection” search on their site like &quot;Star Wars Collection&quot;. In this case it would return 4 collections you can match against:</p>
+<p>Star Wars Collection
+Lego Star Wars Collection
+Robot Chicken: Star Wars Collection
+Star Wars: The Ewok Adventures Collection
+Just choose the proper collection name from the returned results.</p>
+<p>As mentioned you can add several movies at a time to a collection and also use collection names that aren’t on TheMovieDb.Org. Here is an example of a collection useful for grouping movies to a particular artist such as Charlie Chaplin.</p>
 <p>First we long press on the first poster we wish to add until we get this</p>
 <p><img src="images/server/collections-multi1.png" alt="collections-multi1.png"></p>
 <p>Next we click the top left box to select additional movies and then we click the 3 dot menu top right.</p>
@@ -173,13 +199,16 @@
 <p><img src="images/server/collections-multi3.png" alt="collections-multi3.png"></p>
 <p>We now have a collection added for Charlie Chaplin without poster art or meta-data.</p>
 <p><img src="images/server/collections-multi4.png" alt="collections-multi4.png"></p>
-<p>We can now edit the information shown for the collection by clicking the 3 dot menu and choosing “Edit metadata” from the popup menu as shown below. When finished remember to click Save.</p>
+<p>Next, we can add our own information by editing the collection. First we can edit the text that shows up for the collection. We do this by clicking the 3 dot menu and choosing “Edit metadata” from the popup menu. We then scroll down and fill in our description in the “Overview” field and then we click Save.</p>
 <p><img src="images/server/collections-multi5.png" alt="collections-multi5.png"></p>
 <p>We manually add cover art doing a similar process.  We click the 3 dot menu and select “Edit images&quot; from the popup menu.</p>
 <p><img src="images/server/collections-multi6.png" alt="collections-multi6.png"></p>
 <p>We now click the PLUS sign above to arrive at this screen</p>
 <p><img src="images/server/collections-multi7.png" alt="collections-multi7.png"></p>
-<p>From here you have a couple of choices.  You can drag and drop an image into the dashed box or you can click the Browse button to navigate to a local image on your computer.  (also see tip at the bottom of the pages for loading images directly from the internet)</p>
+<p>From here you have a couple of choices. You can drag and drop an image into the dashed box or you can click the Browse button to navigate to a local image on your computer. Besides navigating and selecting local files there is a neat trick you can use to automatically download internet artwork.</p>
+<p>If you open a new tab in your browser you can do a Google Image search for Charlie Chaplin. Once you find an image that interests you right click the artwork and click the “Copy image address” option.</p>
+<p>Now that we are back to our Emby tab we click the Browse button which will open a dialog box (on Windows). We then RIGHT CLICK the file name field to paste the location we just copied from the Internet previously into this field.</p>
+<p>After pasting in the link click the Windows Open button and Emby will import the image.</p>
 <p><img src="images/server/collections-multi10.png" alt="collections-multi10.png"></p>
 <p>We can now see the image has been imported into the Emby dialog and we are ready to upload it by clicking the Upload button.  It will now be added to the server.</p>
 <p><img src="images/server/collections-multi11.png" alt="collections-multi11.png"></p>
@@ -190,29 +219,6 @@
 <p>To remove an item from a collection, first browse to the detail screen for that collection. Each item in the collection will have a 3-dot menu.</p>
 <p>To remove an item, click the 3-dot menu, then select &quot;Remove from Collection&quot;.</p>
 <p><img src="images/server/collections5.png" alt="collections5.png"></p>
-<p>NOTE: It's important to understand that collections are bound to the location of the media at the time the collection is created.  If you move any file that is part of a collection or change a library type from drive letter to UNC or vice versa this will break the collection.  You can manually edit or migrate your collections using the following advanced topic.</p>
-<ul>
-<li><a href="Collections-%E2%80%93-Manual-Migration">Collections – Manual Migration</a></li>
-</ul>
-<h2 id="how-to-create-collection-automatically">How to Create Collection Automatically</h2>
-<p>Collections for Movies can automated by use of the <a href="AutoBoxSets">AutoBoxSets</a> Plugin. This plugin will create collections based on &quot;boxed sets&quot; such as a &quot;Back to the Future&quot; or &quot;Terminator&quot; collection.</p>
-<h2 id="tips">Tips</h2>
-<h3 id="naming-your-manual-collections">Naming your manual collections</h3>
-<p>When creating a manual collection, you use a name as found on TheMovieDb.org.  This will make it easy for Emby to automatically download image art and meta-data for the new collection.</p>
-<p>You can check the name on TheMovieDb.Org by doing a “collection” search on their site like &quot;Star Wars Collection&quot;.  In this case it would return 4 collections you can match against:</p>
-<ul>
-<li>Star Wars Collection</li>
-<li>Lego Star Wars Collection</li>
-<li>Robot Chicken: Star Wars Collection</li>
-<li>Star Wars: The Ewok Adventures Collection</li>
-</ul>
-<h3 id="using-artwork-directly-from-the-internet">Using artwork directly from the Internet</h3>
-<p>Besides navigating and selecting local files there is a neat trick you can use to automatically download internet artwork.</p>
-<p>If you open a new tab in your browser you can do a Google Image search for Charlie Chaplin.  Once you find an image that interests you right click the artwork and click the “Copy image address” option.</p>
-<p><img src="images/server/collections-multi8.png" alt="collections-multi8.png"></p>
-<p>Now instead of browsing a local file to upload to your server from the dialog box we paste the link as shown below.</p>
-<p><img src="images/server/collections-multi9.png" alt="collections-multi9.png"></p>
-<p>After pasting in the link click the Windows Open button and Emby will import the image.</p>
 </article>
           </div>
           
@@ -221,7 +227,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Collections.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Collections.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

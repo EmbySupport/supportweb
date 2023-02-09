@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hardware Acceleration-on-Windows | Emby Documentation </title>
+    <title>Hardware Acceleration on Windows | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Hardware Acceleration-on-Windows | Emby Documentation ">
+    <meta name="title" content="Hardware Acceleration on Windows | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="">
+    <meta property="docfx:uid" content="Hardware-Acceleration-on-Windows">
     
     <meta property="docfx:rel" content="../../">
     
@@ -150,8 +150,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1>Hardware Acceleration-on-Windows</h1>
+            <article class="content wrap" id="_content" data-uid="Hardware-Acceleration-on-Windows">
+<h1>Hardware Acceleration on Windows</h1>
+
+
 <p>Emby supports the following hardware acceleration variants on Windows</p>
 <ul>
 <li><p><strong><a href="#nvidia-nvdec-nvenc">Nvidia NVDEC &amp; NVENC</a></strong><br>
@@ -210,7 +212,7 @@ devices. Detailed information about supported hardware can be found in Nvidias
 <a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a> page.
 It is highly recommended to use these drivers instead of the ones that are
 shipped with Windows.
-The minimum required driver version on Windows is <strong>390.77</strong><br>
+The minimum required driver version on Windows is <strong>471.41</strong><br>
 It is not required to install any other tools or SDKs from Nvidia.</p>
 <h4 id="remarks">Remarks</h4>
 <ul>
@@ -266,13 +268,8 @@ shipped with Windows.
 It is not required to install the Intel Media SDK.</p>
 <h4 id="remarks-1">Remarks</h4>
 <ul>
-<li>Emby currently <strong>does not support</strong> headless operation with Intel QuickSync
-You will either need to connect a physical monitor to the video output
-or you can acquire a &quot;dummy monitor plug&quot; to make the GPU think that
-a monitor is connected</li>
-<li>QuickSync acceleration <strong>does not work</strong> when Emby is run as a Windows service</li>
+<li>Emby only supports headless operation (and running as a service) with Intel QuickSync when using the D3D11 codec.  For normal mode you will need to connect a physical monitor to the video output.</li>
 </ul>
-<p><code>Note: Support for headless mode is planned for the future</code></p>
 <h4 id="further-reading-1">Further Reading</h4>
 <p><a href="https://www.intel.com/content/www/us/en/architecture-and-technology/quick-sync-video/quick-sync-video-general.html">Intel QuickSync Video</a><br>
 <a href="https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Hardware_decoding_and_encoding">Codec Support by CPU Generation</a><br>
@@ -303,13 +300,9 @@ The minumum required software version is:
 <strong>AMD Radeon Software Crimson Edition 16.7.3 (16.30.2311)</strong></p>
 <h4 id="remarks-2">Remarks</h4>
 <ul>
-<li>Emby currently <strong>does not support</strong> headless operation with AMD AMF
-You will either need to connect a physical monitor to the video output
-or you can acquire a &quot;dummy monitor plug&quot; to make the GPU think that
-a monitor is connected</li>
-<li>AMD AMF acceleration <strong>does not work</strong> when Emby is run as a Windows service</li>
+<li>Emby currently does not support headless operation with AMD AMF You will need to connect a physical monitor to the video output.</li>
+<li>AMD AMF acceleration does not work when Emby is run as a Windows service</li>
 </ul>
-<p><code>Note: Support for headless mode is planned for the future</code></p>
 <h4 id="further-reading-2">Further Reading</h4>
 <p><a href="https://gpuopen.com/gaming-product/advanced-media-framework/">AMD Advanced Media Framework</a><br>
 <a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF">AMF SDK</a><br>
@@ -342,11 +335,11 @@ included in Windows.
 Installing the latest drivers from the manufacturers' websites might still be a good idea.</p>
 <h4 id="remarks-3">Remarks</h4>
 <ul>
-<li>Emby currently <strong>does not support</strong> headless operation with DXVA2
-You will either need to connect a physical monitor to the video output
-or you can acquire a &quot;dummy monitor plug&quot; to make the GPU think that
-a monitor is connected</li>
-<li>DXVA2 acceleration <strong>does not work</strong> when Emby is run as a Windows service</li>
+<li>Emby only supports headless operation (and running as a service) with D311VA codecs.  For plain DXVA2 you will need to connect a physical monitor to the video output.</li>
+</ul>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<ul>
+<li>Hardware Acceleration Fails with Remote Desktop (RDP) on Windows</li>
 </ul>
 <p><code>Note: Support for headless mode is planned for the future</code></p>
 <h4 id="further-reading-3">Further Reading</h4>
@@ -359,7 +352,7 @@ a monitor is connected</li>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Hardware-Acceleration-on-Windows.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/articles/Hardware-Acceleration-on-Windows.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
