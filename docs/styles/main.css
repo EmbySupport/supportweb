@@ -628,15 +628,41 @@ header {
     box-shadow: 3px 3px 10px 0px rgb(99 113 119 / 17%);
 }
 
-    .card .category-icon {
-        height: 4.5rem;
-        margin: 0 0.2em 0.6rem 0;
+.fw-category-icon IMG {
+    display: none;
+}
+
+.category-icon, .fw-category-icon {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 36px;
+    color: #0000006b;
+}
+
+    .fw-category-icon::before, .category-icon::before {
+        text-shadow: 0px 0px 10px #ffffffc2, -4px 4px 4px #ffffff9e, 3px 3px 6px #00000073;
+        transition: text-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+        display: block;
     }
 
-    .card.fw-horizontal .fw-category-icon {
-        width: 4.5rem;
-        margin: 0.2rem 0 0 0;
-    }
+a:hover .fw-category-icon::before, 
+a:hover .category-icon::before {
+    text-shadow: 0px 0px 14px #ffffff, -4px 4px 8px #ffffffdb, 3px 3px 10px #000000c4;
+    transform: translate(-1px, -1px);
+}
+
+.card .category-icon {
+    height: 3.9rem;
+    margin: 0 0.2em 0.6rem 0;
+    font-size: 32px;
+}
+
+.card.fw-horizontal .fw-category-icon {
+    width: 4.5rem;
+    /* margin: 0.2rem 0 0 0; */
+    align-self: flex-start;
+    height: 40px;
+    text-align: center;
+}
 
 .card-body {
     color: var(--fw-card-fg);
@@ -645,6 +671,7 @@ header {
 .card.fw-horizontal .card-title {
     margin-bottom: 0.3rem;
     padding-bottom: 0;
+    font-size: 18px;
 }
 
 .cardRow {
@@ -678,8 +705,13 @@ H4.card-title {
 
 H2.card-title {
     margin-top: 0;
-    line-height: 1.2;
-    margin-bottom: 0.4rem;
+    line-height: 1.0;
+    margin-bottom: 0.0rem;
+    font-size: 28px;
+    font-weight: 600;
+    align-items: self-end;
+    /* opacity: 0.85; */
+    color: #00000070;
 }
 
 .landingBackground {
@@ -800,4 +832,45 @@ H2.card-title {
 .landingPage ARTICLE H1:first-child {
     display: none;
 }
+
+.fa-book-reader {
+    color: #5c6bc0;
+}
+
+.fa-comments {
+    color: #70badb;
+}
+
+.fa-certificate {
+    color: #d56280;
+}
+
+.fa-shapes {
+    color: #ff7043;
+}
+
+.fa-database {
+    color: #41baae;
+}
+
+.fa-th {
+    color: #7e57c2;
+}
+
+a.card a {
+    display: none;
+}
+
+a.card .card-title {
+    color: #00000070;
+    transition: color 100ms ease-in-out;
+}
+
+H4.card-title {
+    color: #00000080;
+    font-weight: 700;
+}
+
+a.card:hover .card-title {
+    color: var(--highlight-dark);
 }
