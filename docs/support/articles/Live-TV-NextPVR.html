@@ -154,8 +154,62 @@
 <h1>NextPVR Tuner</h1>
 
 
-<p>.
-TODO: Migrate</p>
+<p>Emby Live TV supports setting up NextPVR as a TV Tuner source. Once you have NextPVR setup and ready to use it's very simply to add to Emby. You do not need to setup guide data in NextPVR as we will set this up in Emby.</p>
+<p>Click the Live TV menu option from the web admin and you will see a screen similar to this.</p>
+<p><img src="images/tvtuners/nextpvr-1.png" alt="Nextpvr 1"></p>
+<p>Click the + sign next to TV Sources and you will get the following screen:</p>
+<p><img src="images/tvtuners/nextpvr-2.png" alt="Nextpvr 2"></p>
+<p>Select the M3U Tuner option from above then setup NextPVR similar to this:</p>
+<p><img src="images/tvtuners/nextpvr-3.png" alt="Nextpvr 3"></p>
+<p>Set the number of streams your provider gives you in the last box.
+You will need to change the IP &amp; Port in the URL to math your system.
+NextPVR uses the following format:</p>
+<p><code>http://IP:PORT/service?method=channel.m3u</code></p>
+<h3 id="if-not-using-emby-server-version-47">If not using Emby Server Version 4.7+</h3>
+<p>You will need to change each URL line (search and replace) to include a unique tag.  I suggest using the channel number.  So you add &amp;client=1 to the end of each URL.  Change 1 to match the channel number.  This is handled by Emby Server automatically in versions 4.7 and higher!</p>
+<pre><code class="lang-M3U">#EXTM3U
+#EXTINF:-1 tvg-chno=&quot;1&quot;,Channel Name for 1
+http://IP:PORT/live?channel=1&amp;client=1
+#EXTINF:-1 tvg-chno=&quot;2&quot;,Channel Name for 2
+http://IP:PORT/live?channel=2&amp;client=2
+#EXTINF:-1 tvg-chno=&quot;3&quot;,Your Channel Name for 3
+http://IP:PORT/live?channel=3&amp;client=3
+</code></pre>
+<p>Real Life Example
+This is what NextPVR v5 shows for channels</p>
+<p><img src="images/tvtuners/nextpvr-4.png" alt="Nextpvr 4"></p>
+<pre><code class="lang-M3U">#EXTM3U
+#EXTINF:-1 tvg-chno=&quot;3.1&quot;,KYW-TV
+http://127.0.0.1:8866/live?channel=3.1&amp;client=3.1
+#EXTINF:-1 tvg-chno=&quot;3.2&quot;,StartTV
+http://127.0.0.1:8866/live?channel=3.2&amp;client=3.3
+#EXTINF:-1 tvg-chno=&quot;3.3&quot;,DABL
+http://127.0.0.1:8866/live?channel=3.3&amp;client=3.3
+#EXTINF:-1 tvg-chno=&quot;3.4&quot;,FaveTV
+http://127.0.0.1:8866/live?channel=3.4&amp;client=3.4
+#EXTINF:-1 tvg-chno=&quot;10.1&quot;,WCAU-TV
+http://127.0.0.1:8866/live?channel=10.1&amp;client=10.1
+#EXTINF:-1 tvg-chno=&quot;10.2&quot;,COZI-TV
+http://127.0.0.1:8866/live?channel=10.2&amp;client=10.2
+#EXTINF:-1 tvg-chno=&quot;10.3&quot;,NBCLX
+http://127.0.0.1:8866/live?channel=10.3&amp;client=10.3
+#EXTINF:-1 tvg-chno=&quot;17.1&quot;,WPHL-DT
+http://127.0.0.1:8866/live?channel=17.1&amp;client=17.1
+#EXTINF:-1 tvg-chno=&quot;17.2&quot;,Antenna
+http://127.0.0.1:8866/live?channel=17.2&amp;client=17.2
+#EXTINF:-1 tvg-chno=&quot;17.3&quot;,Antenna
+http://127.0.0.1:8866/live?channel=17.3&amp;client=17.3
+#EXTINF:-1 tvg-chno=&quot;17.4&quot;,NBCLX
+http://127.0.0.1:8866/live?channel=17.4&amp;client=17.4
+#EXTINF:-1 tvg-chno=&quot;29.1&quot;,WTXFDT
+http://127.0.0.1:8866/live?channel=29.1&amp;client=29.1
+#EXTINF:-1 tvg-chno=&quot;29.2&quot;,Movies!
+http://127.0.0.1:8866/live?channel=29.2&amp;client=29.2
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If using NextPVR 5.1.1 or later you will need to change settings-&gt;Access to enable &quot;Unauthenticated Access&quot; in  NextPVR or your live URLs will fail.</p>
+</div>
 </article>
           </div>
           

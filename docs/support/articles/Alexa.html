@@ -161,57 +161,56 @@
 <p>The Emby Skill enables users to get information about and control playback of their media library on any Emby compatible device. Once you have succesfully linked your Emby account to Alexa, you can start playing your favorite movies, TV shows on your devices with your voice.</p>
 <h2 id="get-started">Get started</h2>
 <p>The first step is to make sure your Emby Server is setup for remote use and has Emby Premiere..  Since Alexa is a cloud based service it will need access to your Emby server from the Internet.  Please follow our instructions for setting up Remote Access.</p>
-<p>Alexa requests are sent from outside your network. You will need to ensure your Emby server is accessible remotely.</p>
-<h4 id="why-is-emby-connect-required">Why is Emby connect required?</h4>
-<p>Emby connect is used to provide your server information to Alexa over a secure connection.</p>
-<h4 id="amazon-alexa-account-linking">Amazon Alexa account linking</h4>
-<p>In the Amazon Alexa app or the <a href="http://alexa.amazon.com/spa/index.html">Amazon Alexa web app</a>, navigate to the following:<br>
-<code>Skills &gt; Your Skills &gt; Emby &gt; Link Account</code></p>
-<p><img src="https://emby.media/community/uploads/inline/4388/58fd8d3a8680b_Instructions_small.jpg" alt="Skills screenshot"></p>
-<h4 id="my-server-is-not-available-to-be-selected-what-do-i-do">My server is not available to be selected, what do I do?</h4>
-<p>If you don't have an Emby account, follow the steps <a href="Emby-Connect">here</a>, otherwise:</p>
-<ol>
-<li>In your server dashboard, Users &gt; Select the Emby user with Emby connect (green cloud icon)</li>
-<li>Remove the username or email from the Emby connect field, hit save.</li>
-<li>Re-add the information to recreate the Emby connect link.</li>
-</ol>
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-<h2 id="training-alexa">Training Alexa</h2>
+<p>At this point please make sure you've already setup your Alexa device following Amazon directions and verify it works for general Alexa use.</p>
+<p>You can now setup an Emby Skill to work with Alexa.  You do this by opening the Amazon Amazon Alexa app or the Amazon Alexa web app, navigate to the following:</p>
+<p><code>Skills &gt; Your Skills &gt; Emby &gt; Link Account</code></p>
+<p><img src="images/apps/alexa/alexa-1.png" alt="Alexa 1"></p>
+<p>Click on the Emby Skill</p>
+<p><img src="images/apps/alexa/alexa-2.png" alt="Alexa 2"></p>
+<p>Now Click the Button top right to ENABLE the skill.</p>
+<p><img src="images/apps/alexa/alexa-3.png" alt="Alexa 3"></p>
+<p>Type in your Emby Connect username you created prior to this as well as your password and click the SIGN IN button.</p>
+<p><img src="images/apps/alexa/alexa-4.png" alt="Alexa 4"></p>
+<p>You can now control what Emby server to control. If you only have one server it will be the only choice.  Select your server and click the LINK TO ALEXA button.</p>
+<p><img src="images/apps/alexa/alexa-5.png" alt="Alexa 5"></p>
+<p>You should receive a confirmation screen showing successful linking of your Emby Connect username to Alexa.</p>
+<p>You can do a similar setup from your iOS or Android device running the Alexa app</p>
+<p>(mobile screen shot)</p>
+<p><img src="images/apps/alexa/alexa-6.png" alt="Alexa 6"></p>
+<p>If you experience any problems please review the information above and if you still have an issue please seek support on our forums and the following location: <a href="https://emby.media/community/index.php?/forum/174-amazon-alexa/">https://emby.media/community/index.php?/forum/174-amazon-alexa/</a></p>
+<h3 id="training-alexa">Training Alexa</h3>
 <p>Alexa may have difficulty understanding the word Emby at first. There are ways to improve this situation.</p>
 <h4 id="english-us-only">English US only</h4>
-<p>If Alexa is set to English US, you have access to voice training. Using this, Alexa will start understanding you instead of guessing what you said. In the Amazon Alexa app or the <a href="http://alexa.amazon.com/spa/index.html">Amazon Alexa web app</a>, navigate to the following:</p>
+<p>If Alexa is set to English US, you have access to voice training. Using this, Alexa will start understanding you instead of guessing what you said. In the Amazon Alexa app or the Amazon Alexa web app, navigate to the following:</p>
 <p><code>Settings &gt; Under Accounts &gt; Voice training</code></p>
 <h4 id="every-languages">Every languages</h4>
-<p>The Amazon Alexa app offers feedback cards for skills. This allows Alexa to self-correct, by marking these cards positively or negatively depending on if Alexa understood you or not. In the Amazon Alexa app or the <a href="http://alexa.amazon.com/spa/index.html">Amazon Alexa web app</a>, navigate to the either:</p>
-<p><code>Home &gt; Cards regarding Emby &gt; More &gt; Did Alexa understand you?</code><br>
-<code>Settings &gt; General &gt; History &gt; Did Alexa do what you wanted?</code></p>
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-<h2 id="commands">Commands</h2>
-<h3 id="how-to-use-alexa">How to use Alexa</h3>
+<p>The Amazon Alexa app offers feedback cards for skills. This allows Alexa to self-correct, by marking these cards positively or negatively depending on if Alexa understood you or not. In the Amazon Alexa app or the Amazon Alexa web app, navigate to the either:</p>
+<p><code>Home &gt; Cards regarding Emby &gt; More &gt; Did Alexa understand you?</code></p>
+<p><code>Settings &gt; General &gt; History &gt; Did Alexa do what you wanted?</code></p>
+<h3 id="commands">Commands</h3>
+<h4 id="how-to-use-alexa">How to use Alexa</h4>
 <ul>
-<li>Every command needs to start with: <strong>Alexa, tell/ask m. b. home to {insert command}.</strong></li>
-<li>Alternatively, you can start an Emby session with: <strong>Alexa, start/begin/open m. b. home.</strong><br>
-<em>The benefit of using an Emby session is it allows you to give multiple commands without needing to invoke Emby for as long as the session is active. Sessions are automatically terminated after 8 seconds of inactivity (when the blue ring of your Alexa device fades).</em></li>
-<li>You can stop whatever Alexa is doing with: <strong>Alexa, cancel/nevermind.</strong> Alexa will also abandon your request if you don't reply within 8 seconds.</li>
-<li>Not all commands are compatible with every Emby apps. If you encounter an issue, post <a href="https://emby.media/community/index.php?/forum/174-amazon-alexa/">here</a>.</li>
-<li>To direct a command to a specific player, append <strong>on another player</strong> or <strong>on {player name}</strong> to the end of your command.</li>
-<li>Here is the list of supported media type: episode, movie, show, season, song, album, artist, audiobook, channel, playlist.</li>
+<li>Every command needs to start with: <strong>Alexa, tell/ask m. b. home  -to [insert command]</strong></li>
+<li>Alternatively, you can start an Emby session with: <strong>Alexa, - start/begin/open m. b. home</strong><br>
+The benefit of using an Emby session is it allows you to give  multiple commands without needing to invoke Emby for as long  as the session is active. Sessions are automatically terminated after 8 seconds of inactivity (when the blue ring of your Alexa device fades).</li>
+<li>You can stop whatever Alexa is doing with: <strong>Alexa, cancel/ nevermind</strong>. Alexa will also abandon your request if you don't reply within 8 seconds</li>
+<li>Not all commands are compatible with every Emby apps. If you encounter an issue, post here</li>
+<li>To direct a command to a specific player, append <strong>on another player</strong> or <strong>on [player name]</strong> to the end of your command</li>
+<li>Here is the list of supported media types:
+episode, movie, show, season, song, album, artist, audiobook, channel, playlist</li>
 <li><strong>Parts of commands in parenthesis given below are optional</strong></li>
 </ul>
 <h3 id="using-alexa-as-a-player">Using Alexa as a player</h3>
-<p>Audio playback is supported at this time. This feature requires your server to be secured with ssl encryption. Refer to <a href="Secure-Your-Server">this guide</a> if you need help. Self-signed certificates are not supported for this.</p>
-<p>​Ask m. b. home to play music. Specify &quot;on this player&quot; or &quot;on Alexa&quot; at the end of your request to skip the player selection. Once <a href="Alexa#media-playback">music playback</a> is initiated with the skill, you can use these controls (notice you don't invoke m. b. home):</p>
+<p>Audio playback is supported at this time. This feature requires your server to be secured with ssl encryption. Refer to this guide if you need help. Self-signed certificates are not supported for this.</p>
+<p>Ask m. b. home to play music. Specify &quot;on this player&quot; or &quot;on Alexa&quot; at the end of your request to skip the player selection. Once music playback is initiated with the skill, you can use these controls (notice you don't invoke m. b. home):</p>
 <ul>
 <li>Alexa, Next</li>
 <li>Alexa, Previous</li>
 <li>Alexa, Pause</li>
 <li>Alexa, Resume</li>
 <li>Alexa, start over</li>
-<li>Alexa, loop (This is to repeat the currently playing item. Loop off to turn off)</li>
+<li>Alexa, loop<br>
+(This is to repeat the currently playing item. Loop off to turn off)</li>
 </ul>
 <h4 id="which-player">Which player?</h4>
 <p>You can set a player as default. If a device/player name is not included at the end of your command, it will be automatically directed at your default player.</p>
@@ -245,7 +244,7 @@
 </ul>
 <h4 id="playback">Playback</h4>
 <ul>
-<li>pause, previous, next, play (the selected content), <strong>stop or stop playback</strong></li>
+<li>pause, previous, next, play (the selected content), stop or - stop playback</li>
 <li>set the volume (to {percent})</li>
 <li>change the audio (to {language})</li>
 <li>change/enable/disable subtitles</li>
@@ -266,7 +265,7 @@
 <li>play the audiobook {title}</li>
 <li>tune in channel {name}</li>
 </ul>
-<h5 id="here-are-a-few-examples">Here are a few examples</h5>
+<h4 id="here-are-a-few-examples">Here are a few examples</h4>
 <ul>
 <li>put on season 2 of Game of Thrones</li>
 <li>play Supernatural, season 5, episode 12</li>
@@ -286,7 +285,7 @@
 <li>play something</li>
 <li>play a movie (genre {Genre})</li>
 <li>play an episode of {series}</li>
-<li>play <strong>a few</strong> episodes</li>
+<li>play a few episodes</li>
 <li>play next up</li>
 </ul>
 <h4 id="play-random-music">Play random music</h4>
@@ -323,36 +322,23 @@
 <h4 id="transfer-or-copy-playback-between-devices">Transfer or Copy playback between devices</h4>
 <p>Transfer will stop playback first. Copy will simply resume playback where you left off, on the device of your choice. By default, it will fill in the missing information with your default player.</p>
 <ul>
-<li>transfer/copy the stream/playback (from {player}) (to {player})</li>
+<li>transfer/copy the stream/playback (from {player}) (to  {player})</li>
 <li>switch/copy the stream/playback (to {player}) (from {player})</li>
 </ul>
-<h5 id="for-example">For example</h5>
+<p>For example</p>
 <ul>
 <li>Transfer the playback from chrome to theater.</li>
-<li>Copy playback to iphone. <em>omitting the origin of the playback will automatically grab it from your default player</em></li>
+<li>Copy playback to iphone. omitting the origin of the playback
+will automatically grab it from your default player</li>
 </ul>
-<h3 id="help">Help</h3>
+<h4 id="help">Help</h4>
 <p>If you are ever uncertain what commands the player supports, ask Emby for:</p>
 <ul>
 <li>the available commands</li>
 <li>help</li>
 </ul>
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-<hr>
-<h3 id="change-your-emby-connect-account">Change your Emby connect account</h3>
-<p>You can easily replace the Emby connect account linked to Alexa. First, you will need to disable the Emby skill. Then, once re-enabled, go though the account linking process again.</p>
-<h3 id="faqs">FAQs</h3>
-<ul>
-<li><strong>Alexa can't find any players.</strong><br>
-Make sure your Emby player is up and running under the same Emby user Alexa is connected to.</li>
-<li><strong>My title is recognized with the wrong words?</strong>
-That's what happens with voice control. Correct the title <a href="https://goo.gl/forms/SnruVeWIBFyufxZr1">here</a>.</li>
-</ul>
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
+<h2 id="change-your-emby-connect-account">Change your Emby connect account</h2>
+<p>You can easily replace the Emby connect account linked to Alexa. First, you will need to disable the Emby skill. Then, once re-enabled, go though the account linking process again as show above.</p>
 </article>
           </div>
           
