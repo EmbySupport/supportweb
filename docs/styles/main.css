@@ -874,3 +874,12 @@ H4.card-title {
 a.card:hover .card-title {
     color: var(--highlight-dark);
 }
+
+h4.seealso-heading {
+    margin-top: 50px;
+}
+
+ul.seealso-list {
+    padding-left: 18px;
+}
+

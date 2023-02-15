@@ -82,6 +82,7 @@ references:
 - uid: DirectPlay-Stream-Transcoding
   name: Direct Play, Stream & Transcoding
   href: support/articles/DirectPlay-Stream-Transcoding.html
+  fullName: Direct Play vs Direct Streaming vs Transcoding
 - uid: DVR-Settings
   name: DVR Settings
   href: support/articles/DVR-Settings.html
@@ -139,12 +140,14 @@ references:
 - uid: Home
   name: Emby Support Home
   href: support/articles/Home.html
+  fullName: Your starting point for browsing the documentation
 - uid: Hosting-Settings
   name: Network (Hosting) Settings
   href: support/articles/Hosting-Settings.html
 - uid: Hwa-Fails-with-RDP
   name: HWA fails with RDP
   href: support/articles/Hwa-Fails-with-RDP.html
+  fullName: Hardware Acceleration Fails with Remote Desktop (RDP) on Windows
 - uid: Identify
   name: Identify
   href: support/articles/Identify.html
@@ -166,6 +169,7 @@ references:
 - uid: LG-Why-not-Atmos
   name: Atmos on LG TV
   href: support/articles/LG-Why-not-Atmos.html
+  fullName: Why does the Emby App for my LG TV not play the Dolby Atmos TrueHD Audio without Transcoding?
 - uid: Library-Setup
   name: Library Setup
   href: support/articles/Library-Setup.html
@@ -187,9 +191,11 @@ references:
 - uid: Live-TV-HDHR-Channels
   name: HDHomeRun Channels
   href: support/articles/Live-TV-HDHR-Channels.html
+  fullName: How to Remove or Hide Channels from My HDHomeRun Tuner
 - uid: Live-TV-Manage-Channels
   name: Manage Channels
   href: support/articles/Live-TV-Manage-Channels.html
+  fullName: How to Hide Specific TV Channels, Edit Parental Rating or Set Tags
 - uid: Live-TV-NextPVR
   name: NextPVR Tuner
   href: support/articles/Live-TV-NextPVR.html
@@ -205,6 +211,7 @@ references:
 - uid: M3U-Tuners
   name: M3U Tuners
   href: support/articles/M3U-Tuners.html
+  fullName: How to add and configure an M3U Tuner
 - uid: Manual-Subtitle-Downloads
   name: Manual Subtitle Downloads
   href: support/articles/Manual-Subtitle-Downloads.html
@@ -265,45 +272,58 @@ references:
 - uid: Premiere-Canceling
   name: Cancel Subscription
   href: support/articles/Premiere-Canceling.html
+  fullName: How do I Cancel an Emby Premiere Subscription?
 - uid: Premiere-Change-Subscription
   name: Change Payment Method
   href: support/articles/Premiere-Change-Subscription.html
+  fullName: How do I change my subscription from PayPal to Credit Card or vice versa?
 - uid: Premiere-Feature-Matrix
   name: Emby Premiere Feature Matrix
   href: support/articles/Premiere-Feature-Matrix.html
 - uid: Premiere-Key-Delivery
   name: Premiere Key Delivery
   href: support/articles/Premiere-Key-Delivery.html
+  fullName: How is the Emby Premiere Key Delivered to Me?
 - uid: Premiere-Key-Invalid
   name: Key Invalid or Missing
   href: support/articles/Premiere-Key-Invalid.html
+  fullName: My Emby Key Says it is Invalid or Missing
 - uid: Premiere-Key-Validity
   name: Keys Valid with Emby 4.0
   href: support/articles/Premiere-Key-Validity.html
+  fullName: Is My Emby Premiere Key Still Valid with Emby 4.0?
 - uid: Premiere-Limits
   name: Premiere-Limits
   href: support/articles/Premiere-Limits.html
+  fullName: Is there a limit to Emby Premiere?
 - uid: Premiere-Lost-Keys
   name: Lost Premiere Keys
   href: support/articles/Premiere-Lost-Keys.html
+  fullName: What if I Lose my Emby Premiere Key?
 - uid: Premiere-Membership-Options
   name: Premiere Membership Options
   href: support/articles/Premiere-Membership-Options.html
+  fullName: What Emby Premiere Membership Options are there?
 - uid: Premiere-Multiple-Servers
   name: Using Multiple Servers
   href: support/articles/Premiere-Multiple-Servers.html
+  fullName: Can I use my Emby Premiere Key on More than one Server?
 - uid: Premiere-PriceDifferences
   name: App Store Price Differences
   href: support/articles/Premiere-PriceDifferences.html
+  fullName: Why is the Emby Premiere Price Different in the App Stores?
 - uid: Premiere-Purchase
   name: Purchasing Emby Premiere
   href: support/articles/Premiere-Purchase.html
+  fullName: How do I purchase Emby Premiere?
 - uid: Premiere-Update-Card
   name: Update Credit Card
   href: support/articles/Premiere-Update-Card.html
+  fullName: How do I update my credit card?
 - uid: Premiere-Upgrade
   name: Upgrade Membership
   href: support/articles/Premiere-Upgrade.html
+  fullName: How do I Upgrade my Emby Premiere Membership?
 - uid: Quick-Start
   name: Quick Start
   href: support/articles/Quick-Start.html
@@ -316,6 +336,7 @@ references:
 - uid: Run-as-Windows-Service
   name: Running as Windows Service
   href: support/articles/Run-as-Windows-Service.html
+  fullName: Running Emby Server as a Windows Service
 - uid: Scheduled-Tasks
   name: Scheduled Tasks
   href: support/articles/Scheduled-Tasks.html
@@ -328,7 +349,7 @@ references:
 - uid: Server-Installation-Shield
   name: Server Installation on Shield TV
   href: support/articles/Server-Installation-Shield.html
-- uid: Server-Settings
+- uid: Server-Settings333
   name: Server Settings
   href: support/articles/Server-Settings.html
 - uid: ShieldTV-Direct-File-Access
@@ -358,6 +379,7 @@ references:
 - uid: Synology-Set-Permissions
   name: Synology Permissions
   href: support/articles/Synology-Set-Permissions.html
+  fullName: How to Set Permissions on DSM 7
 - uid: System-Requirements
   name: System Requirements
   href: support/articles/System-Requirements.html
