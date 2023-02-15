@@ -48,6 +48,8 @@
                         currentData[property] = urlPrefix + value;
                         break;
                     case 'fullName':
+                        currentData['name'] = value;
+                        break;
                     case 'nameWithType':
                         currentData['name'] = value;
                         currentData['type'] = 'SDK Reference';
@@ -134,13 +136,13 @@
                         return;
                     }
 
-                    fetch('https://embysupport.github.io/supportweb/xrefmap.yml')
+                    fetch('https://support2.emby.media/xrefmap.yml')
                         .then(response => response.text())
                         .then(yaml => {
 
                             xrefData = [];
 
-                            parseXrefData(yaml, xrefData, 'https://embysupport.github.io/supportweb/', 'Documentation');
+                            parseXrefData(yaml, xrefData, 'https://support2.emby.media/', 'Documentation');
 
                             fetch('https://dev.emby.media/xrefmap.yml')
                                 .then(response => response.text())
