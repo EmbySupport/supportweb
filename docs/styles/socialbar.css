@@ -113,6 +113,8 @@
 
 .mb-socials-item.rss .mb-socials-item-link:after {
     content: '\f09e';
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
 }
 
 .mb-socials-item.github .mb-socials-item-link:after {

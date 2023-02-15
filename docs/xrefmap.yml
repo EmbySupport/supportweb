@@ -39,10 +39,10 @@ references:
   href: support/articles/Backup.html
 - uid: Book-Naming
   name: Book Naming
-  href: support/articles/Book-naming.html
+  href: support/articles/Book-Naming.html
 - uid: Camera-Upload
   name: Camera Upload
-  href: support/articles/Camera-upload.html
+  href: support/articles/Camera-Upload.html
 - uid: Channels
   name: Channels
   href: support/articles/Channels.html
@@ -210,7 +210,7 @@ references:
   href: support/articles/Manual-Subtitle-Downloads.html
 - uid: Media-Stubs
   name: Media Stubs
-  href: support/articles/Media-stubs.html
+  href: support/articles/Media-Stubs.html
 - uid: Metadata-Manager
   name: Metadata Manager
   href: support/articles/Metadata-manager.html
@@ -222,7 +222,7 @@ references:
   href: support/articles/Music-Lyrics.html
 - uid: Music-Naming
   name: Music Naming
-  href: support/articles/Music-naming.html
+  href: support/articles/Music-Naming.html
 - uid: New-Media-Date-Handling
   name: New Media Date Handling
   href: support/articles/New-Media-Date-Handling.html
@@ -318,7 +318,7 @@ references:
   href: support/articles/Run-as-Windows-Service.html
 - uid: Scheduled-Tasks
   name: Scheduled Tasks
-  href: support/articles/Scheduled-tasks.html
+  href: support/articles/Scheduled-Tasks.html
 - uid: Schedules-Direct
   name: Schedules Direct
   href: support/articles/Schedules-Direct.html
