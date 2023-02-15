@@ -156,7 +156,7 @@
 
 <p>Emby supports the following hardware acceleration variants on Linux</p>
 <ul>
-<li><p><strong><a href="#nvidia-nvdec-nvenc">Nvidia NVDEC &amp; NVENC</a></strong><br>
+<li><p><strong><a href="#nvidia-nvdec--nvenc">Nvidia NVDEC &amp; NVENC</a></strong><br>
 API for video encoding and decoding acceleration using Nvidia GPUs</p>
 </li>
 <li><p><strong><a href="#va-api">VA API</a></strong><br>
@@ -170,8 +170,8 @@ core</p>
 <h2 id="nvidia-nvdec--nvenc">Nvidia NVDEC &amp; NVENC</h2>
 <p>Nvidia provides two hardware acceleration interfaces:</p>
 <ul>
-<li>NVENCODE API for video encode acceleration</li>
-<li>NVDECODE API for video decode acceleration (formerly called NVCUVID API)</li>
+<li>NVENC API for video encode acceleration</li>
+<li>NVDEC API for video decode acceleration (formerly called NVCUVID API)</li>
 </ul>
 <p>NVIDIA GPUs contain one or more hardware-based decoder and encoder(s) (separate from the CUDA cores) which provides fully-accelerated hardware-based video decoding and encoding for several popular codecs. With decoding/encoding offloaded, the graphics engine and the CPU are free for other operations.</p>
 <p>GPU hardware accelerator engines for video decoding (referred to as NVDEC) and video encoding (referred to as NVENC) support faster than real-time video processing which makes them suitable to be used for transcoding applications, in addition to video playback.</p>
@@ -200,7 +200,7 @@ and that not all hardware devices will support all accelerations.</p>
 <h4 id="hardware-requirements">Hardware Requirements</h4>
 <p>Hardware acceleration is available for most Nvidia devices starting with GPUs from the
 Kepler generation (e.g. GeForce GT 630) onwards, including both consumer and professional
-devices. Detailed information about supported hardware can be found in Nvidias
+devices. Detailed information about supported hardware can be found in Nvidia's
 <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a>.</p>
 <h4 id="required-setup-steps">Required Setup Steps</h4>
 <div class="IMPORTANT">
@@ -314,7 +314,7 @@ and that not all hardware devices will support all accelerations.</p>
 </li>
 </ul>
 <h4 id="hardware-requirements-2">Hardware Requirements</h4>
-<p>Quick Sync was initially built into some Sandy Bridge CPUs, but not into Sandy Bridge Pentiums or Celerons.<br>
+<p>Quick Sync was initially built into some Sandy Bridge CPUs, but not into Sandy Bridge Pentium or Celeron CPUs.<br>
 An overview of acceleration capabilities built into the various CPU generations
 can be found under the following links:</p>
 <ul>
