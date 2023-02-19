@@ -2,7 +2,7 @@
 :root {
     --header-bg-color: #212121;
     --header-ft-color: #fefefe;
-    --highlight-light: #4cae50;
+    --highlight-light: #4dc944;
     --highlight-dark: #4cae50;
     --accent-dim: #e0e0e0;
     --accent-super-dim: #f3f3f3;
@@ -52,14 +52,37 @@ a {
         text-decoration: none;
     }
 
+.breadcrumb a,
+article button,
+article a {
+    color: var(--highlight-dark);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+    article button:hover,
+    article button:focus,
+    .breadcrumb a:hover,
+    .breadcrumb a:hover,
+    article a:hover,
+    article a:focus {
+        color: var(--highlight-light);
+        text-decoration: underline;
+    }
+
 .toc .nav > li.active > a {
     color: var(--highlight-dark);
+    font-weight: 500;
 }
 
     .toc .nav > li.active > a:hover,
     .toc .nav > li.active > a:focus {
-        color: var(--highlight-light);
+        color: var(--highlight-dark);
     }
+
+.affix ul > li.active > a, .affix ul > li.active > a:before {
+    color: var(--highlight-light);
+}
 
 /*.pagination > .active > a {
   background-color: var(--header-bg-color);
@@ -77,7 +100,6 @@ a {
 }
 */
 /* HEADINGS */
-
 h1 {
     font-weight: 300;
     font-size: 34px;
@@ -177,7 +199,8 @@ b, optgroup, strong {
 }
 
 .article img {
-    margin: 0.6rem 0;
+    margin: 2rem 0;
+    box-shadow: 3px 3px 20px 4px #0000001c;
 }
 
 /* SIDEBAR */
