@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amazon Alexa | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Amazon Alexa | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/socialbar.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Alexa">
+    
+    <meta property="docfx:rel" content="../">
+    
+    <script type="text/javascript" src="../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../index.html">
+        		    <img id="logo" class="svg" src="../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Alexa">
+<h1>Amazon Alexa</h1>
+
+
+<p>.</p>
+<h2 id="what-is-alexa">What is Alexa?</h2>
+<p>Amazon Alexa is a cloud-based voice service that allows you to retrieve information via voice as well as control device and apps in your Environment including Emby.  You can ask Alexa to play music, hear the news, check weather, control your smart home, and more.</p>
+<p>The Emby Skill enables users to get information about and control playback of their media library on any Emby compatible device. Once you have successfully linked your Emby account to Alexa, you can start playing your favorite movies, TV shows on your devices with your voice.</p>
+<h2 id="get-started">Get started</h2>
+<p>The first step is to make sure your Emby Server is setup for remote use and has Emby Premiere..  Since Alexa is a cloud based service it will need access to your Emby server from the Internet.  Please follow our instructions for setting up Remote Access.</p>
+<p>At this point please make sure you've already setup your Alexa device following Amazon directions and verify it works for general Alexa use.</p>
+<p>You can now setup an Emby Skill to work with Alexa.  You do this by opening the Amazon Amazon Alexa app or the Amazon Alexa web app, navigate to the following:</p>
+<p><code>Skills &gt; Your Skills &gt; Emby &gt; Link Account</code></p>
+<p><img src="images/apps/alexa/alexa-1.png" alt="Alexa 1"></p>
+<p>Click on the Emby Skill</p>
+<p><img src="images/apps/alexa/alexa-2.png" alt="Alexa 2"></p>
+<p>Now Click the Button top right to ENABLE the skill.</p>
+<p><img src="images/apps/alexa/alexa-3.png" alt="Alexa 3"></p>
+<p>Type in your Emby Connect username you created prior to this as well as your password and click the SIGN IN button.</p>
+<p><img src="images/apps/alexa/alexa-4.png" alt="Alexa 4"></p>
+<p>You can now control what Emby server to control. If you only have one server it will be the only choice.  Select your server and click the LINK TO ALEXA button.</p>
+<p><img src="images/apps/alexa/alexa-5.png" alt="Alexa 5"></p>
+<p>You should receive a confirmation screen showing successful linking of your Emby Connect username to Alexa.</p>
+<p>You can do a similar setup from your iOS or Android device running the Alexa app</p>
+<p>(mobile screen shot)</p>
+<p><img src="images/apps/alexa/alexa-6.png" alt="Alexa 6"></p>
+<p>If you experience any problems please review the information above and if you still have an issue please seek support on our forums and the following location: <a href="https://emby.media/community/index.php?/forum/174-amazon-alexa/">https://emby.media/community/index.php?/forum/174-amazon-alexa/</a></p>
+<h3 id="training-alexa">Training Alexa</h3>
+<p>Alexa may have difficulty understanding the word Emby at first. There are ways to improve this situation.</p>
+<h4 id="english-us-only">English US only</h4>
+<p>If Alexa is set to English US, you have access to voice training. Using this, Alexa will start understanding you instead of guessing what you said. In the Amazon Alexa app or the Amazon Alexa web app, navigate to the following:</p>
+<p><code>Settings &gt; Under Accounts &gt; Voice training</code></p>
+<h4 id="every-languages">Every languages</h4>
+<p>The Amazon Alexa app offers feedback cards for skills. This allows Alexa to self-correct, by marking these cards positively or negatively depending on if Alexa understood you or not. In the Amazon Alexa app or the Amazon Alexa web app, navigate to the either:</p>
+<p><code>Home &gt; Cards regarding Emby &gt; More &gt; Did Alexa understand you?</code></p>
+<p><code>Settings &gt; General &gt; History &gt; Did Alexa do what you wanted?</code></p>
+<h3 id="commands">Commands</h3>
+<h4 id="how-to-use-alexa">How to use Alexa</h4>
+<ul>
+<li>Every command needs to start with: <strong>Alexa, tell/ask m. b. home  -to [insert command]</strong></li>
+<li>Alternatively, you can start an Emby session with: <strong>Alexa, - start/begin/open m. b. home</strong><br>
+The benefit of using an Emby session is it allows you to give  multiple commands without needing to invoke Emby for as long  as the session is active. Sessions are automatically terminated after 8 seconds of inactivity (when the blue ring of your Alexa device fades).</li>
+<li>You can stop whatever Alexa is doing with: <strong>Alexa, cancel/ never-mind</strong>. Alexa will also abandon your request if you don't reply within 8 seconds</li>
+<li>Not all commands are compatible with every Emby apps. If you encounter an issue, post here</li>
+<li>To direct a command to a specific player, append <strong>on another player</strong> or <strong>on [player name]</strong> to the end of your command</li>
+<li>Here is the list of supported media types:
+episode, movie, show, season, song, album, artist, audiobook, channel, playlist</li>
+<li><strong>Parts of commands in parenthesis given below are optional</strong></li>
+</ul>
+<h3 id="using-alexa-as-a-player">Using Alexa as a player</h3>
+<p>Audio playback is supported at this time. This feature requires your server to be secured with ssl encryption. Refer to this guide if you need help. Self-signed certificates are not supported for this.</p>
+<p>Ask m. b. home to play music. Specify &quot;on this player&quot; or &quot;on Alexa&quot; at the end of your request to skip the player selection. Once music playback is initiated with the skill, you can use these controls (notice you don't invoke m. b. home):</p>
+<ul>
+<li>Alexa, Next</li>
+<li>Alexa, Previous</li>
+<li>Alexa, Pause</li>
+<li>Alexa, Resume</li>
+<li>Alexa, start over</li>
+<li>Alexa, loop<br>
+(This is to repeat the currently playing item. Loop off to turn off)</li>
+</ul>
+<h4 id="which-player">Which player?</h4>
+<p>You can set a player as default. If a device/player name is not included at the end of your command, it will be automatically directed at your default player.</p>
+<ul>
+<li>change the player (to {player or device name})</li>
+<li>change my player to Living Room TV</li>
+</ul>
+<h4 id="which-emby-user">Which Emby user?</h4>
+<p>By default, the skill will use the same Emby user used to link Alexa to Emby. But it can be changed with the following:</p>
+<ul>
+<li>who is the active user</li>
+<li>change the user (to {Emby username})</li>
+</ul>
+<h4 id="additional-users">Additional users</h4>
+<p>Share the watch status of currently playing content by adding other Emby users to your session.</p>
+<ul>
+<li>who is in the session</li>
+<li>add {user name} to my session</li>
+<li>remove {username} (and {username 2}) from my session</li>
+</ul>
+<h4 id="navigation">Navigation</h4>
+<p>You can navigate your interface by saying the movement or action related to what you want to do.</p>
+<ul>
+<li>move up/down/left/right</li>
+<li>page up/down</li>
+<li>select</li>
+<li>mute/unmute</li>
+<li>go home</li>
+<li>go to the next/previous letter</li>
+<li>show/display/bring up the context menu/TV guide/search/player menu (osd)/settings</li>
+</ul>
+<h4 id="playback">Playback</h4>
+<ul>
+<li>pause, previous, next, play (the selected content), stop or - stop playback</li>
+<li>set the volume (to {percent})</li>
+<li>change the audio (to {language})</li>
+<li>change/enable/disable subtitles</li>
+<li>change the subtitles (to {language})</li>
+<li>seek to {time} or start from the beginning</li>
+<li>seek to (plus/minus) {time}</li>
+<li>jump to chapter {number}</li>
+<li>go to the next/previous chapter</li>
+</ul>
+<h4 id="media-playback">Media Playback</h4>
+<p>By default, Alexa is set to search video content when the content type is not specified. This means, for any other types, you need to include the content type to yield proper results.</p>
+<ul>
+<li>play (the movie) {movie}</li>
+<li>player (the show) {series}</li>
+<li>resume the episode from {series}</li>
+<li>play the artist {Artist}</li>
+<li>play the song {song} (from {Album}, by {Artist})</li>
+<li>play the audiobook {title}</li>
+<li>tune in channel {name}</li>
+</ul>
+<h4 id="here-are-a-few-examples">Here are a few examples</h4>
+<ul>
+<li>put on season 2 of Game of Thrones</li>
+<li>play Supernatural, season 5, episode 12</li>
+<li>play the new episode of Gotham</li>
+<li>watch the next episode of Orange is the new black</li>
+</ul>
+<h4 id="suggestions">Suggestions</h4>
+<p>Reply to the suggestion with a yes or a no.</p>
+<ul>
+<li>give me a suggestion</li>
+<li>suggest me a ({genre}) {content type, i.e. movie}</li>
+<li>I don't know what ({episode}) to watch</li>
+<li>what's good?</li>
+</ul>
+<h4 id="play-random-content">Play random content</h4>
+<ul>
+<li>play something</li>
+<li>play a movie (genre {Genre})</li>
+<li>play an episode of {series}</li>
+<li>play a few episodes</li>
+<li>play next up</li>
+</ul>
+<h4 id="play-random-music">Play random music</h4>
+<ul>
+<li>drop the beat</li>
+<li>put on some music (genre {Genre})</li>
+<li>play songs (genre {Genre})</li>
+<li>play songs by {Artist}</li>
+<li>play songs from the album {Album}</li>
+</ul>
+<h4 id="recently-added">Recently added</h4>
+<ul>
+<li>what's new</li>
+<li>what's been recently added?</li>
+<li>what {content type, i.e. movie} is newly added</li>
+</ul>
+<h4 id="next-up">Next Up</h4>
+<ul>
+<li>what's next</li>
+<li>what is up next</li>
+</ul>
+<h4 id="continue-playing">Continue playing</h4>
+<ul>
+<li>what can I keep watching?</li>
+<li>what (show/movie/audio book) was I in the middle of?</li>
+</ul>
+<h4 id="item-modification">Item modification</h4>
+<ul>
+<li>remove {title} from my favorites</li>
+<li>add ({content type, i.e. movie}) {title} to my favorites</li>
+<li>I love the {media type, i.e. music video} {music video}</li>
+<li>set/mark {media type, i.e. movie} {title} as watched/unwatched</li>
+</ul>
+<h4 id="transfer-or-copy-playback-between-devices">Transfer or Copy playback between devices</h4>
+<p>Transfer will stop playback first. Copy will simply resume playback where you left off, on the device of your choice. By default, it will fill in the missing information with your default player.</p>
+<ul>
+<li>transfer/copy the stream/playback (from {player}) (to  {player})</li>
+<li>switch/copy the stream/playback (to {player}) (from {player})</li>
+</ul>
+<p>For example</p>
+<ul>
+<li>Transfer the playback from chrome to theater.</li>
+<li>Copy playback to iphone. omitting the origin of the playback
+will automatically grab it from your default player</li>
+</ul>
+<h4 id="help">Help</h4>
+<p>If you are ever uncertain what commands the player supports, ask Emby for:</p>
+<ul>
+<li>the available commands</li>
+<li>help</li>
+</ul>
+<h2 id="change-your-emby-connect-account">Change your Emby connect account</h2>
+<p>You can easily replace the Emby connect account linked to Alexa. First, you will need to disable the Emby skill. Then, once re-enabled, go though the account linking process again as show above.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://support.emby.media/support/solutions/articles/44001160798-amazon-alexa" class="contribution-link">On FreshDesk</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Alexa.md/#L1" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2023 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../searchIndex.js"></script>
+    <script type="text/javascript" src="../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
