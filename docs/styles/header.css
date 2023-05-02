@@ -172,6 +172,10 @@
     color: var(--highlight-dark)
 }
 
+.navbar .navbar-collapse .navbar-nav .nav-item:last-child .nav-link {
+    color: var(--highlight-dark)
+}
+
 .navbar .navbar-collapse .nav-item:not(.no-hover):not(.active):hover .nav-link {
     color: var(--header-ft-color)
 }
