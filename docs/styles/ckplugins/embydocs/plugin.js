@@ -3,9 +3,9 @@
 
 (function () {
 
-    CKEDITOR.plugins.addExternal('textmatch', 'https://support2.emby.media/styles/ckplugins/textmatch/plugin.js');
-    CKEDITOR.plugins.addExternal('autocomplete', 'https://support2.emby.media/styles/ckplugins/autocomplete/plugin.js');
-    CKEDITOR.plugins.addExternal('textwatcher', 'https://support2.emby.media/styles/ckplugins/textwatcher/plugin.js');
+    CKEDITOR.plugins.addExternal('textmatch', 'https://emby.media/support/styles/ckplugins/textmatch/plugin.js');
+    CKEDITOR.plugins.addExternal('autocomplete', 'https://emby.media/support/styles/ckplugins/autocomplete/plugin.js');
+    CKEDITOR.plugins.addExternal('textwatcher', 'https://emby.media/support/styles/ckplugins/textwatcher/plugin.js');
 
     let xrefData;
     const maxResults = 50;
@@ -136,13 +136,13 @@
                         return;
                     }
 
-                    fetch('https://support2.emby.media/xrefmap.yml')
+                    fetch('https://emby.media/support/xrefmap.yml')
                         .then(response => response.text())
                         .then(yaml => {
 
                             xrefData = [];
 
-                            parseXrefData(yaml, xrefData, 'https://support2.emby.media/', 'Documentation');
+                            parseXrefData(yaml, xrefData, 'https://emby.media/support/', 'Documentation');
 
                             fetch('https://dev.emby.media/xrefmap.yml')
                                 .then(response => response.text())
