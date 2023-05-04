@@ -90,8 +90,8 @@
                 function matchCallback(text, offset) {
                     // Get the text before the caret.
                     var left = text.slice(0, offset),
-                        // Will look for a '#' character followed by a search term
-                        match = left.match(/#[a-zA-Z\d-.]*$/);
+                        // Will look for two '##' characters followed by a search term
+                        match = left.match(/##[a-zA-Z\d-.]*$/);
 
                     if (!match) {
                         return null;
@@ -107,8 +107,8 @@
                 // Returns (through its callback) the suggestions for the current query.
                 function dataCallback(matchInfo, callback) {
 
-                    // Remove the '#' tag.
-                    var query = matchInfo.query.substring(1);
+                    // Remove the '##' tag.
+                    var query = matchInfo.query.substring(2);
 
                     function simpleSearch(searchStr) {
                         if (searchStr.length === 0) {
