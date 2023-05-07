@@ -62,6 +62,15 @@
         addItem(currentData);
     }
 
+    function setDisplayType(item) {
+
+        if (item.type === 'Documentation') {
+            item.displayType = '';
+        } else {
+            item.displayType = 'Emby ' + item.type + ': ';
+        }
+    }
+    
     CKEDITOR.plugins.add('embydocs', {
         requires: 'autocomplete,textmatch',
 
@@ -114,6 +123,7 @@
                         if (searchStr.length === 0) {
                             let suggestions1 = [];
                             for (let i = 0; i < maxResults && i < xrefData.length; i++) {
+                                setDisplayType(xrefData[i]);
                                 suggestions1.push(xrefData[i]);
                             }
                             callback(suggestions1);
@@ -123,6 +133,7 @@
                         let suggestions = [];
                         for (let i = 0; i < xrefData.length && suggestions.length < maxResults; i++) {
                             if (String(xrefData[i].search).indexOf(searchStr.toLowerCase()) !== -1) {
+                                setDisplayType(xrefData[i]);
                                 suggestions.push(xrefData[i]);
                             }
                         }
@@ -168,7 +179,7 @@
 
                 // Define the templates of the autocomplete suggestions dropdown and output text.
                 config.itemTemplate = '<li data-id="{id}">{type}: {name}</li>';
-                config.outputTemplate = '<a href="{href}">Emby {type}: {name}</a> ';
+                config.outputTemplate = '<a href="{href}">{displayType}{name}</a> ';
 
                 // Attach autocomplete to the editor.
                 new CKEDITOR.plugins.autocomplete(editor, config);
