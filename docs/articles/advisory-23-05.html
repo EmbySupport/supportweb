@@ -171,27 +171,20 @@ As the given situation requires direct action and assessment by the administrato
 <p>Analysis of the plug-in has revealed that it is forwarding the login credentials including the password for every successful login to an external server under control of the hackers.</p>
 <h2 id="actions-to-take">Actions to Take</h2>
 <ul>
-<li>The first thing you need to do is to look for the actual plug-in which comes as <code>helper.dll</code> and <code>EmbyHelper.dll</code>
+<li>Delete the plugin .dll file, which comes as <code>helper.dll</code> and <code>EmbyHelper.dll</code>
 <ul>
 <li>Primary location is the <code>plugins</code> folder under Emby's <code>programdata</code> folder</li>
 <li>Also look in <code>cache</code> and <code>data</code> subfolders</li>
 </ul>
 </li>
-<li>Add an entry to your etc/hosts file:
+<li>Add an entry to your server machine etc/hosts file:
 emmm.spxaebjhxtmddsri.xyz    127.0.0.1
 This is the host name of the control server which the malware is communicating with</li>
-<li>You need to assume that all users and passwords are compromised
-(postpone this until you restart your emby server)
-<ul>
-<li>Assign new passwords to all accounts</li>
-<li>don't allow local login without password for anybody
-(ideally you disable all features that are specific to &quot;local network&quot;</li>
-<li>make sure no user has an empty password</li>
+<li>Assign new passwords to all of your Emby Server users</li>
+<li>Don't allow local login without password</li>
+<li>Ensure no user has an empty password</li>
 </ul>
-</li>
-</ul>
-<p>We don't know what the hacker did while he had access to your system and whether he made any changes, but it is imperative you investigate all of the above.</p>
-<p>In review - very very carefully - go over every single bit of your system and look for</p>
+<p>Review your server machine for:</p>
 <ul>
 <li>Suspicious user accounts</li>
 <li>Unknown processes</li>
@@ -213,7 +206,7 @@ This is the host name of the control server which the malware is communicating w
 </ul>
 </li>
 <li>Start Emby Server</li>
-<li>Now perform all the user account cleanup mentioned above</li>
+<li>Now perform all the user account changes mentioned above</li>
 <li>Reconsider security - go through all Emby settings, especially network settings and tighten security as much as possible</li>
 <li>Re-Enable public network access
 <ul>
