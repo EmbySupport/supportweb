@@ -161,7 +161,7 @@
 <li>Emby Server does not start anymore since  2023-05-25</li>
 <li>You encounter the following message in the Emby Server log:
 <em>We have detected a malicious plugin on your system which has probably been installed without your knowledge. Please see <a href="https://emby.media/support/articles/advisory-23-05.html">https://emby.media/support/articles/advisory-23-05.html</a> for more information on how to proceed. For your safety we have shutdown your Emby Server as a precautionary measure</em> <strong>Note: Your server was never directly accessed by us. We used our standard update mechanism</strong></li>
-<li>You encounter an error entry in the Windows event log, <code>Source=&quot;.NET Runtime&quot;, EventId=1025</code> with the same text as above in the event details</li>
+<li>On Windows installs, you encounter an error entry in the Windows event log, <code>Source=&quot;.NET Runtime&quot;, EventId=1025</code> with the same text as above in the event details</li>
 </ul>
 <h2 id="background">Background</h2>
 <p>Starting Mid-May 2023, a hacker managed to infiltrate user-hosted instances of Emby Server which were accessible via public internet and had an insecure configuration for administrative user accounts. Combined with the &quot;Proxy Header Vulnerability&quot;, which was recently fixed in the beta channel, this allowed an attacker to gain administrative access on such systems.
