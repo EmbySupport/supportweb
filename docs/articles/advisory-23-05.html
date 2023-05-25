@@ -157,90 +157,67 @@
 <h2 id="applicability">Applicability</h2>
 <p>This article applies to cases where you are experiencing one or more of the following symptoms:</p>
 <ul>
-<li>Your Emby Server has shut itself down on 2023-05-25</li>
-<li>Emby Server does not start anymore since  2023-05-25</li>
-<li>You encounter the following message in the Emby Server log:
-<em>We have detected a malicious plugin on your system which has probably been installed without your knowledge. Please see <a href="https://emby.media/support/articles/advisory-23-05.html">https://emby.media/support/articles/advisory-23-05.html</a> for more information on how to proceed. For your safety we have shutdown your Emby Server as a precautionary measure</em></li>
-<li>You encounter an error entry in the Windows event log, <code>Source=&quot;.NET Runtime&quot;, EventId=1025</code> with the same text as above in the event details</li>
+<li>Your Emby Server has shut down and will not start effective 2023-05-25</li>
+<li>You encounter a message in the Emby Server log file starting with &quot;We have detected a malicious plugin on your system which has probably been installed without your knowledge.&quot;</li>
+<li>You encounter an error entry in the Windows event log, Source=&quot;.NET Runtime&quot;, EventId=1025 with the same text as above in the event details</li>
 </ul>
 <h2 id="background">Background</h2>
-<p>Starting Mid-May 2023, a group of hackers managed to infiltrate user-hosted instances of Emby Server which were accessible via public internet and had an insecure configuration for administrative user accounts. Combined with the &quot;Proxy Header Vulnerability&quot;, which was recently fixed in the beta channel, this allowed an attacker to gain administrative access on such systems.
-Eventually, this allowed the attackers to install a custom plugin of their own, which establishes a backdoor in the running process of Emby Server.</p>
-<p>After careful analysis and evaluation of possible strategies for mitigation, the Emby team was able to push out an update to Emby Server instances which is able to detect the plugin in question and prevents it from being loaded. Due to the severity and the nature of this situation and in an abundance of caution we are preventing affected servers to start up again after the detection, even with the plug-in being locked out, as all data and user accounts need to be considered as compromised.
-As the given situation requires direct action and assessment by the administrator, we determined that shutting down the server and preventing further startup up is the most suitable action as it disables the plug-in, possibly prevents the situation from getting worse and at the same time draws the attention of the administrator onto the subject.</p>
+<p>Starting Mid-May 2023, it was discovered a hacker(s) had managed to use a &quot;Proxy Header Vulnerability&quot; to infiltrate Emby Servers improperly configured for remote access, gaining admin access with ability to install a custom plugin. Note: Emby Server version 4.8 (beta) already contains fixes that would have prevented this.</p>
+<p>After careful analysis and evaluation of possible mitigation strategies, the Emby team was able to push out updates to Emby Server instances which enabled detection of the custom plugin used by the exploit and prevent it from running.</p>
+<p>The Emby team determined that shutting down the server and preventing further startup up as the most suitable action as it disables the plug-in and draws the attention of the administrator to find out why the server isn't running.</p>
 <h2 id="risk-and-impact">Risk and Impact</h2>
-<p>A positive detection of the attack in question implies that it is either currently running or that it has been in an active state before. It must be assumed that all data which is accessible to the user account under which Emby Server is configured to operate may have been compromised.  Analysis of the plug-in has revealed that it is forwarding the login credentials including the password for every successful login to an external server under control of the hackers.</p>
-<ul>
-<li>All user names and all passwords are probably known to the hackers</li>
-<li>File system structure, disks, network shares, file names and file contents may be known by the hackers
-(at least as far as accessible by the Emby server account)</li>
-</ul>
-<p>We don't have any knowledge of the following but server administrators should investigate and assume these are possible:</p>
-<ul>
-<li>Additional backdoors could have been installed.</li>
-<li>Scripts may have been added which run on system start or on specific actions</li>
-<li>There may be processes which have been configured to run</li>
-<li>Firewall rules may have been changed</li>
-<li>Network configuration may have been changed</li>
-<li>Open ports may have been added (configured) - for existing or for new processes</li>
-<li>System user accounts may have been changed or added</li>
-</ul>
-<p>Essentially everything on a system could have been changed, so a careful and thorough investigation is mandatory.</p>
+<p>It is best to assume a positive detection of intrusion has allowed access to Emby Server configuration data as well as system data available to the operating system account used to run Emby Server.</p>
 <h2 id="actions-to-take">Actions to Take</h2>
 <ul>
-<li>The first thing you need to do is to look for the actual plug-in which comes as <code>helper.dll</code> and <code>EmbyHelper.dll</code>
-<ul>
-<li>Primary location is the <code>plugins</code> folder under Emby's <code>programdata</code> folder</li>
-<li>Also look in <code>cache</code> and <code>data</code> subfolders</li>
-</ul>
+<li><p>Remove any plug-in named helper.dll or EmbyHelper.dll
+Primary location is the plugins folder under Emby's programdata folder
+Also look in cache and data subfolders</p>
 </li>
-<li>Add an entry to your etc/hosts file:
-emmm.spxaebjhxtmddsri.xyz    127.0.0.1
-This is the host name of the control server which the malware is communicating with</li>
-<li>You need to assume that all users and passwords are compromised
-(postpone this until you restart your emby server)
-<ul>
-<li>Assign new passwords to all accounts</li>
-<li>don't allow local login without password for anybody
-(ideally you disable all features that are specific to &quot;local network&quot;</li>
-<li>make sure no user has an empty password</li>
-</ul>
+<li><p>Add an entry to your etc/hosts file:</p>
+<pre><code>       emmm.spxaebjhxtmddsri.xyz 127.0.0.1
+</code></pre>
+<p>Note: This is the host name of the control server which the malware is communicating with</p>
 </li>
-</ul>
-<p>We don't know what the hacker did while he had access to your system and whether he made any changes, but it is imperative you investigate all of the above.</p>
-<p>In review - very very carefully - go over every single bit of your system and look for</p>
-<ul>
-<li>Suspicious user accounts</li>
-<li>Unknown processes</li>
-<li>Unknown network connections and open ports</li>
-<li>SSH configuration</li>
-<li>Firewall rules</li>
-<li>Change all passwords</li>
-<li>Depending on the required effort and other usages of your system, it might make sense to make a backup of the emby configuration and re-setup your system</li>
+<li><p>Change the password of the OS system account running Emby Server</p>
+</li>
+<li><p>Run a complete Malware and Virus scan on the full system.</p>
+</li>
+<li><p>Check the OS itself for
+Suspicious user accounts
+Unknown processes
+Unknown network connections and open ports
+SSH configuration changes if applicable
+Firewall rule changes</p>
+</li>
 </ul>
 <h2 id="getting-emby-server-to-start-again">Getting Emby Server to Start Again</h2>
 <p>After (and only after) you have done the above:</p>
 <ul>
-<li>Disable external network access</li>
-<li>Go to the following folder under the emby <code>programdata</code> folder:
-<code>programdata/plugins/configurations</code>
-<ul>
-<li>Find the file named <code>ReadyState.xml</code> and delete it.</li>
-<li>Find the file named 'EmbyScripterX.xml' and delete it (if exists)</li>
-</ul>
+<li><p>Disable your router's port forwarding rule used for remote access to the Emby Server</p>
 </li>
-<li>Start Emby Server</li>
-<li>Now perform all the user account cleanup mentioned above</li>
-<li>Reconsider security - go through all Emby settings, especially network settings and tighten security as much as possible</li>
-<li>Re-Enable public network access
-<ul>
-<li>Consider changing IP address, port, or DNS name  (whatever applicable)</li>
-</ul>
+<li><p>Go to the following folder under the emby programdata folder:</p>
+<p>programdata/plugins/configurations</p>
 </li>
-</ul>
-<h2 id="emby-server-4712-security-update">Emby Server 4.7.12 Security Update</h2>
-<ul>
-<li>Watch out for this update and install as soon as it becomes available</li>
+<li><p>Delete the file named ReadyState.xml.</p>
+</li>
+<li><p>Delete the file named 'EmbyScripterX.xml' (if exists)</p>
+</li>
+<li><p><strong>Update Emby Server to 4.7.12 or newer. Beta Servers use version 4.8.0.31 or newer.</strong></p>
+</li>
+<li><p>Start Emby Server</p>
+</li>
+<li><p>Assign new passwords to all accounts.</p>
+</li>
+<li><p>Set all admin accounts to use &quot;Require a password on the local network&quot;. Best to configure all accounts this way.</p>
+</li>
+<li><p>Configure admin accounts to &quot;Hide this user from login screens on the local network&quot; as well as &quot;Hide this user from login screens when connected remotely&quot;.</p>
+</li>
+<li><p>Consider setting up non admins accounts to use &quot;Hide this user from login screens on devices they've never signed into&quot;.</p>
+</li>
+<li><p>Tighten security as much as possible, especially network settings.</p>
+</li>
+<li><p>Enable your router's port forwarding rule used for remote access to the Emby Server</p>
+</li>
 </ul>
 
 
