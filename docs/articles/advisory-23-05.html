@@ -169,12 +169,6 @@ Eventually, this allowed the attackers to install a custom plugin of their own, 
 <p>Analysis of the plug-in has revealed that it is forwarding the private Emby Server login credentials including the password for every successful login to an external server under control of the hackers.</p>
 <h2 id="actions-to-take">Actions to Take</h2>
 <ul>
-<li>Delete the plugin .dll file, which comes as <code>helper.dll</code> and <code>EmbyHelper.dll</code>
-<ul>
-<li>Primary location is the <code>plugins</code> folder under the <a href="Server-Data-Folder.html">Emby Server Data Folder</a></li>
-<li>Also look in <code>cache</code> and <code>data</code> subfolders</li>
-</ul>
-</li>
 <li>Add an entry to your server machine etc/hosts file:
 emmm.spxaebjhxtmddsri.xyz    127.0.0.1
 This is the host name of the control server which the malware is communicating with</li>
@@ -197,6 +191,7 @@ This is the host name of the control server which the malware is communicating w
 <ul>
 <li>Find the file named <code>ReadyState.xml</code> and delete it.</li>
 <li>Find the file named 'EmbyScripterX.xml' and delete it (if exists)</li>
+<li>Delete the plugin .dll file(s), which comes as <code>helper.dll</code> and/or <code>EmbyHelper.dll</code>. The primary location of these is the <code>plugins</code> folder under the <a href="Server-Data-Folder.html">Emby Server Data Folder</a></li>
 </ul>
 </li>
 <li>Start Emby Server</li>
