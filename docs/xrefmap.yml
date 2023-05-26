@@ -349,6 +349,9 @@ references:
 - uid: Secure-Your-Server
   name: Secure Your Server
   href: articles/Secure-Your-Server.html
+- uid: Server-Data-Folder
+  name: Emby Server Data Folder
+  href: articles/Server-Data-Folder.html
 - uid: Server-Installation-Shield
   name: Server Installation on Shield TV
   href: articles/Server-Installation-Shield.html
