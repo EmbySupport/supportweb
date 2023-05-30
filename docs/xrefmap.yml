@@ -147,6 +147,9 @@ references:
 - uid: Hosting-Settings
   name: Network (Hosting) Settings
   href: articles/Hosting-Settings.html
+- uid: How-to-Set-Permissions-on-DSM-7
+  name: How to Set Permissions on DSM 7
+  href: articles/How-to-Set-Permissions-on-DSM-7.html
 - uid: Hwa-Fails-with-RDP
   name: HWA fails with RDP
   href: articles/Hwa-Fails-with-RDP.html
