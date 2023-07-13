@@ -169,292 +169,260 @@
        Seinfeld S01E02.mp4
 
 </code></pre>
-<h2 id="complex-folder-structure">Complex Folder Structure</h2>
-<p>In more complex situations where your top-level directory is further sub-divided before the show folders, the recommended option is to create a TV media folder and add the sub-folder locations instead of the top level folder.</p>
-<p>For example:</p>
-<pre><code> \TV
-     \A-M
-       \Glee (2009)
-          \Season 1
-             Glee S01E01.mp4
-     \N-Z
-       \Seinfeld (1989)
-          \Season 1
-             Seinfeld S01E01.mp4
+<h2 id="id-tags-in-folder--file-names">ID Tags in Folder &amp; File Names</h2>
+<p>Emby can also read a Meta-Data ID from the name.</p>
+<p>Format:</p>
+<pre><code>Name (Year) [tmdbid=xxxx]
+</code></pre>
+<p>Example:</p>
+<pre><code>The Vampire Diaries (2009) [tmdbid=18165]
+</code></pre>
+<p>Emby supports the following tags with the host website for lookup.</p>
+<ul>
+<li><p>tmdbid  (<a href="https://www.themoviedb.org/">https://www.themoviedb.org/</a>)</p>
+</li>
+<li><p>imdbid  (<a href="https://www.imdb.com/">https://www.imdb.com/</a>)</p>
+</li>
+<li><p>tvdbid  (<a href="https://thetvdb.com/">https://thetvdb.com/</a>)</p>
+</li>
+</ul>
+<p>Note:  tmdbid is the preferred tag to use for most uses</p>
+<h2 id="multi-version-movies">Multi-version movies</h2>
+<p>Multiple versions of the same content can be stored in a single movie folder.</p>
+<pre><code>## Complex Folder Structure
+
+In more complex situations where your top-level directory is further sub-divided before the show folders, the recommended option is to create a TV media folder and add the sub-folder locations instead of the top level folder. 
+
+For example:
 
 </code></pre>
-<p>In the above example, the recommended setup is to create a TV media folder, and then add the <strong>A-M</strong> and <strong>N-Z</strong> library paths.</p>
-<p>For more information on setting up the library, see <a href="Library-Setup.html">Library Setup</a>.</p>
-<h3 id="dvd-and-blu-ray-episodes">DVD and Blu-ray episodes</h3>
-<p>Dvd and Blu-ray folder structures are also supported. The folders can have any name, but using episode numbers will improve the ability to download and display metadata.</p>
-<p>To be recognized as a dvd structure, the folder must contain either a VIDEO_TS subfolder, or a VIDEO_TS.ifo file. To be recognized as a blu-ray structure, the folder must contain a BDMV subfolder.</p>
-<pre><code> \TV
-    \Glee (2009)
-       \Season 1
-          \Glee S01E01-E04
-              \VIDEO_TS
-          \Glee S01E05-E08
-              VIDEO_TS.IFO
-          \Glee S01E09-E10
-              \BDMV
+<p>\TV
+\A-M
+\Glee (2009)
+\Season 1
+Glee S01E01.mp4
+\N-Z
+\Seinfeld (1989)
+\Season 1
+Seinfeld S01E01.mp4</p>
+<pre><code>
+In the above example, the recommended setup is to create a TV media folder, and then add the **A-M** and **N-Z** library paths. 
+
+For more information on setting up the library, see [Library Setup](Library-Setup.md).
+
+### DVD and Blu-ray episodes
+
+Dvd and Blu-ray folder structures are also supported. The folders can have any name, but using episode numbers will improve the ability to download and display metadata. 
+
+To be recognized as a dvd structure, the folder must contain either a VIDEO_TS subfolder, or a VIDEO_TS.ifo file. To be recognized as a blu-ray structure, the folder must contain a BDMV subfolder.
 
 </code></pre>
-<h2 id="mixed-content-libraries">Mixed Content Libraries</h2>
-<p>TV series are supported in mixed content libraries using the Unset content type, but season sub-folders are required in this scenario.</p>
-<h2 id="episode-naming-conventions">Episode naming conventions</h2>
-<p>A number of naming conventions are supported:</p>
-<ul>
-<li>show name - S01E01 - Episode Name.ext</li>
-<li>show name S01E01 Episode Name.ext</li>
-<li>anything_s01e02.ext</li>
-<li>anything_s1e2.ext</li>
-<li>anything_s01.e02.ext</li>
-<li>anything_s01_e02.ext</li>
-<li>anything_1x02.ext</li>
-<li>anything_102.ext</li>
-<li>anything_1x02.ext</li>
-<li>02 Episode Name.ext</li>
-<li>s01e02.ext</li>
-<li>1x02.ext</li>
-</ul>
-<h3 id="by-date">By date</h3>
-<p>Common for long-running daily shows, you can also use the date the episode aired.</p>
-<ul>
-<li>anything_1996.11.14.ext</li>
-<li>anything_1996-11-14.ext</li>
-<li>anything_14.11.1996.ext</li>
-</ul>
-<h2 id="multi-version-episodes">Multi-Version Episodes</h2>
-<p>Multi-Version Episodes are best using the following format:</p>
-<ul>
-<li>show name - S01E01 - Display Name 1.ext</li>
-<li>show name - S01E01 - Display Name 2.ext</li>
-</ul>
-<p>For example:
+<p>\TV
+\Glee (2009)
+\Season 1
+\Glee S01E01-E04
+\VIDEO_TS
+\Glee S01E05-E08
+VIDEO_TS.IFO
+\Glee S01E09-E10
+\BDMV</p>
+<pre><code>
+## Mixed Content Libraries
+
+TV series are supported in mixed content libraries using the Unset content type, but season sub-folders are required in this scenario.
+
+## Episode naming conventions
+
+A number of naming conventions are supported:
+
+* show name - S01E01 - Episode Name.ext
+* show name S01E01 Episode Name.ext
+* anything_s01e02.ext
+* anything_s1e2.ext
+* anything_s01.e02.ext
+* anything_s01_e02.ext
+* anything_1x02.ext
+* anything_102.ext
+* anything_1x02.ext
+* 02 Episode Name.ext
+* s01e02.ext
+* 1x02.ext
+
+### By date
+
+Common for long-running daily shows, you can also use the date the episode aired.
+
+* anything_1996.11.14.ext
+* anything_1996-11-14.ext
+* anything_14.11.1996.ext
+
+## Multi-Version Episodes
+
+Multi-Version Episodes are best using the following format:
+
+* show name - S01E01 - Display Name 1.ext
+* show name - S01E01 - Display Name 2.ext
+
+For example:
 Star Trek, The Next Generation - S01E01 - Original Broadcast.mkv
-Star Trek, The Next Generation - S01E01 - Digital Remix.mkv</p>
-<p>anything following the &quot;-&quot; (dash) up to the file extension will be used in the drop down version selector in your Emby client. In this case the two versions show in the interface will be &quot;Original Broadcast&quot; &amp; &quot;Digital Remix&quot;.</p>
-<h2 id="multi-episode-files">Multi-Episode files</h2>
-<p>All multi-episode files must be part of the same season.</p>
-<p>The following conventions are supported:</p>
-<ul>
-<li>01x02x03 episode name.ext</li>
-<li>S01x02x03 episode name.ext</li>
-<li>S01E02E03 episode name.ext</li>
-<li>S01xE02xE03 episode name.ext</li>
-<li>S01E02-E03 episode name.ext</li>
-<li>S01E02-X03 episode name.ext</li>
-<li>01x02 01x03 episode name.ext</li>
-<li>01x02 - 01x03 episode name.ext</li>
-<li>01x02 - 01x05 episode name.ext (includes episodes 2,3,4 and 5)</li>
-<li>01x02 - x03 episode name.ext</li>
-<li>01x02 - x05 episode name.ext</li>
-<li>S01x02.S01x03 episode name.ext</li>
-<li>S01x02 - S01x03 episode name.ext</li>
-<li>show name 01x02x03 episode name.ext</li>
-<li>show name S01x02x03 episode name.ext</li>
-<li>show name S01E02E03 episode name.ext</li>
-<li>show name S01xE02xE03 episode name.ext</li>
-<li>show name S01E02-E03 episode name.ext</li>
-<li>show name S01E02-E05 episode name.ext</li>
-<li>show name S01E02-X03 episode name.ext</li>
-<li>show name S01E02-X05 episode name.ext</li>
-<li>show name 01x02 01x03 episode name.ext</li>
-<li>show name 01x02 - 01x03 episode name.ext</li>
-<li>show name 01x02 - x03 episode name.ext</li>
-<li>show name S01x02.S01x03 episode name.ext</li>
-<li>show name S01x02 - S01x03 episode name.ext</li>
-</ul>
-<h2 id="specials">Specials</h2>
-<p>Specials should be named using one of the following season folder names:</p>
-<ul>
-<li>Season 0</li>
-<li>Season 00</li>
-<li>Specials</li>
-</ul>
-<p>For example:</p>
-<pre><code> \TV
-    \Glee (2009)
-       \Season 0
-          Glee S00E01.mp4
+Star Trek, The Next Generation - S01E01 - Digital Remix.mkv
+
+anything following the &quot;-&quot; (dash) up to the file extension will be used in the drop down version selector in your Emby client. In this case the two versions show in the interface will be &quot;Original Broadcast&quot; &amp; &quot;Digital Remix&quot;.
+
+
+## Multi-Episode files
+
+All multi-episode files must be part of the same season.
+
+The following conventions are supported:
+
+* 01x02x03 episode name.ext
+* S01x02x03 episode name.ext
+* S01E02E03 episode name.ext
+* S01xE02xE03 episode name.ext
+* S01E02-E03 episode name.ext
+* S01E02-X03 episode name.ext
+* 01x02 01x03 episode name.ext
+* 01x02 - 01x03 episode name.ext
+* 01x02 - 01x05 episode name.ext (includes episodes 2,3,4 and 5)
+* 01x02 - x03 episode name.ext
+* 01x02 - x05 episode name.ext
+* S01x02.S01x03 episode name.ext
+* S01x02 - S01x03 episode name.ext
+* show name 01x02x03 episode name.ext
+* show name S01x02x03 episode name.ext
+* show name S01E02E03 episode name.ext
+* show name S01xE02xE03 episode name.ext
+* show name S01E02-E03 episode name.ext
+* show name S01E02-E05 episode name.ext
+* show name S01E02-X03 episode name.ext
+* show name S01E02-X05 episode name.ext
+* show name 01x02 01x03 episode name.ext
+* show name 01x02 - 01x03 episode name.ext
+* show name 01x02 - x03 episode name.ext
+* show name S01x02.S01x03 episode name.ext
+* show name S01x02 - S01x03 episode name.ext
+
+## Specials
+
+Specials should be named using one of the following season folder names:
+
+* Season 0
+* Season 00
+* Specials
+
+For example:
 
 </code></pre>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Please see Ordering TV Show Special/Extras to learn how to place these specials in the proper timeline.</p>
-</div>
-<h2 id="series--season-images">Series &amp; Season Images</h2>
-<p>Images are supported in both series and season folders. Below is a table of the supported image file names. Supported image extensions are <strong>jpg</strong>, <strong>jpeg</strong>, <strong>png</strong> and <strong>tbn</strong>.</p>
-<p>Several image types support multiple file names. They are listed in the order that they're checked for.</p>
-<table>
-<thead>
-<tr>
-<th>Image Type</th>
-<th>Supported file names</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Primary</td>
-<td>folder.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>poster.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>cover.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>default.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>show.ext (series folder only)</td>
-</tr>
-<tr>
-<td>Art</td>
-<td>clearart.ext</td>
-</tr>
-<tr>
-<td>Backdrop</td>
-<td>backdrop.ext, backdropX.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>fanart.ext, fanart-X.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>background.ext, background-X.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>art.ext, art-X.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>extrafanart (subfolder)/fanartX.ext</td>
-</tr>
-<tr>
-<td>Banner</td>
-<td>banner.ext</td>
-</tr>
-<tr>
-<td>Disc</td>
-<td>disc.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>cdart.ext</td>
-</tr>
-<tr>
-<td>Logo</td>
-<td>logo.ext</td>
-</tr>
-<tr>
-<td>Thumb</td>
-<td>thumb.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>landscape.ext</td>
-</tr>
-</tbody>
-</table>
-<p>For backdrops, X represents a number, and you can have any amount of numbered backdrops. For example:</p>
-<pre><code> \TV
-    \Glee (2009)
-       backdrop.ext
-       backdrop1.ext
-       backdrop2.ext
-       backdrop3.ext
+<p>\TV
+\Glee (2009)
+\Season 0
+Glee S00E01.mp4</p>
+<pre><code>
+&gt; [!TIP]
+&gt; Please see Ordering TV Show Special/Extras to learn how to place these specials in the proper timeline.
+
+## Series &amp; Season Images
+
+Images are supported in both series and season folders. Below is a table of the supported image file names. Supported image extensions are **jpg**, **jpeg**, **png** and **tbn**.
+
+Several image types support multiple file names. They are listed in the order that they're checked for.
+
+| Image Type | Supported file names                |
+|------------|-------------------------------------|
+| Primary    | folder.ext                          |
+|            | poster.ext                          |
+|            | cover.ext                           |
+|            | default.ext                         |
+|            | show.ext (series folder only)       |
+| Art        | clearart.ext                        |
+| Backdrop   | backdrop.ext, backdropX.ext         |
+|            | fanart.ext, fanart-X.ext            |
+|            | background.ext, background-X.ext    |
+|            | art.ext, art-X.ext                  |
+|            | extrafanart (subfolder)/fanartX.ext |
+| Banner     | banner.ext                          |
+| Disc       | disc.ext                            |
+|            | cdart.ext                           |
+| Logo       | logo.ext                            |
+| Thumb      | thumb.ext                           |
+|            | landscape.ext                       |
+
+For backdrops, X represents a number, and you can have any amount of numbered backdrops. For example:
 
 </code></pre>
-<h2 id="season-images-without-season-folder">Season images without season folder</h2>
-<p>If season folders are not used, season images can still be supplied directly in the series folder, using a naming convention to indicate the season.</p>
-<table>
-<thead>
-<tr>
-<th>Image Type</th>
-<th>Supported file names</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Primary</td>
-<td>seasonXX-poster.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>season-specials-poster.ext</td>
-</tr>
-<tr>
-<td>Backdrop</td>
-<td>seasonXX-fanart.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>season-specials-fanart.ext</td>
-</tr>
-<tr>
-<td>Banner</td>
-<td>seasonXX-banner.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>season-specials-banner.ext</td>
-</tr>
-<tr>
-<td>Thumb</td>
-<td>seasonXX-landscape.ext</td>
-</tr>
-<tr>
-<td></td>
-<td>season-specials-landscape.ext</td>
-</tr>
-</tbody>
-</table>
-<p>For example:</p>
-<pre><code> \TV
-    \Glee (2009)
-       season01-poster.jpg
-       season-specials-poster.jpg
-       season01-fanart.jpg
-       season-specials-fanart.jpg
-       season01-banner.jpg
-       season-specials-banner.jpg
-       season01-landscape.jpg
-       season-specials-landscape.jpg
+<p>\TV
+\Glee (2009)
+backdrop.ext
+backdrop1.ext
+backdrop2.ext
+backdrop3.ext</p>
+<pre><code>
+## Season images without season folder
+
+If season folders are not used, season images can still be supplied directly in the series folder, using a naming convention to indicate the season.
+
+| Image Type | Supported file names          |
+|------------|-------------------------------|
+| Primary    | seasonXX-poster.ext           |
+|            | season-specials-poster.ext    |
+| Backdrop   | seasonXX-fanart.ext           |
+|            | season-specials-fanart.ext    |
+| Banner     | seasonXX-banner.ext           |
+|            | season-specials-banner.ext    |
+| Thumb      | seasonXX-landscape.ext        |
+|            | season-specials-landscape.ext |
+
+For example:
 
 </code></pre>
-<h2 id="episode-images">Episode Images</h2>
-<p>The following naming conventions are supported for episode images:</p>
-<ul>
-<li>{name}-thumb.ext (in same folder)</li>
-<li>{name}.ext (in metadata sub-folder)</li>
-</ul>
-<p>Supported image extensions are <strong>jpg</strong>, <strong>jpeg</strong>, <strong>png</strong> and <strong>tbn</strong>.</p>
-<p>For example:</p>
-<pre><code> \TV
-    \Glee (2009)
-       \Season 1
-          Glee S01E01.mp4
-          Glee S01E01-thumb.jpg
-       \Season 2
-          Glee S02E01.mp4
+<p>\TV
+\Glee (2009)
+season01-poster.jpg
+season-specials-poster.jpg
+season01-fanart.jpg
+season-specials-fanart.jpg
+season01-banner.jpg
+season-specials-banner.jpg
+season01-landscape.jpg
+season-specials-landscape.jpg</p>
+<pre><code>
+## Episode Images
+
+The following naming conventions are supported for episode images:
+
+* {name}-thumb.ext (in same folder)
+* {name}.ext (in metadata sub-folder)
+
+Supported image extensions are **jpg**, **jpeg**, **png** and **tbn**.
+
+For example:
 
 </code></pre>
-<h2 id="3d-episodes">3D episodes</h2>
-<p>3D episodes files are supported. See <a href="3D-Videos.html">3D videos</a>.</p>
-<h2 id="media-stubs">Media stubs</h2>
-<p>Media stubs are supported as episodes. See <a href="Media-Stubs.html">media stubs</a>.</p>
-<h2 id="strm-files">Strm files</h2>
-<p>Strm files are supported as episodes. See <a href="Strm-Files.html">strm files</a>.</p>
-<h2 id="subtitles">Subtitles</h2>
-<p>Subtitles for episode files are supported. See <a href="Subtitles.html">subtitles</a>.</p>
+<p>\TV
+\Glee (2009)
+\Season 1
+Glee S01E01.mp4
+Glee S01E01-thumb.jpg
+\Season 2
+Glee S02E01.mp4</p>
+<pre><code>
+## 3D episodes
+
+3D episodes files are supported. See [3D videos](3D-Videos.md).
+
+## Media stubs
+
+Media stubs are supported as episodes. See [media stubs](Media-Stubs.md).
+
+## Strm files
+
+Strm files are supported as episodes. See [strm files](Strm-Files.md).
+
+## Subtitles
+
+Subtitles for episode files are supported. See [subtitles](Subtitles.md).
+</code></pre>
 
 
             </article>
