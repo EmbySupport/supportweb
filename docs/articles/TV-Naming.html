@@ -171,9 +171,23 @@
 </code></pre>
 <h2 id="id-tags-in-folder--file-names">ID Tags in Folder &amp; File Names</h2>
 <p>Emby can also read a Meta-Data ID from the name.</p>
-<p>Format:</p>
-<pre><code>Name (Year) [tmdbid=xxxx]
-</code></pre>
+<p>Supported Formats:</p>
+<ul>
+<li>Name (Year) [tvdbid=xxxx]</li>
+<li>Name (Year) [tvdbid-xxxx]</li>
+<li>Name (Year) [tvdb=xxxx]</li>
+<li>Name (Year) [tvdb-xxxx]</li>
+<li>Name (Year) {tvdbid=xxxx}</li>
+<li>Name (Year) {tvdbid-xxxx}</li>
+<li>Name (Year) {tvdb=xxxx}</li>
+<li>Name (Year) {tvdb-xxxx}</li>
+</ul>
+<p>Supported ID's:</p>
+<ul>
+<li>tvdb</li>
+<li>tmdb</li>
+<li>imdb</li>
+</ul>
 <p>Example:</p>
 <pre><code>The Vampire Diaries (2009) [tmdbid=18165]
 </code></pre>

@@ -179,8 +179,23 @@ It will look like this:</p>
 <p>When viewing your media outside of Emby using conventional tools such as Windows Explorer this allows you to navigate your library much quicker without having to wait for thousands of folders to load.  It saves you from scrolling through thousands of folders to get to your &quot;W&quot; movies for example. Emby will work just fine with or without this additional folder!</p>
 <h2 id="id-tags-in-folder--file-names">ID Tags in Folder &amp; File Names</h2>
 <p>Emby can also read a Meta-Data ID from the name.</p>
-<p>Format:
-Name (Year) [tvdbid=xxxx]</p>
+<p>Supported Formats:</p>
+<ul>
+<li>Name (Year) [tvdbid=xxxx]</li>
+<li>Name (Year) [tvdbid-xxxx]</li>
+<li>Name (Year) [tvdb=xxxx]</li>
+<li>Name (Year) [tvdb-xxxx]</li>
+<li>Name (Year) {tvdbid=xxxx}</li>
+<li>Name (Year) {tvdbid-xxxx}</li>
+<li>Name (Year) {tvdb=xxxx}</li>
+<li>Name (Year) {tvdb-xxxx}</li>
+</ul>
+<p>Supported ID's:</p>
+<ul>
+<li>tvdb</li>
+<li>tmdb</li>
+<li>imdb</li>
+</ul>
 <p>Example:
 Severance (2022) [tvdbid=371980]</p>
 <p>Emby supports the following tags with the host website for lookup.</p>
