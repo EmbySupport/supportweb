@@ -173,6 +173,15 @@
 <li>tvg-group - Group the channel belongs to for group management of the guide.  These groups will be imported as tags by Emby for use in parental filtering as well.</li>
 </ul>
 <p>If any are missing, Emby will attempt to automatically detect the information using whatever tags are available.</p>
+<h2 id="example-m3u">Example M3U</h2>
+<pre><code>#EXTM3U
+
+#EXTINF:10.000000,TVG-ID=&quot;Channel1&quot; tvg-name=&quot;Channel 1&quot; tvg-logo=&quot;http://example.com/channel1.png&quot; group-title=&quot;Entertainment&quot;,Channel 1
+http://example.com/stream1.ts
+
+#EXTINF:10.000000,TVG-ID=&quot;Channel2&quot; tvg-name=&quot;Channel 2&quot; tvg-logo=&quot;http://example.com/channel2.png&quot; group-title=&quot;Entertainment&quot;,Channel 2
+http://example.com/stream2.ts
+</code></pre>
 
 
             </article>
