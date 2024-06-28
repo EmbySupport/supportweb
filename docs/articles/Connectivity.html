@@ -163,6 +163,10 @@
 <p><img src="images/server/connectivity2.jpg" alt=""></p>
 <p>This information can then be entered into Emby apps:</p>
 <p><img src="images/server/connectivity3.png" alt=""></p>
+<p>It is recommended that the local IP Address for the Emby Server machine should be fixed. Use the router's DHCP Reservation feature to do that.
+Here is a general guide for doing this.
+<a href="https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router">https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router</a></p>
+<p>If you have a <strong>VPN</strong> running on your router, the requests coming into the server from within the local network may not appear as local and it would be necessary to enable the Network server option &quot;Allow remote connections to this Emby Server&quot;. If actual external remote access is not required, then you should ensure that &quot;Enable automatic port mapping&quot; in Server Network settings is unticked and no manual port forwarding is added in the router. The &quot;Allow remote connections to this Emby Server&quot; would also need to be enabled in the <a href="Users.html">Users</a> settings.</p>
 <h1 id="troubleshooting-internal-connections">Troubleshooting Internal Connections</h1>
 <p>If the above still does not work, please ensure the machine running Emby Server is turned on, and that the Emby Server application is running.</p>
 <p>A useful test is to try to use a web browser on another device, such as another computer, smartphone or tablet. You'll need to ensure the other device is connected to the same WIFI network. Try opening a web browser on that device and entering the local address manually:</p>
