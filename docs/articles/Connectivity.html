@@ -180,7 +180,7 @@ Here is a general guide for doing this.
 <p>If you're certain you've opened the port and are still unable to connect, the next step will be to ensure the server machine is free of viruses and malware. See <a href="https://en.wikipedia.org/wiki/Antivirus_software">AntiVirus software</a>.</p>
 <h1 id="external-connections">External Connections</h1>
 <p>Emby Server also allows you to connect when away from home. We call these external connections because they're out of our home network. Before we begin, we'll assume everything covered above in the <strong>In-Network Connections</strong> section is functioning correctly with your Emby Server, and that you're able to connect using other devices in your home network. If not, then you'll want to go over that section first.</p>
-<p>From here, we suggest using the <a href="Emby-Connect.html">Emby Connect</a> feature as it takes the guesswork out of external connectivity. You only need to read below if you're not using Emby Connect, or you're having trouble connecting.</p>
+<p>The <a href="Remote-Setup.html">Remote Setup</a> article covers how remote access is enabled and the option for automatic port forwarding using the router's uPnP feature.</p>
 <h3 id="locate-your-external-address">Locate Your External Address</h3>
 <p>Your external address is displayed on the front page of the server dashboard, labeled as <strong>Remote access</strong>. This is the address you should use when away from home.</p>
 <p><img src="images/server/connectivity2.jpg" alt=""></p>
@@ -190,18 +190,22 @@ Here is a general guide for doing this.
 <p>If the external address works in a browser, then you're good to go, and can proceed with connecting from Emby apps.</p>
 <h3 id="setup-port-forwarding">Setup Port Forwarding</h3>
 <p>If you're still unable to connect after testing the above, then you may need to setup port forwarding with your router to allow external connectivity to your Emby Server.</p>
-<p>To do this, you'll need to open the web interface for your router, and forward TCP Port 8096 on your router to port 8096 on the Emby Server machine.</p>
-<p>The process of doing this will be slightly different for each router model.  Here is a good step by step guide on how to do this:</p>
-<p><a href="http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router">http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router</a></p>
+<p>To do this, turn off the &quot;Enable automatic port forwarding&quot; option just set and open the web interface for your router. You will need to forward TCP Port 8096 on your router to port 8096 on the Emby Server machine. Do the same for port 8920 as well (if using SSL). It is important that the local IP Address for the Emby Server machine does not change. Use the router's DHCP Reservation feature to do that.</p>
+<p>If you want to use different public port numbers, see <a href="Hosting-Settings.html">Network (Hosting) Settings</a>.  If you have more than one Emby Server on your local network and the manual port forward method is required, then it will be necessary to change from using the default public port numbers, since each server must have a different public port number.</p>
+<p>If you have more than one router, eg an ISP provided router and also your own router, then that would lead to a Double NAT which would lead to failure to reach the server externally.  In such cases, it is recommended that one router, e.g. the ISP router, is configured to run in Modem/Bridge mode.  If they both need to be running as routers, the configuration would be more complex, needing to cascade the port forward for the public port from the first router to the second and have the actual required port forward on the 2nd router.  Also the 2nd router would need to have its local IP Address as a DHCP reservation on the first router.</p>
+<p>The process of doing the port forward will be slightly different for each router model.  Here are good step by step guides on how to do this:</p>
+<p><a href="https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router">https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router</a>
+<a href="http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router">http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router</a></p>
 <p>This Youtube video also explains it pretty well:</p>
 <p><a href="https://www.youtube.com/watch?v=Kp-R-eHiQco">https://www.youtube.com/watch?v=Kp-R-eHiQco</a></p>
 <h3 id="verify-public-port">Verify Public Port</h3>
 <p>To test that your public port is accessible over the internet, try testing it from <a href="http://www.canyouseeme.org/">canyouseeme.org</a></p>
 <p>If this test does not succeed, then it's an indication that your router is blocking the traffic and may need additional configuration.</p>
+<p>If the test succeeds but the device is not able to connect to the server externally, check that you have enabled remote connections for the user. See <a href="Users.html">Users</a>.</p>
 <h3 id="remote-access-configuration">Remote Access Configuration</h3>
-<p>Check out the following link for in-depth instructions to set up remote access on Emby Server.
-<img src="https://emby.media/support/articles/Remote-Setup.md" alt="">
-<a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Remote-Setup.md">https://github.com/EmbySupport/Emby.Docs/blob/master/Remote-Setup.md</a></p>
+<p>Check out the following link for in-depth instructions to set up remote access on Emby Server <a href="Remote-Setup.html">Remote Setup</a>.</p>
+<h3 id="emby-connect">Emby Connect</h3>
+<p>Regardless of the method used for port forwarding, whether it is automatic using uPnP or a manual configuration of the router, we suggest using the Emby Connect feature as it takes the guesswork out of external connectivity. The Emby apps would find the route to the server using Emby Connect.  See <a href="Emby-Connect.html">Emby Connect</a>.</p>
 
 
             </article>
