@@ -192,7 +192,7 @@
   "articles/Excluding-Files-Folders.html": {
     "href": "articles/Excluding-Files-Folders.html",
     "title": "Excluding Files & Folders | Emby Documentation",
-    "keywords": "Excluding Files & Folders To exclude a folder from the library scan, place a file inside the folder named .ignore This will cause Emby to ignore all sub-folders as well."
+    "keywords": "Excluding Files & Folders To exclude a folder from the library scan, place a file named .ignore inside the folder. This will cause Emby to ignore all sub-folders as well. On Windows. the .ignore file can be created using Notepad with the \"Save as type\" set to \"All types (*.*)\""
   },
   "articles/Fire-TV.html": {
     "href": "articles/Fire-TV.html",
