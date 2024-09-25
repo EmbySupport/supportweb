@@ -158,42 +158,87 @@
 <li><a href="#what-is-google-home">What is Google Home?</a></li>
 <li><a href="#get-started">Get started</a>
 <ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#why-is-emby-connect-required">Why is Emby connect required?</a></li>
+<li><a href="#why-is-emby-server-remote-access-required">Why is Emby Server Remote Access required?</a></li>
+<li><a href="#alpha-stage-steps">Alpha stage steps</a></li>
+<li><a href="#emby-remote-setup">Emby Remote setup</a></li>
 <li><a href="#google-home-account-linking">Google Home account linking</a></li>
 <li><a href="#my-server-is-not-available-to-be-selected-what-do-i-do">My server is not available to be selected</a></li>
+<li><a href="#i-get-an-error-when-selecting-the-server-what-do-i-do">I get an error when selecting the server</a></li>
 </ul>
 </li>
 <li><a href="#commands">Commands</a>
 <ul>
 <li><a href="#how-to-use-google-home">How to use Google Home</a></li>
-<li><a href="#which-player">Select a player</a></li>
-<li><a href="#additional-users">Additional users</a></li>
-<li><a href="#navigation">Navigation</a></li>
-<li><a href="#playback">Playback</a></li>
-<li><a href="#media-playback">Media playback</a></li>
-<li><a href="#suggestions">Suggestion to watch</a></li>
-<li><a href="#play-random-content">Play random content</a></li>
-<li><a href="#play-random-music">Play random music</a></li>
-<li><a href="#recently-added">Recently added</a></li>
-<li><a href="#next-up">Next up</a></li>
-<li><a href="#continue-playing">Continue playing</a></li>
-<li><a href="#item-modification">Item modification</a></li>
-<li><a href="#help">Help with commands</a></li>
+<li><a href="#playback-commands">Playback commands</a></li>
+<li><a href="#sync-devices">Sync Devices</a></li>
 </ul>
 </li>
 </ol>
 <h3 id="what-is-google-home">What is Google Home?</h3>
 <p>Google Home is a powerful speaker and voice Assistant. Play your music. Call your friends. Ask it questions. Control your home. It's your own Google, always ready to help.</p>
-<p>The Emby Skill enables users to get information about and control playback of their media library on any Emby compatible device. Once you have successfully linked your Emby account to Google Home, you can start playing your favorite movies, TV shows on your devices with your voice.</p>
+<p>The Emby Skill enables users to control playback of their media library or Live TV on any Emby compatible device. Once you have successfully linked your Emby account to Google Home and have remote access configured on the emby server, you can start controlling playback of your movies, TV shows, music or Live TV on your devices with your voice.</p>
 <h2 id="get-started">Get started</h2>
-<p>The first step is to add Emby to your Google Home account by following the <a href="https://support.google.com/googlehome/answer/7126338?co=GENIE.Platform%3DAndroid&amp;hl=en">steps here</a> and searching for the Emby home app within actions (this is not a home control app). Once this is done, you will need <a href="Emby-Connect.html">Emby Connect</a> to link your Emby account to Google Home. Emby home also requires <a href="https://emby.media/premiere.html">Emby premiere</a>.</p>
-<p>Google Home requests are sent from outside your network. You will need to ensure your Emby server is accessible remotely.</p>
+<p>It is assumed that you already have a Google Home setup. The emby integration with Google Home is currently in alpha test state due to changes made by Google to sunset some functionality. As a result of these changes, the Google Home skill has been renamed from <strong>Emby home</strong> to <strong>Emby Remote</strong>.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>It is necessary for <a href="Emby-Connect.html">Emby Connect</a> to be used for the emby server user account and for the emby server to have <a href="Remote-Setup.html">remote access</a> configured and working. <a href="https://emby.media/support/articles/Secure-Your-Server.html#using-secure-https-connections">Secure Connections</a> for the Emby Server is not necessary unless you need to use the <a href="https://emby.media/community/index.php?/topic/92173-alexa-now-requiring-secure-connection-on-port-443/">Amazon Alexa service</a> with emby.</p>
 <h4 id="why-is-emby-connect-required">Why is Emby connect required?</h4>
-<p>Emby connect is used to provide your server information to Google Home over a secure connection.</p>
+<p>Emby connect is used to provide your server information to Google Home.</p>
+<h4 id="why-is-emby-server-remote-access-required">Why is Emby Server Remote Access required?</h4>
+<p>Remote Access is required because that is how Google Home connects to the server.</p>
+<h3 id="alpha-stage-steps">Alpha stage steps</h3>
+<ul>
+<li><p>Get Access - Send a message to <a href="https://emby.media/community/index.php?/profile/40940-hatharry/">htharry</a> to request access to the <strong>Emby Remote</strong> project within Google Home. Please provide your Google Home email address.</p>
+</li>
+<li><p>Start Alpha Access - Once access has been granted, go to the <a href="https://console.actions.google.com/">Google Home console</a> and login with your Google Home account. You will see the <strong>emby-remote</strong> project. Select it and go through the Google Terms and conditions screens.</p>
+</li>
+</ul>
+<p><img src="images/server/googlehome02.png" alt=""></p>
+<p>You will then need to enable <strong>Emby Remote</strong> testing and the steps to follow are outlined here: <a href="https://developers.home.google.com/cloud-to-cloud/test#enable-testing">Enable Testing</a>.</p>
+<p><img src="images/server/googlehome03.png" alt=""></p>
+<p>You will see a number of versions in the drop-down.
+<img src="images/server/googlehome04.png" alt=""></p>
+<p>Pick the latest alpha release.
+<img src="images/server/googlehome05.png" alt=""></p>
+<ul>
+<li><p>Feedback - Issues encountered at this stage, should be posted on the forum on <a href="https://emby.media/community/index.php?/topic/114533-alpha-testers-wanted-for-google-home/">this topic</a>.</p>
+</li>
+<li><p>Note that <strong>Chromecast</strong> is not compatible due to limitation by Google at this time.</p>
+</li>
+</ul>
+<h3 id="emby-remote-setup">Emby Remote setup</h3>
+<p>When using on a smart phone or tablet, you can install the <a href="https://assistant.google.com/">Google Assistant</a> app to work with the <a href="https://home.google.com/intl/en_uk/get-app/">Google Home</a> app for the control commands to <strong>Emby Remote</strong>.</p>
+<p>On the smart device, open the Google Home app.</p>
+<p>Select <strong>Devices</strong> tab and then <strong>Add Device</strong>.
+<img src="images/server/googlehome06.png" alt=""></p>
+<p>Pick type <strong>Works with Google Home</strong>
+<img src="images/server/googlehome07.png" alt=""></p>
+<p>On the next screen, you will see the list of available skills.
+<img src="images/server/googlehome08.png" alt=""></p>
+<p>Use search to look for <strong>Emby Remote</strong>. Just enter <strong>emby</strong> in the search field. This should be find the <strong>emby remote</strong> skill. If not, double check that you have requested to be added to the alpha testing and you have enabled testing within the project web page as outlined above.
+<img src="images/server/googlehome09.png" alt=""></p>
 <h4 id="google-home-account-linking">Google Home account linking</h4>
 <p>The first time you invoke Emby Home, you will be asked to link your Emby account. Enter your Emby connect credentials and select your server. This will enable the skill and work across all your Google Home devices linked to your Google Account.</p>
-<p>You can link or unlink your Emby account <a href="https://assistant.google.com/services/a/uid/000000b6334db7e5?hl=en">here</a>.
-<img src="https://i.imgur.com/lzbeWj0.png" alt=""></p>
+<p>You will see the following screens that take you into the Emby Connect login.
+<img src="images/server/googlehome10.png" alt=""></p>
+<p><img src="images/server/googlehome11.png" alt=""></p>
+<p>After you sign in with the Emby Connect account, you will see the emby server.
+<img src="images/server/googlehome12.png" alt=""></p>
+<p>If you have more than one server with user accounts linked to this emby connect account, you eill see a drop-down to pick from.
+<img src="images/server/googlehome13.png" alt=""></p>
+<p>Select the server to be used for <strong>Emby Remote</strong> which will now be linked.
+<img src="images/server/googlehome14.png" alt=""></p>
+<p>You will then be presented with the devices to select and add and pick a room to assign to.
+<img src="images/server/googlehome15.png" alt=""></p>
+<p><img src="images/server/googlehome16.png" alt=""></p>
+<p><img src="images/server/googlehome17.png" alt=""></p>
+<p>You can link or unlink your Emby account afterwards, by selecting Settings in the Googe Home app and within the Services section, selecting <strong>Works with Google</strong>
+<img src="images/server/googlehome19.png" alt="">
+You will see the <strong>emby-remote</strong> skill
+<img src="images/server/googlehome20.png" alt="">
+Selecting it, will give you the option to unlink or re-link the skill.
+<img src="images/server/googlehome21.png" alt=""></p>
 <h4 id="my-server-is-not-available-to-be-selected-what-do-i-do">My server is not available to be selected, what do I do?</h4>
 <p>If you don't have an Emby account, follow the steps <a href="Emby-Connect.html">here</a>, otherwise:</p>
 <ol>
@@ -201,138 +246,49 @@
 <li>Remove the username or email from the Emby connect field, hit save.</li>
 <li>Re-add the information to recreate the Emby connect link.</li>
 </ol>
+<h4 id="i-get-an-error-when-selecting-the-server-what-do-i-do">I get an error when selecting the server, what do I do?</h4>
+<p>Check that the emby connect data for the emby server are correct.</p>
+<ol>
+<li>It is best to do this check on a remote device or PC and not when on the local network.</li>
+<li>In a browser, open the <a href="https://app.emby.media">https://app.emby.media</a> web page, sign in and and select <strong>Sign in with Emby Connect</strong>.</li>
+<li>Click on the <strong>...</strong> button for the server and select <strong>Connect</strong>.</li>
+<li>If you get an error, establish if the server is accessible from outside the network. If it is not, see <a href="https://emby.media/support/articles/Remote-Setup.html">Remote Setup</a></li>
+</ol>
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 <h2 id="commands">Commands</h2>
 <h3 id="how-to-use-google-home">How to use Google Home</h3>
 <ul>
-<li>Every command needs to start with: <strong>Ask MB Home {insert command}.</strong></li>
-<li>Alternatively, you can start an Emby session with: <strong>Hey Google Home, talk to MB home.</strong><br>
-<em>The benefit of using an Emby session is it allows you to give multiple commands without needing to invoke Emby for as long as the session is active. Sessions are automatically terminated after 8 seconds of inactivity.</em></li>
-<li>You can stop whatever Google Home is doing with: <strong>Hey Google Home, cancel/nevermind.</strong> Google Home will also abandon your request if you don't reply within 8 seconds.</li>
-<li><strong>Chromecast is not compatible due to limitation by Google at this time.</strong></li>
-<li>Not all commands are compatible with every Emby apps. If you encounter an issue, post <a href="https://emby.media/community/index.php?/forum/174-amazon-alexa/">here</a>.</li>
-<li>To direct a command to a specific player, append <strong>on {player name}</strong> to the end of your command.</li>
-<li>Here is the list of supported media type: episode, movie, show, season, song, album, artist, audiobook, channel, playlist.</li>
-<li>If you are unsure of the active Emby user in Google Home, ask Emby home who's the user.</li>
-<li><strong>Parts of commands in parenthesis given below are optional</strong></li>
+<li>There are a number of ways to send commands to the <strong>emby remote</strong> Google Home skill:
+<strong>Ask MB Remote {insert command}</strong>
+<strong>Hey Google, Ask MB Remote {insert command}</strong>
+<strong>Hey Google, {insert command}</strong>
+and when using Google Assistant, you can also just say the command. It would route it to <strong>emby remote</strong> if it is a known command for the skill.</li>
+<li>Device names can be changed within the Google Home app by selecting the linked device and then settings. that would make it easier to communicate with Google Home.</li>
+<li>If the device names are changed within Emby Server Settings Devices screen, then it will be necessary to sync devices.</li>
 </ul>
-<h4 id="which-player">Which player?</h4>
-<p>You can set a player as default. If a device/player name is not included at the end of your command, it will be automatically directed at your default player.</p>
+<p>At any time, you can update the linked devices by sending this command,
+<strong>Hey Google, Sync Devices</strong></p>
+<h3 id="playback-commands">Playback commands</h3>
 <ul>
-<li>change the player (to {player or device name})</li>
-<li>change my player to Living Room TV</li>
+<li>pause <code>&lt;device name&gt;</code></li>
+<li>resume <code>&lt;device name&gt;</code></li>
+<li>next <code>&lt;device name&gt;</code></li>
+<li>previous <code>&lt;device name&gt;</code></li>
+<li>stop <code>&lt;device name&gt;</code></li>
+<li>mute <code>&lt;device name&gt;</code></li>
+<li>unmute <code>&lt;device name&gt;</code></li>
+<li>seek <code>&lt;device name&gt;</code> to <code>&lt;xx&gt;</code> minutes</li>
+<li>turn down the volume on <code>&lt;device name&gt;</code></li>
+<li>turn up the volume on <code>&lt;device name&gt;</code></li>
+<li>set <code>&lt;device name&gt;</code> volume to <code>&lt;xx&gt;</code>%</li>
 </ul>
-<h4 id="additional-users">Additional users</h4>
-<p>Share the watch status of currently playing content by adding other Emby users to your session.</p>
+<p>Selecting the linked device within the Google Home app would show the following controls
+<img src="images/server/googlehome18.png" alt=""></p>
+<h3 id="sync-devices">Sync Devices</h3>
 <ul>
-<li>who is in the session</li>
-<li>add {user name} to my session</li>
-<li>remove {username} (and {username 2}) from my session</li>
-</ul>
-<h4 id="navigation">Navigation</h4>
-<p>You can navigate your interface by saying the movement or action related to what you want to do.</p>
-<ul>
-<li>move up/down/left/right</li>
-<li>page up/down</li>
-<li>select</li>
-<li>mute/unmute</li>
-<li>go home</li>
-<li>go to the next/previous letter</li>
-<li>show/display/bring up the context menu/TV guide/search/player menu (osd)/settings</li>
-</ul>
-<h4 id="playback">Playback</h4>
-<ul>
-<li>pause, previous, next, play (the selected content), <strong>stop playback</strong></li>
-<li>set the volume (to {percent})</li>
-<li>change the audio (to {language})</li>
-<li>change/enable/disable subtitles</li>
-<li>change the subtitles (to {language})</li>
-<li>seek to {time} or start from the beginning</li>
-<li>seek to (plus/minus) {time}</li>
-<li>jump to chapter {number}</li>
-<li>go to the next/previous chapter</li>
-</ul>
-<h4 id="media-playback">Media Playback</h4>
-<p>By default, Google Home is set to search video content when the content type is not specified. This means, for any other types, you need to include the content type to yield proper results.</p>
-<ul>
-<li>play (the movie) {movie}</li>
-<li>player (the show) {series}</li>
-<li>resume the episode from {series}</li>
-<li>play the artist {Artist}</li>
-<li>play the song {song} (from {Album}, by {Artist})</li>
-<li>play the audiobook {title}</li>
-<li>tune in channel {name}</li>
-</ul>
-<h5 id="here-are-a-few-examples">Here are a few examples</h5>
-<ul>
-<li>put on season 2 of Game of Thrones</li>
-<li>play Supernatural, season 5, episode 12</li>
-<li>play the new episode of Gotham</li>
-<li>watch the next episode of Orange is the new black</li>
-</ul>
-<h4 id="suggestions">Suggestions</h4>
-<p>Reply to the suggestion with a yes or a no.</p>
-<ul>
-<li>give me a suggestion</li>
-<li>suggest me a {content type, i.e. movie} (genre {genre})</li>
-<li>I don't know what ({episode}) to watch</li>
-<li>what's good?</li>
-</ul>
-<h4 id="play-random-content">Play random content</h4>
-<ul>
-<li>play something</li>
-<li>play a movie genre {genre i.e. horror}</li>
-<li>play an episode of {series}</li>
-<li>play <strong>a few</strong> episodes</li>
-</ul>
-<h4 id="play-random-music">Play random music</h4>
-<ul>
-<li>drop the beat</li>
-<li>put on music (genre {genre})</li>
-<li>play songs (genre {genre})</li>
-<li>play songs by {Artist}</li>
-<li>play songs from the album {Album}</li>
-</ul>
-<h4 id="recently-added">Recently added</h4>
-<ul>
-<li>what's new</li>
-<li>what's been recently added?</li>
-<li>what {content type, i.e. movie} is newly added</li>
-<li>what is on {channel name}?</li>
-</ul>
-<h4 id="next-up">Next Up</h4>
-<ul>
-<li>what's next</li>
-<li>what is up next</li>
-</ul>
-<h4 id="continue-playing">Continue playing</h4>
-<ul>
-<li>what can I keep watching?</li>
-<li>what (show/movie/audio book) was I in the middle of?</li>
-</ul>
-<h4 id="item-modification">Item modification</h4>
-<ul>
-<li>add/remove to/from my favorites  {content type, i.e. movie} {title}</li>
-<li>set/mark as watched/unwatched {media type, i.e. movie} {title}</li>
-</ul>
-<h4 id="transfer-or-copy-playback-between-devices">Transfer or Copy playback between devices</h4>
-<p>Transfer will stop playback first. Copy will simply resume playback where you left off, on the device of your choice. By default, it will fill in the missing information with your default player.</p>
-<ul>
-<li>transfer/copy the stream/playback (from {player}) (to {player})</li>
-<li>switch/copy the stream/playback (to {player}) (from {player})</li>
-</ul>
-<h5 id="for-example">For example</h5>
-<ul>
-<li>Transfer the playback from chrome to theater.</li>
-<li>Copy playback to iphone. <em>omitting the origin of the playback will automatically grab it from your default player</em></li>
-</ul>
-<h3 id="help">Help</h3>
-<p>If you are ever uncertain what commands the player supports, ask Emby for:</p>
-<ul>
-<li>the available commands</li>
-<li>help</li>
+<li>sync devices</li>
 </ul>
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
