@@ -156,26 +156,41 @@
 
 <p>You can access Emby Server Log files from the dashboard UI by navigating to <strong>Logs</strong> under the Advanced menu.  You will see a list of log files on the right where you can do one of the following:</p>
 <ul>
+<li>Click on the <strong>...</strong> to the right of the log file name and then choose Multi-Select or Download. If multi-selecting log files, clicking on the <strong>...</strong> after selecting log files would offer the option to download, or</li>
 <li>Click on one to open it in the web browser</li>
 <li>Click the icon in the red box below to open the log file in a new tab.</li>
-<li>Click the icon in the yellow box to download the log file.  This is useful when you need to upload the log file for support.</li>
+<li>Click the icon in the yellow box to download the log file.</li>
 </ul>
-<p>The physical location of log files is displayed on the dashboard main page in the <strong>Paths</strong> section.</p>
+<p>Downloading the logs through either method anonymises the log files and is the recommended way when needing to upload the log files for support.</p>
+<p><img src="images/server/logs1.png" alt=""></p>
+<p><img src="images/server/logs2.png" alt=""></p>
+<p><img src="images/server/logs3.png" alt=""></p>
+<p>The physical location of log files is displayed on the <strong>View Server Info</strong> button which is available through the <strong>...</strong> button next to the server name on the server dashboard main page.</p>
+<p><img src="images/server/logs5.png" alt=""></p>
+<p><img src="images/server/logs6.png" alt=""></p>
 <h2 id="log-rollover">Log Rollover</h2>
 <p>By default, Emby Server will start a new log file every day at midnight. The current log file will be renamed and postfixed by a timestamp value.</p>
-<p>You can control log rollover through in the Scheduled Tasks section by modifying the execution schedule of the <strong>Rotate Logfile</strong> task</p>
+<p>You can control log rollover through in the Scheduled Tasks section by modifying the execution schedule of the <strong>Rotate log file</strong> task</p>
 <h2 id="log-file-types">Log file types</h2>
-<p>There are three types of log files:</p>
+<p>There are four types of log files:</p>
 <ul>
-<li>EmbyServer_xxxxx.txt<br>
-The main server log file, rotated as described above</li>
+<li>embyserver_xxxxx.txt<br>
+The main server log file, rotated as described above. The current log file would just be called embyserver.txt</li>
 </ul>
 <ul>
-<li>ffmpeg_xxxx.txt<br>
-Transcoding logs created for each transcoding or remuxing operation</li>
-<li>hwdetect_xxxxx.txt<br>
-Hardware detection log. Created on every startup of Emby Server</li>
+<li><p>ffmpeg-xxxx.txt
+Transcoding logs created for each transcoding or remuxing operation</p>
+</li>
+<li><p>hardware_detection-xxxxx.txt<br>
+Hardware detection log. Created on every startup of Emby Server</p>
+</li>
+<li><p>quick-extract-xxxxx.txt<br>
+ffmpeg logs for image extractions</p>
+</li>
 </ul>
+<h2 id="debug-logging">Debug Logging</h2>
+<p>A setting is available to allow you to enable additional debug logging. The following shows the various options available. By default, debug logging is not enabled. Debug logging should only be enabled when specifically requested to do so for a specific problem investigation.</p>
+<p><img src="images/server/logs4.png" alt=""></p>
 <h2 id="fail2ban-support">Fail2Ban Support</h2>
 <p>Emby Server creates log entries for authentication failures that are compatible with Fail2Ban:
 The schema is:</p>
