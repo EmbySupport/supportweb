@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sync Jobs | Emby Documentation </title>
+    <title>Download Jobs | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Sync Jobs | Emby Documentation ">
+    <meta name="title" content="Download Jobs | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -151,47 +151,50 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Sync-Jobs">
-<h1>Sync Jobs</h1>
+<h1>Download Jobs</h1>
 
 
-<p>Sync jobs can be created from a number of areas, including, syncing by categories:</p>
-<p><img src="images/server/sync1.png" alt=""></p>
-<p>Syncing from context menus:</p>
-<p><img src="images/server/sync2.png" alt=""></p>
-<p>Syncing from detail pages:</p>
-<p><img src="images/server/sync3.png" alt=""></p>
-<p>Just about everything can be synced, including Genres, Collections, and Playlists:</p>
-<p><img src="images/server/sync10.png" alt=""></p>
-<h2 id="sync-job-settings">Sync Job Settings</h2>
-<p>When creating sync jobs, you'll be able to configure various settings for the job. The settings that are available will differ depending on the content being synced.</p>
-<p><img src="images/server/sync4.png" alt=""></p>
+<p>Download jobs can be for an individual media file download or a whole TV season or show and also possible to download a complete library. Download jobs also include those created for the <a href="Folder-Sync.html">Folder Sync</a> feature.</p>
+<p>Download jobs are created through the <strong>Download</strong> buton within the Emby Apps that support downloads and also within context menu <strong>Download to...</strong> button which is available for media libraries contents. The <strong>Download to...</strong> button is also available in the <a href="Web-Client.html">Emby Web client</a> app. For the various options available, see the <a href="Sync.html">Download Options</a> article.</p>
+<h2 id="downloads-job-settings">Downloads Job Settings</h2>
+<p>When creating sync jobs, you'll be able to configure various settings for the job. The settings that are available will differ depending on the content being synced. See <a href="Sync.html">Download Options</a> for details. The following lists the various options available.</p>
 <p>Some of the settings available are:</p>
 <p><strong>Quality</strong></p>
 <p>The desired quality level of the synced content. Higher produces better video quality but will require more storage space on the mobile device. The &quot;Original&quot; option can be used to force the process to utilize the original file, but this may result in the file not being playable on the device.</p>
+<p><strong>Profile</strong></p>
+<p>On some Emby client apps, an option is provided to select a pre-set download profile, as well as the option of having a custom profile.</p>
 <p><strong>Unwatched Videos Only</strong></p>
-<p>Only unwatched videos will be synced, and videos will be removed from the device as they are watched.</p>
-<p><strong>Automatically Sync New Content</strong></p>
+<p>Only unwatched videos will be downloaded or copied, and videos will be removed from the device as they are watched.</p>
+<p><strong>Automatically Download New Content</strong></p>
 <p>New content added to the folder or category will be automatically synced to the device.</p>
 <p><strong>Item Limit</strong></p>
-<p>The maximum number of items that will be synced to the device at any given time.</p>
+<p>The maximum number of items that will be downloaded to the device at any given time.</p>
 <h2 id="subtitles">Subtitles</h2>
-<p>All available text-based subtitles are included with sync jobs, allowing you to enjoy subtitle selection even when offline.</p>
-<h2 id="managing-sync-jobs">Managing Sync Jobs</h2>
-<p>Individual users can manage their own sync jobs using the main menu of the web interface:</p>
-<p><img src="images/server/sync5.png" alt=""></p>
-<p>Their list of sync jobs will be displayed visually:</p>
-<p><img src="images/server/sync6.png" alt=""></p>
-<p>Clicking on a sync job will display the job details and allow you to modify it's settings:</p>
-<p><img src="images/server/sync8.png" alt=""></p>
-<p>In addition, each item within the job can be managed as desired:</p>
-<p><img src="images/server/sync7.png" alt=""></p>
-<h2 id="cancelling-sync-jobs">Cancelling Sync Jobs</h2>
-<p>To cancel a sync job, simply click the dot menu next to a job and then select the Cancel Sync Job option. This will delete the sync job as well as all files that have been synced as part of this job.</p>
-<p>Alternatively it's also possible to cancel individual items within a job by opening the sync job edit screen and clicking the dot menu next to a sync job item.</p>
+<p>All available text-based subtitles are included with download jobs, allowing you to enjoy subtitle selection even when offline.</p>
+<h2 id="managing-download-jobs">Managing Download Jobs</h2>
+<p>Individual users can manage their own download jobs by opening up the Downloads screen by selecting Downloads within the App Settings or within the Devices section on Emby Web Settings.</p>
+<p><img src="images/server/downloadjobs1.png" alt=""></p>
+<p>and for Emby Web</p>
+<p><img src="images/server/downloadjobs2.png" alt=""></p>
+<p>On selecting that screen and the <strong>Manage Downloads</strong> button, the list of download jobs will show</p>
+<p><img src="images/server/downloadjobs3.png" alt=""></p>
+<p>Selecting the download job will show the download options and list of items and status</p>
+<p><img src="images/server/downloadjobs4.png" alt=""></p>
+<p>and similarly the view of download jobs on Emby Web when opening the Downloads tab</p>
+<p><img src="images/server/downloadjobs5.png" alt=""></p>
+<p>and clicking on the <strong>...</strong> button, the download job can be modified</p>
+<p><img src="images/server/downloadjobs6.png" alt=""></p>
+<p>It is also possible to remove a download</p>
+<p><img src="images/server/downloadjobs7.png" alt=""></p>
+<h2 id="cancelling-download-jobs">Cancelling Download Jobs</h2>
+<p>To cancel a download job, simply click the dot menu next to a job and then select the <strong>Remove Download</strong> option. This will delete the download job as well as all files that have been copied as part of this job.</p>
+<p>Alternatively it's also possible to cancel individual items within a job by opening the download job edit screen and clicking the dot menu next to a download job item.</p>
 <h2 id="administrative-management">Administrative Management</h2>
-<p>Administrators can manage all sync jobs for all users and devices by opening the server dashboard and navigating to <strong>Sync</strong>.</p>
+<p>Administrators can manage all download jobs for all users and devices by opening the server dashboard and navigating to <strong>Downloads</strong> within the <strong>Devices</strong> section of settings.</p>
 <p>From here they'll be able to manage all jobs, job settings and job items:</p>
-<p><img src="images/server/sync9.png" alt=""></p>
+<p><img src="images/server/downloadjobs8.png" alt=""></p>
+<p>The conversions and downloads tasks show up in the Emby Server <strong>Scheduled Tasks</strong> settings screen as <strong>Convert Media</strong> and <strong>Transfer Media</strong>.</p>
+<p><img src="images/server/scheduledtasks4.png" alt=""></p>
 
 
             </article>
@@ -218,7 +221,7 @@
             2023 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
       
           <span class="contribution">
-                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Sync-Jobs%0A*%20Title%3A%20Sync%20Jobs%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FSync-Jobs.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001162175-sync-jobs%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Sync-Jobs%0A*%20Title%3A%20Download%20Jobs%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FSync-Jobs.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001162175-sync-jobs%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
                 <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Sync-Jobs.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
           </span>
       

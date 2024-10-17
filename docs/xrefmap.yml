@@ -374,13 +374,13 @@ references:
   name: Support Home
   href: index.html
 - uid: Sync
-  name: Sync Types
+  name: Download Options
   href: articles/Sync.html
 - uid: Sync-Introduction
-  name: Sync Introduction
+  name: Downloads & Sync
   href: articles/Sync-Introduction.html
 - uid: Sync-Jobs
-  name: Sync Jobs
+  name: Download Jobs
   href: articles/Sync-Jobs.html
 - uid: Synology-NAS
   name: Synology NAS

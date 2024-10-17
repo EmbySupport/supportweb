@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sync Types | Emby Documentation </title>
+    <title>Download Options | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Sync Types | Emby Documentation ">
+    <meta name="title" content="Download Options | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -151,29 +151,92 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Sync">
-<h1>Sync Types</h1>
+<h1>Download Options</h1>
 
 
-<p>The sync feature allows you to copy content to external devices for backup purposes, archiving in multiple resolutions, and offline viewing.</p>
-<h2 id="cloud-sync">Cloud Sync</h2>
-<p>Cloud sync allows you to copy content to cloud storage accounts, for backup as well as archiving in multiple resolutions.</p>
-<p>When content is archived in multiple resolutions, Emby apps will automatically choose the version that is most efficient for them. This will help relieve stress on your internet connection as well as your server's CPU. Apps will browse the content through your Emby Server as normal, but will stream from the cloud during playback.</p>
-<p>Cloud Sync is currently available for:</p>
+<p>Emby client apps have a download icon and two buttons within the context menus, a <strong>Download</strong> button and a <strong>Download to...</strong> button. The latter gives the user the option to specify the target device, or if <a href="Folder-Sync.html">Folder Sync</a> is configured and access to the user account is given, the target server folder to copy media to.</p>
+<p>User access rights and previously authenticated devices for the user, would determine what the available targets for the download are.</p>
 <ul>
-<li>Drop box</li>
-<li><a href="Google-Drive.html">Google Drive</a></li>
+<li><p>The <strong>Download</strong> button will be shown on all Emby client apps which support downloads.</p>
+</li>
+<li><p>The <strong>Download to</strong> button will be shown when the user has at least one client app which supports downloads, or if the user has been granted access to a <a href="Folder-Sync.html">Folder Sync</a> server folder.</p>
+</li>
 </ul>
-<p>Note: Cloud Sync does not move content from your local server to the cloud, nor add content from the cloud to Emby.  All media must originate and be part of the Emby Server media collection locally.</p>
+<p>In all cases, there are options to select the quality of the download plus other options depending on the media type.</p>
+<blockquote>
+<p>[NOTE]
+The <strong>Download</strong> button on the <a href="Web-Client.html">Emby Web app</a> is different and does not form part of the <strong>Downloads &amp; Sync</strong> feature. The button, which is for single item downloads, uses the web browser functionality to download the item, without any conversion, to the default browser downloads folder.</p>
+</blockquote>
+<h2 id="download">Download</h2>
+<h3 id="download-icon">Download icon</h3>
+<p><img src="images/apps/downloads1.png" alt=""></p>
+<h3 id="context-menu-download-options">Context Menu Download options</h3>
+<p>Context Menu for a Movie library</p>
+<p><img src="images/apps/downloads2.png" alt=""></p>
+<p>The <strong>Download</strong> button gives the same functionality as the Download icon.</p>
+<p>Similar options are available at Season level or Episode, or movie etc.</p>
+<h3 id="download-to">Download to...</h3>
+<p>The <strong>Download to...</strong> option allows the user to specify the target destination for the download. This is an example showing the options to download to different authenticated devices for the user.</p>
+<p><img src="images/apps/downloadto4.png" alt=""></p>
+<p>Just about everything can be downloaded, including Genres, Collections, and Playlists, eg for a Music Genre:</p>
+<p><img src="images/apps/downloadto5.png" alt=""></p>
+<p>This is an example for selecting the whole library from the Home screen.</p>
+<p><img src="images/apps/downloadto1.png" alt=""></p>
+<p>And for a specific TV Show season</p>
+<p><img src="images/apps/downloadto2.png" alt=""></p>
+<p>The following is an example of a <strong>Download to...</strong> menu on the <a href="Web-Client.html">Emby Web</a> app showing a download target to the <a href="Emby-Theater-for-Windows.html">Emby Theater for Windows</a> app.</p>
+<p><img src="images/apps/downloadto6.png" alt=""></p>
+<p>And in the following example, the user has access to the <strong>Folder Sync</strong> folders that are configured.</p>
+<p><img src="images/apps/downloadto3.png" alt=""></p>
+<blockquote>
+<p>[NOTE]
+When creating a download to another device or app, the <a href="Sync-Jobs.html">download job</a> will initially do any requested conversion and then it will be ready to be transferred to the device. If the target Emby client app is not running, the download job will remain in this state until the app starts running and the device is accessible to the server.</p>
+</blockquote>
+<h2 id="download-settings">Download Settings</h2>
+<p>There are download settings for the Emby Apps and Emby Server for all downloads, as well as download settings for specific download jobs.</p>
+<h3 id="download-settings---emby-apps">Download Settings - Emby Apps</h3>
+<p>The following shows the options for the <a href="Android-Mobile.html">Emby for Android</a> app. Similar options are available in the <strong>Emby for iOS</strong> app.</p>
+<p><img src="images/apps/downloads10.png" alt=""></p>
+<p>The folowing shows the options for the <a href="Emby-Theater-for-Windows.html">Emby Theater for Windows</a> app.</p>
+<p><img src="images/apps/downloads13.png" alt=""></p>
+<h3 id="download-settings---emby-server">Download Settings - Emby Server</h3>
+<p>The following shows the options for the Emby Server that can be set in Emby Web Settings Devices / Downloads section.</p>
+<p><img src="images/server/downloads_server1.png" alt=""></p>
+<h3 id="specific-download-settings">Specific Download Settings</h3>
+<p>To get started with a download, click on the available <strong>Download</strong> icon/button. You'll then see a dialog allowing you to select your desired download quality and on some apps, the profile for the conversion. Emby Server will convert media so that it can be downloaded in a compatible format for the device. You can choose between several quality options, as well as forcing original quality.</p>
+<p><img src="images/apps/downloads3.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Forcing original quality may result in a download that is not playable on the device.</p>
+</div>
+<p>Custom quality allows you to set your own desired bitrate:</p>
+<p><img src="images/apps/downloads4.png" alt=""></p>
+<p>For TV shows, there would be additional options for restricting downloads to only unplayed episodes and for auto download of new episodes. There is also an option for setting a limit on the number to download.</p>
+<p><img src="images/apps/downloads5.png" alt=""></p>
+<p>On some apps, there is an option to select a profile.</p>
+<p><img src="images/apps/downloads6.png" alt=""></p>
+<p>with a drop-down for the list of available download profiles:</p>
+<p><img src="images/apps/downloads7.png" alt=""></p>
+<p>It is also possible to use a custom profile</p>
+<p><img src="images/apps/downloads8.png" alt=""></p>
+<p><img src="images/apps/downloads9.png" alt=""></p>
+<p>Clicking the <strong>Download</strong> button would then create a download job. See <a href="Sync-Jobs">Download Jobs</a>.</p>
+<h3 id="deleting-downloads">Deleting Downloads</h3>
+<p>Downloaded items can be removed directly on the device within the Downloads area</p>
+<p><img src="images/apps/downloads11.png" alt=""></p>
 <h2 id="folder-sync">Folder Sync</h2>
-<p>Folder sync allows you to copy content to folders and external hard drives, for backup as well as archiving in multiple resolutions.</p>
+<p><a href="Folder-Sync.html">Folder sync</a>, which requires the Folder Sync plugin, allows you to copy content to folders and external hard drives, for backup as well as archiving in multiple resolutions. The actual folder syncing is achieved by creating a download job through the <strong>Download to...</strong> option.</p>
 <p>When content is archived in multiple resolutions, Emby apps will automatically choose the version that is most efficient for them. This will help relieve stress on your server's CPU.</p>
+<p>The following shows how it appears when playing an item that has a synced copy.</p>
+<p><img src="images/apps/downloads12.png" alt=""></p>
 <p>For more information see <a href="Folder-Sync.html">Folder Sync</a>.</p>
-<h2 id="creating-sync-jobs">Creating Sync Jobs</h2>
-<p>See <a href="Sync-Jobs.html">Sync jobs</a></p>
+<h2 id="creating-download-jobs">Creating Download Jobs</h2>
+<p>The above showed how a download can be initiated. See <a href="Sync-Jobs.html">Download jobs</a> for how to view and manage the download jobs.</p>
 <h2 id="user-access">User Access</h2>
-<p>Access to the sync feature can be managed individually for each user.</p>
-<p><img src="images/server/users21.png" alt=""></p>
+<p>Access to the downloads feature can be managed individually for each user.</p>
+<p><img src="images/server/users35.png" alt=""></p>
 <p>For more information, see <a href="Users.html">Users</a>.</p>
+<p>There are additional user access rights requirements for <a href="Folder-Sync.html">Folder Sync</a>.</p>
 
 
             </article>
@@ -200,7 +263,7 @@
             2023 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
       
           <span class="contribution">
-                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Sync%0A*%20Title%3A%20Sync%20Types%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FSync.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001162174-sync%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Sync%0A*%20Title%3A%20Download%20Options%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FSync.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001162174-sync%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
                 <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Sync.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
           </span>
       
