@@ -2,13 +2,13 @@
 sorted: true
 references:
 - uid: 3D-Videos
-  name: 3D Videos
+  name: 3D Video Naming
   href: articles/3D-Videos.html
 - uid: Admin-Password-Reset
   name: Admin Password Reset
   href: articles/Admin-Password-Reset.html
 - uid: Advanced-Menu
-  name: Advanced Menu
+  name: Connecting from Client Apps
   href: articles/Advanced-Menu.html
 - uid: Alexa
   name: Amazon Alexa
@@ -44,7 +44,7 @@ references:
   name: Camera Upload
   href: articles/Camera-Upload.html
 - uid: Channels
-  name: Channels
+  name: Channel Plugins
   href: articles/Channels.html
 - uid: Chromecast
   name: Chromecast
@@ -56,11 +56,8 @@ references:
   name: Collections
   href: articles/Collections.html
 - uid: Collections-Manual-Migration
-  name: Collections – Manual Migration
+  name: Manage Collections (Legacy)
   href: articles/Collections-Manual-Migration.html
-- uid: Collections-Pre46
-  name: Collections - Emby Server versions prior to 4.6
-  href: articles/Collections-Pre46.html
 - uid: Connectivity
   name: Connectivity
   href: articles/Connectivity.html
@@ -80,7 +77,7 @@ references:
   name: Devices
   href: articles/Devices.html
 - uid: DirectPlay-Stream-Transcoding
-  name: Direct Play, Stream & Transcoding
+  name: Playback Methods
   href: articles/DirectPlay-Stream-Transcoding.html
   fullName: Direct Play vs Direct Streaming vs Transcoding
 - uid: DVR-Settings
@@ -89,6 +86,9 @@ references:
 - uid: Emby-Connect
   name: Emby Connect
   href: articles/Emby-Connect.html
+- uid: Emby-Connect-for-Users
+  name: Emby Connect
+  href: articles/Emby-Connect-for-Users.html
 - uid: Emby-for-Kodi
   name: Emby for Kodi
   href: articles/Emby-for-Kodi.html
@@ -141,11 +141,11 @@ references:
   name: HDHomeRun Setup
   href: articles/HDHomeRun-Setup.html
 - uid: Home
-  name: Emby Support Home
+  name: Emby Documentation Home
   href: articles/Home.html
-  fullName: Your starting point for browsing the documentation
+  fullName: Your starting point for all Emby documentation
 - uid: Hosting-Settings
-  name: Network (Hosting) Settings
+  name: Network Setup
   href: articles/Hosting-Settings.html
 - uid: How-to-Set-Permissions-on-DSM-7
   name: How to Set Permissions on DSM 7
@@ -260,14 +260,11 @@ references:
 - uid: Parental-Controls
   name: Parental Controls
   href: articles/Parental-Controls.html
-- uid: Password-Reset
-  name: Emby Connect Password Reset
-  href: articles/Password-Reset.html
 - uid: Passwords
   name: Passwords
   href: articles/Passwords.html
 - uid: Playlist-Manual-Migration
-  name: Playlist – Manual Migration
+  name: Manage Playlists (Legacy)
   href: articles/Playlist-Manual-Migration.html
 - uid: Plugins
   name: Plugins Overview
@@ -368,7 +365,7 @@ references:
   name: STRM Files
   href: articles/Strm-Files.html
 - uid: Subtitles
-  name: Subtitles
+  name: Subtitles Naming
   href: articles/Subtitles.html
 - uid: Support.Index
   name: Support Home
@@ -393,10 +390,11 @@ references:
   name: System Requirements
   href: articles/System-Requirements.html
 - uid: Theme-Songs-Videos
-  name: Theme Songs & Videos
+  name: Theme Media Naming
   href: articles/Theme-Songs-Videos.html
+  fullName: Theme Songs & Videos
 - uid: Trailers
-  name: Trailers
+  name: Trailer Naming
   href: articles/Trailers.html
 - uid: Transcoding
   name: Transcoding
