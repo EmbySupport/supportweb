@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google Home | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google Home | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Google-Home">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google-Home">
+<h1>Google Home</h1>
+
+
+<ol>
+<li><a href="#was-ist-google-home">Was ist Google Home?</a></li>
+<li><a href="#erste-schritte">Erste Schritte</a>
+<ul>
+<li><a href="#voraussetzungen">Voraussetzungen</a></li>
+<li><a href="#warum-ist-emby-connect-erforderlich">Warum ist Emby Connect erforderlich?</a></li>
+<li><a href="#warum-ist-emby-server-remote-zugang-erforderlich">Warum ist Emby Server Remote-Zugang erforderlich?</a></li>
+<li><a href="#alpha-phase-schritte">Alpha-Phase Schritte</a></li>
+<li><a href="#emby-remote-einrichtung">Emby Remote Einrichtung</a></li>
+<li><a href="#google-home-konto-verkn%C3%BCpfung">Google Home Konto-Verknüpfung</a></li>
+<li><a href="#mein-server-ist-nicht-ausw%C3%A4hlbar-was-kann-ich-tun">Mein Server ist nicht auswählbar</a></li>
+<li><a href="#fehler-beim-ausw%C3%A4hlen-des-servers-was-kann-ich-tun">Fehler beim Auswählen des Servers</a></li>
+</ul>
+</li>
+<li><a href="#befehle">Befehle</a>
+<ul>
+<li><a href="#wie-man-google-home-benutzt">Wie man Google Home benutzt</a></li>
+<li><a href="#wiedergabebefehle">Wiedergabebefehle</a></li>
+<li><a href="#ger%C3%A4te-synchronisieren">Geräte synchronisieren</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="was-ist-google-home">Was ist Google Home?</h3>
+<p>Google Home ist ein leistungsstarker Lautsprecher und Sprachassistent. Spielen Sie Ihre Musik ab. Rufen Sie Ihre Freunde an. Stellen Sie Fragen. Steuern Sie Ihr Zuhause. Es ist Ihr ganz persönliches Google, das immer bereit ist zu helfen.</p>
+<p>Die Emby-Funktion ermöglicht es Nutzern, die Wiedergabe ihrer Mediathek oder des Live-TVs auf jedem Emby-kompatiblen Gerät zu steuern. Sobald Sie Ihr Emby-Konto erfolgreich mit Google Home verknüpft und den Fernzugriff auf dem Emby-Server konfiguriert haben, können Sie die Wiedergabe Ihrer Filme, TV-Sendungen, Musik oder des Live-TVs auf Ihren Geräten mit Ihrer Stimme steuern.</p>
+<h2 id="erste-schritte">Erste Schritte</h2>
+<p>Es wird vorausgesetzt, dass Sie bereits ein Google Home eingerichtet haben. Die Emby-Integration mit Google Home befindet sich aufgrund von Änderungen von Google, durch die einige Funktionen eingestellt wurden, derzeit in der Alpha-Testphase. Infolge dieser Änderungen wurde der Google Home-Skill von <strong>Emby Home</strong> in <strong>Emby Remote</strong> umbenannt.</p>
+<h3 id="voraussetzungen">Voraussetzungen</h3>
+<p>Es ist notwendig, dass <a href="Emby-Connect.html">Emby Connect</a> für das Emby-Server-Benutzerkonto verwendet wird und der Emby-Server über einen konfigurierten und funktionierenden <a href="Remote-Setup.html">Fernzugriff</a> verfügt. <a href="https://emby.media/support/articles/Secure-Your-Server.html#using-secure-https-connections">Sichere Verbindungen</a> für den Emby-Server sind nicht erforderlich, es sei denn, Sie benötigen den <a href="https://emby.media/community/index.php?/topic/92173-alexa-now-requiring-secure-connection-on-port-443/">Amazon Alexa Service</a> mit Emby.</p>
+<h4 id="warum-ist-emby-connect-erforderlich">Warum ist Emby Connect erforderlich?</h4>
+<p>Emby Connect wird verwendet, um Ihre Serverinformationen an Google Home zu übermitteln.</p>
+<h4 id="warum-ist-emby-server-remote-zugang-erforderlich">Warum ist Emby Server Remote-Zugang erforderlich?</h4>
+<p>Fernzugriff ist erforderlich, da Google Home auf diese Weise mit dem Server verbindet.</p>
+<h3 id="alpha-phase-schritte">Alpha-Phase Schritte</h3>
+<ul>
+<li><p>Zugang erhalten - Senden Sie eine Nachricht an <a href="https://emby.media/community/index.php?/profile/40940-hatharry/">hatharry</a>, um Zugang zum <strong>Emby Remote</strong> Projekt innerhalb von Google Home zu beantragen. Bitte geben Sie Ihre Google Home E-Mail-Adresse an.</p>
+</li>
+<li><p>Starten des Alpha-Zugriffs - Sobald der Zugang gewährt wurde, gehen Sie zur <a href="https://console.actions.google.com/">Google Home Konsole</a> und melden sich mit Ihrem Google Home Konto an. Sie sehen das <strong>emby-remote</strong> Projekt. Wählen Sie es aus und gehen Sie durch die Bildschirme der Google Nutzungsbedingungen.</p>
+</li>
+</ul>
+<p><img src="images/server/googlehome02.png" alt=""></p>
+<p>Danach müssen Sie das <strong>Emby Remote</strong> Testing aktivieren, die Schritte dazu sind hier beschrieben: <a href="https://developers.home.google.com/cloud-to-cloud/test#enable-testing">Testen aktivieren</a>.</p>
+<p><img src="images/server/googlehome03.png" alt=""></p>
+<p>Sie werden mehrere Versionen im Dropdown sehen.</p>
+<p><img src="images/server/googlehome04.png" alt=""></p>
+<p>Wählen Sie die neueste Alpha-Version.</p>
+<p><img src="images/server/googlehome05.png" alt=""></p>
+<ul>
+<li><p>Feedback - Probleme, die in dieser Phase auftreten, sollten im Forum zu <a href="https://emby.media/community/index.php?/topic/114533-alpha-testers-wanted-for-google-home/">diesem Thema</a> veröffentlicht werden.</p>
+</li>
+<li><p>Beachten Sie, dass <strong>Chromecast</strong> aufgrund von Einschränkungen seitens Google derzeit nicht kompatibel ist.</p>
+</li>
+</ul>
+<h3 id="emby-remote-einrichtung">Emby Remote Einrichtung</h3>
+<p>Wenn Sie ein Smartphone oder Tablet verwenden, können Sie die <a href="https://assistant.google.com/">Google Assistant</a> App installieren, um mit der <a href="https://home.google.com/intl/en_uk/get-app/">Google Home</a> App die Steuerbefehle zu <strong>Emby Remote</strong> zu verwenden.</p>
+<p>Öffnen Sie auf dem Smart-Gerät die Google Home App.</p>
+<p>Wählen Sie die Registerkarte <strong>Geräte</strong> und dann <strong>Gerät hinzufügen</strong>.</p>
+<p><img src="images/server/googlehome06.png" alt=""></p>
+<p>Wählen Sie den Typ <strong>Funktioniert mit Google Home</strong>.</p>
+<p><img src="images/server/googlehome07.png" alt=""></p>
+<p>Auf dem nächsten Bildschirm sehen Sie die Liste der verfügbaren Funktionen.</p>
+<p><img src="images/server/googlehome08.png" alt=""></p>
+<p>Verwenden Sie die Suche, um nach <strong>Emby Remote</strong> zu suchen. Geben Sie einfach <strong>emby</strong> in das Suchfeld ein. Dadurch sollte die <strong>emby remote</strong> Funktion gefunden werden. Falls nicht, überprüfen Sie, ob Sie darum gebeten haben, zum Alpha-Test hinzugefügt zu werden und dass Sie das Testen innerhalb der Projektwebseite aktiviert haben, wie oben beschrieben.</p>
+<p><img src="images/server/googlehome09.png" alt=""></p>
+<h4 id="google-home-konto-verknüpfung">Google Home Konto-Verknüpfung</h4>
+<p>Beim ersten Aufruf von Emby Home werden Sie aufgefordert, Ihr Emby-Konto zu verknüpfen. Geben Sie Ihre Emby-Connect-Zugangsdaten ein und wählen Sie Ihren Server aus. Dadurch wird die Funktion aktiviert und funktioniert über alle Ihre mit Ihrem Google-Konto verknüpften Google Home Geräte hinweg.</p>
+<p>Sie werden folgende Bildschirme sehen, die Sie zur Emby Connect-Anmeldung führen.</p>
+<p><img src="images/server/googlehome10.png" alt=""></p>
+<p><img src="images/server/googlehome11.png" alt=""></p>
+<p>Nachdem Sie sich mit dem Emby Connect Konto angemeldet haben, wird der Emby-Server angezeigt.</p>
+<p><img src="images/server/googlehome12.png" alt=""></p>
+<p>Wenn Sie mehr als einen Server mit Benutzernkonten haben, die mit diesem Emby Connect Konto verknüpft sind, sehen Sie ein Dropdown zur Auswahl.</p>
+<p><img src="images/server/googlehome13.png" alt=""></p>
+<p>Wählen Sie den Server aus, der für <strong>Emby Remote</strong> verwendet werden soll und jetzt verknüpft ist.</p>
+<p><img src="images/server/googlehome14.png" alt=""></p>
+<p>Sie werden dann dazu aufgefordert, die Geräte zum Hinzufügen auszuwählen und einen Raum zuzuweisen.</p>
+<p><img src="images/server/googlehome15.png" alt=""></p>
+<p><img src="images/server/googlehome16.png" alt=""></p>
+<p><img src="images/server/googlehome17.png" alt=""></p>
+<p>Sie können Ihr Emby-Konto anschließend verknüpfen oder die Verknüpfung aufheben, indem Sie im Google Home App Einstellungen auswählen und im Abschnitt Dienste <strong>Funktioniert mit Google</strong> auswählen.</p>
+<p><img src="images/server/googlehome19.png" alt=""></p>
+<p>Sie sehen die <strong>emby-remote</strong> Funktion.</p>
+<p><img src="images/server/googlehome20.png" alt=""></p>
+<p>Die Auswahl ermöglicht es Ihnen, die Verknüpfung aufzuheben oder die Funktion erneut zu verknüpfen.</p>
+<p><img src="images/server/googlehome21.png" alt=""></p>
+<h4 id="mein-server-ist-nicht-auswählbar-was-kann-ich-tun">Mein Server ist nicht auswählbar, was kann ich tun?</h4>
+<p>Falls Sie kein Emby-Konto haben, folgen Sie den Schritten <a href="Emby-Connect.html">hier</a>, andernfalls:</p>
+<ol>
+<li>Auf Ihrem Server-Dashboard, Benutzer &gt; Wählen Sie den Emby-Benutzer mit Emby Connect (grünes Wolkensymbol)</li>
+<li>Entfernen Sie den Benutzernamen oder die E-Mail aus dem Emby Connect Feld, drücken Sie Speichern.</li>
+<li>Fügen Sie die Informationen erneut hinzu, um die Emby Connect-Verknüpfung neu zu erstellen.</li>
+</ol>
+<h4 id="fehler-beim-auswählen-des-servers-was-kann-ich-tun">Fehler beim Auswählen des Servers, was kann ich tun?</h4>
+<p>Überprüfen Sie, ob die Emby Connect-Daten für den Emby-Server korrekt sind.</p>
+<ol>
+<li>Es ist am besten, diese Prüfung auf einem Remote-Gerät oder PC durchzuführen und nicht im lokalen Netzwerk.</li>
+<li>Öffnen Sie in einem Browser die Webseite <a href="https://app.emby.media">https://app.emby.media</a>, melden Sie sich an und wählen Sie <strong>Mit Emby Connect anmelden</strong>.</li>
+<li>Klicken Sie auf die <strong>...</strong> Schaltfläche für den Server und wählen Sie <strong>Verbinden</strong>.</li>
+<li>Wenn Sie einen Fehler erhalten, stellen Sie fest, ob der Server von außerhalb des Netzwerks zugänglich ist. Wenn nicht, siehe <a href="https://emby.media/support/articles/Remote-Setup.html">Remote Setup</a>.</li>
+</ol>
+<div align="right">
+    <b><a href="#">↥ zurück zum Anfang</a></b>
+</div>
+<h2 id="befehle">Befehle</h2>
+<h3 id="wie-man-google-home-benutzt">Wie man Google Home benutzt</h3>
+<ul>
+<li>Es gibt mehrere Möglichkeiten, Befehle an die <strong>emby remote</strong> Google Home Funktion zu senden:
+<strong>MB Remote fragen {Befehl einfügen}</strong>
+<strong>Hey Google, MB Remote fragen {Befehl einfügen}</strong>
+<strong>Hey Google, {Befehl einfügen}</strong>
+und beim Verwenden von Google Assistant können Sie auch einfach den Befehl sagen. Es würde ihn an <strong>emby remote</strong> weiterleiten, wenn es sich um einen bekannten Befehl für die Funktion handelt.</li>
+<li>Gerätenamen können in der Google Home App geändert werden, indem das verknüpfte Gerät ausgewählt wird und dann Einstellungen gewählt werden. Das würde die Kommunikation mit Google Home erleichtern.</li>
+<li>Wenn die Gerätenamen innerhalb der Emby Server-Einstellungen Gerät Bildschirms geändert werden, dann ist es notwendig, die Geräte zu synchronisieren.</li>
+</ul>
+<p>Jederzeit können Sie die verknüpften Geräte mit diesem Befehl aktualisieren,
+<strong>Hey Google, Geräte synchronisieren</strong></p>
+<h3 id="wiedergabebefehle">Wiedergabebefehle</h3>
+<ul>
+<li>pause <code>&lt;Gerätename&gt;</code></li>
+<li>resume <code>&lt;Gerätename&gt;</code></li>
+<li>next <code>&lt;Gerätename&gt;</code></li>
+<li>previous <code>&lt;Gerätename&gt;</code></li>
+<li>stop <code>&lt;Gerätename&gt;</code></li>
+<li>mute <code>&lt;Gerätename&gt;</code></li>
+<li>unmute <code>&lt;Gerätename&gt;</code></li>
+<li>seek <code>&lt;Gerätename&gt;</code> to <code>&lt;xx&gt;</code> Minuten</li>
+<li>turn down the volume on <code>&lt;Gerätename&gt;</code></li>
+<li>turn up the volume on <code>&lt;Gerätename&gt;</code></li>
+<li>set <code>&lt;Gerätename&gt;</code> volume to <code>&lt;xx&gt;</code>%</li>
+</ul>
+<p>Wenn Sie das verknüpfte Gerät in der Google Home App auswählen, werden die folgenden Steuerungen angezeigt</p>
+<p><img src="images/server/googlehome18.png" alt=""></p>
+<h3 id="geräte-synchronisieren">Geräte synchronisieren</h3>
+<ul>
+<li>Geräte synchronisieren</li>
+</ul>
+<div align="right">
+    <b><a href="#">↥ zurück zum Anfang</a></b>
+</div>
+<hr>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Google-Home%0A*%20Title%3A%20Google%20Home%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FGoogle-Home.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001161655-google-home%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Google-Home.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

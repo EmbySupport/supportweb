@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Server-Installation auf Shield TV | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Server-Installation auf Shield TV | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Server-Installation-Shield">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Installation-Shield">
+<h1>Server-Installation auf Shield TV</h1>
+
+
+<p>Es gibt mehrere manuelle Schritte, die abgeschlossen werden müssen, um den Emby Server auf dem Shield TV zu installieren.</p>
+<h2 id="schritt-1-ermitteln-der-ip-adresse-des-shield-tv">Schritt 1: Ermitteln der IP-Adresse des Shield TV</h2>
+<ul>
+<li><p>Navigieren Sie auf dem Startbildschirm des Shield TV nach oben rechts zum Einstellungs-Symbol neben der Uhr.</p>
+</li>
+<li><p>Öffnen Sie die Einstellungen.</p>
+</li>
+<li><p>Scrollen Sie nach unten zu &quot;Netzwerk &amp; Internet&quot; und wählen Sie diese Option aus.</p>
+</li>
+<li><p>Es sollte Ihnen zeigen, dass das Shield TV verbunden ist und Ihnen die IP-Adresse geben.</p>
+</li>
+<li><p>Notieren Sie sich diese IP-Adresse, da Sie sie später benötigen werden.</p>
+</li>
+</ul>
+<h2 id="schritt-2-ermitteln-des-aktuellen-apk-links">Schritt 2: Ermitteln des aktuellen APK-Links</h2>
+<p>Auf einem PC gehen Sie zu <a href="https://emby.media/download.html">https://emby.media/download.html</a> und Sie werden sehen:</p>
+<p><img src="images/server/server_install_shield1.png" alt="Server Install Shield1"></p>
+<p>Klicken Sie auf die Option Shield Android TV und Sie erhalten einen Bildschirm ähnlich:</p>
+<p><img src="images/server/server_install_shield2.png" alt="Server Install Shield2"></p>
+<p>Merken Sie sich die Dateinummern im obigen Link, die &quot;4.3.0.26&quot; sind, die wir in einem folgenden Schritt benötigen.</p>
+<h2 id="schritt-3-downloader-installieren">Schritt 3: Downloader installieren</h2>
+<ul>
+<li><p>Führen Sie auf dem Shield TV die Google Play Store Apps aus,</p>
+</li>
+<li><p>Suchen Sie nach &quot;Downloader by TROYPOINT&quot;.</p>
+</li>
+<li><p>Installieren Sie diese App und führen Sie sie dann aus.</p>
+</li>
+<li><p>Wenn die App um Erlaubnis zur Systemzugriff bittet, erteilen Sie bitte die Erlaubnis.</p>
+</li>
+</ul>
+<h2 id="schritt-4-herunterladen-der-apk">Schritt 4: Herunterladen der APK</h2>
+<p>Auf dem Startbildschirm im &quot;Downloader by TROYPOINT&quot; sehen Sie ein Eingabefeld für den Download-Standort.</p>
+<p>Geben Sie ein:</p>
+<p><a href="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.3.0.26/com.emby.embyserver_4.3.0.26.apk">https://github.com/MediaBrowser/Emby.Releases/releases/download/4.3.0.26/com.emby.embyserver_4.3.0.26.apk</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Wenn die Dateinummer aus Schritt eins von diesem Link abweicht, passen Sie bitte die Zahlen in diesem Link an, um sie mit der aktuellen Datei auf der Website aus Schritt 1 übereinstimmen zu lassen.</p>
+</div>
+<p>Wenn die App um Erlaubnis zur Systemzugriff bittet, erteilen Sie bitte die Erlaubnis.</p>
+<h2 id="schritt-5-installation-des-emby-servers">Schritt 5: Installation des Emby Servers</h2>
+<ul>
+<li><p>Nach Abschluss des Downloads haben Sie die Option, die App zu installieren. Bitte tun Sie dies.</p>
+</li>
+<li><p>Wenn Sie diese Option nicht erhalten oder die App später erneut installieren möchten, können Sie das DATEI-Menü auf der linken Seite verwenden, um die APK-Datei schnell zu finden und zu starten/installieren.</p>
+</li>
+<li><p>Nach dem Starten der APK-Datei erhalten Sie einen Bildschirm mit der Frage:</p>
+<p>&quot;Möchten Sie diese Anwendung installieren? Sie erfordert keinen speziellen Zugriff.&quot;</p>
+</li>
+<li><p>Bitte wählen Sie INSTALLIEREN, um fortzufahren.</p>
+</li>
+</ul>
+<p>Nach Abschluss der Installation haben Sie die Möglichkeit, FERTIG oder ÖFFNEN zu wählen. Bitte wählen Sie ÖFFNEN:</p>
+<p>Das Shield TV wird Sie nun auffordern, ihm die Erlaubnis zum Systemzugriff zu erteilen. Bitte ERLAUBEN Sie es.</p>
+<p>Die Anwendung wird Ihnen nun eine URL bereitstellen, um auf den Server zuzugreifen. Wir WERDEN diese Adresse NICHT VERWENDEN, also ignorieren Sie sie.</p>
+<h2 id="schritt-6-zugriff-auf-das-shield-tv-von-einem-pc-aus">Schritt 6: Zugriff auf das Shield TV von einem PC aus</h2>
+<ul>
+<li><p>Von einem PC aus werden Sie nun eine Verbindung zum Emby Server herstellen, der auf dem Shield TV läuft.</p>
+</li>
+<li><p>Geben Sie <code>http://</code> ein</p>
+</li>
+<li><p>Geben Sie die IP-Adresse aus Schritt 1 ein</p>
+</li>
+<li><p>Fügen Sie einen Doppelpunkt gefolgt von 8096 hinzu</p>
+</li>
+</ul>
+<p>Die auf Ihrem PC eingegebene URL wird dann ähnlich aussehen:</p>
+<p><code>http://192.168.0.14:8096</code></p>
+<h2 id="schritt-7-konfiguration-und-einrichtung">Schritt 7: Konfiguration und Einrichtung</h2>
+<p>Sie sollten nun einen Bildschirm haben, der so aussieht:</p>
+<p><img src="images/server/server_install_shield3.png" alt="Server Install Shield3"></p>
+<p>Herzlichen Glückwunsch, Sie haben den Emby Server erfolgreich installiert und können ihn nun wie jeden anderen Emby Server von einem PC aus konfigurieren. Bitte folgen Sie ab hier der normalen Installationsprozedur.</p>
+<h2 id="schritt-8-optional---verwendung-von-usb-angehängtem-speicher">Schritt 8: Optional - Verwendung von USB-angehängtem Speicher</h2>
+<p>Wenn Sie einen USB-angehängten Speicher auf dem Shield TV verwenden, sollten Sie diesen Nvidia-Artikel zum Schreibzugriff lesen.</p>
+<p><a href="https://nvidia.custhelp.com/app/answers/detail/a_id/4437/%7E/how-to-write-to-usb-shared-storage-on-shield">https://nvidia.custhelp.com/app/answers/detail/a_id/4437/~/how-to-write-to-usb-shared-storage-on-shield</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Installation-Shield%0A*%20Title%3A%20Server-Installation%20auf%20Shield%20TV%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FServer-Installation-Shield.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001849875-server-installation-on-shield-tv%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Server-Installation-Shield.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

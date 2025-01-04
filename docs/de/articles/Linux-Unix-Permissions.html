@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Linux/Unix-Berechtigungen | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Linux/Unix-Berechtigungen | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Linux-Unix-Permissions">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Linux-Unix-Permissions">
+<h1>Linux/Unix-Berechtigungen</h1>
+
+
+<p>Ausgezeichneter Rat von Nutzer Q-Droid im Emby-Forum</p>
+<p>Dies ist ein Auszug aus einem Community-Thread von einem Mitglied, das anderen Anwendungen und Linux-Benutzern auf ihrem Server den Zugriff auf die von Emby verwendete Medienstruktur ermöglichen wollte. Das Mitglied wollte gemeinsamen Lese- und Schreibzugriff auf die Bibliotheken ermöglichen, die Dateien und Verzeichnisse enthalten können, die verschiedenen Benutzern gehören.</p>
+<ol>
+<li>Benutzergruppe (mein-benutzer, Emby, Kodi, usw.) erlauben, Medieninhalte zu lesen und zu schreiben.</li>
+<li>Dasselbe für SMB-Freigaben erlauben.</li>
+</ol>
+<p>Im Allgemeinen kann man nicht verhindern, dass Emby den Regeln des Betriebssystems folgt, und in Linux/UNIX wurden diese Regeln aus Sicherheitsgründen erstellt. Ein &quot;Codezeile&quot; ändert daran nichts, da nur der Superuser auf Benutzerebene die Eigentumsrechte ändern darf. Emby läuft nicht als Superuser, und das sollten Sie auch nicht wünschen. Stattdessen arbeiten Sie mit den Regeln und Tools des Betriebssystems.</p>
+<p>Es gibt verschiedene Möglichkeiten, dies zu tun. Ich werde erklären, was ich tun würde. Dafür benötigen Sie erweiterte Rechte, also root.</p>
+<p>Identifizieren Sie Ihr Medienbasisverzeichnis. Normalerweise ist es das gemeinsame Startverzeichnis für Ihre Bibliotheken. Zum Beispiel, wenn Ihre Bibliotheken so aussehen:</p>
+<pre><code class="lang-&lt;language&gt;">/mnt/library/movies
+/mnt/library/tv shows
+/mnt/library/music
+</code></pre>
+<p>Dann ist &quot;/mnt/library&quot; Ihre Basis. Server mit mehreren Speichervolumen und externen Laufwerken können mehrere Pfade zu den Bibliotheken ohne eine gemeinsame Basis haben. Wenn dies der Fall ist, passen Sie jeden Bibliothekspfad individuell an und wählen Sie ein Verzeichnis, von dem aus Unterverzeichnisse erstellt werden, jedoch nicht &quot;/&quot; und nicht &quot;/mnt&quot;.</p>
+<p>Erstellen Sie auf dem Emby-Server mit dem freizugebenden Medien eine Gruppe für Medien, wenn diese nicht existiert. Der Gruppenname ist willkürlich, es ist jedoch hilfreich, ihn aussagekräftig zu wählen:
+group add media</p>
+<p>Fügen Sie Mitglieder zur Gruppe hinzu (mein-benutzer, emby, usw.):
+usermod -a -G media mein-benutzer
+usermod -a -G media emby
+...</p>
+<p>Wir werden ACLs verwenden. Erstens, um die Berechtigungen festzulegen, und dann, um die Standards festzulegen. Es kann mit einem Befehl erledigt werden, aber es ist einfacher, diesem Ablauf zu folgen. Mitglieder der Mediagruppe können auf Dateien und Verzeichnisse unter /mnt/library zugreifen und diese ändern. Neue Dateien und Verzeichnisse werden mit Berechtigungen für die Mediagruppe erstellt.</p>
+<p>Setzen Sie die Berechtigungen für die Mediagruppe auf vorhandene Elemente (das 'X' ist großgeschrieben):
+setfacl -R -m g:media:rwX /mnt/library</p>
+<p>Legen Sie Standardberechtigungen für die Mediagruppe fest. Gilt für neue Elemente:
+setfacl -R -m d:g:media:rwX /mnt/library</p>
+<p>Wenn Sie SMB/CIFS verwenden, können Sie ähnliche Regeln durchsetzen. Vorausgesetzt, die Benutzer sind dieselben und die Gruppe kann hinzugefügt werden.</p>
+<p>In smb.conf und für jede der Freigaben zur aktuellen Konfiguration hinzufügen:
+[share name]
+create mask = 0664
+directory mask = 0775
+force group = media</p>
+<p>Das obige sollte Ihnen genügend Informationen geben, um zu beginnen, mit minimalen Anpassungen.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Linux-Unix-Permissions%0A*%20Title%3A%20Linux%2FUnix-Berechtigungen%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FLinux-Unix-Permissions.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001962818-linux-unix-permissions%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Linux-Unix-Permissions.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

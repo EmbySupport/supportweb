@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sicherung Ihres Servers | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sicherung Ihres Servers | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Secure-Your-Server">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Secure-Your-Server">
+<h1>Sicherung Ihres Servers</h1>
+
+
+<p>Dies ist ein kurzes Tutorial, wie Sie Ihren Emby Server kostenlos sichern können. Wenn Sie Ihren Server der Welt zugänglich machen, ist es sinnvoll, ihn zu sichern. Es ist auch nützlich, erforderliche gesicherte Streams für externe Dienste wie Amazon Alexa oder Google Home bereitzustellen.</p>
+<h2 id="allgemeine-tipps--best-practices">Allgemeine Tipps &amp; Best Practices</h2>
+<p>Hier sind einige Tipps, die Sie beachten sollten.</p>
+<h3 id="server-admin-konto">Server-Admin-Konto</h3>
+<ul>
+<li><p>Vermeiden Sie es, dem Admin-Benutzerkonto für den Emby Server den Namen &quot;admin&quot; oder &quot;root&quot; zu geben.</p>
+<p>Wenn der Benutzername bereits so festgelegt ist, können Sie ihn über die Servereinstellungen / Benutzerbildschirm bearbeiten und das Profil bearbeiten.</p>
+<p><img src="images/server/users26.png" alt=""></p>
+</li>
+<li><p>Trennen Sie Ihre Admin- und normale Nutzung des Emby Servers. Haben Sie ein separates Konto für die normale Nutzung und das Streaming und behalten Sie das Konto mit Admin-Rechten als separates Konto, das nur für die Serveradministration genutzt wird.</p>
+<p>Sie können steuern, welche Konten die Möglichkeit haben, den Server über diese Benutzereinstellung zu verwalten.</p>
+<p><img src="images/server/users27.png" alt=""></p>
+</li>
+<li><p>Überlegen Sie, das Admin-Benutzerkonto (oder jedes Konto mit Admin-Rechten) aus der Liste der angezeigten Benutzerkonten für die Anmeldung zu verbergen. Wenn es verborgen ist, verwenden Sie die Option &quot;Manuelle Anmeldung&quot; und geben Sie den Benutzernamen und das Passwort ein. Das Folgende zeigt die verschiedenen verfügbaren Optionen, um einen Benutzernamen zu verbergen.</p>
+<p><img src="images/server/users28.png" alt=""></p>
+</li>
+<li><p>Erwägen Sie, Fernverbindungen für das Admin-Konto zu deaktivieren. Dies kann erfolgen, sobald die Konfiguration für Fernverbindungen eingerichtet und funktionsfähig ist. Wenn Änderungen an der Serverkonfiguration erforderlich sind, verwenden Sie Tools wie Team Viewer, Remote Desktop, AnyDesk usw.</p>
+<p><img src="images/server/users29.png" alt=""></p>
+</li>
+</ul>
+<h3 id="fernverbindungen">Fernverbindungen</h3>
+<ul>
+<li><p>Falls der Server nur lokal genutzt werden soll, deaktivieren Sie den Fernzugriff auf der Serverebene, indem Sie diese Netzwerkeinstellung des Servers deaktivieren.</p>
+<p><img src="images/server/hosting7.png" alt=""></p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Wenn Sie ein VPN im lokalen Netzwerk verwenden, müssen Sie dies möglicherweise zulassen oder alternativ das VPN-Subnetz zur Liste der lokalen Netzwerke im Servernetzwerkeinstellungen hinzufügen</p>
+</div>
+<ul>
+<li><p>Wenn Sie einen Domainnamen für den Zugriff auf den Emby Server verwenden, sollten Sie überlegen, nicht das Wort „emby“ als Teil des Domainnamens zu verwenden.</p>
+</li>
+<li><p>Verwenden Sie für Fernverbindungen HTTPS sichere Verbindungen. Siehe Abschnitt <strong>Verwendung von sicheren HTTPS-Verbindungen</strong> unten.</p>
+</li>
+</ul>
+<p><img src="images/server/hosting8.png" alt=""></p>
+<ul>
+<li><p>Wenn der Fernzugriff aktiviert und kein Reverse Proxy verwendet wird, sollten Sie überlegen, die Standardöffentlichen Portnummern zu ändern. Dafür müssten Sie die automatische Portzuordnung (uPnP) deaktivieren und stattdessen manuelles Port-Forwarding auf Ihrem Router für die öffentlichen HTTP und HTTPS Portnummern einrichten, um sie auf die lokalen HTTP und HTTPS Portnummern in den Routereinstellungen weiterzuleiten.</p>
+<p><img src="images/server/hosting9.png" alt=""></p>
+<p><img src="images/server/hosting10.png" alt=""></p>
+<p><img src="images/server/hosting11.png" alt=""></p>
+<p>Ein Beispiel: Wenn Sie den öffentlichen Port 32700 für HTTP und den öffentlichen Port 32800 für HTTPS verwenden, dann sollten Sie zuerst sicherstellen, dass der Server eine statische oder DHCP-reservierte lokale TCP-IP-Adresse im Router eingestellt hat, und dann manuelles Port-Forwarding zu dieser IP-Adresse für TCP-Öffentlicher Port 32700 zur lokalen Port 8096 und TCP-Öffentlicher Port 32800 zur lokalen Port 8920 einrichten. Es sollte keine Notwendigkeit bestehen, die lokalen Ports von den Standardwerten zu ändern. Siehe Artikel zum Fernzugriff.</p>
+</li>
+</ul>
+<h3 id="benutzerkonto-berechtigungen">Benutzerkonto-Berechtigungen</h3>
+<ul>
+<li>Überprüfen Sie alle Kontoberechtigungen in den Benutzerprofilen (Servereinstellungen / Benutzer) und gewähren Sie die geringsten Berechtigungen, wobei sichergestellt wird, dass nur Ihr Serveradministratorkonto die Berechtigung hat, den Server zu verwalten. Stellen Sie sicher, dass die Löschung von Medien kontrolliert und nur auf die Konten, denen Sie diese Berechtigung anvertrauen wollen, beschränkt ist.</li>
+</ul>
+<p>Das Folgende zeigt die Kontrolle, die Sie auf der Benutzerkontenebene haben. Zum Beispiel kann der Fernzugriff auch auf Benutzerebene kontrolliert werden.</p>
+<p><img src="images/server/users29.png" alt=""></p>
+<p><img src="images/server/users30.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Sie können „Alle Bibliotheken“ abwählen und spezifische Bibliotheken auswählen.</p>
+</div>
+<p><img src="images/server/users31.png" alt=""></p>
+<p><img src="images/server/users32.png" alt=""></p>
+<p>Sie können auch Benutzer deaktivieren</p>
+<p><img src="images/server/users33.png" alt=""></p>
+<h2 id="verwendung-von-sicheren-https-verbindungen">Verwendung von sicheren HTTPS-Verbindungen</h2>
+<p>Wenn Sie an einer noch sichereren Einrichtung interessiert sind, finden Sie hier eine Community-geschriebene Anleitung zu <a href="https://emby.media/community/index.php?/topic/47508-how-to-nginx-reverse-proxy/">HOW TO: NGINX Reverse Proxy</a>.</p>
+<p>Sie benötigen zwei Dinge:</p>
+<ul>
+<li>Eine Domain, die TXT-Einträge unterstützt</li>
+<li>Ein SSL-Zertifikat (PKCS #12)</li>
+</ul>
+<h3 id="ihre-domain-erhalten">Ihre Domain erhalten</h3>
+<p>Melden Sie sich für eine kostenlose Domain Ihrer Wahl an. Sie könnten <a href="https://my.freenom.com/">Freenom</a> oder <a href="https://www.dynu.com/en-US/">Dynu</a> verwenden.</p>
+<h3 id="ssl-zertifikat">SSL-Zertifikat</h3>
+<p>Wir werden nun Let's Encrypt SSL-Zertifikate erstellen und es Ihrer Domain hinzufügen. Hier ist ein kostenloser Dienst, um dabei zu helfen <a href="https://www.sslforfree.com/">SSL for free</a>.</p>
+<ol>
+<li><p>Geben Sie Ihre Domain auf der Seite ein, z.B. yourdomain.com, und erstellen Sie ein kostenloses SSL-Zertifikat.</p>
+</li>
+<li><p>Wählen Sie &quot;Manuelle Überprüfung (DNS)&quot; &gt; &quot;Domain manuell bestätigen&quot;. Wir haben nun 2 TXT-Einträge (Schritt 2 auf der SSL for free Website). Wir kopieren die TXT-Einträge zurück zum Domainanbieter. Die Seite „SSL for free“ geöffnet lassen. Wir kommen darauf zurück.
+<img src="https://i.imgur.com/kh19ZgR.jpg" alt=""></p>
+</li>
+<li><p>Auf der Domainanbieter-Website wählen Sie Ihre Domain &gt; DNS verwalten. Lassen Sie uns einen neuen TX-Eintrag erstellen. Wiederholen Sie die Schritte für beide TXT-Einträge auf SSL for free. Ihre Informationen sollten folgendermaßen aussehen.</p>
+<p><strong>Name</strong>: _acme-challenge.{yourdomain.com}</p>
+<p><strong>Typ</strong>: TXT.</p>
+<p><strong>TTL</strong>: 300 (wenn Sie es auf 1 setzen können, tun Sie dies).</p>
+<p><strong>Ziel</strong>: qariKbGVafpb5MespqHdMaGi933yW-Z2A3shE0wIyZA</p>
+</li>
+<li><p>Sie werden Typ-A-Einträge im selben Abschnitt bemerken. Sie können den WWW-Eintrag entfernen. Stellen Sie sicher, dass Ihre externe IP korrekt ist. Wenn Sie eine dynamische IP haben, müssen Sie diese aktualisieren, wenn sie sich ändert.</p>
+</li>
+<li><p>Warten Sie etwa 15 Minuten. Lassen Sie den Domainnamen und die Änderungen verbreiten.</p>
+</li>
+<li><p>Zurück zur SSL for free Website. Sehen Sie sich Schritt 3 an, Sie werden einen oder zwei Links sehen, auf die Sie klicken können. Wenn es erfolgreich ist, klicken Sie auf SSL-Zertifikat herunterladen. Wenn es nicht erfolgreich ist, warten Sie ein wenig länger und versuchen Sie es erneut.</p>
+</li>
+</ol>
+<h3 id="emby-mit-ihrer-domain-und-ssl-zertifikat-einrichten">Emby mit Ihrer Domain und SSL-Zertifikat einrichten</h3>
+<p>Jetzt sollten Sie eine Domain und einen Ordner mit SSL-Zertifikaten (ca_bundle.crt, certificate.crt, private.key) haben. Wir sind fast fertig. Ihr Emby-Server benötigt ein PKCS #12-Zertifikat (certificate.crt und private.key kombiniert).</p>
+<ol>
+<li><p>Verwenden Sie diesen <a href="https://www.sslshopper.com/ssl-converter.html">online certificate converter</a>.</p>
+</li>
+<li><p>Wählen Sie den Typ, zu dem konvertiert werden soll: PKCS #12. Dies sollte die Anzahl der Felder erweitern. Nach Abschluss erhalten Sie ein neues .pfx-Zertifikat.</p>
+<p><strong>Zertifikatsdatei</strong>: certificate.crt</p>
+<p><strong>Privater Schlüssel</strong>: private.key</p>
+<p><strong>Kettenzertifikat</strong>: Das ca_bundle.crt oder Sie können es auch hier finden, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Speichern Sie den Text in einer .txt-Datei.</p>
+<p><strong>PFX-Passwort</strong>: Da der private Schlüssel mit dem Zertifikat kombiniert ist, setzen Sie ein Passwort, um das neue SSL-Zertifikat zu sichern. Merken Sie sich dieses Passwort, Sie werden es in Emby benötigen.</p>
+</li>
+<li><p>Gehen Sie zu Ihrem Emby-Server-Dashboard &gt; Erweitert. Speichern Sie Ihre Änderungen und starten Sie Ihren Server neu.</p>
+<p><strong>Externe Domain</strong>: yourdomain.com</p>
+<p><strong>Pfad zu eigenem SSL-Zertifikat</strong>: Zeigen Sie auf Ihr neues certificate.pem</p>
+<p><strong>Zertifikatspasswort</strong>: Das Passwort, das Sie im vorherigen Schritt festgelegt haben.</p>
+<p><strong>Modus für sichere Verbindung</strong>: Setzen Sie es auf Bevorzugt, aber nicht erforderlich oder Erforderlich für alle Fernverbindungen.</p>
+</li>
+</ol>
+<p>Ihr Dashboard sollte nun Ihren Fernzugriff als <a href="https://yourdomain.com:port">https://yourdomain.com:port</a> widerspiegeln. Wenn Sie alle Schritte befolgt haben, sollte das Klicken auf die neue Remote-URL Ihren Emby-Server erreichen. Wenn es nicht funktioniert, überprüfen Sie Ihre HTTPS-Ports und versuchen Sie, von außerhalb Ihres Netzwerks zu verbinden.</p>
+<p><strong>Speichern Sie alle Ihre Zertifikatsdateien und Schlüssel an einem sicheren Ort.</strong> Sie werden den privaten Schlüssel benötigen, wenn Sie bereit sind, Ihr SSL-Zertifikat zu erneuern (Ich habe meine eigene CSR-Option auf SSL for free eingesetzt). Da dies alles kostenlos ist, erfordert es ein wenig mehr Engagement. Sie müssen sicherstellen, dass Sie Ihre SSL-Zertifikate (alle 3 Monate bei SSL for free) und Ihre kostenlose Domain (mindestens einmal im Jahr) erneuern. Wenn Sie SSL for free verwendet haben, empfehle ich, ein Konto zu erstellen, um den Erneuerungsprozess zu erleichtern.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Secure-Your-Server%0A*%20Title%3A%20Sicherung%20Ihres%20Servers%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FSecure-Your-Server.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001160086-secure-your-server%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Secure-Your-Server.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

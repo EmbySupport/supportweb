@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hardware-Beschleunigung auf Windows | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Hardware-Beschleunigung auf Windows | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Hardware-Acceleration-on-Windows">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Hardware-Acceleration-on-Windows">
+<h1>Hardware-Beschleunigung auf Windows</h1>
+
+
+<p>Emby unterstützt die folgenden Varianten der Hardware-Beschleunigung auf Windows</p>
+<ul>
+<li><p><strong><a href="#nvidia-nvdec--nvenc">Nvidia NVDEC &amp; NVENC</a></strong><br>
+API zur Beschleunigung des Videoencodierens und -decodierens mit Nvidia GPUs</p>
+</li>
+<li><p><strong><a href="#intel-quicksync-video">Intel QuickSync Video</a></strong><br>
+Intels Marke für dedizierte Hardware zum Videoencodieren und -decodieren</p>
+</li>
+<li><p><strong><a href="#amd-amf">AMD AMF</a></strong><br>
+AMD Advanced Media Framework - Multimedia-API für AMD-Hardware zur
+Echtzeitverarbeitung von Multimedia</p>
+</li>
+<li><p><strong><a href="#microsoft-dxva">Microsoft DXVA</a></strong><br>
+Microsoft DirectX Video Acceleration API - Hardware-unabhängige API
+für hardwarebeschleunigtes Videodekodieren</p>
+</li>
+</ul>
+<h2 id="nvidia-nvdec--nvenc">Nvidia NVDEC &amp; NVENC</h2>
+<p>Nvidia bietet zwei Hardware-Beschleunigungsschnittstellen an:</p>
+<ul>
+<li>NVENC API für die Beschleunigung der Videoencodierung</li>
+<li>NVDEC API für die Beschleunigung der Videodecodierung (früher NVCUVID API genannt)</li>
+</ul>
+<p>NVIDIA-GPUs enthalten einen oder mehrere hardwarebasierte Decoder und Encoder (separat von den CUDA-Kernen), die vollständig beschleunigte, hardwarebasierte Video-Dekodierung und -Encodierung für mehrere beliebte Codecs bieten. Wenn Dekodierung/Encodierung ausgelagert wird, sind der Grafikprozessor und die CPU für andere Operationen frei.</p>
+<p>GPU-Hardwarebeschleuniger für die Videodecodierung (NVDEC genannt) und Videoencodierung (NVENC genannt) unterstützen eine schnellere als die Echtzeit-Videobearbeitung, was sie, neben der Videowiedergabe, für Anwendungen zur Transkodierung geeignet macht.</p>
+<h4 id="unterstützte-beschleunigungen">Unterstützte Beschleunigungen</h4>
+<p>Die folgenden Beschleunigungen werden derzeit von Emby unterstützt.
+Bitte beachten Sie, dass Emby möglicherweise nicht alle vom Hardware
+angebotenen Beschleunigungen unterstützt und dass nicht alle Hardwaregeräte alle Beschleunigungen unterstützen.</p>
+<ul>
+<li>Decoder
+<ul>
+<li>H.264 (AVC)</li>
+<li>H.265 (HEVC)</li>
+<li>MPEG2</li>
+<li>MPEG4</li>
+<li>VC1</li>
+<li>VP8</li>
+<li>VP9</li>
+</ul>
+</li>
+<li>Encoder
+<ul>
+<li>H.264 (AVC)</li>
+</ul>
+</li>
+</ul>
+<h4 id="hardware-anforderungen">Hardware-Anforderungen</h4>
+<p>Die Hardware-Beschleunigung ist für die meisten Nvidia-Geräte ab der
+Kepler-Generation (z. B. GeForce GT 630) verfügbar, einschließlich sowohl Verbraucher- als auch Professional-Geräte. Detaillierte Informationen über unterstützte Hardware finden Sie in Nvidias
+<a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a>.</p>
+<h4 id="erforderliche-einrichtungsschritte">Erforderliche Einrichtungsschritte</h4>
+<p>Installieren Sie die neuesten Treiber für Ihre Nvidia-Hardware direkt von der Seite <a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a>. Es wird dringend empfohlen, diese Treiber anstelle der mit Windows gelieferten zu verwenden. Die mindest erforderliche Treiberversion auf Windows ist <strong>471.41</strong><br>
+Es ist nicht erforderlich, andere Tools oder SDKs von Nvidia zu installieren.</p>
+<h4 id="hinweise">Hinweise</h4>
+<ul>
+<li>Emby unterstützt den headless Betrieb für Nvidia<br>
+Es ist nicht erforderlich, einen Monitor anzuschließen</li>
+<li>Nvidia-Beschleunigung funktioniert auch, wenn Emby als Windows-Dienst läuft</li>
+</ul>
+<h4 id="weiterführende-literatur">Weiterführende Literatur</h4>
+<p><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Video Codec SDK</a><br>
+<a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a><br>
+<a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a><br>
+<a href="https://de.wikipedia.org/wiki/Nvidia_NVENC">NVENC</a>,
+<a href="https://de.wikipedia.org/wiki/Nvidia_NVDEC">NVDEC</a></p>
+<h2 id="intel-quicksync-video">Intel QuickSync Video</h2>
+<p>Intel® Quick Sync Video nutzt die dedizierten Medienverarbeitungskapazitäten der Intel® Graphics Technology, um schneller zu dekodieren und zu encodieren, sodass der Prozessor andere Aufgaben erledigen kann und die Systemreaktionsfähigkeit verbessert wird.</p>
+<h4 id="unterstützte-beschleunigungen-1">Unterstützte Beschleunigungen</h4>
+<p>Die folgenden Beschleunigungen werden derzeit von Emby unterstützt.
+Bitte beachten Sie, dass Emby möglicherweise nicht alle vom Hardware
+angebotenen Beschleunigungen unterstützt und dass nicht alle Hardwaregeräte alle Beschleunigungen unterstützen.</p>
+<ul>
+<li>Decoder
+<ul>
+<li>H.264 (AVC)</li>
+<li>H.265 (HEVC)</li>
+<li>MPEG2</li>
+<li>VC1</li>
+<li>VP8</li>
+<li>VP9</li>
+</ul>
+</li>
+<li>Encoder
+<ul>
+<li>H.264 (AVC)</li>
+</ul>
+</li>
+<li>Hardware-Filter
+<ul>
+<li>Skalierung</li>
+<li>Deinterlacing</li>
+</ul>
+</li>
+</ul>
+<h4 id="hardware-anforderungen-1">Hardware-Anforderungen</h4>
+<p>Quick Sync wurde ursprünglich in einige Sandy Bridge CPUs integriert, jedoch nicht in Sandy Bridge Pentium oder Celeron CPUs.<br>
+Eine Übersicht über die in den verschiedenen CPU-Generationen integrierten Beschleunigungsmöglichkeiten
+finden Sie hier: <a href="https://de.wikipedia.org/wiki/Intel_Quick_Sync_Video#Hardware_decoding_and_encoding">Hardware-Dekodierung und -Encodierung</a>.
+und hier <a href="https://de.wikipedia.org/wiki/Intel_Graphics_Technology#Capabilities_(GPU_video_acceleration)">GPU-Beschleunigungsmöglichkeiten</a>.</p>
+<h4 id="erforderliche-einrichtungsschritte-1">Erforderliche Einrichtungsschritte</h4>
+<p>Installieren Sie die neuesten Grafiktreiber für Ihre Intel-CPU mit integrierter Grafikkarte direkt von Intels Seite: <a href="https://downloadcenter.intel.com/">Treiber &amp; Software</a>.
+Es wird dringend empfohlen, diese Treiber anstelle der mit Windows gelieferten
+zu verwenden.
+Es ist nicht erforderlich, das Intel Media SDK zu installieren.</p>
+<h4 id="hinweise-1">Hinweise</h4>
+<ul>
+<li>Emby unterstützt den headless Betrieb (und den Betrieb als Dienst) mit Intel QuickSync nur bei Verwendung des D3D11-Codecs. Für den Normalmodus müssen Sie einen physischen Monitor an den Videoausgang anschließen.</li>
+</ul>
+<h4 id="weiterführende-literatur-1">Weiterführende Literatur</h4>
+<p><a href="https://www.intel.com/content/www/us/en/architecture-and-technology/quick-sync-video/quick-sync-video-general.html">Intel QuickSync Video</a><br>
+<a href="https://de.wikipedia.org/wiki/Intel_Quick_Sync_Video#Hardware_decoding_and_encoding">Codec-Unterstützung nach CPU-Generation</a><br>
+<a href="https://de.wikipedia.org/wiki/Intel_Graphics_Technology#Capabilities_(GPU_video_acceleration)">GPU-Beschleunigungsmöglichkeiten</a><br>
+<a href="https://downloadcenter.intel.com/">Treiber &amp; Software</a></p>
+<h2 id="amd-amf">AMD AMF</h2>
+<p>Das AMD Advanced Media Framework ist ein leichtgewichtiges, portables Multimedia-Framework, das die meisten plattform- und API-spezifischen Details abstrahiert und eine einfache Implementierung von Multimedia-Anwendungen unter Verwendung einer Vielzahl von Technologien wie DirectX 11, OpenGL und OpenCL ermöglicht und eine effiziente Interoperabilität zwischen ihnen erleichtert.</p>
+<h4 id="unterstützte-beschleunigungen-2">Unterstützte Beschleunigungen</h4>
+<p>Die folgenden Beschleunigungen werden derzeit von Emby unterstützt.
+Bitte beachten Sie, dass Emby möglicherweise nicht alle vom Hardware
+angebotenen Beschleunigungen unterstützt und dass nicht alle Hardwaregeräte alle Beschleunigungen unterstützen.</p>
+<ul>
+<li>Encoder
+<ul>
+<li>H.264 (AVC)</li>
+</ul>
+</li>
+</ul>
+<h4 id="hardware-anforderungen-2">Hardware-Anforderungen</h4>
+<p>Das AMF-Framework ist mit den meisten neueren Radeon-GPUs kompatibel, beginnend
+mit der Southern Islands-Familie und APUs der Kabini-, Kaveri-, Carrizo-Familien und neuer.</p>
+<h4 id="erforderliche-einrichtungsschritte-2">Erforderliche Einrichtungsschritte</h4>
+<p>Installieren Sie die neueste Radeon Software direkt von AMDs Website:
+<a href="https://www.amd.com/en/support">AMD Treiber &amp; Unterstützung</a>.
+Es ist nicht erforderlich, das AMF SDK zu installieren.
+Die mindest erforderliche Softwareversion ist:
+<strong>AMD Radeon Software Crimson Edition 16.7.3 (16.30.2311)</strong></p>
+<h4 id="hinweise-2">Hinweise</h4>
+<ul>
+<li>Emby unterstützt derzeit keinen headless Betrieb mit AMD AMF. Sie müssen einen physischen Monitor an den Videoausgang anschließen.</li>
+<li>AMD AMF-Beschleunigung funktioniert nicht, wenn Emby als Windows-Dienst läuft.</li>
+</ul>
+<h4 id="weiterführende-literatur-2">Weiterführende Literatur</h4>
+<p><a href="https://gpuopen.com/gaming-product/advanced-media-framework/">AMD Advanced Media Framework</a><br>
+<a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF">AMF SDK</a><br>
+<a href="https://www.amd.com/en/support">AMD Treiber &amp; Unterstützung</a></p>
+<h2 id="microsoft-dxva">Microsoft DXVA</h2>
+<p>DirectX Video Acceleration (DXVA) ist eine Microsoft-API zur Verwendung von Hardware-Beschleunigung zur Beschleunigung der Videobearbeitung. Software-Codecs und Software-Videoprozessoren können DXVA verwenden, um bestimmte CPU-intensive Operationen
+an die GPU auszulagern.
+DXVA unterstützt nur das Videodekodieren, kein Encodieren.</p>
+<h4 id="unterstützte-beschleunigungen-3">Unterstützte Beschleunigungen</h4>
+<p>Die folgenden Beschleunigungen werden derzeit von Emby unterstützt.
+Bitte beachten Sie, dass Emby möglicherweise nicht alle vom Hardware
+angebotenen Beschleunigungen unterstützt und dass nicht alle Hardwaregeräte alle Beschleunigungen unterstützen.</p>
+<ul>
+<li>Decoder
+<ul>
+<li>H.264 (AVC)</li>
+<li>H.265 (HEVC)</li>
+<li>MPEG2</li>
+<li>VC1</li>
+</ul>
+</li>
+</ul>
+<h4 id="hardware-anforderungen-3">Hardware-Anforderungen</h4>
+<p>DXVA unterstützt Grafikgeräte von verschiedenen Anbietern, einschließlich Nvidia, Intel und AMD.</p>
+<h4 id="erforderliche-einrichtungsschritte-3">Erforderliche Einrichtungsschritte</h4>
+<p>DXVA ist eine Windows-Komponente und soll mit den in Windows enthaltenen Treibern funktionieren.
+Die Installation der neuesten Treiber von den Websites der Hersteller kann trotzdem eine gute Idee sein.</p>
+<h4 id="hinweise-3">Hinweise</h4>
+<ul>
+<li>Emby unterstützt den headless Betrieb (und den Betrieb als Dienst) nur mit D311VA-Codecs. Für einfaches DXVA2 müssen Sie einen physischen Monitor an den Videoausgang anschließen.</li>
+</ul>
+<h3 id="häufige-probleme-und-lösungen">Häufige Probleme und Lösungen</h3>
+<ul>
+<li>Hardware-Beschleunigung schlägt bei Remote-Desktop (RDP) unter Windows fehl</li>
+</ul>
+<p><code>Hinweis: Unterstützung für den headless Modus ist für die Zukunft geplant</code></p>
+<h4 id="weiterführende-literatur-3">Weiterführende Literatur</h4>
+<p><a href="https://docs.microsoft.com/en-us/windows/desktop/medfound/about-dxva-2-0">Über DXVA</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Hardware-Acceleration-on-Windows%0A*%20Title%3A%20Hardware-Beschleunigung%20auf%20Windows%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FHardware-Acceleration-on-Windows.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001160185-hardware-acceleration-on-windows%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Hardware-Acceleration-on-Windows.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

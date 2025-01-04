@@ -1,0 +1,579 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=" | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1></h1>
+
+<pre><code class="lang-markdown">---
+uid: TV-Naming
+title: TV-Benennung
+legacyUrl: /support/solutions/articles/44001159110-tv-naming
+---
+
+Für eine einfache Struktur von TV-Ordnern wird das folgende Layout empfohlen: Serie (Jahr)\Staffel #\Episode. Der Episodenname selbst sollte den Namen der Serie, die Staffel und die Episodennummer enthalten, wie unten beschrieben.
+
+Beim Einrichten der Bibliothek unbedingt **TV** als Inhaltsart auswählen. Das Jahr im Seriennamen ist nicht zwingend erforderlich, da Emby eine Serie in der Regel auch ohne das Jahr zuordnen kann. Das Jahr ist jedoch besonders nützlich bei neu aufgelegten Serien und solchen, die in verschiedenen Jahren ausgestrahlt wurden, wie zum Beispiel Kampfstern Galactica (1978) und Kampfstern Galactica (2003). Das Jahr hilft auch bei einigen Serien wie Afrika (2013), die ohne das Jahr möglicherweise auf verschiedene Shows zugeordnet werden könnten.
+
+Beispiel:
+
+</code></pre>
+<p>\TV
+\Glee (2009)
+\Staffel 1
+Glee S01E01.mp4
+Glee S01E02.mp4</p>
+<p>\TV
+\Seinfeld (1989)
+Seinfeld S01E01.mp4
+Seinfeld S01E02.mp4</p>
+<pre><code>
+
+## ID-Tags in Ordner- und Dateinamen
+Emby kann auch eine Meta-Daten-ID aus dem Namen lesen.
+
+Unterstützte Formate:
+* Name (Jahr) [tvdbid=xxxx]
+* Name (Jahr) [tvdbid-xxxx]
+* Name (Jahr) [tvdb=xxxx]
+* Name (Jahr) [tvdb-xxxx]
+* Name (Jahr) {tvdbid=xxxx}
+* Name (Jahr) {tvdbid-xxxx}
+* Name (Jahr) {tvdb=xxxx}
+* Name (Jahr) {tvdb-xxxx}
+
+Unterstützte IDs:
+* tvdb
+* tmdb (Moviedb)
+* imdb
+
+Beispiel:
+</code></pre>
+<p>The Vampire Diaries (2009) [tmdbid=18165]</p>
+<pre><code>
+Emby unterstützt die folgenden Tags mit der Host-Website zur Suche:
+
+- tmdbid  (https://www.themoviedb.org/)
+
+- imdbid  (https://www.imdb.com/)
+
+- tvdbid  (https://thetvdb.com/)
+
+
+
+Hinweis:  tmdbid ist das bevorzugte Tag für die meisten Anwendungen
+
+
+## Komplexe Ordnerstruktur
+
+In komplexeren Situationen, in denen das oberste Verzeichnis weiter unterteilt ist, bevor die Show-Ordner kommen, wird empfohlen, einen TV-Medienordner zu erstellen und die Unterordnerorte anstelle des obersten Ordners hinzuzufügen. 
+
+Beispiel:
+
+</code></pre>
+<p>\TV
+\A-M
+\Glee (2009)
+\Staffel 1
+Glee S01E01.mp4
+\N-Z
+\Seinfeld (1989)
+\Staffel 1
+Seinfeld S01E01.mp4</p>
+<pre><code>
+Im obigen Beispiel wird empfohlen, einen TV-Medienordner zu erstellen und dann die **A-M** und **N-Z** Bibliothekspfade hinzuzufügen. 
+
+Weitere Informationen zum Einrichten der Bibliothek finden Sie unter [Bibliothekseinrichtung](Library-Setup.md).
+
+### DVD- und Blu-ray-Episoden
+
+DVD- und Blu-ray-Ordnerstrukturen werden ebenfalls unterstützt. Die Ordner können beliebige Namen haben, aber die Verwendung von Episodennummern verbessert die Möglichkeit, Metadaten herunterzuladen und anzuzeigen.
+
+Um als DVD-Struktur erkannt zu werden, muss der Ordner entweder einen VIDEO_TS-Unterordner oder eine VIDEO_TS.ifo-Datei enthalten. Um als Blu-ray-Struktur erkannt zu werden, muss der Ordner einen BDMV-Unterordner enthalten.
+
+</code></pre>
+<p>\TV
+\Glee (2009)
+\Staffel 1
+\Glee S01E01-E04
+\VIDEO_TS
+\Glee S01E05-E08
+VIDEO_TS.IFO
+\Glee S01E09-E10
+\BDMV</p>
+<pre><code>
+## TV-Extras
+
+Sonderfunktionen für TV-Serien können als Videodateien in einem Extras-Ordner unter den TV-Serien-Ordnern gespeichert werden. Es ist auch möglich, diese Extras-Ordner auf der Staffelebene hinzuzufügen.
+
+Zusätzlich zu Extras werden mehrere andere Unterordnernamen unterstützt:
+* extras
+* specials
+* shorts
+* scenes
+* featurettes
+* behind the scenes
+* deleted scenes
+* interviews
+* trailers
+ 
+</code></pre>
+<p>\TV
+\Fawlty Towers
+\Staffel 1
+Fawlty Towers s01e01.mp4
+Fawlty Towers s01e02.mp4
+\interviews
+Interview mit Andrew Sachs.mp4
+Interview mit John Cleese.mp4
+Interview mit Prunella Scales.mp4
+\The Blue Planet
+\Staffel 1
+The Blue Planet s01e01.mkv
+The Blue Planet s01e02.mkv
+The Blue Planet s01e03.mkv
+The Blue Planet s01e04.mkv
+\Specials
+The Blue Planet s00e01 Making Waves.mkv
+The Blue Planet s00e02 Deep Trouble.mkv
+The Blue Planet s00e03 The Abyss.mkv
+The Blue Planet s00e04 Dive to Shark Volcano.mkv
+The Blue Planet s00e05 Amazon Abyss.mkv
+\Die Brücke (2011)
+\Staffel 1
+Die Brücke S01E01.mkv
+Die Brücke S01E02.mkv
+\Hinter den Kulissen
+Hinter Die Brücke.mkv
+\interviews
+Ein Publikumsgespräch mit Sofia Helin.mkv</p>
+<pre><code>
+Es ist auch möglich, den Typ des Extras als Dateinamen-Suffix-Erweiterungen hinzuzufügen, wie im Folgenden:
+
+-Hinter den Kulissen
+-gelöscht
+-featurette
+-Interview
+-Szene
+-kurz
+-Trailer
+
+Beispiele:
+Die folgenden Beispiele sind keine echten Extras, sondern dienen lediglich als Beispiele für die verwendete Syntax.
+
+</code></pre>
+<p>\TV
+\Anne with an E (2017)
+\Staffel 1
+Anne With An E S01E01 You Will Shall Decide Your Destiny.mp4
+Anne With An E S01E01 You Will Shall Decide Your Destiny-kurz.mp4
+Anne With An E S01E02 I Am No Bird, And No Net Ensnares Me.mp4
+Anne With An E S01E02 I Am No Bird, And No Net Ensnares Me-Szene.mp4
+Anne With An E S01E03 But What Is So Headstrong As Youth.mp4
+Anne With An E S01E03 But What Is So Headstrong As Youth-featurette.mp4
+Anne With An E S01E04 An Inward Treasure Born.mp4
+Anne With An E S01E04 An Inward Treasure Born-Hinter den Kulissen.mp4
+Anne With An E S01E05 Tightly Knotted To A Similar String.mp4
+Anne With An E S01E05 Tightly Knotted To A Similar String-gelöscht.mp4
+Anne With An E S01E06 Remorse Is The Poison Of Life.mp4
+Anne With An E S01E06 Remorse Is The Poison Of Life-Interview.mp4
+Anne With An E S01E07 Wherever You Are Is My Home.mp4
+Anne With An E S01E07 Wherever You Are Is My Home-Trailer.mp4</p>
+<pre><code>
+## Mix-Bibliotheken
+
+TV-Serien werden in Mischmedien-Bibliotheken unterstützt, indem die Inhaltsart auf Unset festgelegt wird, aber Staffelunterordner sind in diesem Szenario erforderlich.
+
+## Episodennamenskonventionen
+
+Eine Reihe von Namenskonventionen werden unterstützt:
+
+* Showname - S01E01 - Episodenname.ext
+* Showname S01E01 Episodenname.ext
+* anything_s01e02.ext
+* anything_s1e2.ext
+* anything_s01.e02.ext
+* anything_s01_e02.ext
+* anything_1x02.ext
+* anything_102.ext
+* anything_1x02.ext
+* 02 Episodenname.ext
+* s01e02.ext
+* 1x02.ext
+
+### Nach Datum
+
+Gängig für langlaufende tägliche Shows, Sie können auch das Sendungsdatum verwenden.
+
+* anything_1996.11.14.ext
+* anything_1996-11-14.ext
+* anything_14.11.1996.ext
+
+## Multi-Versionen Episoden
+
+Multi-Versionen Episoden verwenden am besten das folgende Format:
+
+* Showname - S01E01 - Anzeigename 1.ext
+* Showname - S01E01 - Anzeigename 2.ext
+
+Beispiel:
+Star Trek, The Next Generation - S01E01 - Originales Broadcast.mkv
+Star Trek, The Next Generation - S01E01 - Digital Remix.mkv
+
+Alles, was dem &quot;-&quot; (Bindestrich) folgt, bis zur Dateierweiterung, wird im Dropdown-Menü der Version-Auswahl in Ihrem Emby-Client verwendet. In diesem Fall werden die zwei Versionen in der Benutzeroberfläche als &quot;Originales Broadcast&quot; und &quot;Digital Remix&quot; angezeigt.
+
+&gt; [!NOTE]
+&gt; Es gibt eine Beschränkung auf die Anzahl der verschiedenen Versionen für einen Medieneintrag. Bis zu 8 verschiedene Versionen erscheinen in einer Liste von Episoden-Versionen.
+
+## Multi-Episoden-Dateien
+
+Alle Mehrfachepisoden-Dateien müssen Teil derselben Staffel sein.
+
+Die folgenden Konventionen werden unterstützt:
+
+* 01x02x03 Episodenname.ext
+* S01x02x03 Episodenname.ext
+* S01E02E03 Episodenname.ext
+* S01xE02xE03 Episodenname.ext
+* S01E02-E03 Episodenname.ext
+* S01E02-X03 Episodenname.ext
+* 01x02 01x03 Episodenname.ext
+* 01x02 - 01x03 Episodenname.ext
+* 01x02 - 01x05 Episodenname.ext (inklusive Episoden 2,3,4 und 5)
+* 01x02 - x03 Episodenname.ext
+* 01x02 - x05 Episodenname.ext
+* S01x02.S01x03 Episodenname.ext
+* S01x02 - S01x03 Episodenname.ext
+* Showname 01x02x03 Episodenname.ext
+* Showname S01x02x03 Episodenname.ext
+* Showname S01E02E03 Episodenname.ext
+* Showname S01xE02xE03 Episodenname.ext
+* Showname S01E02-E03 Episodenname.ext
+* Showname S01E02-E05 Episodenname.ext
+* Showname S01E02-X03 Episodenname.ext
+* Showname S01E02-X05 Episodenname.ext
+* Showname 01x02 01x03 Episodenname.ext
+* Showname 01x02 - 01x03 Episodenname.ext
+* Showname 01x02 - x03 Episodenname.ext
+* Showname S01x02.S01x03 Episodenname.ext
+* Showname S01x02 - S01x03 Episodenname.ext
+
+## Specials
+
+Spezialepisoden sollten mit einem der folgenden Staffelordnernamen benannt werden:
+
+* Staffel 0
+* Staffel 00
+* Specials
+
+Beispiel:
+
+</code></pre>
+<p>\TV
+\Glee (2009)
+\Staffel 0
+Glee S00E01.mp4</p>
+<pre><code>
+&gt; [!TIP]
+&gt; Siehe &quot;TV-Serien Specials/Extras ordnen&quot;, um zu erfahren, wie man diese Specials zeitlich korrekt einordnet.
+
+## Serien- und Staffelbilde
+
+Bilder werden sowohl in Serien- als auch in Staffelordnern unterstützt. Nachfolgend finden Sie eine Tabelle mit den unterstützten Bilddateinamen. Unterstützte Bildformate sind **jpg**, **jpeg**, **png** und **tbn**.
+
+Mehrere Bildtypen unterstützen mehrere Dateinamen. Sie sind in der Reihenfolge aufgeführt, in der sie überprüft werden.
+
+| Bildtyp   | Unterstützte Dateinamen                                   |
+|-----------|-----------------------------------------------------------|
+| Hauptbild | folder.ext                                                |
+|           | poster.ext                                                |
+|           | cover.ext                                                 |
+|           | default.ext                                               |
+|           | show.ext (nur im Serienordner)                            |
+|           | seasonXX-poster.ext (nur im Serienordner)                 |
+|           | season-specials-poster.ext (nur im Serienordner)          |
+| Kunst     | clearart.ext                                              |
+| Hintergrund | backdrop.ext, backdropX.ext                              |
+|           | fanart.ext, fanart-X.ext                                  |
+|           | background.ext, background-X.ext                          |
+|           | art.ext, art-X.ext                                        |
+|           | extrafanart (Unterordner)/fanartX.ext                     |
+|           | seasonXX-fanart.ext  (nur im Serienordner)                |
+|           | season-specials-fanart.ext (nur im Serienordner)          |
+| Banner    | banner.ext                                                |
+|           | seasonXX-banner.ext (nur im Serienordner)                 |
+|           | season-specials-banner.ext (nur im Serienordner)          |
+| Disc      | disc.ext                                                  |
+|           | cdart.ext                                                 |
+| Logo      | logo.ext                                                  |
+| Daumen    | thumb.ext                                                 |
+|           | landscape.ext                                             |
+|           | seasonXX-landscape.ext (nur im Serienordner)              |
+|           | season-specials-landscape.ext (nur im Serienordner)       |
+
+Für Hintergründe, X steht für eine Zahl, und Sie können beliebig viele nummerierte Hintergründe haben. Zum Beispiel:
+
+</code></pre>
+<p>\TV
+\Glee (2009)
+backdrop.ext
+backdrop1.ext
+backdrop2.ext
+backdrop3.ext</p>
+<pre><code>
+
+## Staffelbilde ohne Staffelordner
+
+Wenn Staffelordner nicht verwendet werden, können Staffelbilder dennoch direkt im Serienordner bereitgestellt werden, indem eine Namenskonvention verwendet wird, die die Staffel angibt.
+
+| Bildtyp   | Unterstützte Dateinamen                                   |
+|-----------|-----------------------------------------------------------|
+| Hauptbild | seasonXX-poster.ext                                       |
+|           | season-specials-poster.ext                                |
+| Hintergrund | seasonXX-fanart.ext                                       |
+|           | season-specials-fanart.ext                                |
+| Banner    | seasonXX-banner.ext                                       |
+|           | season-specials-banner.ext                                |
+| Daumen    | seasonXX-landscape.ext                                    |
+|           | season-specials-landscape.ext                             |
+
+Beispiel:
+
+</code></pre>
+<p>\TV
+\Glee (2009)
+season01-poster.jpg
+season-specials-poster.jpg
+season01-fanart.jpg
+season-specials-fanart.jpg
+season01-banner.jpg
+season-specials-banner.jpg
+season01-landscape.jpg
+season-specials-landscape.jpg</p>
+<pre><code>
+## Episodenbilder
+
+Die folgenden Namenskonventionen werden für Episodenbilder unterstützt:
+
+* {name}-thumb.ext (im gleichen Ordner)
+* {name}.ext (im Metadaten-Unterordner)
+
+Unterstützte Bildformate sind **jpg**, **jpeg**, **png** und **tbn**.
+
+Beispiel:
+
+</code></pre>
+<p>\TV
+\Glee (2009)
+\Staffel 1
+Glee S01E01.mp4
+Glee S01E01-thumb.jpg
+\Staffel 2
+Glee S02E01.mp4</p>
+<pre><code>
+## 3D-Episoden
+
+3D-Episoden-Dateien werden unterstützt. Siehe [3D-Videos](3D-Videos.md).
+
+## Mediastubs
+
+Mediastubs werden als Episoden unterstützt. Siehe [Mediastubs](Media-Stubs.md).
+
+## Strm-Dateien
+
+Strm-Dateien werden als Episoden unterstützt. Siehe [Strm-Dateien](Strm-Files.md).
+
+## Untertitel
+
+Untertitel für Episodendateien werden unterstützt. Siehe [Untertitel](Subtitles.md).
+</code></pre>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20undefined%0A*%20Title%3A%20null%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FTV-Naming.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/TV-Naming.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Live-TV-Einrichtung | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Live-TV-Einrichtung | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Live-TV">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Live-TV">
+<h1>Live-TV-Einrichtung</h1>
+
+
+<p>Emby bietet eine flexible und sehr leistungsstarke Lösung für Live-TV und DVR. Mit Emby’s TV können Sie Live- oder aufgezeichnete TV-Inhalte auf jedes Gerät streamen, das Sie mit einem Emby-Client oder Webbrowser besitzen.</p>
+<p>Sie können Emby nutzen, um die Notwendigkeit von Kabel-Set-Top-Boxen (STBs) zu eliminieren oder Ihren Kabelanbieter vollständig abzuschaffen, indem Sie den Anbieter wechseln und auf OTA- (Over the Air) Übertragungen für lokale Kanäle umsteigen.</p>
+<p>Emby stellt kostenlose Programmdaten (für USA, UK &amp; Kanada) direkt ohne zusätzliche Kosten zur Verfügung.</p>
+<h2 id="überblick-über-die-einrichtung">Überblick über die Einrichtung</h2>
+<p>Die Einrichtung von Live-TV kann in einige Schritte unterteilt werden:</p>
+<ul>
+<li>Konfigurieren Sie Ihre TV-Tuner oder M3U-basierte IPTV-Quellen</li>
+<li>Fügen Sie Quellen für TV-Programmdaten hinzu</li>
+<li>Stimmen Sie Ihr Kanalangebot mit den Programmdaten ab (Kanalzuordnung)</li>
+</ul>
+<h2 id="konfigurieren-sie-ihren-tv-tuner">Konfigurieren Sie Ihren TV-Tuner</h2>
+<p>Out of the box unterstützt Emby Server derzeit die folgenden TV-Tuner:</p>
+<ul>
+<li><a href="HDHomeRun-Setup.html">HDHomerun Netzwerk-Tuner</a> (Modelle verfügbar für sowohl OTA als auch Kabel. Muss DLNA-Modell 2015+ unterstützen)</li>
+<li>Hauppauge TV-Tuner (auf Emby Server für Windows - erfordert Win TV 8.5 oder höher)</li>
+<li><a class="xref" href="../../articles/M3U-Tuners.html">M3U Tuners</a><br>
+M3U-Dateien (oder URLs). Siehe Beispiele für m3u-Dateien unter <a href="http://xmtvplayer.com/build-m3u-file">http://xmtvplayer.com/build-m3u-file</a></li>
+</ul>
+<p>Unterstützung für zusätzliche Tuner kann durch die Installation eines <a href="Live-TV-Plugins.html">Live-TV-Plugins</a> hinzugefügt werden.</p>
+<p>In den meisten Fällen wird Emby Server Ihren HDHomerun automatisch in Ihrem Netzwerk ohne erforderliche Konfiguration erkennen. Sie können auch manuell einen Tuner hinzufügen. Öffnen Sie einfach das Server-Dashboard, navigieren Sie zu <strong>Live TV</strong> und klicken Sie auf <strong>Hinzufügen</strong> unterhalb von Tuner-Geräten.</p>
+<h2 id="fügen-sie-eine-quelle-für-tv-programmdaten-hinzu">Fügen Sie eine Quelle für TV-Programmdaten hinzu</h2>
+<p>Out of the box unterstützt Emby Server derzeit die folgenden Quellen für TV-Programmdaten:</p>
+<ul>
+<li><a href="Emby-Guide-Data.html">Emby Guide Data</a><br>
+(Vereinigte Staaten, Kanada und Vereinigtes Königreich)</li>
+<li><a href="Schedules-Direct.html">Schedules Direct</a><br>
+(Nicht für neue Einstellungen verwenden. Funktioniert ab 1. Juni 2021 nicht mehr)</li>
+<li><a href="Xml-Tv.html">Xml TV</a></li>
+</ul>
+<p>Unterstützung für zusätzliche Quellen kann durch die Installation eines <a href="Live-TV-Plugins.html">Live-TV-Plugins</a> hinzugefügt werden.</p>
+<h2 id="stimmen-sie-ihr-kanalangebot-mit-den-programmdaten-ab">Stimmen Sie Ihr Kanalangebot mit den Programmdaten ab</h2>
+<p>Der letzte Schritt der Live-TV-Einrichtung besteht darin, die Sender Ihres Tuners mit den von Ihnen eingerichteten Programmdaten abzugleichen.</p>
+<ul>
+<li><a href="Live-TV-Channel-Mapping.html">Kanalzuordnung für Live-TV</a></li>
+</ul>
+<h2 id="dvr-einstellungen-optional">DVR-Einstellungen (optional)</h2>
+<p>Sie können optional einige Optionen ändern, die für DVR-Zwecke verwendet werden. Diese Optionen umfassen:</p>
+<ul>
+<li><p>Anzahl der Tage, für die Programmdaten geladen werden</p>
+</li>
+<li><p>Standardaufzeichnungspfade</p>
+</li>
+<li><p>Standard-Vor- und Nachlaufzeiten für Aufzeichnungen. Damit können Sie die Aufzeichnung X Minuten früher starten und Y Minuten später beenden lassen.</p>
+</li>
+<li><p><a href="DVR-Settings.html">DVR-Einstellungen</a></p>
+</li>
+</ul>
+<h2 id="emby-live-tv--dvr-ist-einsatzbereit">Emby Live-TV &amp; DVR ist einsatzbereit.</h2>
+<p>Herzlichen Glückwunsch, Ihr Emby Server sollte jetzt korrekt konfiguriert und bereit zur Nutzung für Live-TV und DVR sein.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Live-TV%0A*%20Title%3A%20Live-TV-Einrichtung%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FLive-TV.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001160415-live-tv-setup%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Live-TV.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

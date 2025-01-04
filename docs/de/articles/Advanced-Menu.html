@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verbindung von Client-Apps | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verbindung von Client-Apps | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="Advanced-Menu">
+    <meta name="searchOption" content="noindex">
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Advanced-Menu">
+<h1>Verbindung von Client-Apps</h1>
+
+
+<p>Zweck dieses Dokuments ist es, zu erläutern, wie Sie von zusätzlichen Geräten aus, sowohl innerhalb als auch außerhalb Ihres Heimnetzwerks, auf den Emby Server zugreifen können. Um zu erfahren, wie Sie Benutzern den Zugriff auf Ihren Server gewähren können, siehe <a href="Users.html">Benutzer</a>.</p>
+<p>In den meisten Fällen müssen Sie nichts tun, um von anderen Geräten aus eine Verbindung zu Ihrem Server herzustellen, da Emby-Apps so gebaut sind, dass sie automatisch wissen, wie sie sich verbinden. Auf einigen Systemen kann jedoch eine manuelle Konfiguration erforderlich sein. Dieses Dokument ist in erster Linie als Fehlerbehebung gedacht, wenn die automatischen Funktionen nicht funktionieren.</p>
+<h1 id="verbindungen-im-netzwerk">Verbindungen im Netzwerk</h1>
+<p>Die meisten Emby-Apps können Ihren Emby Server in Ihrem Heimnetzwerk automatisch entdecken, sodass in diesen Fällen keine weiteren Schritte erforderlich sind. Sollte dies nicht funktionieren, können Sie den Emby Server manuell durch Eingabe der Serveradresse verbinden.</p>
+<p>Um die interne Adresse Ihres Servers zu finden, öffnen Sie einfach das Emby Server Dashboard auf dem Emby Server Rechner, typischerweise http://localhost:8096</p>
+<p>Die lokale Adresse Ihres Emby Servers wird dann im Feld <strong>Lokale Adresse</strong> angezeigt.</p>
+<p><img src="images/server/connectivity2.jpg" alt=""></p>
+<p>Diese Informationen können dann in Emby-Apps eingegeben werden:</p>
+<p><img src="images/server/connectivity3.png" alt=""></p>
+<p>Es wird empfohlen, dass die lokale IP-Adresse für den Emby Server Rechner festgesetzt wird. Verwenden Sie die DHCP-Reservierungsfunktion des Routers, um dies zu tun.
+Hier ist eine allgemeine Anleitung dazu.
+<a href="https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router">https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router</a></p>
+<p>Wenn Sie ein <strong>VPN</strong> auf Ihrem Router laufen haben, erscheinen die Anfragen, die aus dem lokalen Netzwerk auf den Server eingehen, möglicherweise nicht als lokal. Es wäre dann notwendig, die Netzwerkeinstellungen &quot;Erlaube Remote-Verbindungen zu diesem Emby Server&quot; zu aktivieren. Wenn kein tatsächlicher externer Zugriff erforderlich ist, sollten Sie sicherstellen, dass &quot;Automatische Portzuordnung aktivieren&quot; in den Netzwerkeinstellungen des Servers deaktiviert ist und keine manuelle Portweiterleitung im Router hinzugefügt wird. Die Option &quot;Erlaube Remote-Verbindungen zu diesem Emby Server&quot; muss auch in den <a href="Users.html">Benutzereinstellungen</a> aktiviert sein.</p>
+<h1 id="fehlerbehebung-bei-internen-verbindungen">Fehlerbehebung bei internen Verbindungen</h1>
+<p>Wenn das Obige immer noch nicht funktioniert, stellen Sie bitte sicher, dass der Rechner, auf dem Emby Server läuft, eingeschaltet ist und dass die Emby Server Anwendung ausgeführt wird.</p>
+<p>Ein nützlicher Test ist es, zu versuchen, einen Webbrowser auf einem anderen Gerät, wie einem anderen Computer, Smartphone oder Tablet, zu verwenden. Sie müssen sicherstellen, dass das andere Gerät mit demselben WLAN-Netzwerk verbunden ist. Versuchen Sie, auf diesem Gerät einen Webbrowser zu öffnen und die lokale Adresse manuell einzugeben:</p>
+<p><img src="images/server/connectivity4.png" alt=""></p>
+<p>Wenn dies immer noch nicht funktioniert, blockiert höchstwahrscheinlich die Firewall auf dem Serverrechner den Zugriff. Unten finden Sie eine Liste von Schritten zur Fehlerbehebung, die zur Lösung führen können.</p>
+<h3 id="öffnen-sie-tcp-port-8096-in-der-firewall-ihres-servers">Öffnen Sie TCP-Port 8096 in der Firewall Ihres Servers</h3>
+<p>Wenn Sie Windows verwenden, müssen Sie höchstwahrscheinlich die Windows-Firewall konfigurieren. Siehe <a href="http://wiki.mcneel.com/zoo/window7firewall">Wie man einen Port in der Windows-Firewall öffnet</a>.</p>
+<p><strong>Wichtig</strong>: Bitte versuchen Sie nicht, diesen Schritt zu überspringen, indem Sie die Windows-Firewall deaktivieren, da dies normalerweise mehr schadet als nützt.</p>
+<p>Wenn Sie Softwarefirewall von Drittanbietern verwenden, müssen Sie deren Anweisungen folgen, um den Port zu öffnen. <strong>Hinweis</strong>: Wenn Sie Antivirus-Software von Drittanbietern wie Norton Internet Security verwenden, wird diese vermutlich über eine eigene Firewall verfügen, die konfiguriert werden muss.</p>
+<h3 id="führen-sie-einen-antivirus-scan-durch">Führen Sie einen Antivirus-Scan durch</h3>
+<p>Wenn Sie sicher sind, dass Sie den Port geöffnet haben und immer noch keine Verbindung herstellen können, sollte der nächste Schritt darin bestehen, sicherzustellen, dass der Serverrechner frei von Viren und Malware ist. Siehe <a href="https://de.wikipedia.org/wiki/Antivirensoftware">Antivirus-Software</a>.</p>
+<h1 id="externe-verbindungen">Externe Verbindungen</h1>
+<p>Emby Server ermöglicht es Ihnen auch, sich von außerhalb des Hauses zu verbinden. Diese Verbindungen nennen wir externe Verbindungen, weil sie außerhalb unseres Heimnetzwerks liegen. Bevor wir beginnen, nehmen wir an, dass alles behandelt wurde, was im Abschnitt <strong>Verbindungen im Netzwerk</strong> zu Ihrem Emby Server funktioniert, und dass Sie in der Lage sind, sich mit anderen Geräten in Ihrem Heimnetzwerk zu verbinden. Wenn nicht, sollten Sie diesen Abschnitt zuerst durchgehen.</p>
+<p>Der Artikel <a href="Remote-Setup.html">Remote Setup</a> behandelt, wie der Fernzugriff ermöglicht wird und die Option für die automatische Portweiterleitung über die uPnP-Funktion des Routers.</p>
+<h3 id="externe-adresse-lokalisieren">Externe Adresse lokalisieren</h3>
+<p>Ihre externe Adresse wird auf der Startseite des Server-Dashboards mit dem Label <strong>Fernzugriff</strong> angezeigt. Dies ist die Adresse, die Sie verwenden sollten, wenn Sie nicht zu Hause sind.</p>
+<p><img src="images/server/connectivity2.jpg" alt=""></p>
+<h3 id="externe-adresse-testen">Externe Adresse testen</h3>
+<p>Die einfachste Möglichkeit, Ihre externe Adresse zu testen, besteht darin, sie in einem Webbrowser zu öffnen, wenn Sie nicht zu Hause sind, oder innerhalb Ihres Zuhauses mit einem Smartphone oder Tablet, bei dem die WLAN-Verbindung ausgeschaltet ist.</p>
+<p><strong>Wichtig</strong>: Das Testen Ihrer externen Adresse innerhalb Ihres Zuhauses funktioniert möglicherweise nicht, was in Ordnung ist. Einige Internet-Router deaktivieren die Loopback-Fähigkeit (hinausgehen und zurückkommen), daher könnten Sie dies von Ihrem Heimnetzwerk aus nicht testen. Es ist wichtig, dass Sie von außerhalb des Hauses testen oder mit der ausgeschalteten WLAN-Verbindung von Smartphone oder Tablet.</p>
+<p>Wenn die externe Adresse in einem Browser funktioniert, sind Sie bereit, fortzufahren und sich von Emby-Apps aus zu verbinden.</p>
+<h3 id="portweiterleitung-einrichten">Portweiterleitung einrichten</h3>
+<p>Wenn Sie nach dem Testen oben immer noch keine Verbindung herstellen können, müssen Sie möglicherweise die Portweiterleitung über Ihren Router einrichten, um externe Verbindungen zu Ihrem Emby Server zu ermöglichen.</p>
+<p>Deaktivieren Sie hierfür die zuvor aktivierte &quot;Automatische Portweiterleitung aktivieren&quot; Option und öffnen Sie die Weboberfläche Ihres Routers. Sie müssen TCP-Port 8096 auf Ihrem Router zu Port 8096 auf dem Emby Server Rechner weiterleiten. Dasselbe gilt auch für Port 8920 (wenn SSL verwendet wird). Es ist wichtig, dass sich die lokale IP-Adresse für den Emby Server Rechner nicht ändert. Verwenden Sie die DHCP-Reservierungsfunktion des Routers dafür.</p>
+<p>Wenn Sie unterschiedliche öffentliche Portnummern verwenden möchten, siehe <a href="Hosting-Settings.html">Netzwerk-(Hosting-)Einstellungen</a>. Wenn Sie mehr als einen Emby Server in Ihrem lokalen Netzwerk haben und die manuelle Portweiterleitung erforderlich ist, müssen die Standard-öffentlichen Portnummern geändert werden, da jeder Server eine andere öffentliche Portnummer haben muss.</p>
+<p>Wenn Sie mehr als einen Router haben, z.B. einen vom ISP bereitgestellten Router und auch einen eigenen Router, würde dies zu einem Double NAT führen, was dazu führen würde, dass der Server von außen nicht erreichbar ist. In solchen Fällen wird empfohlen, einen Router, z.B. den ISP-Router, im Modem/Bridge-Modus zu betreiben. Wenn beide als Router betrieben werden müssen, wird die Konfiguration komplexer. Dabei muss der Portforward für den öffentlichen Port von einem Router zum anderen weiter verwaltet werden, wobei die tatsächliche Portweiterleitung am zweiten Router erfolgt. Auch der zweite Router muss als DHCP-Reservierung auf dem ersten Router konfiguriert sein.</p>
+<p>Der Vorgang der Portweiterleitung wird für jedes Routermodell etwas unterschiedlich sein. Hier finden Sie gute Schritt-für-Schritt-Anleitungen, wie man dies durchführt:</p>
+<p><a href="https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router">https://portforward.com/dhcp-reservation/#how-to-make-a-dhcp-reservation-in-your-router</a>
+<a href="http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router">http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router</a></p>
+<p>Dieses Youtube-Video erklärt es auch ziemlich gut:</p>
+<p><a href="https://www.youtube.com/watch?v=Kp-R-eHiQco">https://www.youtube.com/watch?v=Kp-R-eHiQco</a></p>
+<h3 id="öffentlichen-port-überprüfen">Öffentlichen Port überprüfen</h3>
+<p>Um zu testen, ob Ihr öffentlicher Port über das Internet zugänglich ist, versuchen Sie, ihn von <a href="http://www.canyouseeme.org/">canyouseeme.org</a> zu testen.</p>
+<p>Wenn dieser Test nicht erfolgreich ist, ist das ein Anzeichen dafür, dass Ihr Router den Datenverkehr blockiert und möglicherweise eine zusätzliche Konfiguration erfordert.</p>
+<p>Wenn der Test erfolgreich ist, das Gerät jedoch nicht in der Lage ist, sich extern mit dem Server zu verbinden, überprüfen Sie, ob Sie den Fernzugriff für den Benutzer aktiviert haben. Siehe <a href="Users.html">Benutzer</a>.</p>
+<h3 id="remote-zugriffs-konfiguration">Remote-Zugriffs-Konfiguration</h3>
+<p>Sehen Sie sich den folgenden Link für detaillierte Anweisungen zur Einrichtung des Fernzugriffs auf Emby Server an <a href="Remote-Setup.html">Remote Setup</a>.</p>
+<h3 id="emby-connect">Emby Connect</h3>
+<p>Unabhängig von der verwendeten Methode zur Portweiterleitung, ob es automatisch mit uPnP oder manuell über den Router konfiguriert wird, empfehlen wir die Verwendung der Emby Connect Funktion, da sie die Unsicherheiten bei der externen Verbindung nimmt. Die Emby-Apps würden den Weg zum Server über Emby Connect finden. Siehe <a href="Emby-Connect.html">Emby Connect</a>.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Advanced-Menu%0A*%20Title%3A%20Verbindung%20von%20Client-Apps%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.SupportWeb%2Fblob%2Fmaster%2FEmby.SupportWeb%2Fcontent%2Fsupport%2Fde%2Farticles%2FAdvanced-Menu.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001159258-advanced-menu%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.SupportWeb/blob/master/Emby.SupportWeb/content/support/de/articles/Advanced-Menu.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </div></body>
+</html>

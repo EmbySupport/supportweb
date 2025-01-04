@@ -101,6 +101,9 @@ references:
 - uid: Emby-Server-does-not-start---Security-advisory-2023-05-25
   name: Emby Server does not start - Security advisory 2023-05-25
   href: articles/advisory-23-05.html
+- uid: Emby-Server-startet-nicht---Sicherheitswarnung-2023-05-25
+  name: Emby Server startet nicht - Sicherheitswarnung 2023-05-25
+  href: de/articles/advisory-23-05.html
 - uid: Emby-Theater-for-Windows
   name: Emby Theater for Windows
   href: articles/Emby-Theater-for-Windows.html
