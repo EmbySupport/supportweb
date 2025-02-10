@@ -155,14 +155,14 @@
 <h4 class="long-title">Running Emby Server as a Windows Service</h4>
 
 <p>Before setting up a Windows Service, you'll need to <a href="https://emby.media/download.html">install Emby Server from the Emby website</a>.</p>
-<p>To setup a Windows Service, we'll be using a program called <a href="http://nssm.cc/">NSSM</a> that can turn any app into a Windows Service. To begin:</p>
+<p>To setup a Windows Service, we'll be using a program called <a href="https://nssm.cc/">NSSM</a> that can turn any app into a Windows Service. To begin:</p>
 <ul>
-<li>Download <a href="http://nssm.cc/">NSSM</a>. Make sure to choose the 64-bit or 32-bit version of NSSM to match the architecture of your Windows installation.</li>
+<li>Download <a href="https://nssm.cc/">NSSM</a>. Make sure to choose the 64-bit or 32-bit version of NSSM to match the architecture of your Windows installation.</li>
 <li>Save nssm.exe to a folder of your choice. You'll need to keep NSSM in this folder in order for the service to function.</li>
 <li>Open a command prompt as admin and &quot;cd&quot; to the folder containing NSSM.</li>
 <li>Type &quot;nssm install&quot; to open the NSSM user interface.</li>
 </ul>
-<p>Follow <a href="http://nssm.cc/usage">this guide</a> to create your Windows Service, but incorporate the following changes:</p>
+<p>Follow <a href="https://nssm.cc/usage">this guide</a> to create your Windows Service, but incorporate the following changes:</p>
 <ul>
 <li><strong>Application path</strong>: path to EmbyServer.exe</li>
 <li><strong>Startup directory</strong>: folder containing the above executable</li>
