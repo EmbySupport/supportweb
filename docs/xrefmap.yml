@@ -8,7 +8,7 @@ references:
   name: Admin Password Reset
   href: articles/Admin-Password-Reset.html
 - uid: Advanced-Menu
-  name: Connecting from Client Apps
+  name: Connecting from Client Apps (obsolete)
   href: articles/Advanced-Menu.html
 - uid: Alexa
   name: Amazon Alexa
@@ -59,7 +59,7 @@ references:
   name: Manage Collections (Legacy)
   href: articles/Collections-Manual-Migration.html
 - uid: Connectivity
-  name: Connectivity
+  name: Connecting from Client Apps
   href: articles/Connectivity.html
 - uid: Content-Access
   name: Content Access
@@ -334,7 +334,7 @@ references:
   name: Quick Start
   href: articles/Quick-Start.html
 - uid: Remote-Setup
-  name: Remote Setup
+  name: Remote Setup (obsolete)
   href: articles/Remote-Setup.html
 - uid: Roku
   name: Roku

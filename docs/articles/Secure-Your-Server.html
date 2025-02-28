@@ -154,7 +154,7 @@
 <h1>Secure Your Server</h1>
 
 
-<p>This is a quick tutorial on how to secure your Emby server for free. If you are opening your server to the world, securing it is a good idea. It is also useful to provide required secured streams to external services such as Amazon Alexa or Google Home.</p>
+<p>This is a quick tutorial on how to secure your Emby server for free. If you are opening your server to the world, securing it is a good idea. It is also useful to provide required secured streams to external services such as Amazon Alexa, which requires https connections.</p>
 <h2 id="general-tips--best-practice">General tips &amp; best practice</h2>
 <p>Here are some tips to consider.</p>
 <h3 id="server-admin-account">Server Admin Account</h3>
@@ -172,18 +172,36 @@
 <p><img src="images/server/users28.png" alt=""></p>
 </li>
 <li><p>Consider disabling remote connections for the server admin account. This can be done once the remote connections configuration is in place and working. If there is a need to make changes to the server configuration, use tools such as Team Viewer, Remote Desktop, AnyDesk etc.</p>
-<p><img src="images/server/users29.png" alt=""></p>
+<p><img src="images/server/users18.png" alt=""></p>
 </li>
 </ul>
+<h3 id="user-account-privileges">User Account Privileges</h3>
+<ul>
+<li>Check all the accounts privileges in the user profiles (Server Settings / <a href="Users.html">Users</a>) and give the least privileges, ensuring only your server admin account has the privilege to manage the server.</li>
+</ul>
+<p>The following shows the control level you have at the user account level. E.g. remote access can be controlled at the user level.</p>
+<p><img src="images/server/users18.png" alt=""></p>
+<p>Check that media deletion is controlled and restricted only to the accounts that you trust to give that privilege to. If you had previously granted media deletion for all libraries, reconsider and where absolutely needed, enable it for specific libraries and channels.</p>
+<p><img src="images/server/users30.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can deselect “All libraries” and select specific libraries and channels.</p>
+</div>
+<p>Similarly for subtitle deletions.</p>
+<p><img src="images/server/users31.png" alt=""></p>
+<p>And for remote control, restrict the permission to control for other users to just the admin accounts.</p>
+<p><img src="images/server/users32.png" alt=""></p>
+<p>You can also disable user accounts</p>
+<p><img src="images/server/users33.png" alt=""></p>
 <h3 id="remote-connections">Remote Connections</h3>
 <ul>
-<li><p>If the server is only to be used locally, disable remote access at the server level by unticking this server network setting.</p>
+<li><p>If the server is only to be used locally, disable remote access at the server level by deselecting this server network setting.</p>
 <p><img src="images/server/hosting7.png" alt=""></p>
 </li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If using a vpn on the local network, you may need to have this allowed, alternatively add the vpn network subnet to the list of LAN Networks in the server network settings</p>
+<p>If using a vpn on the local network, you may need to have this allowed, alternatively add the vpn network subnet to the list of LAN Networks in the server <a href="Hosting-Settings.html">network settings</a>.</p>
 </div>
 <ul>
 <li><p>When using a domain name for access to the emby server, consider not having the word “emby” as part of the domain name.</p>
@@ -193,30 +211,17 @@
 </ul>
 <p><img src="images/server/hosting8.png" alt=""></p>
 <ul>
-<li><p>When enabled for remote access and not using a reverse proxy, consider changing the default public port numbers. To do this, you would need to disable the uPnP automatic port mapping and instead setup on your router manual port forwarding for the http and https public port number to be forwarded to the local http and https port numbers in the router settings.</p>
-<p><img src="images/server/hosting9.png" alt=""></p>
+<li><p>When enabled for remote access and not using a reverse proxy, consider changing the default public port numbers from 8096 and 8920 to other port numbers.</p>
 <p><img src="images/server/hosting10.png" alt=""></p>
 <p><img src="images/server/hosting11.png" alt=""></p>
-<p>As an example, if using public port 32700 for http and public port 32800 for https, then you would need to ensure first that the server has a static or DHCP reserved local tcp IP address setup in the router and then setup manual portwards to this IP address for tcp public port 32700 to forward to local port 8096 and tcp public port 32800 to forward to local port 8920. There should be no need to change the local ports from the default. See remote access article.</p>
 </li>
 </ul>
-<h3 id="user-account-privileges">User Account Privileges</h3>
+<p>The public ports would need to be mapped to the local ports. This can be done either by using the automatic port mapping functionality of the Emby Server or by setting up port forwards manually in the router. See <a href="Connectivity.html#automatic-port-mapping">Automatic Port Mapping</a> and <a href="Connectivity.html#setup-port-forwarding">Setup Port Forwarding</a>.</p>
 <ul>
-<li>Check all the accounts privileges in the user profiles (Server Settings / Users) and give the least privileges, ensuring only your server admin account has the privilege to manage the server. Check that media deletion is controlled and restricted only to the accounts that you trust to give that privilege to.</li>
+<li>You also have the option to restrict remote connections to only be allowed from specific public/WAN IP addresses or subnets. The reverse is also possible, blocking specific remote IP addresses and/or subnets. The default is that all remote addresses would be allowed.</li>
 </ul>
-<p>The following shows the control level you have at the user account level. E.g. remote access can also be controlled at the user level.</p>
-<p><img src="images/server/users29.png" alt=""></p>
-<p><img src="images/server/users30.png" alt=""></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can untick “All libraries” and select specific libraries.</p>
-</div>
-<p><img src="images/server/users31.png" alt=""></p>
-<p><img src="images/server/users32.png" alt=""></p>
-<p>You can also disable users</p>
-<p><img src="images/server/users33.png" alt=""></p>
+<p><img src="images/server/hosting13.png" alt=""></p>
 <h2 id="using-secure-https-connections">Using secure https connections</h2>
-<p>If you are interested in an even more secure setup, here is a community-written guide on <a href="https://emby.media/community/index.php?/topic/47508-how-to-nginx-reverse-proxy/">HOW TO: NGINX Reverse Proxy</a>.</p>
 <p>You'll need two things:</p>
 <ul>
 <li>A domain that supports TXT records</li>
@@ -257,16 +262,19 @@ We are almost done. Your Emby server requires a PKCS #12 certificate (certificat
 <p><strong>Chain certificate</strong>: The ca_bundle.crt or you can also find it here, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Save the text into a .txt file.</p>
 <p><strong>PFX password</strong>: Since the private key is combined with the certificate, set a password to secure the new ssl certificate. Remember this password, you'll need it in Emby.</p>
 </li>
-<li><p>Go to your Emby server dashboard &gt; Advanced. Save your changes and restart your server.</p>
+<li><p>Go to your Emby server dashboard &gt; Network. Save your changes and restart your server.</p>
+<p><img src="images/server/hosting14.png" alt=""></p>
+<p><img src="images/server/hosting17b.png" alt=""></p>
 <p><strong>External domain</strong>: yourdomain.com</p>
-<p><strong>Custom SSL certificate path</strong>: point to your new certificate.pem</p>
+<p><strong>Custom SSL certificate path</strong>: point to your new certificate.pfx file</p>
 <p><strong>Certificate password</strong>: The password you set up in the previous step.</p>
 <p><strong>Secure connection mode</strong>: Set it to Preferred but not required or Required for all remote connections.</p>
 </li>
 </ol>
-<p>Your dashboard should now reflect your remote access as <a href="https://yourdomain.com:port">https://yourdomain.com:port</a>. If you followed all the steps, clicking the new remote url should reach your Emby server. If it doesn't work, verify your https ports and try connecting from outside of your network.</p>
+<p>Your dashboard should now reflect your remote access as <a href="https://yourdomain.com:port">https://yourdomain.com:port</a>. If you followed all the steps, clicking the new remote url should reach your Emby server. If it doesn't work, verify your https ports and try connecting from outside of your network. If the dashboard is still showing the domain url with http, check that you have entered the correct certificate password. You may need to look at the server logs to see if there was an error in processing the certificate.</p>
 <p><strong>Save all your certificate files and keys in safe location.</strong> You'll need the private key when you are ready to renew your SSL certificate (I have my own CSR option on SSL for free).
 Since this is all for free, it requires a bit more involvement. You will need to ensure you renew your SSL certificates (every 3 months with SSL for free) and your free domain (every year at least). If you used SSL for free, I suggest creating an account to make the renewal process easier.</p>
+<p>If you are interested in an even more secure setup, here is a community-written guide on <a href="https://emby.media/community/index.php?/topic/47508-how-to-nginx-reverse-proxy/">HOW TO: NGINX Reverse Proxy</a>.</p>
 
 
             </article>
