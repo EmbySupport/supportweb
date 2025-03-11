@@ -161,7 +161,6 @@
 <li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#why-is-emby-connect-required">Why is Emby connect required?</a></li>
 <li><a href="#why-is-emby-server-remote-access-required">Why is Emby Server Remote Access required?</a></li>
-<li><a href="#alpha-stage-steps">Alpha stage steps</a></li>
 <li><a href="#emby-remote-setup">Emby Remote setup</a></li>
 <li><a href="#google-home-account-linking">Google Home account linking</a></li>
 <li><a href="#my-server-is-not-available-to-be-selected-what-do-i-do">My server is not available to be selected</a></li>
@@ -179,34 +178,29 @@
 <h2 id="what-is-google-home">What is Google Home?</h2>
 <p>Google Home is a powerful speaker and voice Assistant. Play your music. Call your friends. Ask it questions. Control your home. It's your own Google, always ready to help.</p>
 <p>The Emby Skill enables users to control playback of their media library or Live TV on any Emby compatible device. Once you have successfully linked your Emby account to Google Home and have remote access configured on the emby server, you can start controlling playback of your movies, TV shows, music or Live TV on your devices with your voice.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Google have removed support for software based remote control and voice actions. It is no longer possible to enable this for Emby for new users.</p>
+</div>
 <h2 id="get-started">Get started</h2>
-<p>It is assumed that you already have a Google Home setup. The emby integration with Google Home is currently in alpha test state due to changes made by Google to sunset some functionality. As a result of these changes, the Google Home skill has been renamed from <strong>Emby home</strong> to <strong>Emby Remote</strong>.</p>
+<p>It is assumed that you already have a Google Home setup and that you had access to the Google Home skill <strong>Emby Remote</strong>. It is not possible to add new access.</p>
+<ul>
+<li>Feedback - Issues encountered at this stage, should be posted on the forum on <a href="https://emby.media/community/index.php?/topic/114533-testing-emby-for-google-home/">this topic</a>.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>Chromecast</strong> is not compatible due to limitation by Google.</p>
+</div>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>It is necessary for <a href="Emby-Connect.html">Emby Connect</a> to be used for the emby server user account and for the emby server to have <a href="Hosting-Settings.html#allow-remote-access">remote access</a> configured and working. <a href="Secure-Your-Server.html#using-secure-https-connections">Secure Connections</a> for the Emby Server is not necessary unless you need to use the <a href="https://emby.media/community/index.php?/topic/92173-alexa-now-requiring-secure-connection-on-port-443/">Amazon Alexa service</a> with emby.</p>
 <h4 id="why-is-emby-connect-required">Why is Emby connect required?</h4>
 <p>Emby connect is used to provide your server information to Google Home.</p>
 <h4 id="why-is-emby-server-remote-access-required">Why is Emby Server Remote Access required?</h4>
 <p>Remote Access is required because that is how Google Home connects to the server.</p>
-<h3 id="alpha-stage-steps">Alpha stage steps</h3>
-<ul>
-<li><p>Get Access - Send a message to <a href="https://emby.media/community/index.php?/profile/40940-hatharry/">hatharry</a> to request access to the <strong>Emby Remote</strong> project within Google Home. Please provide your Google Home email address.</p>
-</li>
-<li><p>Start Alpha Access - Once access has been granted, go to the <a href="https://console.actions.google.com/">Google Home console</a> and login with your Google Home account. You will see the <strong>emby-remote</strong> project. Select it and go through the Google Terms and conditions screens.</p>
-</li>
-</ul>
-<p><img src="images/server/googlehome02.png" alt=""></p>
-<p>You will then need to enable <strong>Emby Remote</strong> testing and the steps to follow are outlined here: <a href="https://developers.home.google.com/cloud-to-cloud/test#enable-testing">Enable Testing</a>.</p>
-<p><img src="images/server/googlehome03.png" alt=""></p>
-<p>You will see a number of versions in the drop-down.</p>
-<p><img src="images/server/googlehome04.png" alt=""></p>
-<p>Pick the latest alpha release.</p>
-<p><img src="images/server/googlehome05.png" alt=""></p>
-<ul>
-<li><p>Feedback - Issues encountered at this stage, should be posted on the forum on <a href="https://emby.media/community/index.php?/topic/114533-alpha-testers-wanted-for-google-home/">this topic</a>.</p>
-</li>
-<li><p>Note that <strong>Chromecast</strong> is not compatible due to limitation by Google at this time.</p>
-</li>
-</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The instructions here assume you already have access to the <strong>Emby Remote</strong> project.</p>
+</div>
 <h3 id="emby-remote-setup">Emby Remote setup</h3>
 <p>When using on a smart phone or tablet, you can install the <a href="https://assistant.google.com/">Google Assistant</a> app to work with the <a href="https://home.google.com/intl/en_uk/get-app/">Google Home</a> app for the control commands to <strong>Emby Remote</strong>.</p>
 <p>On the smart device, open the Google Home app.</p>
@@ -216,7 +210,7 @@
 <p><img src="images/server/googlehome07.png" alt=""></p>
 <p>On the next screen, you will see the list of available skills.</p>
 <p><img src="images/server/googlehome08.png" alt=""></p>
-<p>Use search to look for <strong>Emby Remote</strong>. Just enter <strong>emby</strong> in the search field. This should be find the <strong>emby remote</strong> skill. If not, double check that you have requested to be added to the alpha testing and you have enabled testing within the project web page as outlined above.</p>
+<p>Use search to look for <strong>Emby Remote</strong>. Just enter <strong>emby</strong> in the search field. This should find the <strong>emby remote</strong> skill. If not, it means that you do not have access to the emby remote skill for this Google Home account. As stated above, it will not be possible to add access.</p>
 <p><img src="images/server/googlehome09.png" alt=""></p>
 <h4 id="google-home-account-linking">Google Home account linking</h4>
 <p>The first time you invoke Emby Home, you will be asked to link your Emby account. Enter your Emby connect credentials and select your server. This will enable the skill and work across all your Google Home devices linked to your Google Account.</p>
