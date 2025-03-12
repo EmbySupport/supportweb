@@ -155,16 +155,16 @@
 
 
 <p>Download jobs can be for an individual media file download or a whole TV season or show and also possible to download a complete library. Download jobs also include those created for the <a href="Folder-Sync.html">Folder Sync</a> feature.</p>
-<p>Download jobs are created through the <strong>Download</strong> button within the Emby Apps that support downloads and also within context menu <strong>Download to...</strong> button which is available for media libraries contents. The <strong>Download to...</strong> button is also available in the <a href="Web-Client.html">Emby Web client</a> app. For the various options available, see the <a href="Sync.html">Download Options</a> article.</p>
+<p>Download jobs are created through the <strong>Download</strong> button within the Emby Apps that support downloads and also within context menu <strong>Download to...</strong> button which is available for media libraries contents. The <strong>Download to...</strong> button is also available in the <a href="Web-Client.html">Emby Web client</a> app to initiate downloads to other apps and devices for the user account. For the various options available, see the <a href="Sync.html">Download Options</a> article.</p>
 <h2 id="downloads-job-settings">Downloads Job Settings</h2>
 <p>When creating sync jobs, you'll be able to configure various settings for the job. The settings that are available will differ depending on the content being synced. See <a href="Sync.html">Download Options</a> for details. The following lists the various options available.</p>
-<p>Some of the settings available are:</p>
+<p>Available settings are:</p>
 <p><strong>Quality</strong></p>
 <p>The desired quality level of the synced content. Higher produces better video quality but will require more storage space on the mobile device. The &quot;Original&quot; option can be used to force the process to utilize the original file, but this may result in the file not being playable on the device.</p>
 <p><strong>Profile</strong></p>
 <p>On some Emby client apps, an option is provided to select a pre-set download profile, as well as the option of having a custom profile.</p>
 <p><strong>Unwatched Videos Only</strong></p>
-<p>Only unwatched videos will be downloaded or copied, and videos will be removed from the device as they are watched.</p>
+<p>Only unwatched videos will be downloaded or copied, and videos will be removed from the device as they are watched. This option does not apply to <a href="Folder-Sync.html">Folder Sync</a> download jobs.</p>
 <p><strong>Automatically Download New Content</strong></p>
 <p>New content added to the folder or category will be automatically synced to the device.</p>
 <p><strong>Item Limit</strong></p>
@@ -172,27 +172,22 @@
 <h2 id="subtitles">Subtitles</h2>
 <p>All available text-based subtitles are included with download jobs, allowing you to enjoy subtitle selection even when offline.</p>
 <h2 id="managing-download-jobs">Managing Download Jobs</h2>
-<p>Individual users can manage their own download jobs by opening up the Downloads screen by selecting Downloads within the App Settings or within the Devices section on Emby Web Settings.</p>
+<p>Individual users can manage their own download jobs on each device. First select Downloads within the App Settings.</p>
 <p><img src="images/server/downloadjobs1.png" alt=""></p>
-<p>and for Emby Web</p>
-<p><img src="images/server/downloadjobs2.png" alt=""></p>
-<p>On selecting that screen and the <strong>Manage Downloads</strong> button, the list of download jobs will show</p>
-<p><img src="images/server/downloadjobs3.png" alt=""></p>
-<p>Selecting the download job will show the download options and list of items and status</p>
-<p><img src="images/server/downloadjobs4.png" alt=""></p>
-<p>and similarly the view of download jobs on Emby Web when opening the Downloads tab</p>
+<p>Then open the <strong>Manage Downloads</strong> tab. This will list the download jobs for that user and device giving the status for each and through
+the dot menu button, there is an option to edit the download job or delete the download.</p>
 <p><img src="images/server/downloadjobs5.png" alt=""></p>
-<p>and clicking on the <strong>...</strong> button, the download job can be modified</p>
-<p><img src="images/server/downloadjobs6.png" alt=""></p>
-<p>It is also possible to remove a download</p>
-<p><img src="images/server/downloadjobs7.png" alt=""></p>
+<p>Choosing <strong>Edit</strong> allows the user to amend the download job options.</p>
+<p><img src="images/server/downloadjobs4.png" alt=""></p>
 <h2 id="cancelling-download-jobs">Cancelling Download Jobs</h2>
 <p>To cancel a download job, simply click the dot menu next to a job and then select the <strong>Remove Download</strong> option. This will delete the download job as well as all files that have been copied as part of this job.</p>
+<p><img src="images/server/downloadjobs7.png" alt=""></p>
 <p>Alternatively it's also possible to cancel individual items within a job by opening the download job edit screen and clicking the dot menu next to a download job item.</p>
+<p><img src="images/server/downloadjobs9.png" alt=""></p>
 <h2 id="administrative-management">Administrative Management</h2>
 <p>Administrators can manage all download jobs for all users and devices by opening the server dashboard and navigating to <strong>Downloads</strong> within the <strong>Devices</strong> section of settings.</p>
-<p>From here they'll be able to manage all jobs, job settings and job items:</p>
-<p><img src="images/server/downloadjobs8.png" alt=""></p>
+<p>From here they'll be able to manage all jobs, job settings and job items and edit or remove downloads:</p>
+<p><img src="images/server/downloadjobs6.png" alt=""></p>
 <p>The conversions and downloads tasks show up in the Emby Server <strong>Scheduled Tasks</strong> settings screen as <strong>Convert Media</strong> and <strong>Transfer Media</strong>.</p>
 <p><img src="images/server/scheduledtasks4.png" alt=""></p>
 
