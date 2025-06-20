@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configuration Backup | Emby Documentation </title>
+    <title>Backup &amp; Restore | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configuration Backup | Emby Documentation ">
+    <meta name="title" content="Backup &amp; Restore | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -151,55 +151,166 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Backup">
-<h1>Configuration Backup</h1>
+<h1>Backup & Restore</h1>
 
 
-<p>This guide will go over how to migrate your settings from Emby Server from one machine to another. There are two methods to backing up Emby Server settings and we'll go over them here.</p>
+<p>This guide will go over the following:</p>
+<ul>
+<li>how to setup regular backups using the Backup &amp; Restore Plugin</li>
+<li>how to migrate your settings from Emby Server from one machine to another</li>
+<li>how to restore the same configuration to a new additional server</li>
+<li>how to restore your server to the last backed up state</li>
+<li>how to restore your server to a specific date backup of the databases</li>
+<li>how to copy playback state and favorites from one user account to another</li>
+</ul>
+<p>There is also a section on manual backups.</p>
 <h2 id="use-the-backup--restore-plugin">Use the Backup &amp; Restore Plugin</h2>
-<p>We recommend using the Backup &amp; Restore plugin, which is designed to make this process really painless by doing the work for you. This plugin requires Emby Premiere and can be found in our plugin catalog.</p>
+<p>We recommend using the Backup &amp; Restore plugin, which is designed to make this process really painless by doing the work for you. This plugin requires <a href="Emby-Premiere.html">Emby Premiere</a> and can be found in our plugin catalog.</p>
 <p>The Backup &amp; Restore plugin can help you backup and restore the following:</p>
 <ul>
 <li>Server configuration</li>
 <li>Users</li>
-<li>User data (play-states, favorites, etc).</li>
-<li>Installed plugins</li>
+<li>User data: play-states &amp; favorites</li>
 <li>Plugin settings</li>
 <li>Playlists</li>
+<li>Live TV Schedule</li>
 </ul>
-<p>This will not backup library contents and metadata. To keep a permanent copy of metadata, we suggest enabling saving of local metadata to media folders.  The plug-in also does not backup live TV recording settings or series at this time.</p>
+<p>This will not backup library contents and metadata. To keep a permanent copy of metadata, we suggest enabling saving of local metadata to media folders.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have configured camera uploads and/or Live TV recordings, the default directories for these (data\camerauploads and data\livetv\recordings) are not part of the backup. You would need to back these up yourself and re-instate on the target new location.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When migrating to a new machine, media paths will need to remain the same as on the original server.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Backups created on older versions of Emby Server are not compatible and cannot be restored into Emby Server 4.8.</p>
+</div>
 <h2 id="how-to-use-the-backup--restore-plugin">How to use the Backup &amp; Restore Plugin</h2>
 <ul>
-<li>Be sure your Emby Premiere key is properly installed and validated.  Backup &amp; Restore requires Emby Premiere.</li>
-<li>Install the plugin into your existing Emby Server</li>
-<li>Configure the Backup plugin by setting a folder to save the backups within.
-By default, this process will run every 12 hours and will retain at most 3 backups. You can monitor your folder to see that backups are created.</li>
-<li>Install the plugin on your new Emby Server installation, then configure to backup folder to the same parent folder that contains your backups.</li>
-<li>Click on a backup, you'll then be taken to the restore screen where you can run a restore.</li>
+<li>Be sure your Emby Premiere key is properly installed and validated.  Backup &amp; Restore requires <a href="Emby-Premiere.html">Emby Premiere</a> .</li>
+<li>Install the plugin into your existing Emby Server.</li>
+<li>Make sure there are no pending updates to the plugin, requiring a server restart to be applied. Restart the Emby Server to apply the updates if the server dashboard indicates that.</li>
+<li>Launch <strong>Backup &amp; Restore</strong> from within the Emby Server Advanced settings sidebar.</li>
+<li>Configure the Backup plugin by setting a folder to save the backups within. If you wish to keep additional  backups of the database files, you can specify that. By default, only one backup set of the databases is produced. Make sure you click <strong>Save</strong> to save the path and number of additional database backups configured.</li>
 </ul>
-<p>ote: if previous backups do not show up correctly, check to make sure you have selected the parent folder and not the specific folder holding the backups.</p>
-<h2 id="how-to-restore-from-a-backup">How to Restore from a Backup</h2>
+<p><strong>Initial Settings</strong></p>
+<p><img src="images/plugins/backup-01.png" alt=""></p>
+<p>Enter the backups path and optionally the number of additional database backup copies retained.</p>
+<p><img src="images/plugins/backup-02.png" alt=""></p>
 <ul>
-<li>Goto Plugins</li>
-<li>Click on the Backup &amp; Restore plugin</li>
-<li>This is the configuration screen that will also show you current backups</li>
-<li>Scroll down to &quot;Current Backup&quot;</li>
-<li>Click on the Backup that you wish to restore.</li>
-<li>You will get a screen that gives you options of things that can be - restored.</li>
-<li>You can optionally do restores of only certain parts of the system or for  -only specific users.  Configure as needed.</li>
-<li>Click the &quot;Restore Now&quot; button.</li>
-<li>You're done !</li>
+<li>Now click <strong>Save</strong>.</li>
 </ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You must set a path for backups by changing the default &quot;undefined&quot; path setting to an actual path and saving that for the backups to start. Please ensure that the system user account that Emby Server runs in, has full permissions to this backups path. Paths must be absolute and not relative.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If running Emby Server on Windows as a Windows Service, the backup path needs to be to a local drive or using UNC path if it is an external shared network drive. This is because Mapped Network Drives would not be available to a Windows Service. e.g. Use &quot;\\server-name\share-name\backups-folder-name&quot; as path and not a mapped network drive.</p>
+</div>
+<ul>
+<li>By default, the backup process will run once a day soon after midnight. This can be changed in <strong>Scheduled Tasks</strong> settings.</li>
+</ul>
+<p><img src="images/plugins/backup-04.png" alt=""></p>
+<ul>
+<li>In Scheduled Tasks, you can manually run the schedule for <strong>&quot;Emby Server Backup&quot;</strong> after backups setup, if you wish to confirm that the backups succeed, rather than wait for the scheduled task to run later on.</li>
+</ul>
+<p><img src="images/plugins/backup-05.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Keep a record of what plugins you add to the Emby Server, as whilst the backup operation does save the configurations of all installed plugins, any added plugins will need to be manually installed after the restore of the server.</p>
+</div>
+<h2 id="how-to-restore-using-the-backup--restore-plugin">How to restore using the Backup &amp; Restore Plugin</h2>
+<h3 id="restoring-to-a-new-server-installation">Restoring to a new server installation</h3>
+<ul>
+<li>Ensure all media is in place on the new server in the same media filesystem paths as before. Any that were within the emby server program data eg the default Camera Upload folder and Live TV Recordings folders need to be copied to within the program data path for the new server.</li>
+<li>Add the Emby Premiere key and install the plugin on your new Emby Server installation. You may need to restart the server to complete installing updates for the Backup &amp; Restore plugin.</li>
+<li>Launch the Backup &amp; Restore plugin on the new server and configure it to have the backup path set to where the backups are. It needs to be the same parent folder that contains your backups and then save this path.</li>
+<li>If the path is correct, after clicking &quot;Save&quot; you will see the available backup to restore from.</li>
+</ul>
+<p><img src="images/plugins/backup-03.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>if previous backups do not show up correctly, check to make sure you have selected the parent folder and not the specific folder holding the backups.</p>
+</div>
+<ul>
+<li>Click on <strong>&quot;Restore from Backup&quot;</strong> and in the <strong>Restore Options</strong> drop-down, select <strong>&quot;embyserver-backup-full&quot;</strong>.</li>
+</ul>
+<p><img src="images/plugins/backup-06.png" alt=""></p>
+<ul>
+<li>If this new server is a replacement for the old server, ensure you have the <strong>&quot;Restore Server ID&quot;</strong> ticked.</li>
+<li>If this new server is an additional server, that will be run alongside the server from which the backup was produced, then you must un-tick the <strong>&quot;Restore Server ID&quot;</strong> option, and if using <a href="Emby-Connect.html">Emby Connect</a>, re-link local accounts to Emby Connect after the restore. See <a href="Emby-Connect-for-Users.html">Emby Connect for Users</a>.</li>
+<li>Click on <strong>&quot;Restore from Backup&quot;</strong></li>
+<li>You will be prompted to confirm.</li>
+</ul>
+<p><img src="images/plugins/backup-07.png" alt=""></p>
+<ul>
+<li>When the restore completes, Emby Server will automatically restart.</li>
+</ul>
+<p><img src="images/plugins/backup-08.png" alt=""></p>
+<ul>
+<li>Make sure you close all previous browser sessions accessing this new server, as they would be using the old pre-restore credentials.</li>
+<li>Install any Plugins that you had added to the server that is being restored. The configuration files are automatically restored, so once the plugins are added and the server restarted to complete the plugins installation, the plugin configuration files should get picked up.</li>
+<li>If you have Live TV configured, go to server settings / Live TV and perform a &quot;Refresh Guide Data&quot;</li>
+</ul>
+<h2 id="how-to-restore-an-earlier-backup-of-the-databases">How to Restore an earlier backup of the databases</h2>
+<ul>
+<li>If you have specified that the backups keep a number of extra backup copies of the databases, you can use Restore to revert to an earlier backup of the databases. The restore will use the last full backup data but the databases will be from the backup date you select.</li>
+<li>Launch <strong>Backup &amp; Restore</strong> from within the Emby Server Advanced settings sidebar.</li>
+<li>Click on <strong>&quot;Restore from Backup&quot;</strong> and in the <strong>Restore Options</strong> section, open the drop-down to see the list of previous databases copies.</li>
+</ul>
+<p><img src="images/plugins/backup-09.png" alt=""></p>
+<ul>
+<li>Select the backup for the day/time you wish to go back to.</li>
+<li>As this restore is not for a new additional server, keep the <strong>&quot;Restore Server ID&quot;</strong> ticked</li>
+<li>Click on <strong>&quot;Restore from Backup&quot;</strong></li>
+<li>You will be prompted to confirm. When the restore completes, Emby Server will automatically restart.</li>
+<li>Make sure you close all previous browser sessions accessing this new server, as credentials may change.</li>
+</ul>
+<h2 id="how-to-use-restore-to-copy-media-playback-state-and-favorites">How to use Restore to copy media playback state and favorites</h2>
+<p>You can use Backup and Restore to copy the playback state and favorites information to a different Emby user account.</p>
+<ul>
+<li>Launch <strong>Backup &amp; Restore</strong> from within the Emby Server Advanced settings sidebar.</li>
+<li>Click on <strong>&quot;Extract User Data from Backup&quot;</strong></li>
+</ul>
+<p><img src="images/plugins/backup-10.png" alt=""></p>
+<ul>
+<li>On the next screen, Un-tick all original user accounts that are in the backup except for the one(s) that you wish to copy their data from.</li>
+<li>For each of the selected original user accounts that are in the backup, select from the dropdown the local user account to copy the playbacks state and favorites to.</li>
+</ul>
+<p>In the example below, we are copying playbacks state and favorites from user <strong>My-Admin-User</strong> to user <strong>MyNewAdmin</strong>.</p>
+<p><img src="images/plugins/backup-11.png" alt=""></p>
+<ul>
+<li>Having made the selection, now click <strong>&quot;Restore from Backup&quot;</strong></li>
+</ul>
+<p>and as per other restores, you will be asked to confirm.</p>
+<p><img src="images/plugins/backup-12.png" alt=""></p>
 <p>If you prefer to backup manually, read on....</p>
 <h2 id="how-to-backup-manually">How to Backup Manually</h2>
 <p>The following instructions will detail how to manually backup or migrate an Emby Server installation.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>It is important that the Emby Server process is not running when files are backed up.</p>
+</div>
 <h3 id="locate-embys-program-data-folder">Locate Emby's program data folder</h3>
-<p>The path to the <a href="Server-Data-Folder.html">Emby Server Data Folder</a> can be found in your Emby Server Dashboard by clicking the 3-dot menu next to the server name.
-<img src="https://github.com/EmbySupport/Emby.Docs/assets/10695413/869368a5-6154-41f0-afe3-cfb8afc1b27f" alt="image"></p>
+<p>The path to the <a href="Server-Data-Folder.html">Emby Server Data Folder</a> can be found in your Emby Server Dashboard by clicking the 3-dot menu next to the server name.</p>
+<p><img src="images/plugins/backup-13.png" alt=""></p>
 <p>Click the view server info menu choice</p>
-<p><img src="https://github.com/EmbySupport/Emby.Docs/assets/10695413/a5f23826-d1d0-4901-8fbf-ebbd667234a8" alt="image"></p>
-<p>The top entry shows the parent location for Emby Server.</p>
+<p>The following shows different examples for a number of platforms</p>
+<p><strong>Windows</strong></p>
+<p><img src="images/plugins/backup-14.png" alt=""></p>
+<p><strong>Synology NAS</strong></p>
+<p><img src="images/plugins/backup-15.png" alt=""></p>
+<p><strong>Linux</strong></p>
+<p><img src="images/plugins/backup-16.png" alt=""></p>
+<p><strong>Western Digital NAS</strong></p>
+<p><img src="images/plugins/backup-17.png" alt=""></p>
+<p>The top path entry shows the parent location for Emby Server app data.</p>
 <p>From now on this guide will refer to this path as /ProgramData.
-Simply backup everything in and below /ProgramData using any tool you wish or copy all files to a backup location.</p>
+Simply backup everything in and below /ProgramData using any tool you wish or copy all files to a backup location. Make sure Emby Server is shutdown and does not show as running in the processes list, activity monitor on Mac, Task Manager on windows. For NAS devices, use the NAS dashboard to stop the Emby Server process.</p>
 <h3 id="migrate-to-a-new-server">Migrate to a new server</h3>
 <p>If you are migrating to a different operating system care should be care should be used to make sure you match up directories properly during the restore as the directory names and locations could be different.</p>
 <ul>
@@ -243,7 +354,7 @@ Simply backup everything in and below /ProgramData using any tool you wish or co
             2025 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
       
           <span class="contribution">
-                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Backup%0A*%20Title%3A%20Configuration%20Backup%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FBackup.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001159936-backup%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Backup%0A*%20Title%3A%20Backup%20%26%20Restore%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FBackup.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001159936-backup%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
                 <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Backup.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
           </span>
       
