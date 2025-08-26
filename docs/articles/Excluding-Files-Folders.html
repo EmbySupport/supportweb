@@ -154,6 +154,34 @@
 <h1>Excluding Files & Folders</h1>
 
 
+<p>Media files can be excluded during a library scan by adding a file named <code>embyignore</code> containing the filename(s) path and/or pattern(s) to exclude. This can be added in the root folder of a library or within sub-folders.</p>
+<p>On Windows. the .embyignore file can be created using Notepad with the &quot;Save as type&quot; set to &quot;All files (*.*)&quot;</p>
+<p><img src="images/server/excludes2.png" alt=""></p>
+<p>When adding the <code>.embyignore</code> to a root folder of a library, the rules would apply to all folders.</p>
+<h3 id="contents-of-the-embyignore-file">Contents of the <code>.embyignore</code> file</h3>
+<ul>
+<li>Comment lines can be added by having a # character at the beginning of the line.</li>
+<li>Blank lines are ignored.</li>
+<li>Multiple patterns / names / paths can be entered on separate lines.</li>
+<li>A wildcard <code>*</code> can be used for file name / folder name pattern.</li>
+<li>Use forward slash character <code>/</code> for directory separator - even on Windows.</li>
+<li>When a directory separator is used, the pattern is relative to the directory holding the <code>.embyignore</code> file. Otherwise, the pattern may also match any level below the folder holding the <code>.embyignore</code> file.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>To ignore all <code>.png</code> files in a photos library, place an <code>.embyignore</code> file containing <code>*.png</code> in the root folder(s) of a photos library.</li>
+<li>To ignore all files in a folder, place an <code>.embyignore</code> file containing a <code>*</code> in the folder that is to be ignored.</li>
+<li>To ignore a folder <code>private-vids</code> and all files and folders below it, place an <code>.embyignore</code> file containing <code>private_vids/*</code> in the root folder of the library.</li>
+<li>To ignore a specific file e.g. <code>private-video.mp4</code>, place an <code>.embyignore</code> containing <code>private-video.mp4</code> in the folder.</li>
+</ul>
+<h3 id="support-for-plexignore">Support for .plexignore</h3>
+<p>For your convenience, Emby Server now also supports <code>.plexignore</code>. An option has been added to Library settings for enabling this.</p>
+<p><img src="images/server/excludes3.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>There may be some differences in outcomes between our support of this feature and Plex. The Emby behavior would not match any that are defects in Plex.</p>
+</div>
+<h2 id="emby-server-48">Emby Server 4.8</h2>
 <p>To exclude a folder from the library scan, place a file named .ignore inside the folder.</p>
 <p>This will cause Emby to ignore all sub-folders as well.</p>
 <p>On Windows. the .ignore file can be created using Notepad with the &quot;Save as type&quot; set to &quot;All types (*.*)&quot;</p>
