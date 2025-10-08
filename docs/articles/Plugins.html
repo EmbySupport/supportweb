@@ -179,6 +179,19 @@
 <p>To install a plugin, click on one within the plugin catalog. The plugin detail page will then contain an installation button.</p>
 <p><img src="images/server/plugins2.png" alt=""></p>
 <p>Click the Install button install. After the installation has completed, the server will need to be restarted.</p>
+<h3 id="manual-install-of-plugins">Manual Install of Plugins</h3>
+<p>Sometimes you may need to install a plugin manually. It could be because there is a new pre-release version made available in the forum or a plugin that is not in the catalogue.</p>
+<p>The installed plugins are stored in the &quot;plugins&quot; directory which is below the Emby Server Data Folder.</p>
+<p>See this article for where the <a href="Server-Data-Folder.html">Emby Server Data Folder</a> is for the various platforms. The &quot;plugins&quot; folder is directly below this folder.</p>
+<p>Ensure that Emby Server is shut down when updating plugins.</p>
+<p>If you are replacing a previously installed version of the plugin, first rename the existing plugin dll file. Lets use the <strong>Emby WebStreams</strong> Plugin as an example.</p>
+<p>So rename the existing &quot;Emby.WebStreams.Plugin.dll&quot; to &quot;Emby.WebStreams.Plugin.dll.old&quot;</p>
+<p>If the plugin that is to be installed is in a zip file, unzip it and locate the dll file. Then copy the dll file, eg &quot;Emby.WebStreams.Plugin.dll&quot; to the &quot;plugins&quot; directory.</p>
+<p>Now you can launch Emby Server.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>On Linux and NAS platforms, you may need to change and set permissions and ownership of the dll file. Make sure it is the same as for other plugin dll's in this directory.</p>
+</div>
 <h2 id="popular-plugins">Popular Plugins</h2>
 <p>The plugin catalog has a vast library of plugins available. Below are some of the more popular choices:</p>
 <ul>
