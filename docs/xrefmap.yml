@@ -101,6 +101,9 @@ references:
 - uid: Emby-Premiere-Stub
   name: Emby Premiere
   href: articles/Emby-Premiere-Stub.html
+- uid: Emby-Server-API-Vulnerability---Security-advisory-2025-10-30
+  name: Emby Server API Vulnerability - Security advisory 2025-10-30
+  href: articles/advisory-25-10.html
 - uid: Emby-Server-does-not-start---Security-advisory-2023-05-25
   name: Emby Server does not start - Security advisory 2023-05-25
   href: articles/advisory-23-05.html
