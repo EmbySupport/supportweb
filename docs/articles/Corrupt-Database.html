@@ -154,18 +154,21 @@
 <h1>Corrupt Database</h1>
 
 
-<p>If your server <a href="Log-Files.html">log file</a> shows SQLite errors like the following example your library.db file needs attention.</p>
+<p>If your server <a href="Log-Files.html">log file</a> shows SQLite errors like the following example, it is most likely that your library.db file needs attention.</p>
 <p><code>SQLitePCL.pretty.SQLiteException</code></p>
 <h2 id="what-can-cause-this-to-happen">What can cause this to happen</h2>
 <p>Typical causes of this are sudden and abrupt terminations of the Emby server process, such as a power loss, operating system crash, force killing the server process, etc. Database errors could also arise if you switch back and forth between Emby Server public release and beta releases.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Downgrade from beta to an earlier public release is not supported. Databases may be incompatible.</p>
+<p>In general, downgrade from beta to an earlier public release is not supported. Databases may be incompatible.</p>
 </div>
 <p>The following logged database error indicates a corrupt database file:</p>
 <p><code>SQLitePCL.pretty.SQLiteException: Corrupt: database disk image is malformed</code></p>
-<p>SQLite tools can be used to try and recover from this. Alternatively, see if you can restore the database from a backup - refer to <a href="Backup.html">Backup &amp; Restore</a>. You should always check first, if restore from a backup resolves the issue before attempting database repairs using the SQLite tools.</p>
-<p>SQlite3 Tools may need to be downloaded on some platforms. e.g. Windows. On Mac OS, sqlite3 should be pre-installed and available to run in terminal on both intel x64 and arm sytsems. For linux, it would be best to download the latest precompiled Sqlite-Tools binary from the following link <a href="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</a>.</p>
+<p>SQLite tools can be used to try and recover from this. Alternatively, an easier option would be to see if you can restore the database from a backup - refer to <a href="Backup.html">Backup &amp; Restore</a> for details of how to restore the databases from a backup.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You should always check first, if restore from a backup, resolves the issue before attempting database repairs using the SQLite tools.</p>
+</div>
 <h2 id="attempt-to-recover-the-database">Attempt to recover the database</h2>
 <h3 id="identify-the-corrupt-database">Identify the corrupt database</h3>
 <p>Emby Server has 4 databases: <code>activitylog.db</code>, <code>authentication.db</code>, <code>library.db</code> and <code>users.db</code>. The main database is the <code>library.db</code> which tends to be the one that may end up with a corruption.</p>
@@ -178,48 +181,107 @@ ActivityRepository			activitylog.db
 <p>As an example, the following log line within the logged error block indicates that the corrupt database is the <code>library.db</code>:</p>
 <p><code>at Emby.Server.Implementations.Data.SqliteItemRepository.Initialize</code></p>
 <h3 id="find-location-of-database-files">Find Location of Database Files</h3>
-<p>This is easily found using the <code>...</code> top menu right above the server information box.</p>
+<p>If the Emby Server is not launching due to the corruption, please refer to <a href="Server-Data-Folder.html">Server-Data-Folder</a> for establishing where the Emby Server data is stored. The database files are in the &quot;data&quot; sub-directory below the path shown in the support document.</p>
+<p>Alternatively, you can find the path by using the &quot;<strong>...</strong>&quot; top menu right above the server information box in the Emby Server Settings Dashboard.</p>
 <p><img src="images/server/corrupt-db-01.png" alt="Corrupt Db1"></p>
-<p>Click on <code>View Server Info</code></p>
-<p><img src="images/server/corrupt-db-02.png" alt="Corrupt Db2"></p>
-<p>We need the location of the library database files. The databases are held in the <code>data</code> directory under the Programme Data path shown.</p>
-<p>e.g. for linux, it would be <code>/var/lib/emby/data</code>. This is the path we will use in the examples below. To familiarize yourself with the different locations for the various platforms and possible need to use of ssh, see <a href="Server-Data-Folder.html">Emby Server App Data area</a>.</p>
-<p>The examples below, will all be for the <code>library.db</code> database on linux. Use similar commands for other platforms.</p>
+<p>Click on <strong>View Server Info</strong>.</p>
+<p>The database files are in the &quot;data&quot; sub-directory below the Program data path shown.</p>
+<p>You will need to use a command-line window, linux shell window, mac terminal session to run the command line shell for SQLite. For NAS, an ssh connection would be needed to access the database files. For Android, <a href="https://developer.android.com/tools/adb">adb</a> would be needed.</p>
+<p><strong>The examples below, will all be for the <code>library.db</code>.</strong></p>
 <h3 id="solutions-to-try-in-this-order">Solutions to Try in This Order</h3>
-<p>If you are running on linux, ensure you have full permissions for all the commands below. You can run with root priviledges by executing:</p>
-<p><code>sudo -i</code></p>
 <h3 id="remove-database-locks">Remove Database Locks</h3>
 <ol>
-<li><p>Shutdown Emby</p>
+<li><p>Shutdown Emby Server if it is running and check that the EmbyServer process is no longer showing before proceeding to the next step. Check with Windows <strong>Task Manager</strong>, macOS <strong>Activity Monitor</strong>, <strong>top</strong> or &quot;<strong>ps -aux | grep emby</strong>&quot; on linux and NAS.</p>
 </li>
-<li><p>Navigate to the folder containing your database file</p>
-<p>eg for the linux example,</p>
-<p><code>cd /var/lib/emby/data</code></p>
+<li><p>In a command line window or terminal session on macOS, or shell window on linux and NAS, navigate to the <code>data</code> directory containing your database file. The following are a few examples, refer to the <a href="Server-Data-Folder.html">Server Data Folder</a> document for the complete list.</p>
 </li>
-<li><p>Delete <code>library.db-shm</code> &amp; <code>library.db-wal</code></p>
-</li>
-<li><p>Restart Emby</p>
-</li>
+</ol>
+<p>On some NAS systems, you may need to gain root privileges first by executing &quot;<strong>sudo -s</strong>&quot; first.</p>
+<p>Examples:</p>
+<p><strong>Windows</strong></p>
+<pre><code>cd &quot;%AppData%\Emby-Server\programdata\data&quot;
+</code></pre>
+<p><strong>Linux</strong></p>
+<pre><code>cd /var/lib/emby/data
+</code></pre>
+<p><strong>macOS</strong></p>
+<pre><code>cd ~/.config/emby-server/data
+</code></pre>
+<p>or</p>
+<pre><code>cd ~/emby-server/data
+</code></pre>
+<p><strong>Western Digital NAS</strong></p>
+<pre><code>cd /mnt/HD/HD_a2/emby/data
+</code></pre>
+<p><strong>Synology DSM 7 NAS</strong></p>
+<pre><code>cd /volume1/@appdata/EmbyServer/data
+</code></pre>
+<p><strong>Synology DSM 6 NAS</strong></p>
+<pre><code>cd /volume1/Emby/data
+</code></pre>
+<p><strong>QNAP NAS</strong></p>
+<pre><code>cd /share/CACHEDEV1_DATA/.qpkg/EmbyServer/programdata/data
+</code></pre>
+<p>or</p>
+<pre><code>cd /share/HDA_DATA/.qpkg/EmbyServer/programdata/data
+</code></pre>
+<p>(see <a href="Server-Data-Folder.html">Server Data Folder</a> for the paths for other platforms)</p>
+<ol start="3">
+<li>Delete the <code>library.db-shm</code> &amp; <code>library.db-wal</code> files if present. You can check if they are present using <code>dir</code> on windows or <code>ls</code> on other platforms.</li>
+</ol>
+<p><strong>Windows</strong></p>
+<pre><code>   del library.db-shm
+   del library.db-wal
+</code></pre>
+<p><strong>Other platforms</strong></p>
+<p>You may need to gain root privileges by executing &quot;<strong>sudo -s</strong>&quot; first.</p>
+<pre><code>   rm library.db-shm
+   rm library.db-wal
+</code></pre>
+<ol start="4">
+<li>Restart Emby Server</li>
 </ol>
 <p>Check your <a href="server-logs.md">server log</a> for SQLite errors and only continue to the next step if needed.</p>
 <h3 id="check-database-integrity-and-recover-database">Check Database Integrity and Recover Database</h3>
-<p>This step will require the use of a SQLite3 utility which is part of the Sqlite3 tools download from sqlite.org or pre-installed, e.g. on Mac OS. If you prefer a graphical based editor you can download DB Browser for SQLite which is available for most platforms.</p>
+<p>This step will require the use of the <a href="https://sqlite.org/cli.html">Command line shell for SQLite3</a> tool, which may be pre-installed on some platforms. It can be downlaoded as part of the Sqlite3 tools from <a href="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</a>. If you prefer a graphical based editor, you can download <a href="https://sqlitebrowser.org/dl/">DB Browser for SQLite</a> which is available for most platforms. The instructions given in this document are for the official SQLite3 tools provided by <a href="https://sqlite.org">https://sqlite.org</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>On NAS platforms and for Android Emby Server, you may need to copy the database file to a computer and do the integrity check and repair on the computer and then copy the file back. Access to the database on NAS systems will require enabling &amp; using ssh, and <a href="https://developer.android.com/tools/adb">adb</a> &amp; enabling Developer Options for Android.</p>
+</div>
+<p>The following shows the available sqlite tools binaries for download:</p>
+<p><img src="images/server/corrupt-db-03.png" alt="Corrupt Db3"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>On some NAS platforms, you may need to gain &quot;root&quot; privileges by executing &quot;sudo -s&quot; first. Alternatively, prefix commands with &quot;sudo&quot;. For some platforms, you would be using root and there is no &quot;sudo&quot; command.</p>
+</div>
 <h4 id="run-integrity-check">Run Integrity Check</h4>
-<p>Make sure the current directory is where the database is, eg for linux</p>
-<p><code>cd /var/lib/emby/data</code></p>
-<p>Open the <code>library.db</code> database, e.g.</p>
-<p><code>sqlite3 library.db</code></p>
-<p>and run the following SQL command:</p>
-<p><code>PRAGMA integrity_check;</code></p>
+<ol>
+<li><p>Shutdown Emby Server if it is running and check that the EmbyServer process is no longer showing before proceeding to the next step. Check with Windows <strong>Task Manager</strong>, macOS <strong>Activity Monitor</strong>, <strong>top</strong> or &quot;<strong>ps -aux | grep emby</strong>&quot; on linux.</p>
+</li>
+<li><p>Navigate to the folder containing your database file, see earlier paragraph covering this.</p>
+</li>
+<li><p>If you downloaded the sqlite3 tools rather than using a pre-installed sqlite3 binary, copy the downloaded sqlite3 file (sqlite3.exe or sqlite3) to this directory to make it easier to use. Alternatively, create a temporary folder where you place the database file you are working on and the sqlite3 tool.</p>
+</li>
+</ol>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Check that you are in the right directory, the directory where the database file is, as sqlite3 does not warn you if it it does not find the database and would instead create a new database in the current path.</p>
+</div>
+<p>Open the <code>library.db</code> database and run an integrity check on it:</p>
+<pre><code>sqlite3 library.db
+PRAGMA integrity_check;
+</code></pre>
 <p>This should return an &quot;ok&quot; when there are no corruptions. If errors are reported, we need to repair the database.</p>
 <p>type in <code>.quit</code> to exit</p>
 <p>Examples of results:</p>
+<p>Corruption detected</p>
 <pre><code>SQLite version 3.50.1 2025-06-06 14:52:32
 Enter &quot;.help&quot; for usage hints.
 sqlite&gt; PRAGMA integrity_check;
 Parse error: database disk image is malformed (11)
 sqlite&gt; .quit
 </code></pre>
+<p>Successful integrity check</p>
 <pre><code>SQLite version 3.50.1 2025-06-06 14:52:32
 Enter &quot;.help&quot; for usage hints.
 sqlite&gt; PRAGMA integrity_check;
@@ -228,57 +290,78 @@ sqlite&gt;.quit
 </code></pre>
 <h4 id="repairing-the-database">Repairing the database</h4>
 <p>With Emby Server shutdown, save a copy of the existing database file and then work on the actual database file.</p>
-<p><code>cp library.db library-saved.db</code></p>
-<p>Attempt to vacuum and reindex the database to see if that resolves the issue. Switch to the directory holding the database and open it:</p>
-<pre><code>cd /var/lib/emby/data
-sqlite3 library.db
+<p><strong>Windows</strong></p>
+<pre><code>copy library.db library-saved.db
 </code></pre>
-<p>Then run these two SQLite3 commands. The commands may take a while to complete. You may get errors indicating corruption.</p>
-<pre><code>VACUUM;
+<p><strong>Other Platforms</strong></p>
+<pre><code>cp library.db library-saved.db
+</code></pre>
+<p>Attempt to vacuum and reindex the database to see if that resolves the issue. Switch to the directory holding the database and open it and run the two commands:</p>
+<pre><code>sqlite3 library.db
+VACUUM;
 REINDEX;
 </code></pre>
+<p>The commands may take a while to complete. You may get errors indicating corruption.</p>
 <p>At the end, close the database and exit, with the <code>.quit</code> command.</p>
 <p>If there were no errors, then you can try to see if the issue is resolved.</p>
 <p>Restart Emby Server and check the <a href="Log-Files.html">emby logs</a> for database errors.</p>
 <p>If database errors persist or the <code>VACUUM</code> or <code>REINDEX</code> failed, then we can try to run the <code>.recover</code> SQLite3 command.</p>
 <p>Shutdown Emby Server</p>
-<p>Navigate to the databases folder as before and open the database file with sqlite3, e.g.</p>
-<pre><code>cd /var/lib/emby/data
-sqlite3 library.db
-</code></pre>
-<p>Run these SQLite3 commands</p>
-<pre><code>.output recovered-librarydb.sql
+<p>Navigate to the databases folder as before and open the database file with sqlite3:</p>
+<pre><code>sqlite3 library.db
+.output recovered-librarydb.sql
 .recover
 </code></pre>
 <p>This may take a while to run. At the end, type <code>.quit</code> to close the database file.</p>
 <p>The <code>recovered-librarydb.sql</code>file will contain the sqlite3 commands to recover the database. The file may be large but it is a text file, and you should be able to view its contents - using text editors that can handle potentially very large files.</p>
 <p>We can now create a new database file using this recovery file.</p>
-<p>Create a new database file within the databases directory. Lets call it <code>library-recovered.db</code>. The following creates this db file:</p>
-<p><code>sqlite3 library-recovered.db</code></p>
-<p>We now need to add the content, so type in this command:</p>
-<p><code>.read recovered-librarydb.sql</code></p>
-<p>(this may take a while to run so please wait for it to finish)</p>
+<p>Create a new database file and lets call it <code>library-recovered.db</code>. The following creates this new db file:</p>
+<pre><code>sqlite3 library-recovered.db
+.read recovered-librarydb.sql
+</code></pre>
+<p>(this may take a while to run, so please wait for it to finish)</p>
 <p>Enter <code>.quit</code> command to close the database and exit.</p>
-<p>We will now check the integrity of our recovered database (as above) using</p>
-<p><code>sqlite3 library-recovered.db</code></p>
-<p>and entering sqlite3 command:</p>
-<p><code>PRAGMA integrity_check;</code></p>
-<p>This should return an integrity_check back of &quot;ok&quot; with no errors reported. If errors are reported please report this in the forum before proceeding to Reset the Library Database. If &quot;ok&quot; and no errors are reported, continue with the next step.</p>
-<p>Make a copy of both library.db and library-recovered.db</p>
-<p>Rename library.db to library.old</p>
-<p>Rename library-recovered.db to library.db</p>
-<p>Ensure the new library.db has the same permissions and ownership as the original library- which we saved to library.old. Adjust the permissions and ownership if not.</p>
+<p>We will now check the integrity of our recovered database by running:</p>
+<pre><code>sqlite3 library-recovered.db
+PRAGMA integrity_check;
+</code></pre>
+<p>This should return an integrity_check back of &quot;ok&quot; with no errors reported. If errors are returned, please report this in the forum before proceeding to Reset the Library Database. If &quot;ok&quot; and no errors are reported, continue with the next step.</p>
+<p>At this point, we have</p>
+<pre><code>library-saved.db        Original corrupt/suspect database
+library.db              Original corrupt/suspect database
+library-recovered.db    The new repaired database
+</code></pre>
+<p>We will now rename the <code>library.db</code> to <code>library.db.old</code> and switch the new repaired database to be the <code>library.db</code>.</p>
+<p><strong>Windows</strong></p>
+<pre><code>rename library.db library.db.old
+rename library-recovered.db library.db
+</code></pre>
+<p><strong>Other platforms</strong></p>
+<pre><code>mv library.db library.db.old
+mv library-recovered.db library.db
+</code></pre>
+<p>If this is for a NAS and is being repaired on a computer, we now need to copy the new repaired library.db to the NAS databases directory.</p>
+<p>Similarly, if the repair was done working in a temporary directory, we need now to copy the new repaired library.db to the correct directory overwriting the corrupt/suspect database file.</p>
+<p>Ensure the new <code>library.db</code> has the same permissions and ownership as the original library. Adjust the permissions and ownership if not. For linux and NAS, the owner, group and permissions can be seen for files in the <code>data</code> directory by executing <code>ls -ail</code>.</p>
 <p>Restart Emby Server</p>
-<p>Check you server log for SQLite errors and only continue to the next step if needed</p>
-<h3 id="steps-to-reset-library-database--start-with-a-fresh-new-setup">Steps to Reset Library Database &amp; Start with a Fresh new setup</h3>
+<p>Check you server log for SQLite errors and only continue to the next step if the database still gives errors and the repair has not been successful.</p>
+<h2 id="steps-to-reset-library-database--start-with-a-fresh-new-setup-of-emby-server">Steps to Reset Library Database &amp; Start with a Fresh new setup of Emby Server</h2>
 <ol>
-<li><p>Shutdown Emby</p>
+<li><p>Shutdown Emby Server</p>
 </li>
-<li><p>Change to the database location found above containing your database files</p>
+<li><p>Navigate to the databases folder as per the earlier instructions</p>
 </li>
-<li><p>Rename library.db to library.corrupt</p>
+<li><p>Rename library.db to library.db.corrupt</p>
 </li>
-<li><p>Restart Emby</p>
+</ol>
+<p><strong>Windows</strong></p>
+<pre><code>rename library.db library.db.corrupt
+</code></pre>
+<p><strong>Other platforms</strong></p>
+<pre><code>mv library.db library.db.corrupt
+</code></pre>
+<ol start="4">
+<li><p>Restart Emby Server</p>
 </li>
 <li><p>Recreate your media libraries</p>
 </li>
