@@ -194,6 +194,8 @@ Here is a general guide for doing this.
 <h3 id="check-lan-networks-server-network-setting">Check &quot;LAN Networks&quot; server Network setting</h3>
 <p>If the <strong>LAN Networks</strong> setting is filled in with a value, make sure that the local network is included. If the field is empty and you are using only one network subnet, then this is not relevant to the problem. If you have more than one local network subnets, include all the subnets in the LAN Networks field.</p>
 <p><img src="images/server/connectivity5.png" alt=""></p>
+<h3 id="router-ap-isolation">Router AP Isolation</h3>
+<p>If you find that wired devices can access the Emby Server but not devices on wi-fi, check the router wi-fi settings to see if &quot;<strong>AP Isolation</strong>&quot; is enabled. Disabling this would allow wi-fi connected devices to see other devices on the local network. This would be a valid setting to have enabled for a &quot;Guest Network&quot;, so check first if your wi-fi is configured as a Guest Netowrk.</p>
 <h3 id="use-of-vpn">Use of VPN</h3>
 <p>When using a vpn on your router, the requests coming into the server from within the local network may not appear as local. You would need to add the local network subnet used by the vpn to the <strong>LAN Networks</strong> server Network setting. Ensure you also include the local network subnet that the server is connected to as well.</p>
 <p>As an example, if your local network is on subnet 192.168.1.xxx and the vpn is using subnet 10.253.0.xx, then you would enter: 10.253.0.0/24,192.168.1.0/24 in the LAN Networks server Network settings covering IP address ranges 10.253.0.1 to 10.253.0.255 and 192.168.1.1 to 192.168.1.255. See <a href="Hosting-Settings.html#LAN-Networks">LAN Networks</a>.</p>
