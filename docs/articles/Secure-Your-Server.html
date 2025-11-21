@@ -228,33 +228,71 @@
 <li>A ssl certificate (PKCS #12)</li>
 </ul>
 <h3 id="get-your-domain">Get your domain</h3>
-<p>Sign up for a free domain of your choice. You could use <a href="https://my.freenom.com/">Freenom</a> or <a href="https://www.dynu.com/en-US/">Dynu</a>.</p>
+<p>Sign up for a free domain of your choice. You could use <a href="https://www.dynu.com/">Dynu</a> which is what will be covered in the instructions below. Alternatively use a paid-for registered domain name.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For the SSL certificate setup, you will need to edit the DNS record for verification of the domain and <strong>Dynu</strong> no longer allow creation of TXT DNS records in the first 30 days after setting up a new domain. This restriction may be only for updates through the Dynu DDNS Service Control Panel and it may be possible to make early changes through api using 3rd party products. Otherwise, wait 30 days after creating the domain before getting and adding the ssl certificate.</p>
+</div>
+<ol>
+<li><p>Create an account with <a href="https://dynu.com">https://dynu.com</a></p>
+</li>
+<li><p>Login to your account and open the Control Panel</p>
+</li>
+</ol>
+<p><img src="images/server/hosting21.png" alt=""></p>
+<ol start="3">
+<li><p>Select &quot;<strong>DDNS Services</strong>&quot;</p>
+</li>
+<li><p>Click on &quot;<strong>+Add</strong>&quot; to add a domain to the Dynamic DNS Service.</p>
+</li>
+</ol>
+<p><img src="images/server/hosting24.png" alt=""></p>
+<p>Next, either choose a free domain name provided by <strong>Dynu</strong>, selecting one of the many Top Level domain names with your hostname as the prefix, or adding a domain you already own.</p>
+<p><img src="images/server/hosting22.png" alt=""></p>
+<p>The following shows examples of available Top Level domain names for a free domain name provided by Dynu.</p>
+<p><img src="images/server/hosting23.png" alt=""></p>
+<ol start="5">
+<li><p>If adding a free domain from Dynu, select your preferred Top Level domain and enter the prefix &quot;Host&quot; name you wish to have.</p>
+</li>
+<li><p>For <strong>Dynu</strong> free domains, you will now need to wait 30 days before you can add DNS TXT record for verification for the SSL certificate as detailed in the next section.</p>
+</li>
+</ol>
 <h3 id="ssl-certificate">SSL certificate</h3>
-<p>We will now create Let's encrypt ssl certificates and add it to your domain. Here is a free service to help with this <a href="https://www.sslforfree.com/">SSL for free</a>.</p>
+<p>Two sources for ssl certificates will be covered here, <a href="https://www.sslforfree.com/">SSL for free</a> which is now part of <a href="https://zerossl.com">ZeroSSL</a> and <a href="https://letsencrypt.org/">Let's Encrypt</a>. There are pros and cons for both.</p>
+<p>&quot;SSL for Free&quot; following the merge into &quot;ZeroSSL&quot; is no longer available free after the first 90-day certificate and you would need to switch to a paid-for-plan. Whereas &quot;Let's Encrypt&quot; provides free certificates without any time limit, but requiring renewal every 90 days.</p>
+<p>&quot;Let's Encrypt&quot; certificates, however, may have compatibility issues with LG and Samsung Smart TVs, issues which are known not to arise currently with ZeroSSL certificates.</p>
+<h3 id="ssl-for-free--zerossl-certificate">SSL for Free / ZeroSSL certificate</h3>
+<p>Go to the web site through either <a href="https://www.sslforfree.com/">SSL for free</a> or <a href="https://zerossl.com">ZeroSSL</a> and register and login to your account.</p>
 <ol>
 <li><p>Enter your domain on the site. i.e. yourdomain.com and create a free SSL certificate</p>
 </li>
-<li><p>Select Manual Verification (DNS) &gt; Manually verify domain. We now have 2 TXT records (step 2 on the SSL for free website). We will copy back the TXT records to the domain provider. Leave the SSL for free page open. We will come back to it.
-<img src="https://i.imgur.com/kh19ZgR.jpg" alt=""></p>
+<li><p>Select Manual Verification (DNS) &gt; Manually verify domain. We now have 2 TXT records (step 2 on the SSL for free website). We will copy back the TXT records to the domain provider. Leave the SSL for free page open. We will come back to it.</p>
 </li>
-<li><p>On the domain provider website, select your domain &gt; Manage DNS. Let's create a new TX record. Repeat the steps for both TXT records on SSL for free. Your information should look like this.</p>
+</ol>
+<p><img src="images/server/hosting25.jpg" alt=""></p>
+<ol start="3">
+<li>On the domain provider website, select your domain &gt; Manage DNS. Let's create a new TX record. Repeat the steps for both TXT records on SSL for free. Your information should look like this.</li>
+</ol>
+<p>For Dynu DNS, login and open the Control Panel and select DDNS Services, then select the domain from the list of domains for your account, and click on <strong>DNS Records</strong> and then fill the template for Adding a DNS Record. In the <strong>Node Name</strong> field replace the preset &quot;www&quot; with <code>_acme-challenge</code>. For the <strong>type</strong> field, open the drop-down and select <strong>&quot;TXT - text&quot;</strong>. In the <strong>&quot;Text&quot;</strong> field, you would enter the text character requested for the certificate domain verification process.</p>
+<p>You should end up with a TXT DNS Record like this - these are just examples:</p>
 <p><strong>Name</strong>: _acme-challenge.{yourdomain.com}</p>
 <p><strong>Type</strong>: TXT.</p>
-<p><strong>TTL</strong>: 300 (if you can set it to 1, go for it).</p>
+<p><strong>TTL</strong>: 300 (if you can set it to the lowest possible value).</p>
 <p><strong>Target</strong>: qariKbGVafpb5MespqHdMaGi933yW-Z2A3shE0wIyZA</p>
-</li>
+<ol start="4">
 <li><p>You'll notice Type A records in the same section. You can remove the WWW entry. Ensure your external IP is correct. If you have a dynamic IP, you'll need to keep this updated when it changes.</p>
 </li>
 <li><p>Wait about 15 minutes. Let the domain name and changes propagate.</p>
 </li>
-<li><p>Back to the SSL for free website. Look at step 3, you'll see a link or two to click. Click them. If it is successful, go ahead and click Download SSL certificate. If it is not successful, wait a little longer and retry.</p>
+<li><p>Back to the <strong>SSL for free</strong> / <strong>ZeroSSL</strong> website. Look at step 3, you'll see a link or two to click. Click them. If it is successful, go ahead and click Download SSL certificate. If it is not successful, wait a little longer and retry.</p>
+</li>
+<li><p>After the certificate is created, you should be able to remove the TXT DNS records for the domain</p>
 </li>
 </ol>
-<h3 id="setup-emby-with-your-domain-and-ssl-certificate">Setup Emby with your domain and SSL certificate</h3>
-<p>Now you should have a domain and a folder of ssl certificate (ca_bundle.crt, certificate.crt, private.key).
-We are almost done. Your Emby server requires a PKCS #12 certificate (certificate.crt and private.key combined).</p>
-<ol>
-<li><p>Use this <a href="https://www.sslshopper.com/ssl-converter.html">online certificate converter</a>.</p>
+<p>Now you should have a domain and a folder of ssl certificate (ca_bundle.crt, certificate.crt, private.key).</p>
+<p>We are almost done. Your Emby server requires a PKCS #12 certificate (certificate.crt and private.key combined).</p>
+<ol start="8">
+<li><p>You now need to create the PKCS #12 pfx certificate to use with Emby Server. Use this <a href="https://www.sslshopper.com/ssl-converter.html">online certificate converter</a>.</p>
 </li>
 <li><p>Select type to convert to: PKCS #12. This should expand the number of fields. Once completed, you'll get a new .pfx certificate.</p>
 <p><strong>Certificate file</strong>: certificate.crt</p>
@@ -262,19 +300,107 @@ We are almost done. Your Emby server requires a PKCS #12 certificate (certificat
 <p><strong>Chain certificate</strong>: The ca_bundle.crt or you can also find it here, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Save the text into a .txt file.</p>
 <p><strong>PFX password</strong>: Since the private key is combined with the certificate, set a password to secure the new ssl certificate. Remember this password, you'll need it in Emby.</p>
 </li>
-<li><p>Go to your Emby server dashboard &gt; Network. Save your changes and restart your server.</p>
-<p><img src="images/server/hosting14.png" alt=""></p>
-<p><img src="images/server/hosting17b.png" alt=""></p>
-<p><strong>External domain</strong>: yourdomain.com</p>
-<p><strong>Custom SSL certificate path</strong>: point to your new certificate.pfx file</p>
-<p><strong>Certificate password</strong>: The password you set up in the previous step.</p>
-<p><strong>Secure connection mode</strong>: Set it to Preferred but not required or Required for all remote connections.</p>
+<li><p>Copy the pfx file to where you want to keep the Emby Server certificate and you will also need the pfx password. Next go to the following section below: <strong>Setup Emby Server with your domain and SSL certificate</strong></p>
 </li>
 </ol>
-<p>Your dashboard should now reflect your remote access as <a href="https://yourdomain.com:port">https://yourdomain.com:port</a>. If you followed all the steps, clicking the new remote url should reach your Emby server. If it doesn't work, verify your https ports and try connecting from outside of your network. If the dashboard is still showing the domain url with http, check that you have entered the correct certificate password. You may need to look at the server logs to see if there was an error in processing the certificate.</p>
-<p><strong>Save all your certificate files and keys in safe location.</strong> You'll need the private key when you are ready to renew your SSL certificate (I have my own CSR option on SSL for free).
-Since this is all for free, it requires a bit more involvement. You will need to ensure you renew your SSL certificates (every 3 months with SSL for free) and your free domain (every year at least). If you used SSL for free, I suggest creating an account to make the renewal process easier.</p>
+<h3 id="lets-encrypt-certificate">Let's Encrypt certificate</h3>
+<p>For certificates provided by <strong>Let's Encrypt</strong>, you will need to select an Acme Client application that would interact with the <strong>Let's Encrypt</strong> servers. See <a href="https://letsencrypt.org/docs/client-options/">ACME Client Implementations</a> for the list of available Acme clients.</p>
+<p>The instructions given below are for the <a href="https://poshac.me/">Posh-ACME</a> Powershell Acme client for Windows. Powershell should be available for MacOS and Linux as well. The sequence of steps should be similar whichever Acme client is used. The method that is documented here requires the addition of a TXT DNS Record to the DDNS Service DNS records for your domain.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Whilst the instructions here cover the manual insertion of a DNS record for verification, the <a href="https://poshac.me/">Posh-Acme</a> product does have many plugins, including one for <strong>Dynu</strong> that can be used for automating the creation of the certificate and verification of the domain ownership. You can explore these features and try out with the staging test servers of <strong>Let's Encrypt</strong>. See <a href="https://poshac.me/docs/v4/Plugins/">Posh-ACME DNS Plugins</a> and <a href="https://poshac.me/docs/v4/Tutorial/">Posh-ACME Tutorial</a>.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have just created a free domain with <a href="https://www.dynu.com/">Dynu</a>, you will need to wait 30 days before you can proceed with the following steps. You may find that the use of API and the plugins mentioned in the above tip, gets round this restriction.</p>
+</div>
+<p>The following instructions are for the windows platform. Powershell should be available for other platforms as well.</p>
+<p>Start a PowerShell session running as administrator.</p>
+<p>Install the Posh-Acme package</p>
+<pre><code>Install-Module -Name Posh-ACME -Scope CurrentUser
+</code></pre>
+<p>Answer &quot;Y&quot; to trust the install.</p>
+<p>You may need to add the PowerShell Gallery if not already available.</p>
+<p>You may need to change the PowerShell execution policy to import the Posh-Acme module, through these PowerShell commands:</p>
+<pre><code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+Import-Module Posh-ACME
+</code></pre>
+<p>Let's Encrypt have two sets of server platforms, a staging one for testing purposes and the production set.</p>
+<p>Execute the following Powershell command to select the Production environment.</p>
+<pre><code>Set-PAServer LE_PROD
+</code></pre>
+<p>(If you wish to experiment with the staging test environment, run this command <code>Set-PAServer LE_STAGE</code>)</p>
+<p>You will be shown a link to the Terms of Service, follow the link to read the terms.</p>
+<p>You are now ready to request the certificate.</p>
+<p>Select a password to use with the pfx certificate to be configured in the Emby Server Network Settings. This will need to be passed on in the new certificate request.</p>
+<p>You should also include a contact e-mail address in the request which is expected to result in a reminder for renewal.</p>
+<p>Run the following PowerShell command to request the certificate for your domain.</p>
+<pre><code>New-PACertificate &lt;your domain&gt; -AcceptTOS -PfxPass &lt;the-password to be set on the pfx certificate&gt; -Contact '&lt;your e-mail address&gt;' -Verbose -Force
+</code></pre>
+<p>The additional parameters being:</p>
+<p><code>-AcceptTOS</code> : To accept the Terms of Service.</p>
+<p><code>-Verbose</code> : could be useful in event of issues.</p>
+<p><code>-Force</code> : allows you to re-create the certificate.</p>
+<p>Example:</p>
+<pre><code>New-PACertificate my.domain.org -AcceptTOS -PfxPass gTsjAd!02 -Contact 'my-email@mail-provider.com' -Verbose -Force
+</code></pre>
+<p>You would then get the TXT record to add your domain DNS Records for the DDNS service.</p>
+<p>Exmaple of response from Posh-Acme:</p>
+<pre><code>Please create the following TXT records:
+------------------------------------------
+_acme-challenge.&lt;your domain&gt; -&gt; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+------------------------------------------
+
+Press any key to continue.:
+</code></pre>
+<p>where xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx would be the TXT string displayed by Posh-Acme that needs to be in the TXT DNS record.</p>
+<p>Now login your DDNS service provider, eg <a href="https://www.dynu.com/">https://www.dynu.com</a> and click on the <strong>Control Panel</strong> button.</p>
+<p>Click on &quot;DDNS Service&quot;</p>
+<p>Click on your domain name</p>
+<p>and now click on &quot;DNS Records&quot;</p>
+<p>You will see a number of DNS records of Type A and AAAA. You will also see a public IP Address. Check that this is your WAN/Public IP Address.</p>
+<p>You now need to add a DNS Record.</p>
+<p>In the Node Name field, overwrite the preset &quot;www&quot; with &quot;_acme-challenge&quot;
+In the Type field, select &quot;TXT - Text&quot; from the drop-down
+In the Text field, paste in the text characters returned by Posh-Acme above.
+Now click on &quot;+Add DNS Record&quot;</p>
+<p><img src="images/server/hosting28.png" alt=""></p>
+<p>You should now see a new DNS record added with the name &quot;_acme-challenge.your-domain-name&quot;</p>
+<p><img src="images/server/hosting29.png" alt=""></p>
+<p>Now go back to the Powershell session and hit enter to continue.</p>
+<p>Posh-Acme will now sleep for 2 minutes and then auto connect to your DDNS provider and validate the DNS entry and confirm ownership of the domain through that.</p>
+<p>When validated, Posh-Acme will now request that you remove this DNS record and it will confirm the certificate creation.</p>
+<p><img src="images/server/hosting26.png" alt=""></p>
+<p>Go back to the DDNS service DNS Records page for your domain, and for the <code>_acme-challenge.your-domain</code> DNS record, click on the recycle bin icon and confirm the deletion.</p>
+<p>To see where the certificate files are stored by Posh-Acme, go back to the Powershell session and enter the following command:</p>
+<pre><code>Get-PACertificate | fl
+</code></pre>
+<p><img src="images/server/hosting27.png" alt=""></p>
+<p>The file that you will need for Emby Server is that in the path for &quot;PfxFile&quot;.
+Copy the file for where you want to keep the Emby Server certificate and you will also need the password you specified on the <code>New-PACertificate</code> command.</p>
+<p>Now proceed with the following section to add the domain and certificate to the Emby Server Network settings.</p>
+<h3 id="setup-emby-server-with-your-domain-and-ssl-certificate">Setup Emby Server with your domain and SSL certificate</h3>
+<p>Go to your Emby server Settings dashboard &gt; Network.</p>
+<p>The following will be the fields you will need to specify:</p>
+<p><img src="images/server/hosting14.png" alt=""></p>
+<p><img src="images/server/hosting17b.png" alt=""></p>
+<p>where:
+<strong>External domain</strong>: yourdomain.com</p>
+<p><strong>Custom SSL certificate path</strong>: point to your new certificate.pfx file</p>
+<p><strong>Certificate password</strong>: The pfx password you set up in the previous step.</p>
+<p><strong>Secure connection mode</strong>: Set it to either &quot;<strong>Preferred but not required</strong>&quot; or &quot;<strong>Required for all remote connections</strong>&quot;.</p>
+<p>Your Emby Server Settings dashboard should now reflect your remote access through this url <code>https://yourdomain:port</code>.</p>
+<p>If you followed all the steps, then navigating a browser from outside your local network to this new remote url should reach your Emby server.</p>
+<p>If it doesn't work, verify your https ports and try connecting from outside of your network. If the dashboard is still showing the domain url with http, check that you have entered the correct certificate password. You may need to look at the server logs to see if there was an error in processing the certificate.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The test needs to be made from outside your local network as connections into your public WAN IP address from within the local network are normally blocked.</p>
+</div>
+<p><strong>Save all your certificate files and keys in safe location.</strong> You'll need the private key when you are ready to renew your SSL certificate.</p>
+<div class="TIP">
+<h5>Tip</h5>
 <p>If you are interested in an even more secure setup, here is a community-written guide on <a href="https://emby.media/community/index.php?/topic/47508-how-to-nginx-reverse-proxy/">HOW TO: NGINX Reverse Proxy</a>.</p>
+</div>
 
 
             </article>
