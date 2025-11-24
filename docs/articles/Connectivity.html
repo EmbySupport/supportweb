@@ -171,7 +171,13 @@ Here is a general guide for doing this.
 <p>If the above still does not work, please ensure the machine running Emby Server is turned on, and that the Emby Server application is running. Check through <strong>Task Manager</strong> on Windows, <strong>Activity Monitor</strong> on MacOS, or <strong>ps -e</strong> command on Linux.</p>
 <p>A useful test is to try to use a web browser on another device, such as another computer, smartphone or tablet. You'll need to ensure the other device is connected to the same WIFI network. Try opening a web browser on that device and entering the local address manually:</p>
 <p><img src="images/server/connectivity4.png" alt=""></p>
-<p>If this still does not work, then most likely the firewall on the server machine is not allowing access. Below are a list of troubleshooting steps that can be taken to resolve this.</p>
+<h3 id="windows-network-profile">Windows Network Profile</h3>
+<p>If running the Emby Server on Windows, check that your network connection is set as <strong>Private</strong> and not <strong>Public</strong>. The profile may get switched to Public after re-configuration or updates. Check all the Windows network connections, Ethernet and WiFi. Example for an Ethernet connection:</p>
+<p><img src="images/server/connectivity18.png" alt=""></p>
+<p>See section headed <strong>Make a network public or private</strong> in this Windows support article <a href="https://support.microsoft.com/en-gb/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9">Essential Network Settings and Tasks in Windows</a>.</p>
+<p>The follows shows the differences between the two network profiles:</p>
+<p><img src="images/server/connectivity19.png" alt=""></p>
+<p>If this is set correctly as <strong>Private</strong> and you are still unable to connect to the emby server locally, then most likely the firewall on the server machine is not allowing access. Below are a list of troubleshooting steps that can be taken to resolve this.</p>
 <h3 id="open-tcp-ports-8096--8920--udp-port-7359-on-your-servers-firewall">Open TCP Ports 8096 / 8920 &amp; UDP Port 7359 on your server's firewall</h3>
 <p>If running Windows, the built-in Windows Firewall is usually auto-configured by Emby Server. You may validate this by inspecting the Windows Firewall rules and checking to see Inbound Rules for the EmbyServer.exe for both tcp and udp and Inbound Rules for local TCP ports 8096 and 8920 and for server discovery on the local network, UDP port 7359.</p>
 <p><img src="images/server/connectivity14a.png" alt=""></p>
