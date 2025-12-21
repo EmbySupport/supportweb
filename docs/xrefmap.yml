@@ -269,6 +269,9 @@ references:
 - uid: Passwords
   name: Passwords
   href: articles/Passwords.html
+- uid: Platform-Code-Builder
+  name: Platform-Code Builder
+  href: Platform-Code-Builder.html
 - uid: Playlist-Manual-Migration
   name: Manage Playlists (Legacy)
   href: articles/Playlist-Manual-Migration.html
