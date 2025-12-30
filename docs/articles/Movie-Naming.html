@@ -160,23 +160,37 @@
 <p>Emby supports several different formats and naming conventions such as ISO copies of discs to DVD/Blu-Ray file formatted layouts which are both different types of disc copies. These formats work but are not an ideal way to build your library. Since neither of these are streaming formats they require more work by the server to transcode and stream to client apps. These formats and naming conventions are covered below.</p>
 <p>A much better way of building a large Emby library of content is to prepare you media ahead of time using a streaming friendly format such as MP4 or MKV containers featuring H.264 (or H.265) video with at least one 2 Channel AAC default audio track along side any other audio tracks such as Dolby Digital or DTS. Media prepared in this fashion will have the greatest compatibility with all Emby clients. The idea behind preparing your media ahead of time in this fashion is to reduce the need for the Server to have to transcode (convert) media on the fly. This is not a requirement but is strongly encouraged.</p>
 <h2 id="naming-your-media">Naming your media</h2>
-<p>Once you've prepared your media files, it's time to name your media in a way that allows Emby the best chance of determining what it is.  The best way to do this is to use the format: &quot;MovieName (year).extension&quot; such as &quot;Top Gun (1986).mp4&quot; or &quot;Avatar (2009).mkv&quot;.  Because Emby allows many other advanced functions that can be used with your media we want to create a folder structure that aids in this use.  The simplest method of doing this is to put all media related to a Movie in the same folder using a name &quot;MovieName (year). Emby will then use the folder name to determine the movie.<br>
-It will look like this:</p>
+<p>Once you've prepared your media files, it's time to name your media in a way that allows Emby the best chance of determining what it is.  The best way to do this is to use the format: &quot;MovieName (year).extension&quot; such as &quot;Top Gun (1986).mp4&quot; or &quot;Avatar (2009).mkv&quot;.  Because Emby allows many other advanced functions that can be used with your media we want to create a folder structure that aids in this use.  The simplest method of doing this is to put all media related to a Movie in the same folder using a name &quot;MovieName (year). Emby will then use the folder name to determine the movie. The use of folders for each movie helps with identification and ensuring related files are linked to the movie.</p>
+<p>It will look like this:</p>
 <pre><code>\Movies\Avatar (2009)\Avatar (2009).mkv
 \Movies\Pulp Fiction (1994)\Pulp Fiction (1994).mp4
 \Movies\Reservoir Dogs (1992)\Reservoir Dogs (1992).mp4
 \Movies\The Usual Suspects (1995)\The Usual Suspects (1995).mkv
 \Movies\Top Gun (1986)\Top Gun (1986).mp4
 </code></pre>
-<h2 id="complex-folder-structure">Complex Folder Structure</h2>
-<p>If you plan on having thousands of movies in your library you may want to add an additional folder to your hierarchy to aid in navigation.  For example you could create folders for all movies starting with the first letter or number such as:</p>
-<pre><code>\Movies\A\Avatar (2009)\Avatar (2009).mkv
-\Movies\P\Pulp Fiction (1994)\Pulp Fiction (1994).mp4
-\Movies\R\Reservoir Dogs (1992)\Reservoir Dogs (1992).mp4
-\Movies\T\The Usual Suspects (1995)\The Usual Suspects (1995).mkv
-\Movies\T\Top Gun (1986)\Top Gun (1986).mp4
+<div class="NOTE">
+<h5>Note</h5>
+<p>Movie folders are used internally to improve detection and would only be reflected in the library &quot;<strong>Folders</strong>&quot; view.</p>
+</div>
+<h2 id="other-folder-structures">Other Folder Structures</h2>
+<p>The default library views are not by folder structure. Instead they offer metadata-based views of your library that are created automatically. If, instead, you wish to use a custom set of category folders, you could do that by adding a set of folders below the library root folder and the movies split between these category folders. Emby will work just fine with or without this additional level of folders! These category folders will be visible in the library <strong>Folders</strong> view.</p>
+<p>In the following examples, movies are stored in year bands, each being a 30-year span category, as an example:</p>
+<pre><code>\Movies\Movies 1925-1954\The 39 Steps (1935)\The 39 Steps (1935).mkv
+\Movies\Movies 1925-1954\Sunset Boulevard (1950)\Sunset Boulevard (1950).mkv
+
+\Movies\Movies 1955-1984\Vertigo (1958)\Vertigo (1958).mkv
+\Movies\Movies 1955-1984\Moonraker (1979)\Moonraker (1979).mp4
+
+\Movies\Movies 1985-2014\The Italian Job (2003)\The Italian Job (2003).mkv
+\Movies\Movies 1985-2014\Alex Cross (2012)\Alex Cross (2012).mp4
+
+\Movies\Movies 2015-2044\The Girl on the Train (2016)\The Girl on the Train (2016).mkv
+\Movies\Movies 2015-2044\The Ice Road (2021)\The Ice Road (2021).mp4
 </code></pre>
-<p>When viewing your media outside of Emby using conventional tools such as Windows Explorer this allows you to navigate your library much quicker without having to wait for thousands of folders to load.  It saves you from scrolling through thousands of folders to get to your &quot;W&quot; movies for example. Emby will work just fine with or without this additional folder!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Higher level folders below the library root folder and above the movie folders would only appear in the library &quot;<strong>Folders</strong>&quot; view.</p>
+</div>
 <h2 id="id-tags-in-folder--file-names">ID Tags in Folder &amp; File Names</h2>
 <p>Emby can also read a Meta-Data ID from the name.</p>
 <p>Supported Formats:</p>
