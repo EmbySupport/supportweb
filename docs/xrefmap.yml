@@ -37,6 +37,9 @@ references:
 - uid: Backup
   name: Backup & Restore
   href: articles/Backup.html
+- uid: Beta-Programs
+  name: Beta Programs
+  href: articles/misc/Beta-Programs.html
 - uid: Book-Naming
   name: Book Naming
   href: articles/Book-Naming.html
@@ -95,21 +98,42 @@ references:
 - uid: Emby-Guide-Data
   name: Emby Guide Data
   href: articles/Emby-Guide-Data.html
+- uid: Emby-Linux
+  name: Emby Linux
+  href: articles/apps/linux/Emby-Linux.html
+- uid: Emby-Linux-FAQ
+  name: Emby Linux FAQ
+  href: articles/apps/linux/Emby-Linux-FAQ.html
+- uid: Emby-Package-Repository
+  name: Emby Package Repository
+  href: articles/misc/downloads/Emby-Package-Repository.html
+- uid: Emby-Pkg-Installer
+  name: Emby Universal Installer
+  href: articles/misc/downloads/Emby-Pkg-Installer.html
+- uid: Emby-Platform-Codes
+  name: Emby Platform Codes
+  href: articles/misc/Emby-Platform-Codes.html
 - uid: Emby-Premiere
   name: Emby Premiere
   href: articles/Emby-Premiere.html
 - uid: Emby-Premiere-Stub
   name: Emby Premiere
   href: articles/Emby-Premiere-Stub.html
-- uid: Emby-Server-API-Vulnerability---Security-advisory-2025-10-30
-  name: Emby Server API Vulnerability - Security advisory 2025-10-30
-  href: articles/advisory-25-10.html
 - uid: Emby-Server-does-not-start---Security-advisory-2023-05-25
   name: Emby Server does not start - Security advisory 2023-05-25
   href: articles/advisory-23-05.html
 - uid: Emby-Theater-for-Windows
   name: Emby Windows
-  href: articles/Emby-Theater-for-Windows.html
+  href: articles/apps/windows/Emby-Windows.html
+- uid: Emby-Windows-FAQ
+  name: Emby Windows FAQ
+  href: articles/apps/windows/Emby-Windows-FAQ.html
+- uid: Emby-Xbox
+  name: Emby Xbox
+  href: articles/apps/xbox/Emby-Xbox.html
+- uid: Emby-Xbox-FAQ
+  name: Emby Xbox FAQ
+  href: articles/apps/xbox/Emby-Xbox-FAQ.html
 - uid: Excluding-Files-Folders
   name: Excluding Files & Folders
   href: articles/Excluding-Files-Folders.html
@@ -420,6 +444,39 @@ references:
 - uid: Webhooks
   name: Webhooks
   href: articles/Webhooks.html
+- uid: Win-Feature-Accessibility
+  name: 'Feature: Accessibility'
+  href: articles/apps/windows/features/Win-Feature-Accessibility.html
+- uid: Win-Feature-BrightnessAttenuation
+  name: 'Feature: Brightness Attenuation'
+  href: articles/apps/windows/features/Win-Feature-BrightnessAttenuation.html
+- uid: Win-Feature-DisplayControl
+  name: 'Feature: Display Control'
+  href: articles/apps/windows/features/Win-Feature-DisplayControl.html
+- uid: Win-Feature-Gamepad
+  name: 'Feature: Enhanced Gamepad Support'
+  href: articles/apps/windows/features/Win-Feature-Gamepad.html
+- uid: Win-Feature-Remote-Control
+  name: 'Feature: Enhanced Remote Control Support'
+  href: articles/apps/windows/features/Win-Feature-Remote-Control.html
+- uid: Win-Feature-StartAnim
+  name: 'Feature: Start Animation'
+  href: articles/apps/windows/features/Win-Feature-StartAnim.html
+- uid: Win-Feature-WinTheme
+  name: 'Feature: Windows Theme'
+  href: articles/apps/windows/features/Win-Feature-WinTheme.html
+- uid: Xbox-Feature-DisplayControl
+  name: 'Feature: Display Control'
+  href: articles/apps/xbox/features/Xbox-Feature-DisplayControl.html
+- uid: Xbox-Feature-Gamepad
+  name: 'Feature: Enhanced Gamepad Support'
+  href: articles/apps/xbox/features/Xbox-Feature-Gamepad.html
+- uid: Xbox-Feature-Remote-Control
+  name: 'Feature: Enhanced Remote Control Support'
+  href: articles/apps/xbox/features/Xbox-Feature-Remote-Control.html
+- uid: Xbox-Feature-StartAnim
+  name: 'Feature: Start Animation'
+  href: articles/apps/xbox/features/Xbox-Feature-StartAnim.html
 - uid: Xml-Tv
   name: Xml TV
   href: articles/Xml-Tv.html

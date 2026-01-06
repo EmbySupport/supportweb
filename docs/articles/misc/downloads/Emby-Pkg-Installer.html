@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Emby Universal Installer | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Emby Universal Installer | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="Emby-Pkg-Installer">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby-Pkg-Installer">
+<h1>Emby Universal Installer</h1>
+
+
+<h2 id="as-easy-as-it-can-be">As Easy as it can be!</h2>
+<div class="universal-installer">
+    <div class="codewrapper" style="line-height: 1.5;"><pre class="rp-pre"><code class="lang-bash hljs" style="font-weight: 600;   color: #7d7d7d;">curl https://pkg.emby.media/get.sh | sh</code></pre><button type="button" class="copy-btn" aria-label="Copy to clipboard"><i class="fa fa-clipboard" aria-hidden="true"></i><span class="copy-label">Copy</span></button><div class="copy-toast" role="status" aria-live="polite">Copied to clipboard</div></div>
+    <div class="rp-description">Use the button to copy-paste or type the command to run in a terminal</div>
+</div>
+<p style="text-align: center;font-weight: 500;color: #6f6f6f;">All apps - all distros - all architectures <br> all channels - all package managers - all versions  <br>ONE COMMAND
+    </p>
+<h3 id="about">About</h3>
+<p><code>get.sh</code> is the recommended way to set up the Emby package repository on Linux. It is a single, universal script that:</p>
+<ul>
+<li>detects your system’s package manager automatically (APT, DNF, Zypper, Pacman)</li>
+<li>guides you through repository setup and package installation</li>
+<li>avoids immediate elevation: it runs as a regular user and only requests root permissions for actions that require it</li>
+</ul>
+<hr>
+<h2 id="quick-start-interactive">Quick start (interactive)</h2>
+<ul>
+<li>Run the installer script as shown above.</li>
+<li>Then follow the prompts:</li>
+</ul>
+<ol>
+<li>Choose channel (<code>stable</code> or <code>beta</code>)</li>
+<li>Register/unregister repository (or show packages if already registered)</li>
+<li>Choose an app/package</li>
+<li>Install/uninstall/view info (and optionally open Software Center if supported)</li>
+</ol>
+<hr>
+<h2 id="non-interactive-usage-automation">Non-interactive usage (automation)</h2>
+<p><code>get.sh</code> supports non-interactive usage via environment variables.</p>
+<h3 id="environment-variables">Environment variables</h3>
+<ul>
+<li><p><code>ch</code> = <code>stable|beta</code><br>
+Selects repository channel.</p>
+</li>
+<li><p><code>rop</code> = <code>R|S|U</code><br>
+Repository operation:</p>
+<ul>
+<li><code>R</code> = register (or “reload” if already registered)</li>
+<li><code>S</code> = show packages (requires repo already registered)</li>
+<li><code>U</code> = unregister (requires repo already registered)</li>
+</ul>
+</li>
+<li><p><code>app</code> = package id (required when <code>rop=S</code>)<br>
+Examples: <code>emby-server</code>, <code>media.emby.client</code>, <code>media.emby.client.beta</code></p>
+</li>
+<li><p><code>aop</code> = operation when <code>rop=S</code> (required when <code>rop=S</code>)<br>
+Valid operations depend on app state and platform (the script will reject invalid combinations):</p>
+<ul>
+<li><code>I</code> = install (latest)</li>
+<li><code>U</code> = uninstall</li>
+<li><code>V</code> = choose a specific version (only offered when multiple versions exist)</li>
+<li><code>S</code> = show app info</li>
+<li><code>K</code> = block/unblock package from auto-updating (not available on Pacman)</li>
+</ul>
+</li>
+<li><p><code>GET_LOCAL</code> = <code>1</code><br>
+Local test mode. Instead of downloading platform helper scripts from <code>pkg.emby.media</code>, the script will use local files from <code>./tree_update/</code> (useful when developing this repository).</p>
+</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p>Register stable repo:</p>
+<pre><code class="lang-sh">curl -fsSL https://pkg.emby.media/get.sh | env ch=stable rop=R sh
+</code></pre>
+<p>Unregister beta repo:</p>
+<pre><code class="lang-sh">curl -fsSL https://pkg.emby.media/get.sh | env ch=beta rop=U sh
+</code></pre>
+<p>Show packages (beta) and install the beta client:</p>
+<pre><code class="lang-sh">curl -fsSL https://pkg.emby.media/get.sh | env ch=beta rop=S app=media.emby.client.beta aop=I sh
+</code></pre>
+<hr>
+<h2 id="what-getsh-does-high-level">What <code>get.sh</code> does (high level)</h2>
+<h3 id="1-detects-the-platform-package-manager">1) Detects the platform (package manager)</h3>
+<p><code>get.sh</code> selects the first supported platform it finds:</p>
+<ul>
+<li>APT if <code>apt-get</code> is available</li>
+<li>Pacman if <code>pacman</code> is available</li>
+<li>DNF if <code>dnf</code> is available</li>
+<li>Zypper if <code>zypper</code> is available</li>
+</ul>
+<p>If <code>rpm-ostree</code> is detected, <code>get.sh</code> prints a message with manual steps and exits (rpm-ostree is not currently supported by the interactive installer).</p>
+<p>If none of the above is found, the script exits with an error.</p>
+<h3 id="2-fetches-a-platform-helper-script">2) Fetches a platform helper script</h3>
+<p>After detecting the platform, <code>get.sh</code> fetches exactly one helper script (unless <code>GET_LOCAL=1</code> is used):</p>
+<ul>
+<li>APT: <code>https://pkg.emby.media/apt/setup.sh</code></li>
+<li>Pacman: <code>https://pkg.emby.media/pac/setup.sh</code></li>
+<li>DNF: <code>https://pkg.emby.media/rpm/setup-dnf.sh</code></li>
+<li>Zypper: <code>https://pkg.emby.media/rpm/setup-zypper.sh</code></li>
+</ul>
+<p>That helper script provides a shared set of functions (an “interface”) that <code>get.sh</code> calls to:</p>
+<ul>
+<li>check whether the repository is registered</li>
+<li>register/unregister the repository</li>
+<li>list available packages</li>
+<li>install/uninstall packages, show package info, etc.</li>
+</ul>
+<h3 id="3-performs-requested-actions">3) Performs requested actions</h3>
+<p>Repository-level actions:</p>
+<ul>
+<li>Register (or reload) repository for the chosen channel</li>
+<li>Unregister repository for the chosen channel</li>
+</ul>
+<p>App/package actions:</p>
+<ul>
+<li>Install/uninstall</li>
+<li>Show package information</li>
+<li>Select and install a specific version (when supported and multiple versions exist)</li>
+<li>Block/unblock package from auto-updating (APT, DNF, Zypper only)</li>
+</ul>
+<hr>
+<h2 id="cross-channel-update-protection">Cross-channel update protection</h2>
+<p>When you have both the stable and beta repositories registered, there's a risk of accidentally upgrading your Emby Server from one channel to another during routine system updates. To prevent this, <code>get.sh</code> includes automatic cross-channel update protection.</p>
+<h3 id="automatic-blocking">Automatic blocking</h3>
+<p>When registering a repository, <code>get.sh</code> automatically blocks cross-channel server updates:</p>
+<ul>
+<li><p><strong>Registering the beta repo with a stable Emby Server installed</strong>: The script automatically blocks <code>emby-server</code> from the beta repo, preventing accidental upgrades to beta versions.</p>
+</li>
+<li><p><strong>Registering the stable repo with a beta Emby Server installed</strong>: The script automatically blocks <code>emby-server</code> from the stable repo, preventing accidental downgrades to stable versions.</p>
+</li>
+</ul>
+<p>When automatic blocking occurs, you'll see a message like:</p>
+<pre><code>An Emby Server (stable) installation was detected on this system.
+The Emby Server package from the beta repo has been blocked automatically
+in order to prevent automatic updates being offered, which could
+lead to unwanted installation of a beta server version over your
+stable installation.
+</code></pre>
+<h3 id="manual-blockingunblocking">Manual blocking/unblocking</h3>
+<p>You can also manually control package update blocking from the package operations menu:</p>
+<ol>
+<li>Navigate to the package in the packages list</li>
+<li>Select the package to view operations</li>
+<li>Use the <strong>K</strong> option to toggle blocking:
+<ul>
+<li>If currently blocked: &quot;Unblock package from auto-updating&quot;</li>
+<li>If not blocked: &quot;Block package from auto-updating&quot;</li>
+</ul>
+</li>
+</ol>
+<p>Blocked packages are shown in the package list with &quot;(updates blocked)&quot; next to their status.</p>
+<h3 id="platform-implementation">Platform implementation</h3>
+<p>The blocking feature uses platform-native mechanisms:</p>
+<ul>
+<li><strong>APT</strong>: Creates pinning rules in <code>/etc/apt/preferences.d/</code> with negative priority</li>
+<li><strong>DNF</strong>: Adds <code>excludepkgs=</code> to the repo file in <code>/etc/yum.repos.d/</code></li>
+<li><strong>Zypper</strong>: Creates repo-scoped package locks via <code>zypper addlock -r</code></li>
+<li><strong>Pacman</strong>: Not supported (no beta server packages available)</li>
+</ul>
+<hr>
+<h2 id="security-model--elevation">Security model / elevation</h2>
+<ul>
+<li><code>get.sh</code> is designed to be safe to run as a regular user.</li>
+<li>When a privileged action is needed, <code>get.sh</code> tries to use an elevation tool:
+<ul>
+<li><code>sudo</code> (most common)</li>
+<li><code>doas</code></li>
+<li><code>run0</code></li>
+<li><code>pkexec</code></li>
+<li><code>sudo-rs</code></li>
+</ul>
+</li>
+</ul>
+<p>If no elevation tool is available and you are not already running as root, operations that require root privileges will fail with an error.</p>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="could-not-find-a-supported-package-manager">“Could not find a supported package manager”</h3>
+<p>Your system must have one of: APT, Pacman, DNF, or Zypper.</p>
+<h3 id="no-elevation-tool-available">“No elevation tool available”</h3>
+<p>Install <code>sudo</code> (or another supported elevation tool) and re-run.</p>
+<h3 id="this-system-uses-rpm-ostree-which-is-not-yet-supported">“This system uses rpm-ostree which is not yet supported”</h3>
+<p>Follow the instructions printed by <code>get.sh</code> (it suggests installing the <code>.repo</code> file and using <code>rpm-ostree install ...</code>, then rebooting).</p>
+<h3 id="debugging-downloads">Debugging downloads</h3>
+<p><code>get.sh</code> uses either <code>curl</code> or <code>wget</code> (whichever is available). If downloads fail, verify connectivity to <code>https://pkg.emby.media/</code>.</p>
+<hr>
+<h2 id="local-development--testing-get_local1">Local development / testing (<code>GET_LOCAL=1</code>)</h2>
+<p>From the repository root:</p>
+<pre><code class="lang-sh">GET_LOCAL=1 env ch=stable rop=R sh tree_update/get.sh
+</code></pre>
+<p>This forces <code>get.sh</code> to use <code>tree_update/apt/setup.sh</code>, <code>tree_update/pac/setup.sh</code>, etc. instead of downloading them.</p>
+<style>
+
+.universal-installer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0px 0;
+}
+
+.codewrapper {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 9px;
+    width: fit-content;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+pre {
+    border: 0;
+    padding: 9.5px;
+    margin: 20px 0;
+    font-size: 15px;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f8f8f7;
+    border-radius: 4px;
+    border: none;
+    box-shadow: var(--card-box-shadow);
+    display: block;
+    font-family: monospace;
+    unicode-bidi: isolate;
+    white-space: pre;
+    margin-block: 1em 1em;
+    margin-inline: 0px;
+}
+
+pre.rp-pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 60px;
+    padding-left: 15px;
+}
+
+.rp-description {
+    font-size: 11px;
+    color: #9f9f9f;
+    margin-bottom: 20px;
+}
+
+h1#emby-package-repositories {
+    margin-left: 200px;
+    color: white;
+    margin-top: 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: clip;
+    font-size: 36px;
+}
+
+h3#rp-single-commandD {
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-right: 22px;
+}
+
+ul.rp-list {
+    list-style: none;
+    padding-inline-start: 0; margin-right: 30px;
+    user-select: none;
+}
+
+
+.copy-btn {
+    position: absolute;
+    top: 0;
+    bottom: 1px;
+    right: 0;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--font-color);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: var(--card-box-shadow);
+    transition: transform 120ms ease, box-shadow var(--transition), color var(--transition), border-color var(--transition);
+    margin: 3px;
+    opacity: 0.6;
+}
+
+.copy-btn .fa {
+    font-size: 14px;
+}
+
+.copy-btn:hover, .copy-btn:focus {
+    color: var(--highlight-dark);
+    border-color: var(--highlight-light);
+    outline: none;
+    /* transform: translateY(-1px); */
+}
+
+.copy-btn.is-copied {
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.copy-btn.is-error {
+    color: #c62828;
+    border-color: #c62828;
+}
+
+.copy-toast {
+    position: absolute;
+    top: -36px;
+    right: 8px;
+    background: #212121;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: var(--card-box-shadow);
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.copy-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect small screens: keep button tappable */
+@media (max-width: 480px) {
+    .copy-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+.copy-label {
+    display: none;
+}
+
+</style>
+<script>
+(function() {
+  function makeWrapper(pre) {
+    if (pre.parentElement && pre.parentElement.classList.contains('codewrapper')) return pre.parentElement;
+    const wrap = document.createElement('div');
+    wrap.className = 'codewrapper';
+    pre.parentNode.insertBefore(wrap, pre);
+    wrap.appendChild(pre);
+    return wrap;
+  }
+
+  function createButton() {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn';
+    btn.setAttribute('aria-label', 'Copy to clipboard');
+    btn.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i><span class="copy-label">Copy</span>';
+    return btn;
+  }
+
+  function createToast() {
+    const div = document.createElement('div');
+    div.className = 'copy-toast';
+    div.setAttribute('role', 'status');
+    div.setAttribute('aria-live', 'polite');
+    div.textContent = 'Copied to clipboard';
+    return div;
+  }
+
+  function getCodeText(codeEl) {
+    return (codeEl.innerText || codeEl.textContent || '').trim();
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    ta.style.left = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (_) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function setState(btn, toast, state) {
+    const label = btn.querySelector('.copy-label');
+    const icon = btn.querySelector('.fa');
+    btn.classList.remove('is-copied', 'is-error');
+    toast.classList.remove('show');
+    if (state === 'copied') {
+      btn.classList.add('is-copied');
+      if (icon) icon.className = 'fa fa-check';
+      if (label) label.textContent = 'Copied!';
+      toast.textContent = 'Copied to clipboard';
+      toast.classList.add('show');
+    } else if (state === 'error') {
+      btn.classList.add('is-error');
+      if (icon) icon.className = 'fa fa-times';
+      if (label) label.textContent = 'Copy failed';
+      toast.textContent = 'Copy failed';
+      toast.classList.add('show');
+    } else {
+      if (icon) icon.className = 'fa fa-clipboard';
+      if (label) label.textContent = 'Copy';
+    }
+  }
+
+  function attach(pre) {
+    const wrap = makeWrapper(pre);
+    const code = pre.querySelector('code') || pre;
+    const btn = createButton();
+    const toast = createToast();
+    wrap.appendChild(btn);
+    wrap.appendChild(toast);
+
+    let resetTimer = null;
+    function reset() {
+      setState(btn, toast, 'idle');
+      btn.disabled = false;
+    }
+
+    btn.addEventListener('click', async function() {
+      const text = getCodeText(code);
+      if (!text) return;
+      btn.disabled = true;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          setState(btn, toast, 'copied');
+        } else {
+          const ok = fallbackCopy(text);
+          setState(btn, toast, ok ? 'copied' : 'error');
+        }
+      } catch (e) {
+        const ok = fallbackCopy(text);
+        setState(btn, toast, ok ? 'copied' : 'error');
+      }
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(reset, 1800);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('pre').forEach(attach);
+  });
+})();
+</script>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Emby-Pkg-Installer%0A*%20Title%3A%20Emby%20Universal%20Installer%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fmisc%2Fdownloads%2FEmby-Pkg-Installer.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/misc/downloads/Emby-Pkg-Installer.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </div></body>
+</html>
