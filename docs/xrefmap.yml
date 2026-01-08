@@ -101,15 +101,36 @@ references:
 - uid: Emby-Linux
   name: Emby Linux
   href: articles/apps/linux/Emby-Linux.html
+- uid: Emby-Linux-Beta-Program
+  name: 'Emby Linux: Beta Program'
+  href: articles/apps/linux/Emby-Linux-Beta-Program.html
 - uid: Emby-Linux-FAQ
   name: Emby Linux FAQ
   href: articles/apps/linux/Emby-Linux-FAQ.html
+- uid: Emby-Linux-Flags
+  name: 'Emby Linux: Commandline Flags'
+  href: articles/apps/linux/Emby-Linux-Flags.html
+- uid: Emby-Linux-Platform-Support
+  name: 'Emby Linux: Platform Support'
+  href: articles/apps/linux/Emby-Linux-Platform-Support.html
 - uid: Emby-Package-Repository
   name: Emby Package Repository
   href: articles/misc/downloads/Emby-Package-Repository.html
+- uid: Emby-Pkg-APT
+  name: 'Manual Repo Setup: APT'
+  href: articles/misc/downloads/Emby-Pkg-APT.html
+- uid: Emby-Pkg-DNF
+  name: 'Manual Repo Setup: DNF'
+  href: articles/misc/downloads/Emby-Pkg-DNF.html
 - uid: Emby-Pkg-Installer
   name: Emby Universal Installer
   href: articles/misc/downloads/Emby-Pkg-Installer.html
+- uid: Emby-Pkg-Pacman
+  name: 'Manual Repo Setup: Pacman'
+  href: articles/misc/downloads/Emby-Pkg-Pacman.html
+- uid: Emby-Pkg-Zypper
+  name: 'Manual Repo Setup: Zypper'
+  href: articles/misc/downloads/Emby-Pkg-Zypper.html
 - uid: Emby-Platform-Codes
   name: Emby Platform Codes
   href: articles/misc/Emby-Platform-Codes.html
@@ -125,12 +146,18 @@ references:
 - uid: Emby-Theater-for-Windows
   name: Emby Windows
   href: articles/apps/windows/Emby-Windows.html
+- uid: Emby-Windows-Beta-Program
+  name: 'Emby Windows: Beta Program'
+  href: articles/apps/windows/Emby-Windows-Beta-Program.html
 - uid: Emby-Windows-FAQ
   name: Emby Windows FAQ
   href: articles/apps/windows/Emby-Windows-FAQ.html
 - uid: Emby-Xbox
   name: Emby Xbox
   href: articles/apps/xbox/Emby-Xbox.html
+- uid: Emby-Xbox-Beta-Program
+  name: 'Emby Xbox: Beta Program'
+  href: articles/apps/xbox/Emby-Xbox-Beta-Program.html
 - uid: Emby-Xbox-FAQ
   name: Emby Xbox FAQ
   href: articles/apps/xbox/Emby-Xbox-FAQ.html
