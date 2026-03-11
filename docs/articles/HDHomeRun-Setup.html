@@ -161,10 +161,17 @@
 <ul>
 <li><a href="Older-HDHomeRun-Support.html">Older HDHomeRun Support</a></li>
 </ul>
+<p>The Live TV &amp; DVR feature requires a valid <a href="Emby-Premiere.html">Emby Premiere</a> subscription. This would be indicated on the setup screen when there is no subscription.</p>
 <p>Open the server dashboard and click the Live TV menu option on the left.  If you haven't setup any part of Live TV yet you should have a page that looks like this:</p>
-<p><img src="images/server/hdhomerun1.png" alt="hdhomerun1.png"></p>
-<p>Click the plus sign next to TV Source in order to add our first tuner. We will then be presented with a screen that allows us to choose the type of tuner to add.  Select HD HomeRun from the drop down list of choices and then click the save button.</p>
+<p><img src="images/server/livetv6.png" alt="hdhomerun1.png"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Whilst you will be permitted to add the Live TV device, there would be no channels or guide data without an <a href="Emby-Premiere.html">Emby Premiere</a> subscription.</p>
+</div>
+<p>Click on <strong>&quot;+ Add TV Source&quot;</strong> in order to add our first tuner. We will then be presented with a screen that allows us to choose the type of tuner to add.  Select HD HomeRun.</p>
 <p><img src="images/server/hdhomerun2.png" alt="hdhomerun2.png"></p>
+<p>If the HD HomeRun device does not show, click on &quot;<strong>Detect Devices</strong>&quot;</p>
+<p><img src="images/server/hdhomerun3a.png" alt="hdhomerun2.png"></p>
 <p>Emby will search your network and present all HDHomeRun devices it finds on your network.  Here is a example showing two Primes and one Quatro automatically found.</p>
 <p><img src="images/server/hdhomerun3.png" alt="hdhomerun3.png"></p>
 <p>In this example we are going to setup OTA (Over the Air) using the HDHomeRun Quatro. Click the Quatro (3rd on this list).</p>
@@ -174,6 +181,7 @@ The ability to import all channels or only FAVORITE channels (already configured
 <p><img src="images/server/hdhomerun4.png" alt="hdhomerun4.png"></p>
 <p>For this example using a Quatro we will enable the restriction of favorite channels and disable the hardware transcoding option. Once we’ve set our options the click save button and we will have added our first tuner.</p>
 <p><img src="images/server/hdhomerun5.png" alt="hdhomerun5.png"></p>
+<p>You are ready now to add guide data and where needed, map tuner channels to guide data and optionally configure the advanced Live TV settings. See the relavant paragraphs on the <a href="Live-TV.html">Live-TV</a> document.</p>
 <h2 id="hdhomerun-favorite-setup">HDHomeRun Favorite Setup</h2>
 <p>In order to make use of favorites with your HDHomeRun tuner you need to set this up outside of Emby.  You do this by opening the built in web app on your tuner in a web browser and then selecting the Channel Lineup menu option.  You can also just type the URL into your browser which will look similar to this:</p>
 <p><a href="http://192.168.100.23/lineup.html">http://192.168.100.23/lineup.html</a></p>

@@ -194,6 +194,9 @@ references:
 - uid: Hardware-Acceleration-Overview
   name: Hardware Acceleration Overview
   href: articles/Hardware-Acceleration-Overview.html
+- uid: Hauppauge-Setup
+  name: Hauppauge Setup
+  href: articles/Hauppauge-Setup.html
 - uid: HDHomeRun-Setup
   name: HDHomeRun Setup
   href: articles/HDHomeRun-Setup.html

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Live TV Setup | Emby Documentation </title>
+    <title>Hauppauge Setup | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Live TV Setup | Emby Documentation ">
+    <meta name="title" content="Hauppauge Setup | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="Live-TV">
+    <meta property="docfx:uid" content="Hauppauge-Setup">
     
     <meta property="docfx:rel" content="../">
     
@@ -150,56 +150,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Live-TV">
-<h1>Live TV Setup</h1>
+            <article class="content wrap" id="_content" data-uid="Hauppauge-Setup">
+<h1>Hauppauge Setup</h1>
 
 
-<p>Emby provides a flexible and very powerful Live TV and DVR solution.  With Emby’s TV you will be able to stream Live or Recorded TV content to any device you have with an Emby client or web browser.</p>
-<p>You can use Emby to eliminate the need for cable STBs (Set Top Boxes) or you can eliminate your cable provider entirely by cutting the cord and switching to OTA (Over the Air) broadcasts for local channels.</p>
-<p>Emby provides free guide data (US, UK &amp; Canada) right out of the box at no additional cost.</p>
-<h2 id="overview-of-setup">Overview of Setup</h2>
-<p>Setup of Live TV can be broken down into a few steps:</p>
-<ul>
-<li>Configure your TV Tuner(s) or M3U based IPTV sources</li>
-<li>Add TV Guide Data Source(s)</li>
-<li>Match your Channel Lineup to Guide Data (Channel Mapping)</li>
-</ul>
-<p>The LiveTV and DVR feature requires a valid <a href="Emby-Premiere.html">Emby Premiere</a> subscription.</p>
-<h2 id="configure-your-tv-tuner">Configure Your TV Tuner</h2>
-<p>Out of the box, Emby Server currently supports the following TV Tuners:</p>
-<ul>
-<li><a href="HDHomeRun-Setup.html">HDHomerun Network Tuner</a> (Models available for both OTA and Cable. Must support DLNA 2015+ model)</li>
-<li><a href="Hauppauge-Setup.html">Hauppauge TV Tuners</a> (on Emby Server for Windows - Requires WinTV 8.5 or greater to be installed)</li>
-<li><a href="M3U-Tuners.html">M3U Tuners</a>  - M3U files (or urls). See examples of m3u files at <a href="M3U-Tuners.html#example-m3u">M3U Examples</a></li>
-</ul>
-<p>Support for additional tuners can be added by installing a <a href="Live-TV-Plugins.html">Live TV Plugin</a>.</p>
-<p>In most cases, Emby Server will automatically discover your HDHomerun on your network with no configuration required. You can manually add a tuner as well.  Simply open the server dashboard, navigate to <strong>Live TV</strong>, then click <strong>Add</strong> underneath tuner devices.</p>
-<h2 id="add-a-tv-guide-data-source">Add a TV Guide Data Source</h2>
-<p>Out of the box, Emby Server currently supports the following TV Guide data sources:</p>
-<ul>
-<li><a href="Emby-Guide-Data.html">Emby Guide Data</a><br>
-(United States, Canada and United Kingdom)</li>
-<li><a href="Schedules-Direct.html">Schedules Direct</a><br>
-(Do not use on new setups. Will stop working June 1st, 2021)</li>
-<li><a href="Xml-Tv.html">Xml TV</a></li>
-</ul>
-<p>Support for additional sources can be added by installing a <a href="Live-TV-Plugins.html">Live TV Plugin</a>.</p>
-<h2 id="match-your-channel-lineup-to-guide-data">Match your Channel Lineup to Guide Data</h2>
-<p>The final step of setting up Live TV is matching the tuner's stations to the Guide Data you have setup.</p>
-<p><a href="Live-TV-Channel-Mapping.html">Live TV Channel Mapping</a></p>
-<h2 id="live-tv-advanced-settings-optional">Live TV Advanced Settings (optional)</h2>
-<p>You can optionally change a few options used for DVR purposes.  These options include:</p>
-<ul>
-<li>Live stream buffer</li>
-<li>Amount of days of Guide Data loaded</li>
-<li>Option to wake the server for scheduled recordings</li>
-<li>Default recording paths</li>
-<li>Default Pre and Post recording padding times.  This allows you set recording to start X minutes early and finish Y minutes late.</li>
-<li>Post-processing script to run after recording</li>
-</ul>
-<p><a href="DVR-Settings.html">Live TV Advanced Settings</a></p>
-<h2 id="emby-live-tv--dvr-is-ready-to-use">Emby Live TV &amp; DVR is Ready to Use.</h2>
-<p>Congratulations, your Emby Server should now be configured properly and ready to use for Live TV and DVR.</p>
+<p>Emby has native support for current <a href="https://hauppauge.com/">Hauppauge</a> PCIe and USB Tuners on Windows.</p>
+<p>You will need first to install the Hauppauge WinTV app and go through the configuration process and ensuring latest drivers and channel data is in place. The product also needs to be activated. The earliest supported version is v8.5. The following is the link for the <a href="https://www.hauppauge.com/pages/support/support_wintv10.html">WinTV v10 app</a>.</p>
+<p>When installing the WinTV application, make sure that it is installed for all Windows users to access and that the folder paths for the installation and recordings are in directories that have full permissions set for the windows user account that Emby Server would run under. The following shows the paths that need to be defined at install time.</p>
+<p><img src="images/tvtuners/hauppauge-1.png" alt=""></p>
+<p>and</p>
+<p><img src="images/tvtuners/hauppauge-2.png" alt=""></p>
+<p>These paths can also be set through WinTV application settings.</p>
+<p>After installing the Hauppauge WinTV app, ensure all the channel tuning data is updated, click on <strong>Settings</strong> and then <strong>Check for Tuning Updates</strong> in the <strong>General</strong> tab.</p>
+<p><img src="images/tvtuners/hauppauge-3.png" alt=""></p>
+<p>After ensuring that the tuning data is up to date, make sure the Hauppauge Pause Buffer path is setup and permissions are set for the Emby Server windows process for full access. To set the directory paths, on WinTV v10, select the <strong>Recordings</strong> tab and on WinTV v8.5, select the <strong>Capture</strong> tab. The Disk Buffering Pause-Mode Recording Directory is used by Emby Server for Live TV streaming and recordings.</p>
+<p><strong>WinTV v10</strong></p>
+<p><img src="images/tvtuners/hauppauge-4.png" alt=""></p>
+<p><strong>WinTV v8.5</strong></p>
+<p><img src="images/tvtuners/hauppauge-5.png" alt=""></p>
+<p>Next is to configure the tuner and scan for the TV channels. The example in the following screenshots is for DVB-T OTA channels for the UK.</p>
+<p><img src="images/tvtuners/hauppauge-6.png" alt=""></p>
+<p>Select the tuner and click on <strong>Tuner Setup</strong>.</p>
+<p>Go through the options applicable to your region, type of tuner and channels available for you.</p>
+<p><img src="images/tvtuners/hauppauge-7.png" alt=""></p>
+<p><img src="images/tvtuners/hauppauge-8.png" alt=""></p>
+<p>On completion of the scan and setup, use the WinTV app to test that the channels do stream and the signal and quality is good.</p>
+<p>Close the WinTV application and prepare to add the Hauppauge tuner to the Emby Server.</p>
+<p>The Live TV &amp; DVR feature requires a valid <a href="Emby-Premiere.html">Emby Premiere</a> subscription. This would be indicated on the setup screen when there is no subscription:</p>
+<p><img src="images/server/livetv6.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Whilst you will be permitted to add the Live TV device, there would be no channels or guide data without an <a href="Emby-Premiere.html">Emby Premiere</a> subscription.</p>
+</div>
+<p>To add an Hauppauge device, click on <strong>+ Add TV Source</strong> and select <strong>Hauppauge</strong></p>
+<p><img src="images/server/hauppauge-server1.png" alt=""></p>
+<p>This will show the following</p>
+<p><img src="images/server/hauppauge-server2.png" alt=""></p>
+<p>Click on <strong>Detect Devices</strong></p>
+<p>You will then see all the detected new Live TV tuner devices, select the Hauppauge device you wish to add</p>
+<p><img src="images/server/hauppauge-server3.png" alt=""></p>
+<p>You will be back to this screeen. Click on <strong>Add TV Source</strong></p>
+<p><img src="images/server/hauppauge-server4.png" alt=""></p>
+<p>You will now see the device added.</p>
+<p><img src="images/server/hauppauge-server5.png" alt=""></p>
+<p>You are ready now to add guide data and where needed, map tuner channels to guide data and optionally configure the advanced Live TV settings. See the relavant paragraphs on the <a href="Live-TV.html">Live-TV</a> document.</p>
 
 
             </article>
@@ -226,8 +220,8 @@
             2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
       
           <span class="contribution">
-                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Live-TV%0A*%20Title%3A%20Live%20TV%20Setup%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FLive-TV.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001160415-live-tv-setup%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
-                <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Live-TV.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Hauppauge-Setup%0A*%20Title%3A%20Hauppauge%20Setup%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FHauppauge-Setup.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Hauppauge-Setup.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
           </span>
       
           
