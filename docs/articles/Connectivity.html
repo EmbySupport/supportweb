@@ -154,7 +154,10 @@
 <h1>Connecting from Client Apps</h1>
 
 
-<p>The purpose of this document is to discuss how to connect to the Emby Server from additional devices, both within your home network and externally. To learn how to grant users access to your server, see <a href="Users.html">Users</a>.</p>
+<p>The purpose of this document is to discuss how to connect to the Emby Server from additional devices, both within your home network and externally.</p>
+<p>Browse this document to aquaint yourself with the types of issues that may arise and what they would impact and how to address them.</p>
+<p>For any new connectivity issues, use the checklist below to troubleshoot : <a href="#troubleshooting-connectivity-issues-checklist">Troubleshooting Connectivity Issues Checklist</a>.</p>
+<p>To learn how to grant users access to your server, see <a href="Users.html">Users</a>.</p>
 <p>In most cases you won't need to do any extra configuration to connect to your server from other devices, as Emby apps are built to automatically know how to connect to it. But on some systems or if you have more than one emby server with remote access enabled, some manual configuration may be necessary.</p>
 <p>This document is primarily designed for troubleshooting, when the automatic features do not work and a custom configuration is needed.</p>
 <h1 id="in-network-connections">In-Network Connections</h1>
@@ -320,13 +323,44 @@ Here is a general guide for doing this.
 <li>On the second router, setup port forwards for the http public tcp port 32700 to forward to port 8096 to the local IP address of the emby server machine. And similarly, if secure connections are used, setup the port forward for the https tcp public port 32800 to forward to port 8920 to the local IP address of the emby server machine.</li>
 </ul>
 <h3 id="multiple-servers---public-port-clash">Multiple Servers - Public Port clash</h3>
-<p>If you have more tha one system running emby server on the local network and remote connections enabled, then with the default settings there would be a public port clash and the remote connections would be attempting to go to the first system that was configured. In such cases, you will need to change the public ports and ensure that each emby server has a different public port.</p>
+<p>If you have more than one system running emby server on the local network and remote connections enabled, then with the default settings there would be a public port clash and the remote connections would be attempting to go to the first system that was configured. In such cases, you will need to change the public ports and ensure that each emby server has a different public port.</p>
 <h3 id="isp-blocking">ISP Blocking</h3>
 <p>You may also be blocked by your ISP. Open command prompt session and do a trace route to 8.8.8.8.</p>
 <p>On windows it would be: <code>tracert 8.8.8.8</code></p>
 <p>Ignore the first line which will be your own router.  What you want to see is if any of the next 3 or 4 lines start with 10., 192. or 172.  If the first octet number is a 172 we need to check the second octet number to see if it's between 16 to 31 (172.16.xx.xx to 172.31.xx.xx).  If any of these returned lines matches this you are likely being blocked by your ISP.</p>
 <h1 id="emby-connect">Emby Connect</h1>
 <p>Regardless of the method used for port forwarding, whether it is automatic using uPnP or a manual configuration of the router, we suggest trying out the Emby Connect feature as it takes the guesswork out of external connectivity. The Emby apps would find the route to the server using Emby Connect.  See <a href="Emby-Connect.html">Emby Connect</a>.</p>
+<h1 id="troubleshooting-connectivity-issues-checklist">Troubleshooting Connectivity Issues Checklist</h1>
+<p>Use this checklist to help with finding out the cause of any new connectivity issues.</p>
+<h2 id="1-local-ip-address">1. Local IP Address</h2>
+<p>Check if the Local IP Address for the Emby Server changed. When this happens, any port forward in the router for external remote access would still be for the old IP Address. Client Apps may also be attempting to use the IP address already known to them from previous connections.</p>
+<p>You should use static IP address and/or DHCP Reservation for the device/computer running Emby Server. See section about that above in <a href="#in-network-connections">In Network Connections</a>.</p>
+<p>If the IP Address has changed, any port forward in the router needs to be corrected - but only look into that after ensuring the IP Address will no longer change with use of static IP Address and/or DHCP Reservation.</p>
+<p>For manually created port forward, you will need to login to the router and correct the destination IP address for the port forward. See <a href="#setup-port-forwarding">Setup Port Forwarding</a> above.</p>
+<p>For automatically created port forward with uPnP and the emby server setting: <strong>Enable automatic port mapping</strong>, you will need to shutdown Emby Server, then reboot the router to clear the existing cached uPnP port forward and then launch Emby Server.</p>
+<p>If you are using Emby Connect, you may need to unlink and re-link the user account to the Emby Connect e-mail address to refresh the Emby Connect data.</p>
+<p>Exit Emby Apps and relaunch them.</p>
+<h2 id="2-windows-network-profile">2. Windows Network Profile</h2>
+<p>If running on Microsoft Windows, check if the <strong>Network Profile</strong> got switched from <strong>Private</strong> to <strong>Public</strong>. This has been seen to arise after some system updates. See section <a href="#windows-network-profile">Windows Network Profile</a> above.</p>
+<h2 id="3-public-ip-address">3. Public IP Address</h2>
+<p>Check if the public IP Address for your network got changed. This does happen sometimes on router reboots or periodically by the ISP and would arise more frequently when the ISP provides you with a cgNAT IP Address. This would affect external remote access. Emby client apps may still be attempting to use the old Public IP Address known to them.</p>
+<p>If this happens regularly, look into using a domain name and DDNS service to periodically refresh the IP address. See section <a href="#external-public-ip-address-change">External Public IP Address change</a> above. If you have a cgNAT IP address, you should be able to request a static public IP address from your ISP for a small fee. See section <a href="#cgnat-double-nat">cgNAT Double NAT</a> above.</p>
+<p>You can test out access to the server with the new public ip address by adding the server manually on the Select Server screen and giving the public IP address and public port. Note that access through the public IP address may be blocked by routers if you try to test it out locally. Best to do this test externally and could be done on a mobile device connected through cellular connection and not wifi.</p>
+<p>If you are using Emby Connect, you may need to unlink and re-link the user account to the Emby Connect e-mail address to refresh the Emby Connect data.</p>
+<h2 id="4-router-settings">4. Router Settings</h2>
+<p>Sometimes router settings get lost and any existing port forwards may disappear. This has been seen to happen after some remote ISP updates to routers overnight. If you had any manual port forwards, and they no longer show, you will need to reinstate them. See <a href="#setup-port-forwarding">Setup Port Forwarding</a> above.</p>
+<p>The next checklist is to help with issues arising after a change.</p>
+<h2 id="1-vpn-added">1. vpn added</h2>
+<p>See section <a href="#use-of-vpn">Use of vpn</a> above.</p>
+<h2 id="2-switched-isp-provider">2. Switched ISP provider</h2>
+<p>You may find that after switching ISP, you are now given a cgNAT IP address or that your public IP Address is now changing more frequently than before. See sections <a href="#cgnat-double-nat">cgNAT</a> and <a href="#external-public-ip-address-change">External Public IP Address change</a> above.</p>
+<h2 id="3-added-a-modemrouter">3. Added a modem/router</h2>
+<p>This may give rise to a double NAT setup. See <a href="#multiple-routers-double-nat">Double NAT</a> section above.</p>
+<h2 id="4-added-another-emby-server">4. Added another Emby Server</h2>
+<p>You may have added or launched another emby server and this new server is resulting in a port number clash. See <a href="#multiple-servers---public-port-clash">Multiple Servers Public Port Clash</a></p>
+<h2 id="5-restored-server-from-backup">5. Restored server from backup</h2>
+<p>If you have restored a server and restored the server id as well and not shutdown the old server, you will have two servers with the same ID. Make sure the old server is no longer running and would not auto launch.</p>
+<p>Finally, please do browse this whole document for additional information.</p>
 
 
             </article>
