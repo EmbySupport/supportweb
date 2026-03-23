@@ -168,16 +168,121 @@
 <li>A wildcard <code>*</code> can be used for file name / folder name pattern.</li>
 <li>Use forward slash character <code>/</code> for directory separator - even on Windows.</li>
 <li>When a directory separator is used, the pattern is relative to the directory holding the <code>.embyignore</code> file. Otherwise, the pattern may also match any level below the folder holding the <code>.embyignore</code> file.</li>
-<li>A leading <code>/</code> in a pattern restricts the action to the directory containing the <code>.embyignore</code>.</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <ul>
 <li>To ignore all <code>.png</code> files in a photos library, place an <code>.embyignore</code> file containing <code>*.png</code> in the root folder(s) of a photos library.</li>
 <li>To ignore all files in a folder, place an <code>.embyignore</code> file containing a <code>*</code> in the folder that is to be ignored.</li>
-<li>To ignore a folder <code>private-vids</code> and all files and folders below it, place an <code>.embyignore</code> file containing <code>private_vids/*</code> in the root folder of the library.</li>
+<li>To ignore a folder <code>private-vids</code> and all files and folders below it, place an <code>.embyignore</code> file containing <code>private_vids/</code> or <code>/private-vids/</code> in the parent folder.</li>
 <li>To ignore a specific file e.g. <code>private-video.mp4</code>, place an <code>.embyignore</code> containing <code>private-video.mp4</code> in the folder and lower sub-folders.</li>
-<li>To ignore files with names starting with <code>private</code> in this folder only, place an <code>.embyignore</code> containing <code>/private*</code> in the folder.</li>
+<li>To ignore files with names starting with <code>private</code> in this folder only, place an <code>.embyignore</code> containing <code>private*</code> in the folder.</li>
 </ul>
+<p>The following are specific examples for a Home Videosa and Photos library with two root folders. The names have been chosen to make it easier to see the folder levels and where the files are located. The two root folders for the library identified as Root1 and Root2 with subfolders identified as A, B and C amd lower levels ientified as I, II and III.</p>
+<p>We have an <code>.embyignore</code> in each of the two library root folders <code>Root1-Videos</code> and <code>Root2-Photos</code> and an <code>.embyignore</code> in folder <code>Root2-Photos\R2-Folder-A</code> to ignore a specific photo in that folder. The media files and folders are as follows:</p>
+<pre><code>My Videos and Photos
+├───Root1-Videos
+│   │   .embyignore
+│   │   R1-Video1.MOV
+│   │   R1-Video2.mp4
+│   │
+│   ├───R1-Folder-A
+│   │       Private-Video.MOV
+│   │       R1-A-Video1.MOV
+│   │       R1-A-Video2.mp4
+│   │
+│   ├───R1-Folder-B
+│   │   │   R1-B-Video1.MOV
+│   │   │   R1-B-Video2.mp4
+│   │   │
+│   │   ├───R1-B-SubFolder-I
+│   │   │       R1-B-SubFolder-I-Video1.MOV
+│   │   │       R1-B-SubFolder-I-Video2.mp4
+│   │   │
+│   │   ├───R1-B-SubFolder-II
+│   │   │       R1-B-SubFolder-II-Video1.MOV
+│   │   │       R1-B-SubFolder-II-Video2.mp4
+│   │   │
+│   │   └───R1-B-SubFolder-III
+│   │           R1-B-SubFolder-III-Video1.MOV
+│   │           R1-B-SubFolder-III-Video2.mp4
+│   │
+│   └───R1-Folder-C
+│           R1-C-Video1.MOV
+│           R1-C-Video2.mp4
+│
+└───Root2-Photos
+    │   .embyignore
+    │   R2-Photo1.jpg
+    │   R2-Photo2.jpg
+    │   R2-Screenshot1.png
+    │   R2-Screenshot2.png
+    │
+    ├───R2-Folder-A
+    │       .embyignore
+    │       R2-A-Photo1.jpg
+    │       R2-A-Photo2.jpg
+    │       R2-A-Screenshot1.png
+    │       R2-A-Screenshot2.png
+    │
+    ├───R2-Folder-B
+    │   │   R2-B-Photo1.jpg
+    │   │   R2-B-Photo2.jpg
+    │   │   R2-B-Screenshot1.png
+    │   │   R2-B-Screenshot2.png
+    │   │
+    │   ├───R2-B-SubFolder-I
+    │   │       R2-B-SubFolder-I-Photo1.jpg
+    │   │       R2-B-SubFolder-I-Photo2.jpg
+    │   │       R2-B-SubFolder-I-Screenshot1.png
+    │   │       R2-B-SubFolder-I-Screenshot2.png
+    │   │
+    │   ├───R2-B-SubFolder-II
+    │   │       R2-B-SubFolder-II-Photo1.jpg
+    │   │       R2-B-SubFolder-II-Photo2.jpg
+    │   │       R2-B-SubFolder-II-Screenshot1.png
+    │   │       R2-B-SubFolder-II-Screenshot2.png
+    │   │
+    │   └───R2-B-SubFolder-III
+    │           R2-B-SubFolder-III-Photo1.jpg
+    │           R2-B-SubFolder-III-Photo2.jpg
+    │           R2-B-SubFolder-III-Screenshot1.png
+    │           R2-B-SubFolder-III-Screenshot2.png
+    │
+    └───R2-Folder-C
+            Private-Photo.jpg
+            R2-C-Photo1.jpg
+            R2-C-Photo2.jpg
+            R2-C-Screenshot1.png
+            R2-C-Screenshot2.png
+</code></pre>
+<p>The <code>.embygnore</code> in <code>Root1-Videos</code> has the following content:</p>
+<pre><code># This is the .embyignore file stored in the library root folder: Root1-Videos
+
+# ignore all files and folders with names starting with &quot;private-&quot;
+private-*
+
+# ignore lower sub-directory R1-B-SubFolder-I
+/R1-Folder-B/R1-B-SubFolder-I/
+</code></pre>
+<p>The <code>.embyignore</code> in <code>Root2-Photos</code> has the following content:</p>
+<pre><code># This is the .embyignore file stored in the library root folder: Root2-Photos
+
+# ignore all files and folders with names starting with &quot;private-&quot;
+private-*
+
+# ignore folder R2-Folder-B and all contents and children. the R2-Folder-B is directly below Root2-Photos
+/R2-Folder-B
+
+# ignore all images saved as *.png files 
+*.png
+</code></pre>
+<p>These will result in all media or folders with names starting with &quot;private-&quot; getting ignored. All screenshots which would be png files get excluded from the photos folders. A specific photo folder and all its content excluded <code>R2-Folder-B</code>. A specific video folder <code>R1-B-SubFolder-I</code> getting excluded.</p>
+<p>The 3rd <code>.embyignore</code> file is in photo folder <code>Root2-Photos\R2-Folder-A</code> to exclude a specific photo. The <code>.embyignore</code> content is:</p>
+<pre><code># This is the .embyignore file stored in folder Root2-Photos\R2-Folder-A
+
+# ignore a specific photo in this folder
+/R2-A-Photo2.jpg
+</code></pre>
 <h3 id="support-for-plexignore">Support for .plexignore</h3>
 <p>For your convenience, Emby Server now also supports <code>.plexignore</code>. An option has been added to Library settings for enabling this.</p>
 <p><img src="images/server/excludes3.png" alt=""></p>
