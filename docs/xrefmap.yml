@@ -409,6 +409,9 @@ references:
 - uid: Schedules-Direct
   name: Schedules Direct
   href: articles/Schedules-Direct.html
+- uid: Search
+  name: Search
+  href: articles/Search.html
 - uid: Secure-Your-Server
   name: Secure Your Server
   href: articles/Secure-Your-Server.html
