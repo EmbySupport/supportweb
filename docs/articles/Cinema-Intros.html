@@ -160,7 +160,7 @@
 <p>The configuration page allows you to choose the types of videos that will trigger cinema intros. Currently, Movies and Episodes are supported. A video is determined to be a Movie or Episode based upon the content type chosen when setting up the library.</p>
 <p><img src="images/server/cinemamode1.png" alt=""></p>
 <h2 id="internet-trailers">Internet Trailers</h2>
-<p>A vast library of internet trailers are available for use with cinema intros. The categories available are movies coming soon to theaters, movies coming soon to Dvd, and movies coming soon to Netflix.</p>
+<p>A vast library of internet trailers are available for use with cinema intros. The categories available are for new movies and movies coming soon to theaters, with option to include trailers for older movies.</p>
 <p><img src="images/server/cinemamode3.png" alt=""></p>
 <p>This feature has two requirements:</p>
 <ul>
@@ -172,7 +172,7 @@
 <p><img src="images/server/cinemamode2.png" alt=""></p>
 <h2 id="custom-intros">Custom Intros</h2>
 <p>In addition you can specify your own custom videos to be used with cinema intros. Simply create a folder containing the videos, and enter the path in the custom intro field:</p>
-<p><img src="images/server/cinemamode5.png" alt=""></p>
+<p><img src="images/server/cinemamode5a.png" alt=""></p>
 <p><strong>Important</strong>: Make sure to run a library scan after adding new intro files.</p>
 <h2 id="codec-intros">Codec Intros</h2>
 <p>Codec intros allow you to create intros based on the media information of the main feature you are watching. For example, if you're watching a movie with AC3 audio, you can create an ac3 intro called ac3.mp4, and place this in your codec intro path.</p>
@@ -196,7 +196,7 @@
 <p>The file name (before extension) should be the same name as the codec shown when looking at a video for either audio codec or video codec. To review the media information for one of your videos, visit the detail screen in the web app.</p>
 </div>
 <p>Simply create a folder containing the videos, and enter the path in the codec intro field:</p>
-<p><img src="images/server/cinemamode5.png" alt=""></p>
+<p><img src="images/server/cinemamode5b.png" alt=""></p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Make sure to run a library scan after adding new intro files.</p>
@@ -206,14 +206,19 @@
 <p>With the use of Custom Intro directories you can make use of Tags for each movie/episode such as &quot;HomeMovies&quot;.  These tags can be added using the MetaData Manager.<br>
 Make sure that Intros added to the custom directories above have proper tags in the files before adding them to Emby.  You can use Windows or other tag editor to assist with this. This allows Emby to display your custom Intro for any movie tagged with the same name.</p>
 </div>
+<h2 id="number-of-trailers-played">Number of Trailers played</h2>
+<p>The initial default is set to 2. This can be modified in this setting:</p>
+<p><img src="images/server/cinemamode4a.png" alt=""></p>
+<h2 id="trailers-and-watched-status">Trailers and Watched status</h2>
+<p>The unwatched setting will prevent trailers that you've already seen from being used again, as well as trailers from movies that you've already seen. Note that enabling this setting may eventually result in no unwatched trailers being available.</p>
+<p><img src="images/server/cinemamode4c.png" alt=""></p>
 <h2 id="parental-control">Parental Control</h2>
 <p>Smart parental control will compare the ratings of trailers against the rating of the movie being played, and filter the trailers based on ratings of an equal or lower value. For example, you might be an adult watching The Goonies with your children. The Goonies is rated PG, so this setting will exclude any trailers with a higher rating than PG. Unrated trailers will also be excluded.</p>
-<p>The unwatched setting will prevent trailers that you've already seen from being used again, as well as trailers from movies that you've already seen. Note that enabling this setting may eventually result in no unwatched trailers being available.</p>
-<h2 id="user-control">User Control</h2>
-<p>Once you've enabled cinema intros in the server dashboard, they'll be turned on for all users by default. Each user can opt-out of cinema intros individually by disabling it in their user profile settings.</p>
-<p>This is accessed by clicking the user icon in the top right hand corner of the web interface, then selecting <strong>Preferences</strong>-&gt; <strong>Playback</strong>.</p>
+<p><img src="images/server/cinemamode4b.png" alt=""></p>
+<h2 id="emby-apps-control">Emby Apps Control</h2>
+<p>Emby Apps have settings to enable or disable Cinema Intros. TV apps enable Cinema Intros by default.</p>
+<p>Click the user icon in the top right hand corner of the app screen and then select <strong>App Settings</strong>-&gt; <strong>Playback</strong> and scroll down to see the <strong>Cinema Intros</strong> option.</p>
 <p><img src="images/server/cinemamode6.png" alt=""></p>
-<p>As an administrator, if you would like to personally change this for a user, you can access this page from the <strong>Server Dashboard</strong> -&gt; <strong>Users</strong> -&gt; <strong>Click User</strong> -&gt; <strong>Edit this user's playback settings</strong>.</p>
 
 
             </article>
