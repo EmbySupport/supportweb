@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Backing up &amp; Restoring Emby Server | Emby Documentation </title>
+    <title>Using Restore to Copy Playback States and Favorites | Emby Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Backing up &amp; Restoring Emby Server | Emby Documentation ">
+    <meta name="title" content="Using Restore to Copy Playback States and Favorites | Emby Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="Backup">
+    <meta property="docfx:uid" content="Backup-Restore-Playbacks-And-Favorites">
     
     <meta property="docfx:rel" content="../">
     
@@ -150,21 +150,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Backup">
-<h1>Backing up & Restoring Emby Server</h1>
+            <article class="content wrap" id="_content" data-uid="Backup-Restore-Playbacks-And-Favorites">
+<h1>Using Restore to Copy Playback States and Favorites</h1>
 
 
-<p>The guides will go over the following:</p>
-<ul>
-<li>how to setup regular backups using the Backup &amp; Restore Plugin. See <a href="Backup-Using-Plugin.html">Backing Up Emby Server</a>.</li>
-<li>how to migrate your settings from Emby Server from one machine to another. See <a href="Backup-Restore-Add-New-Server.html">Using Restore to add an Additional Server</a> and <a href="Backup-Restore-To-New-System.html">Using Restore to migrate to a New System</a>.</li>
-<li>how to fully migrate to a new system. See <a href="Backup-Restore-To-New-System.html">Using Restore to migrate to a New System</a>.</li>
-<li>how to restore your server to the last backed up state. See <a href="Backup-Restore-Last-Backup.html">Restoring Last Backup</a>.</li>
-<li>how to restore your server to a specific backup date of the databases. See <a href="Backup-Restore-Earlier-Backup.html">Restoring an Earlier Backup of the Database</a>.</li>
-<li>how to copy playback state and favorites from one user account to another. See <a href="Backup-Restore-Playbacks-And-Favorites.html">Using Restore to Copy Playback States and Favorites</a>.</li>
-</ul>
-<p>All the above use the Emby Server <strong>Backup &amp; Restore Plugin</strong> and will require <a href="Emby-Premiere.html">Emby Premiere</a>.</p>
-<p>An article is also provided for manual backups. See <a href="Backup-Manual-Backups.html">How to Backup Manually</a>.</p>
+<p>You can use Backup and Restore to copy the playback state and favorites information to a different Emby user account.</p>
+<p>Launch the Backup &amp; Restore plugin by clicking on Backup &amp; Restore from the Advanced section of the server dashboard left sidebar.</p>
+<p><img src="images/plugins/backup-18.png" alt=""></p>
+<p>This should show the current backup. Click on <strong>&quot;Extract User Data from Backup&quot;</strong></p>
+<p><img src="images/plugins/backup-10.png" alt=""></p>
+<p>On the next screen, tick the original user accounts that are in the backup that you wish to copy the data from.</p>
+<p>For each of the selected original user accounts that are in the backup, select from the dropdown the local user account to copy the playbacks state and favorites to.</p>
+<p>In the example below, we are copying playbacks state and favorites from user <strong>My-Admin-User</strong> to user <strong>MyNewAdmin</strong>.</p>
+<p><img src="images/plugins/backup-11.png" alt=""></p>
+<p>Having made the selection, now click <strong>&quot;Restore from Backup&quot;</strong></p>
+<p>and as per other restores, you will be asked to confirm.</p>
+<p><img src="images/plugins/backup-12.png" alt=""></p>
 
 
             </article>
@@ -191,8 +192,8 @@
             2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
       
           <span class="contribution">
-                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Backup%0A*%20Title%3A%20Backing%20up%20%26%20Restoring%20Emby%20Server%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FBackup.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.media%2Fsupport%2Fsolutions%2Farticles%2F44001159936-backup%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
-                <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Backup.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Backup-Restore-Playbacks-And-Favorites%0A*%20Title%3A%20Using%20Restore%20to%20Copy%20Playback%20States%20and%20Favorites%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FBackup-Restore-Playbacks-And-Favorites.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Backup-Restore-Playbacks-And-Favorites.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
           </span>
       
           

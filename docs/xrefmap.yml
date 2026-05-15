@@ -35,8 +35,29 @@ references:
   name: Automatic Subtitle Downloads
   href: articles/Automatic-Subtitle-Downloads.html
 - uid: Backup
-  name: Backup & Restore
+  name: Backing up & Restoring Emby Server
   href: articles/Backup.html
+- uid: Backup-Manual-Backups
+  name: How to Backup Manually
+  href: articles/Backup-Manual-Backups.html
+- uid: Backup-Restore-Add-New-Server
+  name: Using Restore to add an Additional Server
+  href: articles/Backup-Restore-Add-New-Server.html
+- uid: Backup-Restore-Earlier-Backup
+  name: Restoring an Earlier Backup of the Database
+  href: articles/Backup-Restore-Earlier-Backup.html
+- uid: Backup-Restore-Last-Backup
+  name: Restoring Last Backup
+  href: articles/Backup-Restore-Last-Backup.html
+- uid: Backup-Restore-Playbacks-And-Favorites
+  name: Using Restore to Copy Playback States and Favorites
+  href: articles/Backup-Restore-Playbacks-And-Favorites.html
+- uid: Backup-Restore-to-New-System
+  name: Using Restore to migrate to a New System
+  href: articles/Backup-Restore-To-New-System.html
+- uid: Backup-Using-Plugin
+  name: Backing Up Emby Server
+  href: articles/Backup-Using-Plugin.html
 - uid: Beta-Programs
   name: Beta Programs
   href: articles/misc/Beta-Programs.html
