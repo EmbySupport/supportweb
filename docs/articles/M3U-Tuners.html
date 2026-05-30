@@ -155,11 +155,11 @@
 <h4 class="long-title">How to add and configure an M3U Tuner</h4>
 
 <p>Emby Live TV supports setting up M3U files as TV Tuners. Each M3U file will contain a list of channels, along with information such as channel name, id, and how to play the channel.</p>
-<p>To add an M3U tuner, simply open the Emby Server dashboard, navigate to Live TV, then click Add underneath tuner devices.</p>
-<p><img src="images/server/livetvtuneradd.png" alt=""></p>
-<p>On the M3U Tuner setup screen, you'll need to enter the path to an M3U file.</p>
-<p><img src="images/server/m3utunersetup.png" alt=""></p>
-<p>Emby will accept either:</p>
+<p>To add an M3U tuner, simply open the Emby Server dashboard, navigate to <strong>Live TV Setup</strong> and click <strong>Add TV Source</strong></p>
+<p><img src="images/server/m3utuner1.png" alt=""></p>
+<p>Then select <strong>M3U</strong></p>
+<p><img src="images/server/m3utuner2.png" alt=""></p>
+<p>On the M3U Tuner setup screen, Emby will accept either:</p>
 <ul>
 <li>A file path to an M3U file</li>
 <li>A URL to an M3U file that can be downloaded</li>
@@ -173,6 +173,10 @@
 <li>tvg-group - Group the channel belongs to for group management of the guide.  These groups will be imported as tags by Emby for use in parental filtering as well.</li>
 </ul>
 <p>If any are missing, Emby will attempt to automatically detect the information using whatever tags are available.</p>
+<p>The setup page will have the following options available. Leaving the <strong>Referer http header</strong> and <strong>user agent http header</strong> fields blank will result in Emby Server's default values being used.</p>
+<p><img src="images/server/m3utuner3.png" alt=""></p>
+<p>There is a choice of using a Guide Data source or the m3u for channel images.</p>
+<p><img src="images/server/m3utuner4.png" alt=""></p>
 <h2 id="example-m3u">Example M3U</h2>
 <pre><code>#EXTM3U
 
