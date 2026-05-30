@@ -160,6 +160,7 @@
 <p><a href="#how-can-i-make-the-emby-app-start-automatically-on-windows-startup">How can I make the Emby app start automatically on Windows startup?</a></p>
 <p><a href="#im-experiencing-stuttering-video-playback-what-can-i-do">I'm experiencing stuttering video playback, what can I do?</a></p>
 <p><a href="#on-the-video-quality-settings-page-there-are-multiple-presets-how-can-i-know-which-settings-are-applied-by-each-preset">On the video quality settings page there are multiple presets. How can I know which settings are applied by each preset?</a></p>
+<p><a href="#how-do-i-get-51-audio">How do I get 5.1 Audio</a></p>
 <p><a href="#i-have-installed-the-app-but-it-doesnt-look-like-it-does-in-some-of-the-screenshots">I have installed the app, but it doesn't look like it does in some of the screenshots.</a></p>
 <p><a href="#to-which-folder-do-the-downloaded-files-go-when-using-the-downloadsync-feature">To which folder do the downloaded files go when using the Download/Sync feature?</a></p>
 <p><a href="#i-am-changing-the-subtitle-style-settings-but-it-doesnt-seem-that-they-have-any-effect">I am changing the subtitle style settings, but it doesn't seem that they have any effect.</a></p>
@@ -188,7 +189,7 @@ Its Chromium version has a wealth of security issues and the way of loading the 
 <li>Open <strong>Windows Explorer</strong></li>
 <li>Enter this into the address bar:<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code></li>
 <li>Leave that Window open</li>
-<li>Open <strong>Start Menu</strong> &gt;&gt; <strong>All Apps</strong></li>
+<li>Open <strong>Start Menu</strong> &gt;&gt; <strong>All Apps</strong> / <strong>All</strong> with <strong>View: List</strong></li>
 <li>Scroll down until you see the Emby app icon</li>
 <li>Drag-drop it into the Startup folder in the Explorer Window</li>
 </ul>
@@ -202,6 +203,31 @@ Check your monitor configuration to see whether it runs at a high refresh rate (
 <h3 id="on-the-video-quality-settings-page-there-are-multiple-presets-how-can-i-know-which-settings-are-applied-by-each-preset">On the video quality settings page there are multiple presets. How can I know which settings are applied by each preset?</h3>
 <p>You can see the detail options applied by a preset by selecting one of the presets first and switching to Customize directly after.<br>
 Switching to Customize keeps the values of the previously selected preset. This allows you to see how options are set by each preset.</p>
+<h3 id="how-do-i-get-51-audio">How do I get 5.1 Audio</h3>
+<p>There are two ways to get <strong>5.1 Audio</strong></p>
+<p><strong>1. Change the shared mode speaker layout</strong></p>
+<ul>
+<li>Go to Windows <strong>Settings</strong> &gt; <strong>System</strong> &gt; <strong>Sound</strong></li>
+<li>Scroll down</li>
+<li>Click on <strong>More Sound Settings</strong></li>
+<li>In the list of Playback devices, right-click your HDMI output device</li>
+<li>Choose <strong>Configure Speakers</strong></li>
+<li>Configure for a 5.1 layout</li>
+</ul>
+<p><strong>2. Use exclusive audio mode</strong></p>
+<ul>
+<li>Go to Windows <strong>Settings</strong> &gt; <strong>System</strong> &gt; <strong>Sound</strong></li>
+<li>Scroll down</li>
+<li>Click on <strong>More Sound Settings</strong></li>
+<li>In the list of Playback devices, right-click your HDMI output device</li>
+<li>Choose <strong>Properties</strong></li>
+<li>Go to the <strong>Advanced</strong> tab</li>
+<li>Under <strong>Exclusive Mode</strong>, make sure both checkboxes are checked:</li>
+<li><strong>Allow applications to take exclusive control of this device</strong> and <strong>Give exclusive mode applications priority</strong></li>
+<li>In the Emby App, under <strong>Settings</strong> &gt; <strong>Video Player</strong> &gt; <strong>Audio Options</strong> tab</li>
+<li>For <strong>Audio Device</strong>, make sure, your specific audio output device is selected (instead of <strong>Default system Audio Device</strong>)</li>
+<li>Toggle to <strong>on</strong> the <strong>Enable exclusive audio mode</strong> setting</li>
+</ul>
 <h3 id="i-have-installed-the-app-but-it-doesnt-look-like-it-does-in-some-of-the-screenshots">I have installed the app, but it doesn't look like it does in some of the screenshots.</h3>
 <p>These are showing the Windows theme as it's new and exclusive to the Windows app.
 To enable the Windows theme, click the gear icon at the right top and choose <strong>Setting</strong>, then click <strong>Display</strong> and find the <strong>Theme</strong> setting.</p>

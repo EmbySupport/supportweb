@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>QNAP SSL Certificate Renewal | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="QNAP SSL Certificate Renewal | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/socialbar.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="QNAP-SSL-Certificate-Renewal">
+    
+    <meta property="docfx:rel" content="../">
+    
+    <script type="text/javascript" src="../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="/">
+        		    <img id="logo" class="svg" src="../images/logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/about.html" title="About">About</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/blog.html" title="Blog">Blog</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/download.html" title="Download">Download</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="https://emby.media/premiere.html" title="Emby Premiere">Emby Premiere</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="http://app.emby.media/" title="Sign In">Sign In</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../index.html" title="Support">Support</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QNAP-SSL-Certificate-Renewal">
+<h1>QNAP SSL Certificate Renewal</h1>
+
+
+<p>For Emby Servers running on <strong><a href="https://www.qnap.com/en-uk/operating-system/qts">QNAP QTS</a></strong> and <strong><a href="https://www.qnap.com/en-uk/operating-system/quts-hero">QNAP QuTS hero</a></strong> that have configured automatic SSL certificate renewals in QNAP, this article details a method for updating the SSL PFX certificate file used by Emby Server when Secure Connections are enabled for Emby Server as outlined in <a href="Secure-Your-Server.html#using-secure-https-connections">Using Secure https Connections</a>.</p>
+<p>A shell script <code>QNAPEmbyCertRenew.sh</code> is provided that can be customized and scheduled to run daily, to check if the QNAP NAS has updated its SSL Certificate. If that is detected, the Emby Server SSL certificate pfx file would be replaced with one based on the renewed QNAP SSL certificate, with a password as specified in the script.</p>
+<h2 id="key-points">Key Points</h2>
+<ul>
+<li>The script can be customized to work on <strong>QuTS hero</strong> or <strong>QTS</strong> with default being <strong>QTS</strong></li>
+<li>It allows for specifying a fixed path for the QNAP NAS certificate (QTS) or no path specified and the filesystem is searched for the latest certificate (QuTS hero)</li>
+<li>Emby Server is notified and updated with the new certificate (and its password) when a new QNAP Certificate is detected</li>
+<li>The creation of the Emby SSL certificate pfx file and the emby server update happens only once after each QNAP certificate renewal</li>
+<li>Emby Server would automatically restart when idle time is detected after the update to switch to the new certificate</li>
+<li>There is an option to disable the auto update of Emby Server</li>
+<li>The Emby Server pfx certificate files have unique names based on the UTC date &amp; time of the QNAP certificate renewal and emby server pfx file update</li>
+<li>Old Emby Server pfx certificate files that were created with the same filename syntax and are over 6 months old are automatically purged</li>
+<li>The script is preset to use <code>/share/Emby-SSL-Certificate</code> for the Emby Server pfx files and the script log file.</li>
+<li>A log file is used to record actions by the script. The log filename is <code>cert-2-pfx-check.log</code></li>
+<li>The script is preset to use local port <code>8096</code> for the Emby Server.</li>
+<li>The script is preset to check the QNAP SSL certificate in this file <code>/etc/config/QcloudSSLCertificate/cert/cert</code>. This should be correct for QTS. For QuTS hero the line should be commented out and a filesystem search would be used to locate the latest QNAP certificate.</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A share folder for holding the Emby Server certificate pfx file and the script and its log file: defaulted to <code>/share/Emby-SSL-Certificate</code>.</li>
+<li>An Emby API Key to use for notifying Emby Server of the updated SSL certificate pfx file.</li>
+<li>SSH connection to the QNAP NAS to setup the script. Refer to <a href="https://www.qnap.com/en/how-to/faq/article/how-do-i-access-my-qnap-nas-using-ssh">QNAP: How Do I Access My QNAP NAS Using ssh</a>.</li>
+<li>Tools such as <strong><a href="https://putty.org/index.html">PuTTY</a></strong> for Windows to access the NAS through ssh.</li>
+<li>If using windows to edit the script, ensuring end of line characters are correct for linux - by using tool such as <strong><a href="https://sourceforge.net/projects/dos2unix/">dos2unix</a></strong>.</li>
+<li>Using tools such as <strong><a href="https://notepad-plus-plus.org/">Notepad++</a></strong> to view end of line characters.</li>
+<li>Familiarity with <strong>crontab</strong> file contents for scheduling the running of the script - see <a href="https://www.qnap.com/en/how-to/faq/article/how-to-add-jobs-to-crontab-to-schedule-a-job">QNAP: How to- Add Jobs to crontab to schedule a job</a>.</li>
+<li>Familiarity with using Linux text editors such as <strong><a href="https://www.redhat.com/en/blog/introduction-vi-editor">vi</a></strong> for editing the <code>/etc/config/crontab</code> file.</li>
+</ul>
+<h2 id="script-file---qnapembycertrenewsh">Script File - QNAPEmbyCertRenew.sh</h2>
+<pre><code>#!/bin/sh
+
+# QNAPEmbyCertRenew.sh - version created 30 May 2026
+
+# Script is based on one provided by dieffe70 https://emby.media/community/topic/113284-guide-ssl-qnap-certificate-and-emby-manual-and-automatic
+
+now=&quot;$(date)&quot;
+
+# Password for exported PFX
+PFX_PASSWORD=&quot;Replace-This-With-Your-PFX-Password&quot;
+
+# PFX Output file Directory - change the path for your specific /share path
+PFX_DIR=&quot;/share/Emby-SSL-Certificate&quot;
+
+# Ensure directory ends with /
+PFX_DIR=&quot;${PFX_DIR%/}/&quot;
+
+# The output certificate file generated will have a filename extension of &quot;.pfx&quot;
+# The actual filename will be the PFX_FILE_PREFIX followed by the QNAP cert file UTC date/timestamp and the UTC date/time the pfx file generated
+# and ending with the .pfx extension
+PFX_FILE_PREFIX=&quot;embycert&quot;
+
+# Log file
+PFX_LOG=&quot;${PFX_DIR}cert-2-pfx-check.log&quot;
+
+# This will ensure that the new QNAP certificate is only picked once
+STATE_FILE=&quot;${PFX_DIR}.last_processed_time&quot;
+
+# Set this option to &quot;NO&quot; if you do not wish Emby Server to be notified of a change to the certificate
+# Any change would only become active on restart of the Emby Server. 
+# The default in this script is to notify Emby Server of any channge to the certificate
+# Emby Server will pick the path and password and will automatically schedule a restart when the server is detected to be idle
+AUTO_EMBY_UPDATE=&quot;YES&quot;
+
+# The option to notify Emby Server requires having an api key for use for the update
+# See Emby Server Settings / Advanced / Api keys for generating an api key to use
+# Enclose the api key between the quote characters on the following line
+EMBY_API_KEY=&quot;Replace-This-With-Your-API-Key-For-EmbyServer&quot;
+
+EMBY_IP=&quot;127.0.0.1&quot;
+
+# Edit the following line if using non standard local port
+EMBY_PORT=&quot;8096&quot;
+
+# Either specifiy a path for the cert file (QTS) or leave empty (QuTS hero) to search filesystem for it
+
+# Comment out one of these 2 lines by prefixing it with a # as per other comments - defaulted to QTS
+# The first is needed for QuTS hero - so you comment out the second
+# The second is needed for QTS - so you comment out the first or leave as per default
+QNAP_CERT_PATH=&quot;&quot;
+QNAP_CERT_PATH=&quot;/etc/config/QcloudSSLCertificate/cert/cert&quot;
+
+if [ -z &quot;$QNAP_CERT_PATH&quot; ]; then
+	# For QuTS hero path may change so search filesystem for latest QNAP cert file
+	echo &quot;$now - Starting search of filesystem for the latest cert file&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	CRT_FILE=$(find /mnt -type f -name &quot;cert&quot; 2&gt;/dev/null \
+		| while read -r file; do
+			stat -c &quot;%Y %n&quot; &quot;$file&quot;
+		  done \
+		| sort -nr \
+		| head -n 1 \
+		| cut -d' ' -f2-)
+
+	if [ -z &quot;$CRT_FILE&quot; ]; then
+		echo &quot;$now - No certificate file found.&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+		exit 1
+	fi
+else
+	# For QTS we pick the cert file as per the specified path
+	echo &quot;$now - Picking QNAP certificate from this file path $QNAP_CERT_PATH&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	CRT_FILE=&quot;$QNAP_CERT_PATH&quot;
+
+	if [ ! -f &quot;$CRT_FILE&quot; ]; then
+		echo &quot;$now - Specified cert file $CRT_FILE not found&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+		exit 1
+	fi
+fi
+
+CERT_DIR=$(dirname &quot;$CRT_FILE&quot;)
+KEY_FILE=&quot;$CERT_DIR/key&quot;
+
+echo &quot;$now - CERT_DIR: $CERT_DIR&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+echo &quot;$now - CRT_FILE: $CRT_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+echo &quot;$now - KEY_FILE: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+
+if [ ! -f &quot;$KEY_FILE&quot; ]; then
+	echo &quot;$now - Private key not found: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	exit 1
+fi
+
+# Get current file mtime (epoch seconds)
+CURRENT_MTIME=$(stat -c %Y &quot;$CRT_FILE&quot; 2&gt;/dev/null)
+
+# If state file exists, read last processed time
+if [ -f &quot;$STATE_FILE&quot; ]; then
+	LAST_MTIME=$(cat &quot;$STATE_FILE&quot;)
+else
+	LAST_MTIME=0
+fi
+
+# Only process if file is newer than last processed
+if [ &quot;$CURRENT_MTIME&quot; -gt &quot;$LAST_MTIME&quot; ]; then
+
+	echo &quot;$now - Certificate has changed (mtime $CURRENT_MTIME &gt; last processed $LAST_MTIME)&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	echo &quot;$now - Using certificate directory: $CERT_DIR&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	echo &quot;$now - Certificate: $CRT_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	echo &quot;$now - Private Key: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+
+	# Convert epoch mtime to UTC yyyy-mm-dd_hh.mm.ss
+	CURRENT_MTIME_UTC=$(date -u -d &quot;@$CURRENT_MTIME&quot; +&quot;%Y-%m-%dT%H.%M.%SZ&quot;)
+	CURRENT_TIME_UTC=$(date -u +&quot;%Y-%m-%dT%H.%M.%SZ&quot;)
+
+	# Build pfx filename
+	PFX_FILE=&quot;${PFX_DIR}${PFX_FILE_PREFIX}_${CURRENT_MTIME_UTC}_${CURRENT_TIME_UTC}.pfx&quot;
+
+	echo &quot;$now - Emby PFX: $PFX_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	
+	# Create the PFX file
+	OPENSSL_CMD=&quot;openssl pkcs12 -export \
+		-out \&quot;$PFX_FILE\&quot; \
+		-inkey \&quot;$KEY_FILE\&quot; \
+		-in \&quot;$CRT_FILE\&quot; \
+		-passout \&quot;pass:$PFX_PASSWORD\&quot;&quot;
+
+	# uncomment next line to add extra logging if needed
+	# echo &quot;$now - Executing command $OPENSSL_CMD&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	
+	eval &quot;$OPENSSL_CMD&quot;
+	if [ $? -eq 0 ]; then
+		echo &quot;$now - PFX successfully created: $PFX_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	else
+		echo &quot;$now - PFX creation failed.&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+		exit 1
+	fi
+
+	# Save the processed certificate timestamp
+	echo &quot;$CURRENT_MTIME&quot; &gt; &quot;$STATE_FILE&quot;
+
+	if [ &quot;$AUTO_EMBY_UPDATE&quot; = &quot;YES&quot; ]; then
+
+		if [ -z &quot;$EMBY_API_KEY&quot; ]; then
+			echo &quot;$now - Cannot update Emby Server: no API key specified&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+			exit 1
+		fi
+
+		if [ &quot;$EMBY_IP&quot; = &quot;x.x.x.x&quot; ]; then
+			echo &quot;$now - Cannot update Emby Server: server IP address not configured&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+			exit 1
+		fi
+
+		PFX_DATA=&quot;{ \&quot;CertificatePath\&quot;: \&quot;$PFX_FILE\&quot;, \&quot;CertificatePassword\&quot;: \&quot;$PFX_PASSWORD\&quot; }&quot;
+		
+		EMBY_RESPONSE=$(curl \
+			--write-out '%{http_code}' \
+			--output /dev/null \
+			--silent \
+			-X POST \
+			&quot;http://$EMBY_IP:$EMBY_PORT/emby/System/Configuration/Partial&quot; \
+			-H &quot;X-Emby-Token: $EMBY_API_KEY&quot; \
+			-H &quot;Content-Type: text/plain&quot; \
+			--data-binary &quot;$PFX_DATA&quot;)
+
+		echo &quot;$now - Emby Server Update Response: $EMBY_RESPONSE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+
+		if [ &quot;$EMBY_RESPONSE&quot; != &quot;200&quot; ] &amp;&amp; [ &quot;$EMBY_RESPONSE&quot; != &quot;204&quot; ]; then
+			echo &quot;$now - Warning: Emby Server returned unexpected status code $EMBY_RESPONSE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+			exit 1
+		fi
+		# Purge pfx files created by this script more than 6 months ago
+		PFX_PATTERN=&quot;${PFX_FILE_PREFIX}_????-??-??T??.??.??Z_????-??-??T??.??.??Z.pfx&quot;	
+		DELETE_CMD=&quot;find \&quot;$PFX_DIR\&quot; -type f -name \&quot;$PFX_PATTERN\&quot; -mtime +183&quot;
+
+		eval &quot;$DELETE_CMD&quot; | while IFS= read line
+		do
+			echo &quot;$now - deleting $line&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+			rm -f &quot;$line&quot; &gt;&gt; &quot;$LOG_FILE&quot; 2&gt;&amp;1
+		done
+		
+	else
+		echo &quot;$now - Emby Server not updated - AUTO_EMBY_UPDATE option not set to YES&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+		echo &quot;$now - Emby Server Network Settings should be updated manually to specify the path as ${PFX_FILE}&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+		echo &quot;$now - Also make sure the Emby Server certificate password is set to the value specified in this script&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+	fi
+	
+else
+	echo &quot;$now - Certificate unchanged (mtime $CURRENT_MTIME, last processed $LAST_MTIME) - skipping&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+fi
+</code></pre>
+<h2 id="how-to-obtain-an-api-key-for-emby-server">How to obtain an API Key for Emby Server</h2>
+<p>The script needs to have an <strong>Api key</strong> to allow it to communicate with the Emby Server. An <strong>Api key</strong> can be generated by going the Emby Server <strong>Settings</strong> dashboard and then in the <strong>Advanced</strong> section in the sidebar on the left, selecting <strong>Api Keys</strong> and then <strong>+New Api Key</strong>. After clicking on <strong>+New Api Key</strong>, you will be asked to assign a name to the API Key. Suggest you name it <code>QNAP Emby CertRenew Script</code> and then click <strong>Submit</strong>.</p>
+<p>The key will appear in the list of Api Keys. To be able to copy the api key to the clipboard through the <strong>...</strong> button on the right, you would need to be connected to the server through an https secure connection. If you are not, you would need to manually select the displayed api key and using <strong>control and C</strong> to copy it. Paste the key into script in the field within the quotes on the script line starting with <code>EMBY_API_KEY=</code> replacing the preset text.</p>
+<h2 id="lines-to-edit-in-the-provided-script">Lines to edit in the provided script</h2>
+<p>The following lists all the lines that should be edited and set.</p>
+<p>The <code>PFX_PASSWORD</code> is the password for the Emby Server pfx certificate file that will be generated and will be set when the pfx file update is notified to Emby Server.</p>
+<p>The <code>EMBY_API_KEY</code> will hold the api key you generated above.</p>
+<p>One of the two <code>QNAP_CERT_PATH</code> lines should be commented out by placing a <code># </code> before the text.</p>
+<pre><code>PFX_PASSWORD=&quot;Replace-This-With-Your-PFX-Password&quot;
+EMBY_API_KEY=&quot;Replace-This-With-Your-an-API-Key-For-EmbyServer&quot;
+QNAP_CERT_PATH=&quot;&quot;
+QNAP_CERT_PATH=&quot;/etc/config/QcloudSSLCertificate/cert/cert&quot;
+</code></pre>
+<p>For <strong>QNAP QTS</strong> where the certificate is expected to be in a fixed location, you would have the lines as:</p>
+<pre><code># QNAP_CERT_PATH=&quot;&quot;
+QNAP_CERT_PATH=&quot;/etc/config/QcloudSSLCertificate/cert/cert&quot;
+</code></pre>
+<p>For <strong>QNAP QuTS hero</strong> where the certificate location is not fixed, you would have the lines as:</p>
+<pre><code>QNAP_CERT_PATH=&quot;&quot;
+# QNAP_CERT_PATH=&quot;/etc/config/QcloudSSLCertificate/cert/cert&quot;
+</code></pre>
+<p>The following gives other settings in the script that can be modified.</p>
+<p>If you have a different share folder for holding the script and log and the pfx certificates, change the <code>PFX_DIR</code> path.</p>
+<p>Change the <code>EMBY_PORT</code> number if your server has a non standard local port.</p>
+<p>If you change the auto update option, then you will need to manually update the server network settings to use the new certificate file and password. See <a href="Secure-Your-Server.html#setup-emby-server-with-your-domain-and-ssl-certificate">Setup Emby Server with your domain and SSL certificate</a>.</p>
+<pre><code>PFX_DIR=&quot;/share/Emby-SSL-Certificate&quot;
+AUTO_EMBY_UPDATE=&quot;YES&quot;
+EMBY_PORT=&quot;8096&quot;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In all the instructions below, it is assumed that the script will be in folder <code>/share/Emby-SSL-Certificate/</code>. Modify the steps shown below if you chose a different location for the script and/or PFX_DIR.</p>
+</div>
+<h2 id="copy-the-script-file-to-the-nas">Copy the script file to the NAS</h2>
+<p>Having completed all the edits to the script file, and with access from a PC to the share where you will have the script and Emby certificate pfx files on the NAS, copy the <code>QNAPEmbyCertRenew.sh</code> script to that share folder on the QNAP NAS. It is suggested you use the same directory for the Emby SSL certificate pfx files.</p>
+<p>Assuming the path on the NAS is <code>/share/Emby-SSL-Certificate</code>, copy the edited <code>QNAPEmbyCertRenew.sh</code> to this directory. Next you will need to check and correct the end of line characters, if necessary.</p>
+<h2 id="how-to-use-notepad-to-check-for-end-of-line-character">How to use Notepad++ to check for end of line character</h2>
+<p>If using Windows to create and edit the script, you may end up with windows <strong>CR</strong> / <strong>LF</strong> at end of lines. On Linux it needs to be just <strong>LF</strong>.</p>
+<p>You can check with <strong><a href="https://notepad-plus-plus.org/">Notepad++</a></strong> to see if you need to use <strong><a href="https://sourceforge.net/projects/dos2unix/">dos2unix</a></strong> to replace the <strong>CR LF</strong> with <strong>LF</strong>.</p>
+<p>In <strong>Notepad++</strong>, with the script file open, select <strong>View</strong> &gt;&gt; <strong>Show Symbol</strong> &gt;&gt; <strong>Show All Characters</strong>.</p>
+<p>If all lines end with <strong>LF</strong> then no action is needed.</p>
+<p>If all or some lines end with <strong>CR LF</strong>, you will need to use <strong>dos2unix</strong> to update the file. Either way, there is no harm in doing it anyway.</p>
+<p>This is an example of how you would use <strong>dos2unix</strong> on windows.</p>
+<p>In this example, assume that the <a href="https://sourceforge.net/projects/dos2unix/">dos2unix tools</a> were downloaded into the <strong>Downloads</strong> folder as <code>dos2unix-7.5.5-win64.zip</code>, being the file for the current version at time of writing this article.</p>
+<p>Unzip the files. The <code>dos2unix.exe</code> binary would be within the <code>dos2unix-7.5.5-win64\bin\</code> folder.</p>
+<p>We will assume that the script has been copied to the NAS and the path is, as example, <code>\\NAS\Emby-SSL-Certificate\QNAPEmbyCertRenew.sh</code> where &quot;NAS&quot; is the hostname for the QNAP NAS or the local IP Address.</p>
+<p>Ensure all the changes to the script have been made and saved and the editor is closed.</p>
+<p>Open a windows <strong>cmd.exe</strong> session and type command similar to this - replace <code>NAS</code> with the NAS hostname or IP Address. Also have the correct directory name for the unzipped dos2unix tool, e.g.:</p>
+<pre><code>&quot;%HOMEPATH%\Downloads\dos2unix-7.5.5-win64\bin\dos2unix.exe&quot;  &quot;\\NAS\Emby-SSL-Certificate\QNAPEmbyCertRenew.sh&quot;
+</code></pre>
+<p>This will display a message that the file has been converted to Unix format.</p>
+<p>After this, you can double check with Notepad++ that the CR LFs have been replaced with LFs at end of each line.</p>
+<h2 id="set-execute-permissions-for-the-script">Set Execute permissions for the script</h2>
+<p>With ssh enabled on the QNAP NAS - see <a href="https://www.qnap.com/en/how-to/faq/article/how-do-i-access-my-qnap-nas-using-ssh">QNAP: How Do I Access My QNAP NAS Using ssh</a>, use <strong><a href="https://putty.org/index.html">PuTTY</a></strong> to establish a shell ssh connection to the QNAP NAS.</p>
+<p>Login with the QNAP admin account.</p>
+<p>Add execute permission to the script file</p>
+<pre><code>chmod +x /share/Emby-SSL-Certificate/QNAPEmbyCertRenew.sh
+</code></pre>
+<p>You can use <code>ls -ail /share/Emby-SSL-Certificate/</code> to check the permissions for the file.</p>
+<h2 id="do-a-manual-test-to-run-the-script">Do a manual test to run the script</h2>
+<p>Do this using the ssh PuTTY session.</p>
+<p>Note that the first time you run the script, it will update Emby Server with a new certificate pfx even if the QNAP SSL certificate has not changed. So be prepared for the server restarting sometime after running the script is executed for the test. The restart would happen when the Emby Server detects idle state.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It has been seen that having DLNA Server enabled may impact the detection of idle state for the auto restart.</p>
+</div>
+<p>Execute the script by typing in this command</p>
+<pre><code>/bin/sh  /share/Emby-SSL-Certificate/QNAPEmbyCertRenew.sh
+</code></pre>
+<p>Now check the log file. If the folder is accessible on a PC, do that using the PC viewing the file <code>\\NAS\Emby-SSL-Certificate\cert-2-pfx-check.log</code> with a text editor. Replace <code>NAS</code> with the NAS IP address or host name.</p>
+<p>Or you can do that on the NAS in the ssh session, by typing the following:</p>
+<pre><code>tail -n 20 /share/Emby-SSL-Certificate/cert-2-pfx-check.log
+</code></pre>
+<p>If a pfx file was created and emby server notified, then proceed to next section of automating the running of this script.</p>
+<h2 id="schedule-the-script-to-run-daily">Schedule the script to run daily</h2>
+<p>With the QNAP renewing the certificate weeks before expiry, it should be sufficient to run the script once each day. But you can run it more than once by customizing the crontab line.</p>
+<p>The steps outlined below will schedule the script to run once daily at 1 am.</p>
+<p>It is assumed that you are familiar with using a linux text editor such as <strong><a href="https://www.redhat.com/en/blog/introduction-vi-editor">vi</a></strong> and know how to insert a line and save the edit and exit the editor.</p>
+<p>Connect to the QNAP using PuTTy as before and login using the admin account.</p>
+<p>We will add the following line to the end of the <code>/etc/config/crontab</code> file:</p>
+<pre><code>0 1 * * * /bin/sh  /share/Emby-SSL-Certificate/QNAPEmbyCertRenew.sh
+</code></pre>
+<p>Use the editor to edit <code>/etc/config/crontab</code> and add this line as the last line, e.g.</p>
+<pre><code>vi /etc/config/crontab
+</code></pre>
+<p>Save the changes and exit the editor.</p>
+<p>Now you must get crontab to pick the changed file. Type this command line:</p>
+<pre><code>crontab /etc/config/crontab &amp;&amp; /etc/init.d/crond.sh restart
+</code></pre>
+<p>You can check that the crontab line has now been added by executing this command</p>
+<pre><code>crontab -l
+</code></pre>
+<p>(this is lowercase L)</p>
+<p>The following day, inspect the script log file <code>/share/Emby-SSL-Certificate/cert-2-pfx-check.log</code> to check that the script did run at 1 am.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+      
+          <span class="contribution">
+                <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20QNAP-SSL-Certificate-Renewal%0A*%20Title%3A%20QNAP%20SSL%20Certificate%20Renewal%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FQNAP-SSL-Certificate-Renewal.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/QNAP-SSL-Certificate-Renewal.md/#L1" class="contribution-link " title="View article source"><div class="far fa-edit fa-sm"></div></a>
+          </span>
+      
+          
+        
+      </div></div></footer>
+    
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../searchIndex.js"></script>
+    <script type="text/javascript" src="../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </div></body>
+</html>

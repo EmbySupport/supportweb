@@ -265,6 +265,7 @@
 <p>Two sources for ssl certificates will be covered here, <a href="https://www.sslforfree.com/">SSL for free</a> which is now part of <a href="https://zerossl.com">ZeroSSL</a> and <a href="https://letsencrypt.org/">Let's Encrypt</a>. There are pros and cons for both.</p>
 <p>&quot;SSL for Free&quot; following the merge into &quot;ZeroSSL&quot; is no longer available free after the first 90-day certificate and you would need to switch to a paid-for-plan. Whereas &quot;Let's Encrypt&quot; provides free certificates without any time limit, but requiring renewal every 90 days.</p>
 <p>&quot;Let's Encrypt&quot; certificates, however, may have compatibility issues with LG and Samsung Smart TVs, issues which are known not to arise currently with ZeroSSL certificates.</p>
+<p>For QNAP users where they have automatic SSL certificate renewals, there is now a script available to pick the QNAP SSL certificate and convert it into a pfx certificate file and password for Emby Server to use. See <a href="QNAP-SSL-Certificate-Renewal.html">QNAP SSL Certificate Renewal</a>.</p>
 <h3 id="ssl-for-free--zerossl-certificate">SSL for Free / ZeroSSL certificate</h3>
 <p>Go to the web site through either <a href="https://www.sslforfree.com/">SSL for free</a> or <a href="https://zerossl.com">ZeroSSL</a> and register and login to your account.</p>
 <ol>
@@ -304,7 +305,7 @@
 <p><strong>Chain certificate</strong>: The ca_bundle.crt or you can also find it here, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Save the text into a .txt file.</p>
 <p><strong>PFX password</strong>: Since the private key is combined with the certificate, set a password to secure the new ssl certificate. Remember this password, you'll need it in Emby.</p>
 </li>
-<li><p>Copy the pfx file to where you want to keep the Emby Server certificate and you will also need the pfx password. Next go to the following section below: <strong>Setup Emby Server with your domain and SSL certificate</strong></p>
+<li><p>Copy the pfx file to where you want to keep the Emby Server certificate and you will also need the pfx password. Next go to the following section <a href="#setup-emby-server-with-your-domain-and-ssl-certificate">Setup Emby Server with your domain and SSL certificate</a>.</p>
 </li>
 </ol>
 <h3 id="lets-encrypt-certificate">Let's Encrypt certificate</h3>

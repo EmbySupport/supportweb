@@ -411,6 +411,9 @@ references:
   name: Upgrade Membership
   href: articles/Premiere-Upgrade.html
   fullName: How do I Upgrade my Emby Premiere Membership?
+- uid: QNAP-SSL-Certificate-Renewal
+  name: QNAP SSL Certificate Renewal
+  href: articles/QNAP-SSL-Certificate-Renewal.html
 - uid: Quick-Start
   name: Quick Start
   href: articles/Quick-Start.html
