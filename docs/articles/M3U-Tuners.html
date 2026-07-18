@@ -164,6 +164,12 @@
 <li>A file path to an M3U file</li>
 <li>A URL to an M3U file that can be downloaded</li>
 </ul>
+<p>The setup page will have the options showing on the screenshot below.</p>
+<p>Leaving the <strong>Referer http header</strong> and <strong>user agent http header</strong> fields blank will result in Emby Server's default values being used.</p>
+<p>It will be possible to choose how the <strong>Referer</strong> header item is included in the streaming requests. Some providers may only accept <strong>Referrer</strong>, whilst others may expect it to be <strong>Referer</strong>. The default is to include both variants. You have a choice of including both, either <strong>Referer</strong> or <strong>Referrer</strong> or none. The wrong <strong>Referer</strong> or <strong>User Agent</strong> could give rise to http 403 (Forbidden) errors being returned.</p>
+<p>You can also set the simultaneous stream limit if there is one.</p>
+<p><img src="images/server/m3utuner3.png" alt=""></p>
+<h2 id="m3u-properties">M3U properties</h2>
 <p>The following M3U properties are supported:</p>
 <ul>
 <li>tvg-name - Channel name</li>
@@ -173,9 +179,7 @@
 <li>tvg-group - Group the channel belongs to for group management of the guide.  These groups will be imported as tags by Emby for use in parental filtering as well.</li>
 </ul>
 <p>If any are missing, Emby will attempt to automatically detect the information using whatever tags are available.</p>
-<p>The setup page will have the following options available. Leaving the <strong>Referer http header</strong> and <strong>user agent http header</strong> fields blank will result in Emby Server's default values being used.</p>
-<p><img src="images/server/m3utuner3.png" alt=""></p>
-<p>There is a choice of using a Guide Data source or the m3u for channel images.</p>
+<p>There is a choice for the channel image source, using a Guide Data source or the m3u for channel images.</p>
 <p><img src="images/server/m3utuner4.png" alt=""></p>
 <h2 id="example-m3u">Example M3U</h2>
 <pre><code>#EXTM3U
