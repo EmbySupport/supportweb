@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User Preferences - Home Screen | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User Preferences - Home Screen | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <script type="text/javascript" src="../../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="User-Prefs-HomeScreen">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
+                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
+                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
+                    <li><a href="../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
+                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="User-Prefs-HomeScreen">
+<h1>User Preferences - Home Screen</h1>
+
+
+<p>Users and the server administrator can customize the Home Screen content and as from Emby Server version 4.10.x, the functionality has been greatly enhanced to allow you to view your media grouped in the way you like.</p>
+<p>This article covers the features introduced in Emby Server version 4.10.x onwards. For earlier versions of Emby Server (4.8.x and 4.9.x), refer to <a href="User-Prefs-HomeScreen-Legacy.html">User Preferences - Home Screen (Legacy)</a>.</p>
+<p>There are very advanced and functionality rich options for customizing the users Home Screens introduced in Emby Server 4.10.x, giving you the ability to:</p>
+<ul>
+<li>Limit certain sections to specific libraries</li>
+<li>Choose the image that is used (poster/thumb)</li>
+<li>Override the scroll direction</li>
+<li>View recently released episodes / movies</li>
+<li>Create a home screen section based on a playlist, collection, genre, studio or tag.</li>
+<li>Having dynamic views based on extensive selection criteria with added option for a Spotlight view</li>
+<li>Add a Home screen banner that appears on the users Emby home screen</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Server admin can replicate the Home Screen customization from one user account to other user accounts. Have a look at <a href="../../User-Copy-Settings.html">Copy User Settings</a> once you have a configuration for one user account that you want to replicate.</p>
+</div>
+<h2 id="home-screen-banner">Home screen banner</h2>
+<p>This can be added in the Emby Server General Settings</p>
+<p><img src="../../images/server/serversettings9.png" alt=""></p>
+<p>The following shows the initial default <strong>Home Screen</strong> contents and preferences. See <a href="#adding-and-customizing-home-screen-sections">Adding and customizing Home Screen sections</a> below for making changes.</p>
+<h2 id="default-home-screen-sections">Default Home Screen Sections</h2>
+<p><img src="../../images/server/users59.png" alt=""></p>
+<p>The order in which the libraries are shown is determined by the <strong>Library Order</strong> list that follows. Each library is listed and can be re-ordered by selecting the row and moving it up or down. Rows are also shown for <strong>LiveTV</strong> and installed additions such as <strong>The Emby Show</strong>.</p>
+<p>In this example, <strong>The Emby Show</strong> plugin is installed and <strong>LiveTV</strong> has been configured and there is one library for each of <strong>Movies</strong>, <strong>TV Shows</strong>, <strong>Music</strong>, <strong>Photos</strong> and <strong>Videos</strong>.</p>
+<p><img src="../../images/server/users60.png" alt=""></p>
+<p>Below this, there are options for selecting the default screens for each.</p>
+<p><img src="../../images/server/users61.png" alt=""></p>
+<h2 id="adding-and-customizing-home-screen-sections">Adding and customizing Home Screen sections</h2>
+<p>There is no limit on the number of sections to be added to the Home Screen. A section type can be added more than once with different selection and presentation options. The order the sections appear can be changed by selecting a row within the &quot;<strong>Home Sections</strong>&quot; settings page and dragging up or down. The following shows the various section types that can be added:</p>
+<p><img src="../../images/server/users62.png" alt=""></p>
+<p>Some of the options that were available for Home Screen customization in previous versions of Emby Server, have now been moved and covered by the configuration options available when adding or editing a section.</p>
+<p>For example, the old &quot;<strong>Next Up (Legacy)</strong>&quot; is no longer available as a section type but the options for &quot;<strong>Continue Watching</strong>&quot; will include one for &quot;<strong>Include next up episodes</strong>&quot; allowing you to create a <strong>Next Up</strong> section for your selected TV Libraries.</p>
+<p>Also libraries home screen preferences for inclusion in secondary home screen sections such as <strong>Latest Media</strong> and <strong>Continue Watching</strong> have been removed and equivalent functionality is now provided by having a library list to tick for each section.</p>
+<p>With the variety of available options, you will see now that there may be more than one way to achieve what you like to see on the Home Screen.</p>
+<p>See the <a href="#home-sections-faq">FAQ</a> below for further information.</p>
+<h2 id="options-for-home-sections">Options for Home Sections</h2>
+<p><strong>Custom Title</strong></p>
+<p>You have the option to specify a custom title for the sections for all but sections for the &quot;Latest Media&quot; section type. If the option is available and left blank, the title will be automatically generated. The Home section title appears above each section on the Home Screen, except when it is for a section with a Spotlight view type and it is the first section on the Home Screen. An example of this is shown in the <a href="#home-screen-examples">Home screen examples</a> below.</p>
+<p><img src="../../images/server/users103.png" alt=""></p>
+<p><strong>Show This Section</strong></p>
+<p>All section types have an option for always showing a Home Section or only when TV display mode is on or off. The default is always.</p>
+<p><img src="../../images/server/users115.png" alt=""></p>
+<p><strong>View Type</strong></p>
+<p>This could be a choice of <strong>Cards</strong> or <strong>Buttons</strong> as in the case of <strong>&quot;My Media&quot;</strong> section type or <strong>Cards</strong> and <strong>Spotlight</strong> for section types where a Spotlight view is available.</p>
+<p><img src="../../images/server/users71.png" alt=""></p>
+<p>or</p>
+<p><img src="../../images/server/users104.png" alt=""></p>
+<p><strong>Dynamic Media section media types option</strong></p>
+<p>The Dynamic Media home section type allows you to create sections for specific media and metadata types: Movies, Shows, Movies &amp; Shows, Episodes, Music Videos, Videos, Photos, Programs, Live TV Channels, Music Albums, Artists, Songs, Audio Books, Trailers, Games, Books.</p>
+<p><img src="../../images/server/users121.png" alt=""></p>
+<p><strong>Libraries</strong></p>
+<p>A drop-down list of all libraries will be shown where you can exclude/include individual libraries. This list will also include components such as Live TV, Web Streams and IPTV. The default is all being included. Example:</p>
+<p><img src="../../images/server/users74.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>New libraries added to the server will get included in Home Sections where you had specific libraries selected. The Home Sections would need to be edited if a new library is to be excluded.</p>
+</div>
+<p><strong>Next Up episodes</strong></p>
+<p>The <strong>&quot;Continue Watching&quot;</strong> Home Section has an option for including or excluding the Next Up episodes. Toggle the <strong>&quot;Include next up episodes in Continue Watching&quot;</strong> option to include or exclude Next up episodes.</p>
+<p><img src="../../images/server/users119.png" alt=""></p>
+<p><strong>Filters</strong></p>
+<p>The following shows examples of filters that are available, depending on the section type or the media type for a <strong>Dynamic Media</strong> section type.</p>
+<p><strong>Favorite and Tags filtering</strong></p>
+<p><img src="../../images/server/users116.png" alt=""></p>
+<p><strong>Playstate filtering</strong></p>
+<p><img src="../../images/server/users117.png" alt=""></p>
+<p><strong>Filter options for Studio and Genre</strong></p>
+<p><img src="../../images/server/users118.png" alt=""></p>
+<p><strong>Sort By</strong> and <strong>Sort Order</strong></p>
+<p>Extensive list of sort options are provided with Ascending or Descending sort order.</p>
+<p>Example:</p>
+<p><img src="../../images/server/users84.png" alt=""></p>
+<p><strong>Scroll Direction</strong></p>
+<p>This will be a choice between <strong>Auto</strong> (the default) and <strong>Horizontal</strong> or <strong>Vertical</strong> to override apps scroll direction. When set to Auto, Emby apps will choose a scroll direction based on several factors such as screen size, orientation, form factor.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Forcing vertical scroll direction may result in the number of items shown being limited for performance reasons.</p>
+</div>
+<p><img src="../../images/server/users75.png" alt=""></p>
+<p>and options being:</p>
+<p><img src="../../images/server/users76.png" alt=""></p>
+<p><strong>Image Type</strong></p>
+<p>This will be a choice between <strong>Auto</strong> (the default) and <strong>Primary</strong> or <strong>Thumb</strong> image.</p>
+<p><img src="../../images/server/users79a.png" alt=""></p>
+<p>with the drop-down giving the 3 options:</p>
+<p><img src="../../images/server/users79.png" alt=""></p>
+<h2 id="home-section-types-matrix">Home Section Types Matrix</h2>
+<style type="text/css">
+
+    table.homesection-matrix-table {
+        width: 100%;
+        margin-right: calc(0%);
+    }
+
+    table.homesection-matrix-table th {
+        background-color: rgb(97, 189, 109);
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    table.homesection-matrix-table td {
+        text-align: center;
+    }
+
+    table.homesection-matrix-table tr td:nth-child(1) {
+        text-align: left;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(1) {
+        width: 40%;
+        text-align: left;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(2) {
+        width: 10%;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(3) {
+        width: 10%;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(4) {
+        width: 10%;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(5) {
+        width: 10%;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(6) {
+        width: 10%;
+    }
+
+    table.homesection-matrix-table tr th:nth-child(7) {
+        width: 10%;
+    }
+
+</style>
+<table class="homesection-matrix-table">
+    <thead>
+    <tr>
+        <th>
+            <span>Section Type</span>
+        </th>
+        <th>Custom Sorting</th>
+        <th>Libraries Selection</th>
+        <th>Spotlight View</th>
+        <th>Filters</th>
+        <th>Play State Filtering</th>
+        <th>Image Type Option</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>My Media</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+    </tr>
+    <tr>
+        <td>Continue Watching</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Continue Listening</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+    </tr>
+    <tr>
+        <td>Latest Media</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+    </tr>
+    <tr>
+        <td>Collections</td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Playlists</td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Single Collection</td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+    <tr>
+        <td>Single Playlist</td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Dynamic Media</td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Recently Released Movies</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    <tr>
+        <td>Recently Released Episodes</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    <tr>
+        <td>On Now</td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+    </tr>
+    <tr>
+        <td>Active Recordings</td>
+        <td>
+            <div></div>
+            </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div></div>
+        </td>
+        <td>
+            <div>✔</div>
+        </td>
+    </tr>
+    </tr></tr></tbody>
+</table>
+<h2 id="home-sections-faq">Home Sections FAQ</h2>
+<p><a href="#how-many-home-sections-can-i-have">How many Home Sections can I have?</a></p>
+<p><a href="#if-i-select-libraries-for-a-home-section-what-happens-when-new-libraries-are-added">If I select libraries for a Home Section, what happens when new libraries are added?</a></p>
+<p><a href="#which-home-section-types-can-display-next-up-episodes">Which Home Section types can display &quot;Next-Up Episodes&quot;?</a></p>
+<p><a href="#how-do-i-create-the-next-up-legacy-home-section">How do I create the &quot;Next Up (Legacy)&quot; Home section?</a></p>
+<p><a href="#can-i-change-the-title-of-a-home-section">Can I change the title of a Home Section?</a></p>
+<p><a href="#i-added-a-section-title-but-it-is-not-showing">I added a section title but it is not showing!</a></p>
+<p><a href="#what-is-a-spotlight-view">What is a Spotlight view?</a></p>
+<p><a href="#where-do-channels-live-tv-web-streams-iptv-etc-fit-in">Where do Channels, Live TV, Web Streams, IPTV etc fit in?</a></p>
+<p><a href="#what-filtering-is-available">What filtering is available?</a></p>
+<p><a href="#what-can-i-achieve-with-the-dynamic-media-home-section-type">What can I achieve with the &quot;Dynamic Media&quot; Home section type?</a></p>
+<p><a href="#what-is-the-continue-listening-section-type-for-i-do-not-see-my-music-there">What is the &quot;Continue Listening&quot; section type for? I do not see my music there!</a></p>
+<h3 id="how-many-home-sections-can-i-have">How many Home Sections can I have?</h3>
+<p>There is no limit on the number of Home Sections you create and you can have multiple Home Sections of the same type.</p>
+<h3 id="if-i-select-libraries-for-a-home-section-what-happens-when-new-libraries-are-added">If I select libraries for a Home Section, what happens when new libraries are added?</h3>
+<p>Any new libraries that are added will show in all Home Sections that have libraries selected. You would need to edit the Home Sections if you do not wish a new library to be included.</p>
+<h3 id="which-home-section-types-can-display-next-up-episodes">Which Home Section types can display &quot;Next-Up Episodes&quot;?</h3>
+<p>You can create a <strong>&quot;Next-Up&quot;</strong> view by ticking that option in the <strong>&quot;Continue Watching&quot;</strong> Home Section type.</p>
+<h3 id="how-do-i-create-the-next-up-legacy-home-section">How do I create the &quot;Next Up (Legacy)&quot; Home section?</h3>
+<p>Add a <strong>&quot;Continue Watching&quot;</strong> Home Section and give it a custom title. Open up the <strong>Libraries</strong> drop-down and untick all the non TV libraries. Finally, ensure that the <strong>&quot;Include next up episodes in Continue Watching&quot;</strong> option is selected.</p>
+<p><img src="../../images/server/users119.png" alt=""></p>
+<h3 id="can-i-change-the-title-of-a-home-section">Can I change the title of a Home Section?</h3>
+<p>With the exception of the &quot;Latest Media&quot; Home Section type, for all others you can specify a custom title for the Home Section.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>As an example you could split the view of your libraries using multiple &quot;My Media&quot; sections with different title. Furthermore, the &quot;My Media&quot; section type has view options of cards or buttons - so you can have some content showing with poster cards and some libraries in a different Home Section just having the  smaller buttons.</p>
+</div>
+<h3 id="i-added-a-section-title-but-it-is-not-showing">I added a section title but it is not showing</h3>
+<p>This may happen for a Spotlight view home section and only if that section is the first Home screen section. It is by design on some Emby Client apps.</p>
+<h3 id="what-is-a-spotlight-view">What is a Spotlight view?</h3>
+<p>The Spotlight view which is available on a number of Home Section Types (see the <a href="#home-section-types-matrix">Home Section Types Matrix</a>) gives an impressive large poster for each media item. See examples shown below in <a href="#home-screen-examples">Home Screen Examples</a>.</p>
+<h3 id="where-do-channels-live-tv-web-streams-iptv-etc-fit-in">Where do Channels, Live TV, Web Streams, IPTV etc fit in?</h3>
+<p>These are treated as libraries and would be available in the libraries selections list.</p>
+<h3 id="what-filtering-is-available">What filtering is available?</h3>
+<p>This varies for Home Section Types. With the exception of the <strong>&quot;Latest Media&quot;</strong> section type, all sections that have filtering will have <strong>Favourites</strong> and <strong>Tags</strong> as filter options. Some section types will offer Genre and Studio filtering as well. See the <a href="#home-section-types-matrix">Home Section Types Matrix</a> for the section types that have filtering on whether a media item has been played or not.</p>
+<h3 id="what-can-i-achieve-with-the-dynamic-media-home-section-type">What can I achieve with the &quot;Dynamic Media&quot; Home section type?</h3>
+<p>You can create a section for any of these types: Movies, Shows, Movies &amp; Shows, Episodes, Music Videos, Videos, Photos, Programs, Live TV Channels, Music Albums, Artists, Songs, Audio Books, Trailers, Games, Books. You can select specific libraries and show the section as a Spotlight large poster view or the normal size poster cards view. Depending on the selected type, you have filter options, such as Tags, Genre, Favorites, Studio, playstate. The display can be sorted in many different ways.</p>
+<h3 id="what-is-the-continue-listening-section-type-for-i-do-not-see-my-music-there">What is the &quot;Continue Listening&quot; section type for? I do not see my music there</h3>
+<p>The &quot;Continue Listening&quot; section type is for Audio Books. That is why the music does not show.</p>
+<h2 id="home-screen-examples">Home Screen Examples</h2>
+<p>Example of different <strong>My Media</strong> sections showing the main libraries as <strong>cards</strong> and others as <strong>buttons</strong>. In this example, there are five &quot;My Media&quot; sections with different libraries selected and a view type of Cards for the first three and buttons for the other two.</p>
+<p><img src="../../images/server/users72.png" alt=""></p>
+<p>Example of a Single Collection Home Section:</p>
+<p><img src="../../images/server/users101.png" alt=""></p>
+<p>Example of a Single Playlist Home Section:</p>
+<p><img src="../../images/server/users102.png" alt=""></p>
+<p>Example of &quot;Recently Released Movies&quot; section with Spotlight view where each movie shows with a large full screen poster.</p>
+<p><img src="../../images/server/users120.png" alt=""></p>
+<p>Example of a Dynamic view for Movies and Shows based on tags. In this example, created a tag &quot;MyPicks&quot; and assigned this tag to a number of Movies and TV Shows and created the dynamic view with a title of &quot;This month's Picks&quot; and filtering on this tag.</p>
+<p>View type: Spotlight</p>
+<p><img src="../../images/server/users122.png" alt=""></p>
+<p>View type: Cards</p>
+<p><img src="../../images/server/users123.png" alt=""></p>
+<p>And here is an example for a Spotlight view of a dynamic media section filtered by a tag and is set as the first section on the Home Screen.</p>
+<p><img src="../../images/server/users124.png" alt=""></p>
+
+<h4 class="seealso-heading">See Also</h4>
+<ul class="seealso-list">
+      <li class="seealso-item">
+          <a class="seealso-link" href="User-Prefs-HomeScreen-Legacy.html" title="User Preferences - Home Screen (Legacy)">User Preferences - Home Screen (Legacy)</a>
+      </li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20User-Prefs-HomeScreen%0A*%20Title%3A%20User%20Preferences%20-%20Home%20Screen%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fapps%2Fcommon%2FUser-Prefs-HomeScreen.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/apps/common/User-Prefs-HomeScreen.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User Customization | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User Customization | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script type="text/javascript" src="../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:uid" content="User-Customization">
+    
+    <meta property="docfx:rel" content="../">
+    
+    <script type="text/javascript" src="../nav.js"></script>
+    <script type="text/javascript" src="toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
+                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
+                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
+                    <li><a href="../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
+                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="User-Customization">
+<h1>User Customization</h1>
+
+
+<p>Users are managed within the server dashboard by navigating to <strong>Users</strong>.</p>
+<p>Once a local user account has been created, the first step should be to set and save a password for that account. See <a href="Passwords.html">Passwords</a>. Then you can come back and the customization outlined in this article.</p>
+<h2 id="emby-connect">Emby Connect</h2>
+<p>You can link the local user account to an Emby Connect e-mail address. See <a href="Emby-Connect.html">Emby Connect</a>.</p>
+<p><img src="images/server/users37.png" alt=""></p>
+<h2 id="control-remote-access-to-the-emby-server">Control Remote Access to the Emby Server</h2>
+<p>You can control remote connections to the server at the user level.</p>
+<p><img src="images/server/users18.png" alt=""></p>
+<p>You can disable or hide a user, as well as lock them from changing their user profile settings.</p>
+<h2 id="disabling-user">Disabling User</h2>
+<p>Disabling a user will do just that. All existing sessions from that user will be abruptly terminated.</p>
+<p><img src="images/server/users33.png" alt=""></p>
+<h2 id="hiding-user-account-name-on-login-screens">Hiding User account name on Login Screens</h2>
+<p>Hiding a user will simply remove them from visual login screens. They will need to enter their username and password manually.</p>
+<p><img src="images/server/users28.png" alt=""></p>
+<h2 id="controlling-users-ability-to-change-password--add-a-profile-image">Controlling user's ability to change password / add a profile image</h2>
+<p>The server administrator can disable the user's ability to change their password and profile image. Disabling this would remove the ability to edit the Profile in the list of User Preferences visible to the user. This is useful for administrators who prefer to dictate these terms to their users.</p>
+<p><img src="images/server/users20.png" alt=""></p>
+<h2 id="feature-access">Feature Access</h2>
+<p>Features can be granted or denied, such as the ability to delete media, download media, view live tv, manage live tv, etc. The &quot;Allow media playback&quot; option determines if the user is able to play media or not. This option is handy if you'd like to setup a user who can browse the library but not play anything.</p>
+<p><img src="images/server/users38.png" alt=""></p>
+<p><img src="images/server/users39.png" alt=""></p>
+<p>You can set a limit on the number of concurrent video streaming sessions for the user. Note that this requires <a href="Emby-Premiere.html">Emby Premiere</a> for it to be enforced.</p>
+<p><img src="images/server/users40.png" alt=""></p>
+<p>You can also limit the bandwidth per video streaming for devices away from the local network.</p>
+<p><img src="images/server/users41.png" alt=""></p>
+<p>And in cases where the remote device has quality set to Auto, you can also put a bandwidth limit to override that.</p>
+<p><img src="images/server/users51.png" alt=""></p>
+<p>If you want to allow media deletions by the user, you can select from the list of libraries and channels.</p>
+<p><img src="images/server/users42.png" alt=""></p>
+<p>You can also decide how they can remote control shared devices. Remote controlling another user allows them to send content to devices for playback while another user is signed in. Remote controlling shared devices, such as Dlna devices, allows them to send content to those as well. These can be set now or later.</p>
+<p><img src="images/server/users19.png" alt=""></p>
+<p>Other features can also be configured: Downloads, Subtitles, Camera Upload, Media Conversion, Sharing playlists and some limited media information sharing on social media.</p>
+<p><img src="images/server/users35.png" alt=""></p>
+<p><img src="images/server/users43.png" alt=""></p>
+<p><img src="images/server/users44.png" alt=""></p>
+<p><img src="images/server/users45.png" alt=""></p>
+<p><img src="images/server/users46.png" alt=""></p>
+<p><img src="images/server/users47.png" alt=""></p>
+
+<h4 class="seealso-heading">See Also</h4>
+<ul class="seealso-list">
+      <li class="seealso-item">
+          <a class="seealso-link" href="User-Copy-Settings.html" title="Copy User Settings">Copy User Settings</a>
+      </li>
+      <li class="seealso-item">
+          <a class="seealso-link" href="User-Prefs.html" title="User Preferences">User Preferences</a>
+      </li>
+      <li class="seealso-item">
+          <a class="seealso-link" href="Content-Access.html" title="Content Access">Content Access</a>
+      </li>
+      <li class="seealso-item">
+          <a class="seealso-link" href="Device-Access.html" title="Device Access">Device Access</a>
+      </li>
+      <li class="seealso-item">
+          <a class="seealso-link" href="Parental-Controls.html" title="Parental Controls">Parental Controls</a>
+      </li>
+      <li class="seealso-item">
+          <a class="seealso-link" href="Passwords.html" title="Passwords">Passwords</a>
+      </li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20User-Customization%0A*%20Title%3A%20User%20Customization%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FUser-Customization.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/User-Customization.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../searchIndex.js"></script>
+    <script type="text/javascript" src="../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

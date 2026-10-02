@@ -492,6 +492,39 @@ references:
 - uid: TV-Naming
   name: TV Naming
   href: articles/TV-Naming.html
+- uid: User-Copy-Settings
+  name: Copy User Settings
+  href: articles/User-Copy-Settings.html
+- uid: User-Customization
+  name: User Customization
+  href: articles/User-Customization.html
+- uid: User-Preferences
+  name: User Preferences
+  href: articles/apps/common/User-Preferences.html
+- uid: User-Prefs
+  name: User Preferences
+  href: articles/User-Prefs.html
+- uid: User-Prefs-Display
+  name: User Preferences - Display
+  href: articles/apps/common/User-Prefs-Display.html
+- uid: User-Prefs-HomeScreen
+  name: User Preferences - Home Screen
+  href: articles/apps/common/User-Prefs-HomeScreen.html
+- uid: User-Prefs-HomeScreen-Legacy
+  name: User Preferences - Home Screen (Legacy)
+  href: articles/apps/common/User-Prefs-HomeScreen-Legacy.html
+- uid: User-Prefs-Notifications
+  name: User Preferences - Notifications
+  href: articles/apps/common/User-Prefs-Notifications.html
+- uid: User-Prefs-Playback
+  name: User Preferences - Playback
+  href: articles/apps/common/User-Prefs-Playback.html
+- uid: User-Prefs-Profile
+  name: User Preferences - Profile
+  href: articles/apps/common/User-Prefs-Profile.html
+- uid: User-Prefs-Subtitles
+  name: User Preferences - Subtitles
+  href: articles/apps/common/User-Prefs-Subtitles.html
 - uid: Users
   name: Users
   href: articles/Users.html
