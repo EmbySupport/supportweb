@@ -25,6 +25,9 @@ references:
 - uid: Apple-TV
   name: Apple TV
   href: articles/Apple-TV.html
+- uid: Apps
+  name: Emby Apps Documentation
+  href: articles/Apps.html
 - uid: Audio-Book-Naming
   name: Audio Book Naming
   href: articles/Audio-Book-Naming.html
