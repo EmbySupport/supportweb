@@ -15,4 +15,8 @@ var EMBY_SITE_THEME = "light";
             : "dark";
     }
     document.documentElement.setAttribute("data-theme", theme === "light" ? "light" : "dark");
+    var themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+        themeColor.setAttribute("content", theme === "light" ? "#f7f8f9" : "#090d0f");
+    }
 }());

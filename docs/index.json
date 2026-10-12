@@ -216,7 +216,7 @@
   },
   "articles/Auto-Organize.html": {
     "href": "articles/Auto-Organize.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Coming soon."
   },
   "articles/Backup.html": {
@@ -331,17 +331,17 @@
   },
   "articles/Dlna-Profiles.html": {
     "href": "articles/Dlna-Profiles.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Coming soon."
   },
   "articles/Dlna-Server.html": {
     "href": "articles/Dlna-Server.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Coming soon."
   },
   "articles/Dlna-Settings.html": {
     "href": "articles/Dlna-Settings.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Coming soon."
   },
   "articles/DVR-Settings.html": {
@@ -491,7 +491,7 @@
   },
   "articles/includes/beta-warning.html": {
     "href": "articles/includes/beta-warning.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Warning The information in this document is about a pre-release application. All the provided details are subject to being changed without notice."
   },
   "articles/includes/feature-display-control.html": {
@@ -521,7 +521,7 @@
   },
   "articles/Introduction-to-Live-TV-and-DVR.html": {
     "href": "articles/Introduction-to-Live-TV-and-DVR.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Emby provides a flexible and very powerful Live TV and DVR solution. With Emby’s TV you will be able to stream Live or Recorded TV content to any device you have with an Emby client or web browser. Want to watch TV on your iPad or Android notebook? Want to watch a football game live on your Mobile Phone when out and about? How about being able to easily setup recordings from anywhere at any time? Emby can do all this and a whole lot more. You can use Emby to eliminate the need for cable STBs (Set Top Boxes) throughout the house saving you money each and every month on rental fees per STB. You can even eliminate your cable provider entirely by cutting the cord and switching to OTA (Over the Air) broadcasts for all of your local channels. If you need national network channels like CNN, Fox News, Hallmark, ESPN, etc then Emby can do this too. Emby fully supports Premium TV by Silicon Dust which includes 45 national network channels. If that wasn't enough, Emby fully supports the use of IPTV so you can add any service of your choosing that uses true IPTV. You can even add your IPTV security cameras to your channel list! Yes, Emby is that flexible! Emby supports multiple EPG (Electronic Programming Guide) sources so you can use whatever source of guide content required for your unique setup. If are in the USA, Canada or the United Kingdom, Emby will provide this data for you out of the box for no additional cost using the excellent feature rich guide data built right in. If that wasn't enough, not only can you mix and match all of this into one easy to use system, but you can also configure which of your users have access. You determine what users can view Live TV and which of your users can setup Recordings. How’s that for a powerful Live TV & DVR solution?"
   },
   "articles/Intro-Skip.html": {
@@ -556,7 +556,7 @@
   },
   "articles/Linux-Troubleshooting-Guide-and-FAQ.html": {
     "href": "articles/Linux-Troubleshooting-Guide-and-FAQ.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "Emby Server does not restart from the web interface Emby on Linux does not have the built-in capability to restart itself. So to restart Emby uses a helper script. The helper script named restart.sh can be found on most distributions at /usr/lib/emby-server . The script can only restart Emby if it was started by a service manager program such as systemctl or service. If for some reason the helper script does not successfully restart Emby for you, please check the following: Ensure helper script is executable. Ensure Emby was started via a service manager. Ensure permissions of /etc/sudoers.d/emby are 0640 Ensure whatever user is running emby-server is part of the emby group (usermod -a -G emby $USER_NAME) Ensure /etc/sudoers permissions is 0640 Example of troubleshooting restart on a distribution using systemd sudo systemctl status emby-server - Get PID. Hit restart on web interface sudo systemctl status emby-server - Get PID. If PIDs differ restart was successful. Otherwise, check the following: ls -la /usr/lib/emby-server/restart.sh - ensure it is executable. ps -aux | grep emby - Take note of PID sudo -u emby /usr/lib/emby-server/restart.sh - if you are running emby-server as another user other than emby, please adjust command appropriately. ps -aux | grep emby - Take note of PID If PIDs differ restart worked."
   },
   "articles/Linux-Unix-Permissions.html": {
@@ -711,7 +711,7 @@
   },
   "articles/Open-Subtitles-Old.html": {
     "href": "articles/Open-Subtitles-Old.html",
-    "title": "| Emby Documentation",
+    "title": "Emby Documentation",
     "keywords": "To use Open Subtitles, you need to register an account on the Open Subtitles website. To do this, click \"Open Subtitles\" in the side-bar menu of the Emby server dashboard. Then click on Register and the Open Subtitles registration page will open, where you can register an account. Once registered, enter the username and password in the form above and click Save. To manage subtitle downloading, click on a library in Emby library setup , and edit the subtitle downloading settings. Subtitles will now be downloaded as needed when available, via the Download Subtitles Scheduled Task . Note: Emby also supports other subtitle providers. You can always find the latest list in the Plugins Catalog."
   },
   "articles/Optional-Network-Paths.html": {

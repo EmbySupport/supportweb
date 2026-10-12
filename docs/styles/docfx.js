@@ -352,108 +352,68 @@ $(function () {
       loadNavbar();
     } else {
 
-        // Set active link
+        // Resolve complete URLs: every category shares "articles/", so matching
+        // only that first segment would always select the first menu entry.
         var navbarPath = $("meta[property='docfx\\:navrel']").attr("content");
-        if (!navbarPath) {
-            return;
-        }
-        navbarPath = navbarPath.replace(/\\/g, '/');
-        var tocPath = $("meta[property='docfx\\:tocrel']").attr("content") || '';
-        if (tocPath) tocPath = tocPath.replace(/\\/g, '/');
+        var currentUrl = new URL(window.location.href);
+        var navUrl = new URL((navbarPath || '.').replace(/\\/g, '/'), currentUrl.href);
+        var navDirectory = navUrl.pathname.slice(0, navUrl.pathname.lastIndexOf('/') + 1);
+        var declaredCurrent = $('#navbar a.is-current[href]').first()[0];
+        var selected = null;
+        var bestMatch = -1;
+        var exactMatch = false;
+        var directoryCounts = Object.create(null);
+        var navigationLinks = [];
 
-        var index = navbarPath.lastIndexOf('/');
-        var navrel = '';
-        if (index > -1) {
-            navrel = navbarPath.substr(0, index + 1);
-        }
-        var currentAbsPath = util.getCurrentWindowAbsolutePath();
+        $('#navbar a').removeClass(active + ' is-current').removeAttr('aria-current');
+        $('#navbar li').removeClass(active);
+        $('#navbar a[href]').each(function (i, link) {
+            var href = link.getAttribute('href').trim();
+            if (!href || href.charAt(0) === '#' || link.getAttribute('data-toggle') === 'dropdown') return;
+            var url;
+            try { url = new URL(link.href, currentUrl.href); } catch (e) { return; }
+            if (url.protocol !== currentUrl.protocol || url.host !== currentUrl.host) return;
 
-        var foundActive = false;
-
-        $('#navbar').find('a[href]').each(function (i, e) {
-            
-            if (foundActive) {
-                return;
+            var directory = url.pathname.slice(0, url.pathname.lastIndexOf('/') + 1);
+            directoryCounts[directory] = (directoryCounts[directory] || 0) + 1;
+            navigationLinks.push({ link: link, url: url, directory: directory });
+        });
+        navigationLinks.forEach(function (item) {
+            var link = item.link;
+            var url = item.url;
+            var directory = item.directory;
+            var exact = url.pathname === currentUrl.pathname;
+            var score = -1;
+            if (exact) {
+                score = Infinity;
+            } else if (directoryCounts[directory] === 1 && directory.length > navDirectory.length &&
+                directory.indexOf(navDirectory) === 0 && currentUrl.pathname.indexOf(directory) === 0) {
+                // Only an unambiguous category directory represents descendants.
+                // Sections sharing a folder use the authored current item below.
+                // The site root (or Emby Home) is never a catch-all section.
+                score = directory.length;
             }
-
-            var href = $(e).attr("href");
-            if (util.isRelativePath(href)) {
-                ////href = navrel + href;
-                ////$(e).attr("href", href);
-
-                var isActive = false;
-                var originalHref = e.name;
-                if (originalHref) {
-                    originalHref = navrel + originalHref;
-                    if (util.getDirectory(util.getAbsolutePath(originalHref)) === util.getDirectory(util.getAbsolutePath(tocPath))) {
-                        isActive = true;
-                    }
-                } else {
-                    if (util.getAbsolutePath(href) === currentAbsPath) {
-                        var dropdown = $(e).attr('data-toggle') === "dropdown";
-                        if (!dropdown) {
-                            isActive = true;
-                        }
-                    }
-                }
-                if (isActive) {
-                    $(e).addClass(active);
-                    foundActive = true;
-                }
+            if (score > bestMatch) {
+                selected = link;
+                bestMatch = score;
+                exactMatch = exact;
             }
         });
-
-        // Second attempt - more relaxed matching
-        $('#navbar').find('a[href]').each(function(i, e) {
-
-            if (foundActive) {
-                return;
+        // An authored current navigation item identifies this documentation
+        // section even when it links to the section's landing page.
+        if (!selected && declaredCurrent) {
+            var declaredUrl = new URL(declaredCurrent.href, currentUrl.href);
+            if (declaredUrl.protocol === currentUrl.protocol && declaredUrl.host === currentUrl.host) {
+                selected = declaredCurrent;
+                exactMatch = declaredUrl.pathname === currentUrl.pathname;
             }
-
-            var href = $(e).attr("href");
-            var navRootPath = href.replace(navrel, '').split('/')[0];
-
-            let levels = getParentPathLevels(navrel);
-            let pathParts = splitPath(currentAbsPath);
-
-            if (levels >= pathParts.length) {
-                return;
-            }
-
-            for (let j = 0; j < levels; j++) {
-                pathParts.pop();
-            }
-
-            if (pathParts[pathParts.length - 1] === navRootPath) {
-                $(e).addClass(active);
-                foundActive = true;
-            }
-        });
-
-      $('#navbar ul a.active').parents('li').addClass(active);
+        }
+        if (selected) {
+            $(selected).addClass(active).attr('aria-current', exactMatch ? 'page' : 'location');
+            $(selected).parents('li').addClass(active);
+        }
           renderBreadcrumb();
           showSearch();
-    }
-    
-    function getParentPathLevels(path) {
-        let i = 0;
-
-        while (path && path.length > 2 && path.slice(0, 3) === '../') {
-            path = path.slice(3);
-            i++;
-        }
-
-        return i;
-    }
-
-    function splitPath(path) {
-
-        if (!path) {
-            return [];
-        }
-
-        let paths = path.split('/');
-        return paths;
     }
 
     function showSearch() {
@@ -469,8 +429,6 @@ $(function () {
         return;
       }
       navbarPath = navbarPath.replace(/\\/g, '/');
-      var tocPath = $("meta[property='docfx\\:tocrel']").attr("content") || '';
-      if (tocPath) tocPath = tocPath.replace(/\\/g, '/');
 
 
       if (typeof navData !== 'undefined') {
@@ -484,33 +442,14 @@ $(function () {
               navrel = navbarPath.substr(0, index + 1);
           }
           $('#navbar>ul').addClass('navbar-nav');
-          var currentAbsPath = util.getCurrentWindowAbsolutePath();
-          // set active item
+          // Make the loaded links page-relative, then use the same active-link
+          // selection as the server-rendered header.
           $('#navbar').find('a[href]').each(function(i, e) {
               var href = $(e).attr("href");
               if (util.isRelativePath(href)) {
                   href = navrel + href;
                   $(e).attr("href", href);
 
-                  var isActive = false;
-                  var originalHref = e.name;
-                  if (originalHref) {
-                      originalHref = navrel + originalHref;
-                      if (util.getDirectory(util.getAbsolutePath(originalHref)) ===
-                          util.getDirectory(util.getAbsolutePath(tocPath))) {
-                          isActive = true;
-                      }
-                  } else {
-                      if (util.getAbsolutePath(href) === currentAbsPath) {
-                          var dropdown = $(e).attr('data-toggle') == "dropdown"
-                          if (!dropdown) {
-                              isActive = true;
-                          }
-                      }
-                  }
-                  if (isActive) {
-                      $(e).addClass(active);
-                  }
               }
           });
           renderNavbar();
@@ -719,6 +658,8 @@ $(function () {
   }
 
   function renderBreadcrumb() {
+    // Article breadcrumbs are generated with matching JSON-LD at build time.
+    if ($('#breadcrumb [aria-current="page"]').length) return;
     var breadcrumb = [];
     $('#navbar a.active').each(function(i, e) {
         breadcrumb.push({

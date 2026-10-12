@@ -196,8 +196,10 @@ b, optgroup, strong {
 }
 
 .article img {
-    margin: 2rem 0;
-    box-shadow: 3px 3px 20px 4px #0000001c;
+    margin: 20px 30px 25px 5px;
+    box-shadow: 3px 3px 20px 4px #00000047;
+    display: block;
+    max-width: stretch;
 }
 
 /* SIDEBAR */
@@ -377,7 +379,7 @@ b, optgroup, strong {
 /* CODE HIGHLIGHT */
 pre {
     padding: 9.5px;
-    margin: 20px 0;
+    margin: 15px 20px 30px 5px;
     font-size: 15px;
     word-break: break-all;
     word-wrap: break-word;
@@ -446,6 +448,7 @@ header {
 
 .sidetoc {
     top: 240px;
+    margin-top: 15px;
 }
 
 .navbar-brand {
@@ -819,4 +822,29 @@ video {
     display: block;
     box-sizing: border-box;
     shape-outside: margin-box;
+}
+
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+    margin: 30px 20px 30px 5px;
+    box-shadow: var(--card-box-shadow);
+}
+
+.table-responsive .table {
+    margin-bottom: 0;
+}
+
+.table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+    padding: 5px 10px;
+}
+
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+    background: transparent;
+}
+
+.sidetoc.shiftup {
+    bottom: 82px;
 }
