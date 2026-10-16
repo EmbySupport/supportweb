@@ -351,7 +351,7 @@ fi
 <p>The key will appear in the list of Api Keys. To be able to copy the api key to the clipboard through the <strong>...</strong> button on the right, you would need to be connected to the server through an https secure connection. If you are not, you would need to manually select the displayed api key and using <strong>control and C</strong> to copy it. Paste the key into script in the field within the quotes on the script line starting with <code>EMBY_API_KEY=</code> replacing the preset text.</p>
 <h2 id="lines-to-edit-in-the-provided-script">Lines to edit in the provided script</h2>
 <p>The following lists all the lines that should be edited and set.</p>
-<p>The <code>PFX_PASSWORD</code> is the password for the Emby Server pfx certificate file that will be generated and will be set when the pfx file update is notified to Emby Server.</p>
+<p>The <code>PFX_PASSWORD</code> is the password for the Emby Server pfx certificate file that will be generated and will be set when the pfx file update is notified to Emby Server. It is a password set by you and will be used for the Emby Server certificate.</p>
 <p>The <code>EMBY_API_KEY</code> will hold the api key you generated above.</p>
 <p>One of the two <code>QNAP_CERT_PATH</code> lines should be commented out by placing a <code>#</code> before the text.</p>
 <pre><code>PFX_PASSWORD=&quot;Replace-This-With-Your-PFX-Password&quot;
