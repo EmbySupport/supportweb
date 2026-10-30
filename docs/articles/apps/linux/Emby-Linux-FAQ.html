@@ -156,27 +156,27 @@ This is usually the topmost item. If you are admin of the Emby Server, you might
 <p>First of all, make sure you haven't chosen &quot;High Quality&quot; under <strong>Video Player</strong> settings &gt;&gt; <strong>Video Quality</strong>. Also, don't use &quot;Customize&quot; but try both the &quot;Balanced&quot; and the &quot;Efficiency&quot; presets.<br>
 Then, use appropriate Linux tools for checking CPU and GPU usage.
 Look at the Media Info on the item detail screen at the bottom and check whether the video has a high bitrate (&gt; 20,000 Mbps).<br>
-Open Stats for Nerds and see whether it's DirectPlay or Transcoding.<br>
-Check your monitor configuration to see whether it runs at a high refresh rate.</p>
+Open <a class="xref" href="https://emby.media/learn/articles/playback-streaming/behavior/diagnostics/Playback-Information.html">Stats for Nerds</a> and see whether it's DirectPlay or Transcoding.<br>
+Check your monitor configuration to see whether it runs at a high <a class="xref" href="https://emby.media/learn/articles/display-av/motion/refresh-synchronization/Display-Refresh-Rate.html">refresh rate</a>.</p>
 <h3 id="on-the-video-quality-settings-page-there-are-multiple-presets-how-can-i-know-which-settings-are-applied-by-each-preset">On the video quality settings page there are multiple presets. How can I know which settings are applied by each preset?</h3>
 <p>You can see the detail options applied by a preset by selecting one of the presets first and switching to Customize directly after.<br>
 Switching to Customize keeps the values of the previously selected preset. This allows you to see how options are set by each preset.</p>
 <h3 id="i-am-changing-the-subtitle-style-settings-but-it-doesnt-seem-that-they-have-any-effect">I am changing the subtitle style settings, but it doesn't seem that they have any effect</h3>
 <p>There can be multiple reasons for this:</p>
 <ul>
-<li>The subtitles are &quot;graphic&quot; subtitles.
+<li>The subtitles are <a class="xref" href="https://emby.media/learn/articles/subtitles/formats/bitmap/Subtitle-Bitmap.html">&quot;graphic&quot; subtitles</a>.
 The appearance of those cannot be changed.
 Typical subtitle formats using bitmaps are: DVDSub DVBSub, PGS/HDMV Subtitles</li>
-<li>The subtitles are SSA/ASS subtitles
+<li>The subtitles are <a class="xref" href="https://emby.media/learn/articles/subtitles/rendering/fonts-typesetting/Subtitle-ASS-Typesetting.html">SSA/ASS subtitles</a>
 Those subtitles have built-in styling which cannot be overridden</li>
 </ul>
 <h3 id="i-have-selected-the-high-quality-preset-in-the-video-quality-options-why-doesnt-it-use-hardware-acceleration">I have selected the High Quality preset in the video quality options, why doesn't it use hardware acceleration?</h3>
-<p>Short: While it does not perform hardware decoding and filtering, everything at the video presentation side (rendering on screen) is done by GPU shaders. This includes scaling, tone mapping and possibly subtitle overlay.</p>
+<p>Short: While it does not perform hardware decoding and filtering, everything at the video presentation side (rendering on screen) is done by <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/building-blocks/Hardware-GPU-Compute.html">GPU shaders</a>. This includes scaling, tone mapping and possibly subtitle overlay.</p>
 <p>Long: On the decoding side, sw decoding can provide better quality, also you get the best deinterlacing by sw implementations, other filtering (e.g. dynamic bounds detection) works only with sw filtering. The best scaling is achieved by using GPU shaders (which happens at the end of the chain).
 When doing sw filtering and scaling only at the end, then there's no advantage in using hw decoding. The computational effort weighs less than the data transfer between CPU and GPU memory.<br>
-Actually, hw decoding is generally a bit overestimated. CPUs can do that easily as well. The main advantage of hw decoding is the avoidance of data transfer between GPU and CPU mem, when further processing happens in GPU memory. But hw decoding and just downloading it back to CPU memory right after it, is worse than doing CPU decoding using CPU memory right away. That's why there's no hw decoding in case of the high-quality mode. This mode is for achieving the best quality without compromise and without caring about efficiency and energy consumption.<br>
+Actually, hw decoding is generally a bit overestimated. CPUs can do that easily as well. The main advantage of hw decoding is the avoidance of data transfer between GPU and CPU mem, when further processing happens in GPU memory. But hw decoding and just <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/memory/Hardware-Copy-Back.html">downloading it back to CPU memory</a> right after it, is worse than doing CPU decoding using CPU memory right away. That's why there's no hw decoding in case of the high-quality mode. This mode is for achieving the best quality without compromise and without caring about efficiency and energy consumption.<br>
 But this doesn't mean that the GPU isn't used: it's used for tone mapping and scaling and there are some scaling modes to choose which can get your GPU really hot.<br>
-The energy efficient mode entirely disables the shader-based scaling and does the scaling in hardware (which is deemed to be of lower quality than shader-based scaling), and also maintains a full hardware processing pipeline (never does copying between GPU and CPU).<br>
+The energy efficient mode entirely disables the shader-based scaling and does the scaling in hardware (which is deemed to be of lower quality than shader-based scaling), and also maintains a <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/memory/Hardware-Zero-Copy.html">full hardware processing pipeline</a> (never does copying between GPU and CPU).<br>
 In balanced mode, sw filtering is being used as well as shader-based scaling, but it uses hw decoding and in certain cases (when the video is much larger than the resolution of the current display) it downscales in hardware to reduce the amount of data while the eventual scaling is still done by GPU shaders (but at less load because of smaller video frames to scale).</p>
 
 

@@ -191,7 +191,7 @@
 <li>where library root folders change and you have folder level access restrictions, you will go through the user accounts and re-apply the restrictions for the new server libraries folder paths.</li>
 </ul>
 <h2 id="backup-your-media">Backup your media</h2>
-<p>You are responsible for ensuring your media is backed up and is available to copy to the new system. Any artwork/nfo files stored alongside the media files, should be included in your migration of the media to the new system.</p>
+<p>You are responsible for ensuring your <a class="xref" href="https://emby.media/learn/articles/storage/data-protection/backups/Storage-Media-Backups.html">media is backed up</a> and is available to copy to the new system. Any artwork/nfo files stored alongside the media files, should be included in your migration of the media to the new system.</p>
 <h2 id="backup-you-camera-uploads-and-live-tv-recordings">Backup you camera-uploads and Live TV recordings</h2>
 <p>Where these are stored in the default Emby Server directories, they will need to be backed up and restored by you or simply copied across to the new system. These would be within the data folder below the Emby Server Program Data area. See <a href="Server-Data-Folder.html">Emby Server Data Folder</a> for information on where the Emby Server Data area is on various platforms. The directories would be and these would need to be in a similar folder tree on the new system below the Emby Server Program Data base.</p>
 <pre><code>    data\livetv\recordings
@@ -211,7 +211,7 @@
 <p>The default directories for Camera-Uploads and Live TV Recordings should be copied onto the new system - within the equivalent data directory below the <a href="Server-Data-Folder.html">Emby Server Data Folder</a> on the new system.</p>
 <h2 id="make-sure-permissions-are-correct-for-emby-server-to-read--write-to-the-media-directories">Make sure permissions are correct for Emby Server to read / write to the media directories</h2>
 <p>Have all the media available on the new computer / NAS.</p>
-<p>Ensure that the Emby Server process running on the new system, will have full permissions access to the media.</p>
+<p>Ensure that the Emby Server process running on the new system, will have full <a class="xref" href="https://emby.media/learn/articles/storage/sharing/permissions/Storage-Permissions.html">permissions access</a> to the media.</p>
 <h2 id="make-the-emby-server-backup-available-on-the-new-system">Make the Emby Server backup available on the new system</h2>
 <p>You can copy the top level folder that was configured on the original system for the Backup &amp; Restore plugin to the new system.</p>
 <p>In the example for the configured backup <a href="Backup-Using-Plugin.html">here</a>, we had <code>H:\BACKUP-DELL-INSPIRON14</code> as the Emby Server backups parent folder.
@@ -265,7 +265,7 @@ Copy that directory contents to the new system, so we have it, for example, as <
 <p>Repeat this action for all root media folders and for all libraries.</p>
 <p>Ensure you also cover the special case of default CameraUploads and Live TV recordings libraries paths if they were in use and within <a href="Server-Data-Folder.html">Emby Server Data Folder</a> area.</p>
 <h2 id="adjust-any-users-folder-level-access-settings">Adjust any users Folder Level Access settings</h2>
-<p>If you have Library Folder Level access restrictions for users, these will need to re-configured for the new folder paths. Whole Library access restrictions will carry forward without need for any adjustments, but folder level restrictions will need to be re-instated for the libraries new folder paths.</p>
+<p>If you have <a class="xref" href="https://emby.media/learn/articles/networking/access/rules/Network-Library-Permissions.html">Library Folder Level access restrictions</a> for users, these will need to re-configured for the new folder paths. Whole Library access restrictions will carry forward without need for any adjustments, but folder level restrictions will need to be re-instated for the libraries new folder paths.</p>
 <p>In this example, we have one user account which had no access to the TV and Photos library and a folder level access restriction for the Movies library:</p>
 <p><img src="images/plugins/backup-34.png" alt=""></p>
 <p>On the new server, the access levels for this user account shows now as follows:</p>
@@ -285,7 +285,7 @@ Copy that directory contents to the new system, so we have it, for example, as <
 <p>All libraries will now show just the new paths.</p>
 <p><img src="images/plugins/backup-30.png" alt=""></p>
 <h2 id="check-the-new-restored-server">Check the new restored server</h2>
-<p>Go to the restored server Home Screen and check out the libraries.</p>
+<p>Go to the restored server Home Screen and check out the libraries. <a class="xref" href="https://emby.media/learn/articles/storage/data-protection/backups/Storage-Restore.html">Backup restoration</a> explains the checks that connect recovered files to a usable server.</p>
 <p>In this restore example, the Movies library images are in place</p>
 <p><img src="images/plugins/backup-31.png" alt=""></p>
 <p>and picking a TV show from the TV library, posters and actors all in place.</p>

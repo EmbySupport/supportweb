@@ -149,7 +149,7 @@
 <p><img src="images/server/logs6.png" alt=""></p>
 <h2 id="log-rollover">Log Rollover</h2>
 <p>By default, Emby Server will start a new log file every day at midnight. The current log file will be renamed and postfixed by a timestamp value.</p>
-<p>You can control log rollover through in the Scheduled Tasks section by modifying the execution schedule of the <strong>Rotate log file</strong> task</p>
+<p>You can control <a class="xref" href="https://emby.media/learn/articles/storage/workload/logging/Server-Log-Rotation.html">log rollover</a> through in the Scheduled Tasks section by modifying the execution schedule of the <strong>Rotate log file</strong> task</p>
 <h2 id="log-file-types">Log file types</h2>
 <p>There are four types of log files:</p>
 <ul>
@@ -157,7 +157,7 @@
 The main server log file, rotated as described above. The current log file would just be called embyserver.txt</p>
 </li>
 <li><p>ffmpeg-xxxx.txt
-Transcoding logs created for each transcoding or remuxing operation</p>
+<a class="xref" href="https://emby.media/learn/articles/playback-streaming/behavior/diagnostics/Playback-Transcode-Logs.html">Transcoding logs</a> created for each transcoding or remuxing operation</p>
 </li>
 <li><p>hardware_detection-xxxxx.txt<br>
 Hardware detection log. Created on every startup of Emby Server</p>
@@ -167,7 +167,7 @@ ffmpeg logs for image extractions</p>
 </li>
 </ul>
 <h2 id="debug-logging">Debug Logging</h2>
-<p>A setting is available to allow you to enable additional debug logging. The following shows the various options available. By default, debug logging is not enabled. Debug logging should only be enabled when specifically requested to do so for a specific problem investigation.</p>
+<p>A setting is available to allow you to enable additional <a class="xref" href="https://emby.media/learn/articles/storage/workload/logging/Server-Log-Levels.html">debug logging</a>. The following shows the various options available. By default, debug logging is not enabled. Debug logging should only be enabled when specifically requested to do so for a specific problem investigation.</p>
 <p><img src="images/server/logs4.png" alt=""></p>
 <h2 id="fail2ban-support">Fail2Ban Support</h2>
 <p>Emby Server creates log entries for authentication failures that are compatible with Fail2Ban:

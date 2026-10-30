@@ -134,7 +134,7 @@
 <h2 id="library-setup">Library Setup</h2>
 <p>When setting up the library, make sure to select <strong>Movies</strong>, <strong>Home videos</strong>, or <strong>Music videos</strong> as the content type.</p>
 <p>Emby supports several different formats and naming conventions such as ISO copies of discs to DVD/Blu-Ray file formatted layouts which are both different types of disc copies. These formats work but are not an ideal way to build your library. Since neither of these are streaming formats they require more work by the server to transcode and stream to client apps. These formats and naming conventions are covered below.</p>
-<p>A much better way of building a large Emby library of content is to prepare you media ahead of time using a streaming friendly format such as MP4 or MKV containers featuring H.264 (or H.265) video with at least one 2 Channel AAC default audio track along side any other audio tracks such as Dolby Digital or DTS. Media prepared in this fashion will have the greatest compatibility with all Emby clients. The idea behind preparing your media ahead of time in this fashion is to reduce the need for the Server to have to transcode (convert) media on the fly. This is not a requirement but is strongly encouraged.</p>
+<p>A much better way of building a large Emby library of content is to prepare you media ahead of time using a streaming friendly format such as MP4 or MKV <a class="xref" href="https://emby.media/learn/articles/media-files/fundamentals/Containers-and-Codecs.html">containers</a> featuring H.264 (or H.265) video with at least one 2 Channel AAC default audio track along side any other audio tracks such as Dolby Digital or DTS. Media prepared in this fashion will have the greatest compatibility with all Emby clients. The idea behind preparing your media ahead of time in this fashion is to reduce the need for the Server to have to transcode (convert) media on the fly. This is not a requirement but is strongly encouraged.</p>
 <h2 id="naming-your-media">Naming your media</h2>
 <p>Once you've prepared your media files, it's time to name your media in a way that allows Emby the best chance of determining what it is.  The best way to do this is to use the format: &quot;MovieName (year).extension&quot; such as &quot;Top Gun (1986).mp4&quot; or &quot;Avatar (2009).mkv&quot;.  Because Emby allows many other advanced functions that can be used with your media we want to create a folder structure that aids in this use.  The simplest method of doing this is to put all media related to a Movie in the same folder using a name &quot;MovieName (year). Emby will then use the folder name to determine the movie. The use of folders for each movie helps with identification and ensuring related files are linked to the movie.</p>
 <p>It will look like this:</p>
@@ -168,7 +168,7 @@
 <p>Higher level folders below the library root folder and above the movie folders would only appear in the library &quot;<strong>Folders</strong>&quot; view.</p>
 </div>
 <h2 id="id-tags-in-folder--file-names">ID Tags in Folder &amp; File Names</h2>
-<p>Emby can also read a Meta-Data ID from the name.</p>
+<p>Emby can also read a <a class="xref" href="https://emby.media/learn/articles/metadata-discovery/identification/external-identifiers/Metadata-Provider-IDs.html">Meta-Data ID</a> from the name.</p>
 <p>Supported Formats:</p>
 <ul>
 <li>Name (Year) [tmdbid=xxxx]</li>
@@ -193,7 +193,7 @@ Casino Royale (2006) [tmdbid=36557]</p>
 <p>imdbid (<a href="https://www.imdb.com/">https://www.imdb.com/</a>)</p>
 <p>tvdbid (<a href="https://thetvdb.com/">https://thetvdb.com/</a>)</p>
 <h2 id="multi-version-movies">Multi-version movies</h2>
-<p>Multiple versions of the same content must be stored in a single movie folder.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/libraries-collections/movies/editions-versions/Library-Alternate-Versions.html">Multiple versions</a> of the same content must be stored in a single movie folder.</p>
 <pre><code>/Movies
   /300 (2006)
   /300 (2006)/300 (2006) - 1080p.mkv
@@ -207,14 +207,14 @@ Casino Royale (2006) [tmdbid=36557]</p>
 <p>If using the dash method anything following the dash will be what you see in the Emby client app.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The above example includes a 3D version, which is discussed in the <a href="3D-Videos.html">3D Video</a> naming guide.  Also, this feature is primarily designed for multiple qualities of the same item.  It can be used for different &quot;cuts&quot; but there may be some limitations in doing that.</p>
+<p>The above example includes a 3D version, which is discussed in the <a href="3D-Videos.html">3D Video</a> naming guide.  Also, this feature is primarily designed for multiple qualities of the same item.  It can be used for different <a class="xref" href="https://emby.media/learn/articles/libraries-collections/movies/editions-versions/Library-Movie-Editions.html">&quot;cuts&quot;</a> but there may be some limitations in doing that.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>There is a limit on the number of different versions for a media item. Up to 8 different versions will appear in a list of a movie versions.</p>
 </div>
 <h2 id="movie-extras">Movie extras</h2>
-<p>Special features for movies can be stored as video files in an extras folder under movie folders. Nested folders are not supported.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/libraries-collections/movies/supplementary/Library-Movie-Extras.html">Special features for movies</a> can be stored as video files in an extras folder under movie folders. Nested folders are not supported.</p>
 <p>In addition to extras, several other sub-folder names are supported:</p>
 <ul>
 <li>extras</li>
@@ -393,7 +393,7 @@ Casino Royale (2006) [tmdbid=36557]</p>
 
 </code></pre>
 <h3 id="dvd-and-blu-ray-file-formats">DVD and Blu-ray file formats</h3>
-<p>Dvd and Blu-ray folder structures are also supported. To be recognized as a dvd structure, the folder must contain either a VIDEO_TS subfolder, or a VIDEO_TS.ifo file. To be recognized as a blu-ray structure, the folder must contain a BDMV subfolder.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/media-files/packaging/disc/DVD-Video-File-Structure.html">Dvd</a> and <a class="xref" href="https://emby.media/learn/articles/media-files/packaging/disc/Blu-ray-File-Structure.html">Blu-ray</a> folder structures are also supported. To be recognized as a dvd structure, the folder must contain either a VIDEO_TS subfolder, or a VIDEO_TS.ifo file. To be recognized as a blu-ray structure, the folder must contain a BDMV subfolder.</p>
 <pre><code>\Movies\Alien (1979)\VIDEO_TS.IFO
 \Movies\Léon (1994)\VIDEO_TS.IFO
 \Movies\Scarface (1983)\VIDEO_TS.IFO
@@ -405,14 +405,14 @@ Or:
  \Movies\Scarface (1983)\VIDEO_TS\VIDEO_TS.IFO
 </code></pre>
 <h3 id="iso-format">ISO format</h3>
-<p>Emby Server has basic support for videos stored in ISO format. This includes the ability to catalog the ISO's within Emby Server, and play them in HTPC-based apps such as Emby for Kodi, Emby Windows, or Emby for Xbox. Other apps will generally only be able to play them with the use of an external player.</p>
+<p>Emby Server has basic support for videos stored in <a class="xref" href="https://emby.media/learn/articles/media-files/packaging/disc/Disc-Images-ISO.html">ISO format</a>. This includes the ability to catalog the ISO's within Emby Server, and play them in HTPC-based apps such as Emby for Kodi, Emby Windows, or Emby for Xbox. Other apps will generally only be able to play them with the use of an external player.</p>
 <p>ISOs should be named just like any other video file, with one minor difference. Including &quot;.dvd&quot; or &quot;.bluray&quot; within the file name will allow Emby Server to automatically determine what type of ISO it is. If this is not included, it will be assumed to be DVD.</p>
 <pre><code>\Movies\Alien (1979)\Alien (1979).dvd.iso
 \Movies\Léon (1994)\Léon (1994).bluray.iso
 \Movies\Scarface (1983)\Scarface (1983).iso
 </code></pre>
 <h2 id="split-video-files-file-stacking">Split video files (file stacking)</h2>
-<p>The following are default stacking extensions that can be added to file names. # can be 1 through 9 or A through D. Stacking is supported for video files (but only when each video is in its own folder as in the example below) as well as dvd and blu-ray folder structures. Split videos require all parts be in the same movie folder with no other videos present in that folder.</p>
+<p>The following are default stacking extensions that can be added to file names. # can be 1 through 9 or A through D. Stacking is supported for video files (but only when each video is in its own folder as in the example below) as well as dvd and blu-ray folder structures. <a class="xref" href="https://emby.media/learn/articles/libraries-collections/movies/editions-versions/Library-Multipart-Movies.html">Split videos</a> require all parts be in the same movie folder with no other videos present in that folder.</p>
 <ul>
 <li>​part#​</li>
 <li>​cd#​</li>

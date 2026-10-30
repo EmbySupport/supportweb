@@ -186,6 +186,7 @@
 <p><strong>The examples below, will all be for the <code>library.db</code>.</strong></p>
 <h3 id="solutions-to-try-in-this-order">Solutions to Try in This Order</h3>
 <h3 id="remove-database-locks">Remove Database Locks</h3>
+<p><a class="xref" href="https://emby.media/learn/articles/storage/workload/databases/Server-Database-Locking.html">Database locking</a> and <a class="xref" href="https://emby.media/learn/articles/storage/workload/databases/Server-WAL.html">write-ahead logging</a> explain the different roles of coordination state and persisted database changes. A WAL can contain committed changes that have not yet reached the main database file.</p>
 <ol>
 <li><p>Shutdown Emby Server if it is running and check that the EmbyServer process is no longer showing before proceeding to the next step. Check with Windows <strong>Task Manager</strong>, macOS <strong>Activity Monitor</strong>, <strong>top</strong> or &quot;<strong>ps -aux | grep emby</strong>&quot; on linux and NAS.</p>
 </li>
@@ -338,7 +339,7 @@ mv library-recovered.db library.db
 </code></pre>
 <p>If this is for a NAS and is being repaired on a computer, we now need to copy the new repaired library.db to the NAS databases directory.</p>
 <p>Similarly, if the repair was done working in a temporary directory, we need now to copy the new repaired library.db to the correct directory overwriting the corrupt/suspect database file.</p>
-<p>Ensure the new <code>library.db</code> has the same permissions and ownership as the original library. Adjust the permissions and ownership if not. For linux and NAS, the owner, group and permissions can be seen for files in the <code>data</code> directory by executing <code>ls -ail</code>.</p>
+<p>Ensure the new <code>library.db</code> has the same <a class="xref" href="https://emby.media/learn/articles/storage/sharing/permissions/Storage-Permissions.html">permissions and ownership</a> as the original library. Adjust the permissions and ownership if not. For linux and NAS, the owner, group and permissions can be seen for files in the <code>data</code> directory by executing <code>ls -ail</code>.</p>
 <p>Restart Emby Server</p>
 <p>Check you server log for SQLite errors and only continue to the next step if the database still gives errors and the repair has not been successful.</p>
 <h2 id="steps-to-reset-library-database--start-with-a-fresh-new-setup-of-emby-server">Steps to Reset Library Database &amp; Start with a Fresh new setup of Emby Server</h2>

@@ -130,7 +130,7 @@
 
 
 
-<p>This is a quick tutorial on how to secure your Emby server for free. If you are opening your server to the world, securing it is a good idea. It is also useful to provide required secured streams to external services such as Amazon Alexa, which requires https connections.</p>
+<p>This is a quick tutorial on how to secure your Emby server for free. If you are opening your server to the world, securing it is a good idea. It is also useful to provide required secured streams to external services such as Amazon Alexa, which requires <a class="xref" href="https://emby.media/learn/articles/networking/security/Network-HTTPS-TLS.html">https connections</a>.</p>
 <h2 id="general-tips--best-practice">General tips &amp; best practice</h2>
 <p>Here are some tips to consider.</p>
 <h3 id="server-admin-account">Server Admin Account</h3>
@@ -156,7 +156,7 @@
 </ul>
 <h3 id="user-account-privileges">User Account Privileges</h3>
 <ul>
-<li>Check all the accounts privileges in the user profiles (Server Settings / <a href="Users.html">Users</a>) and give the least privileges, ensuring only your server admin account has the privilege to manage the server.</li>
+<li>Check all the <a class="xref" href="https://emby.media/learn/articles/networking/access/identity/Network-Authorization.html">accounts privileges</a> in the user profiles (Server Settings / <a href="Users.html">Users</a>) and give the least privileges, ensuring only your server admin account has the privilege to manage the server.</li>
 </ul>
 <p>The following shows the control level you have at the user account level. E.g. remote access can be controlled at the user level.</p>
 <p><img src="images/server/users18.png" alt=""></p>
@@ -204,13 +204,13 @@
 <p>You'll need two things:</p>
 <ul>
 <li>A domain that supports TXT records</li>
-<li>A ssl certificate (PKCS #12)</li>
+<li>A <a class="xref" href="https://emby.media/learn/articles/networking/security/certificates/Network-TLS-Certificates.html">ssl certificate</a> (PKCS #12)</li>
 </ul>
 <h3 id="get-your-domain">Get your domain</h3>
 <p>Sign up for a free domain of your choice. You could use <a href="https://www.dynu.com/">Dynu</a> which is what will be covered in the instructions below. Alternatively use a paid-for registered domain name.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>For the SSL certificate setup, you will need to edit the DNS record for verification of the domain and <strong>Dynu</strong> no longer allow creation of TXT DNS records in the first 30 days after setting up a new domain. This restriction may be only for updates through the Dynu DDNS Service Control Panel and it may be possible to make early changes through api using 3rd party products. Otherwise, wait 30 days after creating the domain before getting and adding the ssl certificate.</p>
+<p>For the SSL certificate setup, you will need to edit the <a class="xref" href="https://emby.media/learn/articles/networking/names/dns/Network-DNS.html">DNS record</a> for verification of the domain and <strong>Dynu</strong> no longer allow creation of TXT DNS records in the first 30 days after setting up a new domain. This restriction may be only for updates through the Dynu DDNS Service Control Panel and it may be possible to make early changes through api using 3rd party products. Otherwise, wait 30 days after creating the domain before getting and adding the ssl certificate.</p>
 </div>
 <ol>
 <li><p>Create an account with <a href="https://dynu.com">https://dynu.com</a></p>
@@ -280,7 +280,7 @@
 <p>This should expand the number of fields. Once completed, you'll get a new .pfx certificate.</p>
 <p><strong>Certificate file</strong>: certificate.crt</p>
 <p><strong>Private key</strong>: private.key</p>
-<p><strong>Chain certificate</strong>: The ca_bundle.crt or you can also find it here, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Save the text into a .txt file.</p>
+<p><strong><a class="xref" href="https://emby.media/learn/articles/networking/security/certificates/Network-TLS-Chains.html">Chain certificate</a></strong>: The ca_bundle.crt or you can also find it here, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Save the text into a .txt file.</p>
 <p><strong>PFX password</strong>: Since the private key is combined with the certificate, set a password to secure the new ssl certificate. Remember this password, you'll need it in Emby.</p>
 </li>
 <li><p>Copy the pfx file to where you want to keep the Emby Server certificate</p>
@@ -288,7 +288,7 @@
 </li>
 </ol>
 <h3 id="lets-encrypt-certificate">Let's Encrypt certificate</h3>
-<p>For certificates provided by <strong>Let's Encrypt</strong>, you will need to select an Acme Client application that would interact with the <strong>Let's Encrypt</strong> servers. See <a href="https://letsencrypt.org/docs/client-options/">ACME Client Implementations</a> for the list of available Acme clients.</p>
+<p>For certificates provided by <strong>Let's Encrypt</strong>, you will need to select an <a class="xref" href="https://emby.media/learn/articles/networking/security/certificates/Network-ACME.html">Acme Client</a> application that would interact with the <strong>Let's Encrypt</strong> servers. See <a href="https://letsencrypt.org/docs/client-options/">ACME Client Implementations</a> for the list of available Acme clients.</p>
 <p>The instructions given below are for the <a href="https://poshac.me/">Posh-ACME</a> Powershell Acme client for Windows. Powershell should be available for MacOS and Linux as well. The sequence of steps should be similar whichever Acme client is used. The method that is documented here requires the addition of a TXT DNS Record to the DDNS Service DNS records for your domain.</p>
 <div class="TIP">
 <h5>Tip</h5>
@@ -373,7 +373,7 @@ Copy the file for where you want to keep the Emby Server certificate and you wil
 <p><strong>Custom SSL certificate path</strong>: point to your new certificate.pfx file</p>
 <p><strong>Certificate password</strong>: The pfx password you set up in the previous step.</p>
 <p><strong>Secure connection mode</strong>: Set it to either &quot;<strong>Preferred but not required</strong>&quot; or &quot;<strong>Required for all remote connections</strong>&quot;.</p>
-<p>Your Emby Server Settings dashboard should now reflect your remote access through this url <code>https://yourdomain:port</code>.</p>
+<p>Your Emby Server Settings dashboard should now reflect your remote access through this url <code>https://yourdomain:port</code>. The <a class="xref" href="https://emby.media/learn/articles/networking/security/certificates/Network-TLS-Names.html">certificate hostname</a> must match the hostname used for the connection.</p>
 <p>If you followed all the steps, then navigating a browser from outside your local network to this new remote url should reach your Emby server.</p>
 <p>If it doesn't work, verify your https ports and try connecting from outside of your network. If the dashboard is still showing the domain url with http, check that you have entered the correct certificate password. You may need to look at the server logs to see if there was an error in processing the certificate.</p>
 <div class="NOTE">

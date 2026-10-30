@@ -146,8 +146,8 @@ Intel's brand for its dedicated video encoding and decoding hardware core</p>
 <h2 id="nvidia-nvdec--nvenc">Nvidia NVDEC &amp; NVENC</h2>
 <p>Nvidia provides two hardware acceleration interfaces:</p>
 <ul>
-<li>NVENC API for video encode acceleration</li>
-<li>NVDEC API for video decode acceleration (formerly called NVCUVID API)</li>
+<li><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/nvidia/Hardware-NVIDIA-NVENC.html">NVENC API</a> for video encode acceleration</li>
+<li><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/nvidia/Hardware-NVIDIA-NVDEC.html">NVDEC API</a> for video decode acceleration (formerly called NVCUVID API)</li>
 </ul>
 <p>NVIDIA GPUs contain one or more hardware-based decoder and encoder(s) (separate from the CUDA cores) which provides fully-accelerated hardware-based video decoding and encoding for several popular codecs. With decoding/encoding offloaded, the graphics engine and the CPU are free for other operations.</p>
 <p>GPU hardware accelerator engines for video decoding (referred to as NVDEC) and video encoding (referred to as NVENC) support faster than real-time video processing which makes them suitable to be used for transcoding applications, in addition to video playback.</p>
@@ -198,7 +198,7 @@ It is not required to connect a monitor</li>
 <a href="https://en.wikipedia.org/wiki/Nvidia_NVENC">NVENC</a>,
 <a href="https://en.wikipedia.org/wiki/Nvidia_NVDEC">NVDEC</a></p>
 <h2 id="va-api">VA API</h2>
-<p>VAAPI (Video Acceleration API) is an open-source library and API specification, which provides access to graphics hardware acceleration capabilities for video processing. It consists of a main library and driver-specific acceleration backends for each supported hardware vendor.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/linux/Hardware-Linux-VAAPI.html">VAAPI (Video Acceleration API)</a> is an open-source library and API specification, which provides access to graphics hardware acceleration capabilities for video processing. It consists of a main library and <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/linux/Hardware-Linux-VAAPI-Drivers.html">driver-specific acceleration backends</a> for each supported hardware vendor.</p>
 <h4 id="supported-accelerations-1">Supported Accelerations</h4>
 <p>The following accelerations are currently supported by Emby.
 Please note that Emby may not support all accelerations offered by the hardware and that not all hardware devices will support all accelerations.</p>
@@ -258,7 +258,7 @@ Please note that Emby may not support all accelerations offered by the hardware 
 <p><a href="https://en.wikipedia.org/wiki/Video_Acceleration_API">Video Acceleration API</a>
 <a href="https://01.org/vaapi">Intel Video and Audio for Linux</a></p>
 <h2 id="intel-quicksync-video">Intel QuickSync Video</h2>
-<p>Intel® Quick Sync Video uses the dedicated media processing capabilities of Intel® Graphics Technology to decode and encode fast, enabling the processor to complete other tasks and improving system responsiveness.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/intel/Hardware-Intel-QSV.html">Intel® Quick Sync Video</a> uses the dedicated media processing capabilities of Intel® Graphics Technology to decode and encode fast, enabling the processor to complete other tasks and improving system responsiveness.</p>
 <h4 id="supported-accelerations-2">Supported Accelerations</h4>
 <p>The following accelerations are currently supported by Emby.
 Please note that Emby may not support all accelerations offered by the hardware and that not all hardware devices will support all accelerations.</p>

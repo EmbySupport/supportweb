@@ -129,7 +129,7 @@
 
 
 
-<p>For Emby Servers running on <strong><a href="https://www.qnap.com/en-uk/operating-system/qts">QNAP QTS</a></strong> and <strong><a href="https://www.qnap.com/en-uk/operating-system/quts-hero">QNAP QuTS hero</a></strong> that have configured automatic SSL certificate renewals in QNAP, this article details a method for updating the SSL PFX certificate file used by Emby Server when Secure Connections are enabled for Emby Server as outlined in <a href="Secure-Your-Server.html#using-secure-https-connections">Using Secure https Connections</a>.</p>
+<p>For Emby Servers running on <strong><a href="https://www.qnap.com/en-uk/operating-system/qts">QNAP QTS</a></strong> and <strong><a href="https://www.qnap.com/en-uk/operating-system/quts-hero">QNAP QuTS hero</a></strong> that have configured <a class="xref" href="https://emby.media/learn/articles/networking/security/certificates/Network-ACME.html">automatic SSL certificate renewals</a> in QNAP, this article details a method for updating the SSL PFX certificate file used by Emby Server when Secure Connections are enabled for Emby Server as outlined in <a href="Secure-Your-Server.html#using-secure-https-connections">Using Secure https Connections</a>.</p>
 <p>A shell script <code>QNAPEmbyCertRenew.sh</code> is provided that can be customized and scheduled to run daily, to check if the QNAP NAS has updated its SSL Certificate. If that is detected, the Emby Server SSL certificate pfx file would be replaced with one based on the renewed QNAP SSL certificate, with a password as specified in the script.</p>
 <h2 id="key-points">Key Points</h2>
 <ul>
@@ -149,7 +149,7 @@
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>A share folder for holding the Emby Server certificate pfx file and the script and its log file: defaulted to <code>/share/Emby-SSL-Certificate</code>.</li>
-<li>An Emby API Key to use for notifying Emby Server of the updated SSL certificate pfx file.</li>
+<li>An <a class="xref" href="https://emby.media/learn/articles/automation/api/credentials/Automation-API-Keys.html">Emby API Key</a> to use for notifying Emby Server of the updated SSL certificate pfx file.</li>
 <li>SSH connection to the QNAP NAS to setup the script. Refer to <a href="https://www.qnap.com/en/how-to/faq/article/how-do-i-access-my-qnap-nas-using-ssh">QNAP: How Do I Access My QNAP NAS Using ssh</a>.</li>
 <li>Tools such as <strong><a href="https://putty.org/index.html">PuTTY</a></strong> for Windows to access the NAS through ssh.</li>
 <li>If using windows to edit the script, ensuring end of line characters are correct for linux - by using tool such as <strong><a href="https://sourceforge.net/projects/dos2unix/">dos2unix</a></strong>.</li>

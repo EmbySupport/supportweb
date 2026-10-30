@@ -129,7 +129,7 @@
 
 
 <p>The hardware requirements for the server will depend on a number of factors including the format of your prepared media, the type of client devices used as well as how much bandwidth is available between the client and the server.</p>
-<p>If you prepare you media in a format that all devices can use, such as MP4 container, using H.264 video with a stereo AAC audio track then you won't need a powerful server normally because all Emby apps can use that format directly.  If however you don't prepare your media ahead of time like this or if you don't have adequate bandwidth between the client and server to play the media AS IS then the Emby Server will assist you by transcoding (converting) your media on the fly in real-time.</p>
+<p>If you prepare you media in a format that all devices can use, such as MP4 container, using H.264 video with a stereo AAC audio track then you won't need a powerful server normally because all Emby apps can use that format directly.  If however you don't prepare your media ahead of time like this or if you don't have adequate bandwidth between the client and server to play the media AS IS then the Emby Server will assist you by <a class="xref" href="https://emby.media/learn/articles/playback-streaming/from-server/modes/Playback-Transcoding.html">transcoding</a> (converting) your media on the fly in real-time.</p>
 <p>Transcoding is the process where media is converted from one resolution or format to another (e.g. playing Full HD media on some smartphones requires transcoding). The process is CPU-intensive, so an older/slower PC might not be up to the task.</p>
 <h2 id="windows-mac-linux-or-freebsd-computer">Windows, Mac, Linux, or FreeBSD computer</h2>
 <h3 id="minimum-requirements--no-transcoding">Minimum Requirements — no transcoding</h3>
@@ -152,7 +152,7 @@
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Emby also supports Hardware Based Transcoding using a GPU/Video card (if new enough). This can substantially reduce the CPU requirements needed for multiple transcodes in real-time!  This allows the server to support numerous clients at the same time without your computer's CPU being overworked. Some GPUs can support 20+ streams. That's in addition to the streams your Emby server can handle without transcoding!</p>
+<p>Emby also supports <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/Hardware-Media-Acceleration.html">Hardware Based Transcoding</a> using a GPU/Video card (if new enough). This can substantially reduce the CPU requirements needed for multiple transcodes in real-time!  This allows the server to support numerous clients at the same time without your computer's CPU being overworked. Some GPUs can support 20+ streams. That's in addition to the streams your Emby server can handle without transcoding!</p>
 </div>
 <h2 id="network-requirements">Network Requirements</h2>
 <h3 id="minimum-requirements">Minimum requirements</h3>
@@ -164,7 +164,7 @@
 <h3 id="recommended-configuration">Recommended configuration</h3>
 <ul>
 <li>An ADSL/Cable/WiFi Internet connection for media metadata and software updates</li>
-<li>10 Megabit upload bandwidth (minimum) if serving content remotely</li>
+<li>10 Megabit <a class="xref" href="https://emby.media/learn/articles/networking/performance/capacity/Network-Upload.html">upload bandwidth</a> (minimum) if serving content remotely</li>
 <li>Uncongested, WIFI with strong signal using 802.11AC wireless network</li>
 <li>Wired Gigabit Ethernet network</li>
 </ul>

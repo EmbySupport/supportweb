@@ -140,7 +140,7 @@
 <li>Playlists</li>
 <li>Live TV Schedule</li>
 </ul>
-<p>This will not backup library contents. For metadata, there are options to include all metadata in the backups. You can configure your libraries to save nfo and image files alongside the media within the media folders and they would then be included in your own library media content backups.</p>
+<p>This will not backup library contents. See <a class="xref" href="https://emby.media/learn/articles/storage/data-protection/backups/Storage-Media-Backups.html">media backups</a> for protecting those source files. For metadata, there are options to include all metadata in the backups. You can configure your libraries to save <a class="xref" href="https://emby.media/learn/articles/metadata-discovery/local-formats/Metadata-NFO.html">nfo</a> and image files alongside the media within the media folders and they would then be included in your own library media content backups.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If you have configured camera uploads and/or Live TV recordings, the default directories for these (data\camerauploads and data\livetv\recordings) are not part of the backup. You would need to back these up yourself and re-instate on the target new location.</p>
@@ -164,7 +164,7 @@
 <p><img src="images/plugins/backup-01.png" alt=""></p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>You must set a path for backups by changing the default &quot;undefined&quot; path setting to an actual path and saving that for the backups to start. Please ensure that the system user account that Emby Server runs in, has full permissions to this backups path. Paths must be absolute and not relative.</p>
+<p>You must set a path for backups by changing the default &quot;undefined&quot; path setting to an actual path and saving that for the backups to start. Please ensure that the system user account that Emby Server runs in, has full <a class="xref" href="https://emby.media/learn/articles/storage/sharing/permissions/Storage-Permissions.html">permissions</a> to this backups path. Paths must be absolute and not relative.</p>
 </div>
 <p>Enter a path for the backups, e.g.:</p>
 <p><img src="images/plugins/backup-02-A.png" alt=""></p>
@@ -177,7 +177,7 @@
 <p><img src="images/plugins/backup-02.png" alt=""></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If running Emby Server on Windows as a Windows Service, the backup path needs to be to a local drive or using UNC path if it is an external shared network drive. This is because Mapped Network Drives would not be available to a Windows Service. e.g. Use <code>\\server-name\share-name\backups-folder-name</code> as path and not a mapped network drive.</p>
+<p>If running Emby Server on Windows as a Windows Service, the backup path needs to be to a local drive or using UNC path if it is an external shared network drive. This is because Mapped Network Drives would not be available to a Windows Service. See <a class="xref" href="https://emby.media/learn/articles/storage/sharing/permissions/Storage-Service-Access.html">storage access from background services</a> for the difference from a desktop session. e.g. Use <code>\\server-name\share-name\backups-folder-name</code> as path and not a mapped network drive.</p>
 </div>
 <p>By default, the backup process will run once a day soon after midnight. This can be changed in <strong>Scheduled Tasks</strong> settings.</p>
 <p><img src="images/plugins/backup-04.png" alt=""></p>

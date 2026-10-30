@@ -130,7 +130,7 @@
 
 
 
-<p>One of the areas in which Emby Server shines as a media server is the metadata management. The server has a metadata manager which allows you to view all of the metadata for every item in your library in one place.</p>
+<p>One of the areas in which Emby Server shines as a media server is the metadata management. The server has a metadata manager which allows you to view all of the <a class="xref" href="https://emby.media/learn/articles/metadata-discovery/understanding/Metadata-Overview.html">metadata</a> for every item in your library in one place.</p>
 <p>The metadata manager can be accessed via the side-bar in the web client and other emby client apps.</p>
 <p><img src="images/server/metadatamanager1.png" alt=""></p>
 <p>The functionality is also available via the <strong>&quot;...&quot;</strong> options button and selecting one of the edit options for any media item:</p>
@@ -156,10 +156,10 @@
 <h4 id="identifying-items">Identifying items</h4>
 <p>All media can get their information from online databases such as TheMovieDB and TheTVDB. If an item is misidentified by the server, you can manually identify the item using the <strong>Identify</strong> button, or, if you already know the database IDs for your incorrectly identified item, simply insert the correct IDs into the database fields and refresh the item.</p>
 <h4 id="database-ids">Database IDs</h4>
-<p>Database IDs are extremely important to the server to determine what each media item is and whether it has been watched.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/metadata-discovery/identification/external-identifiers/Metadata-Provider-IDs.html">Database IDs</a> are extremely important to the server to determine what each media item is and whether it has been watched.</p>
 <p>One catch to this approach is that media items with the same IDs (for example, a movie that has both a 3D and 2D version) will be treated by the server as the exact same item regardless of the existence of two separate files. This can mean that it can show up in the Resume tab or other places twice. Also, if you watch the 3D version but not the 2D version, the server will mark both formats as watched.</p>
 <h4 id="saving-metadata">Saving metadata</h4>
-<p>Be sure to hit <strong>Save</strong> after changing ANY metadata; otherwise, all of your changes will be lost when you navigate away from the page. If you wish for the changes that you made to be persistent through a refresh of the item, you will need to either lock the metadata field you changed, or lock the entire item. Examples of the lock option can be seen here:</p>
+<p>Be sure to hit <strong>Save</strong> after changing ANY metadata; otherwise, all of your changes will be lost when you navigate away from the page. If you wish for the changes that you made to be persistent through a refresh of the item, you will need to either lock the metadata field you changed, or lock the entire item. See <a class="xref" href="https://emby.media/learn/articles/metadata-discovery/understanding/Metadata-Precedence.html">metadata precedence</a> for how sources and field choices interact. Examples of the lock option can be seen here:</p>
 <p><img src="images/server/metadatamanager3.png" alt=""></p>
 <p>This shows how to lock the item:</p>
 <p><img src="images/server/metadatamanager4.png" alt=""></p>
@@ -186,7 +186,7 @@
 <h2 id="subtitles">Subtitles</h2>
 <p>For your movies and TV shows, the metadata manager can ve used to manage subtitles. You can also access this for specific media items through the <strong>Options</strong> button and selecting &quot;<strong>Edit Subtitles</strong>&quot;.</p>
 <p><img src="images/server/metadatamanager8a.png" alt=""></p>
-<p>This will allow you to see which subtitles you have, whether they are graphical or text, and what languages the subtitles are in.</p>
+<p>This will allow you to see which subtitles you have, whether they are <a class="xref" href="https://emby.media/learn/articles/subtitles/formats/Subtitle-Formats.html">graphical or text</a>, and what languages the subtitles are in.</p>
 <p><img src="images/server/metadatamanager8b.png" alt=""></p>
 <p>To search for new subtitles, you need to enable access to the Open Subtitles database, you will need to enter your account information on the Open Subtitles setup screen by selecting &quot;Open Subtitles&quot; within the &quot;Advanced&quot; menu in Server Settings:</p>
 <p><img src="images/server/metadatamanager10a.png" alt=""></p>
