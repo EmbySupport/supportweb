@@ -170,6 +170,9 @@ references:
 - uid: Emby-Theater-for-Windows
   name: Emby Windows
   href: articles/apps/windows/Emby-Windows.html
+- uid: Emby-Theater-for-Windows-Legacy
+  name: Emby Windows
+  href: articles/Emby-Theater-for-Windows.html
 - uid: Emby-Windows-Beta-Program
   name: 'Emby Windows: Beta Program'
   href: articles/apps/windows/Emby-Windows-Beta-Program.html
