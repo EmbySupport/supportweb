@@ -216,6 +216,49 @@ a:focus-visible, button:focus-visible, input:focus-visible {
         margin-bottom: 3px;
     }
 
+/* Reserve the approved switcher's title position before its assets load.
+   Direct-child selectors stop matching as soon as the link is wrapped. */
+@media (min-width: 901px) {
+    .site-header .nav > .site-title-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+        min-height: 40px;
+        margin-left: 12px;
+        padding: 8px 44px 8px 12px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+    }
+
+    .site-header .nav > .site-title-link .site-title {
+        border-left: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .site-header .nav > .site-title-link::before {
+        content: '';
+        position: absolute;
+        left: -12px;
+        top: 50%;
+        width: 1px;
+        height: 24px;
+        background: var(--modern-line);
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 901px) and (hover: none), (min-width: 901px) and (any-pointer: coarse) {
+    .site-header .nav > .site-title-link {
+        min-height: 44px;
+        padding-right: 56px;
+    }
+}
+
 .site-header .site-title strong {
     color: inherit;
     font-weight: 700;
