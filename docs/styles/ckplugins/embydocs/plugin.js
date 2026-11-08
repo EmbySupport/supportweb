@@ -27,7 +27,7 @@
             title: 'Emby Dev',
             url: 'https://dev.emby.media/xrefmap.yml',
             urlPrefix: 'https://dev.emby.media/',
-            type: 'SDK Documentation'
+            type: 'SDK Docs'
         }
     ];
 
@@ -84,7 +84,7 @@
                         break;
                     case 'nameWithType':
                         currentData['name'] = value;
-                        currentData['type'] = 'SDK Reference';
+                        currentData['type'] = 'SDK Ref';
                         break;
                 }
 
@@ -100,9 +100,9 @@
             item.displayType = '';
         } else if (item.type === 'Learn') {
             item.displayType = 'Learn: ';
-        } else if (item.type === 'SDK Documentation') {
+        } else if (item.type === 'SDK Docs') {
             item.displayType = 'SDK: ';
-        } else if (item.type === 'SDK Reference') {
+        } else if (item.type === 'SDK Ref') {
             item.displayType = 'SDK: ';
         } else {
             item.displayType = 'Emby ' + item.type + ': ';
