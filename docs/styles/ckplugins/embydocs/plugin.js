@@ -7,8 +7,37 @@
     CKEDITOR.plugins.addExternal('autocomplete', 'https://emby.media/support/styles/ckplugins/autocomplete/plugin.js');
     CKEDITOR.plugins.addExternal('textwatcher', 'https://emby.media/support/styles/ckplugins/textwatcher/plugin.js');
 
-    let xrefData;
     const maxResults = 50;
+
+    // '##' selects the first source, each additional '#' the next one
+    const sources = [
+        {
+            title: 'Emby Docs',
+            url: 'https://emby.media/support/xrefmap.yml',
+            urlPrefix: 'https://emby.media/support/',
+            type: 'Documentation'
+        },
+        {
+            title: 'Emby Learn',
+            url: 'https://emby.media/learn/xrefmap.yml',
+            urlPrefix: 'https://emby.media/learn/',
+            type: 'Learn'
+        },
+        {
+            title: 'Emby Dev',
+            url: 'https://dev.emby.media/xrefmap.yml',
+            urlPrefix: 'https://dev.emby.media/',
+            type: 'SDK Documentation'
+        }
+    ];
+
+    function unquote(value) {
+        if (value.length > 1 && value.startsWith("'") && value.endsWith("'")) {
+            return value.slice(1, -1).replace(/''/g, "'");
+        }
+
+        return value;
+    }
 
     function parseXrefData(yaml, data, urlPrefix, type) {
         const lines = yaml.split('\n');
@@ -18,7 +47,8 @@
         let value = '';
 
         function addItem(item) {
-            if (item && item.name && Object.keys(item).length > 0) {
+            // DocFX adds an overload group entry (uid ending with '*') next to each member
+            if (item && item.name && Object.keys(item).length > 0 && !item.uid.endsWith('*')) {
                 item.id = data.length + 1;
                 item.search = item.name.toLowerCase();
                 if (item.uid.indexOf('emby.restapi') === 0) {
@@ -37,7 +67,9 @@
             }
 
             if (currentData) {
-                [property, value] = line.trim().split(': ');
+                const separator = line.indexOf(': ');
+                property = line.substring(0, separator).trim();
+                value = unquote(line.substring(separator + 2).trim());
 
                 switch (property) {
                     case 'uid':
@@ -66,9 +98,38 @@
 
         if (item.type === 'Documentation') {
             item.displayType = '';
+        } else if (item.type === 'Learn') {
+            item.displayType = 'Learn: ';
+        } else if (item.type === 'SDK Documentation') {
+            item.displayType = 'SDK: ';
+        } else if (item.type === 'SDK Reference') {
+            item.displayType = 'SDK: ';
         } else {
             item.displayType = 'Emby ' + item.type + ': ';
         }
+    }
+
+    function loadSource(source) {
+        if (!source.loading) {
+            source.loading = fetch(source.url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load ' + source.url + ': ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(yaml => {
+                    const data = [];
+                    parseXrefData(yaml, data, source.urlPrefix, source.type);
+                    source.data = data;
+                })
+                .catch(error => {
+                    source.loading = null;
+                    throw error;
+                });
+        }
+
+        return source.loading;
     }
     
     CKEDITOR.plugins.add('embydocs', {
@@ -99,10 +160,10 @@
                 function matchCallback(text, offset) {
                     // Get the text before the caret.
                     var left = text.slice(0, offset),
-                        // Will look for two '##' characters followed by a search term
-                        match = left.match(/##[a-zA-Z\d-.]*$/);
+                        // Will look for at least two '#' characters followed by a search term
+                        match = left.match(/(#{2,})[a-zA-Z\d-.]*$/);
 
-                    if (!match) {
+                    if (!match || match[1].length > sources.length + 1) {
                         return null;
                     }
                     return {
@@ -116,69 +177,57 @@
                 // Returns (through its callback) the suggestions for the current query.
                 function dataCallback(matchInfo, callback) {
 
-                    // Remove the '##' tag.
-                    var query = matchInfo.query.substring(2);
+                    const hashCount = matchInfo.query.match(/^#+/)[0].length;
+                    const source = sources[hashCount - 2];
+                    const nextSource = sources[hashCount - 1];
+                    const query = matchInfo.query.substring(hashCount);
+
+                    function show(items, message) {
+                        callback(items, {
+                            header: source.title,
+                            message: message,
+                            footer: nextSource ? "Type '#' again for " + nextSource.title + ' content' : ''
+                        });
+                    }
 
                     function simpleSearch(searchStr) {
                         if (searchStr.length === 0) {
                             let suggestions1 = [];
-                            for (let i = 0; i < maxResults && i < xrefData.length; i++) {
-                                setDisplayType(xrefData[i]);
-                                suggestions1.push(xrefData[i]);
+                            for (let i = 0; i < maxResults && i < source.data.length; i++) {
+                                setDisplayType(source.data[i]);
+                                suggestions1.push(source.data[i]);
                             }
-                            callback(suggestions1);
+                            show(suggestions1);
                             return;
                         }
 
                         let suggestions = [];
-                        for (let i = 0; i < xrefData.length && suggestions.length < maxResults; i++) {
-                            if (String(xrefData[i].search).indexOf(searchStr.toLowerCase()) !== -1) {
-                                setDisplayType(xrefData[i]);
-                                suggestions.push(xrefData[i]);
+                        for (let i = 0; i < source.data.length && suggestions.length < maxResults; i++) {
+                            if (String(source.data[i].search).indexOf(searchStr.toLowerCase()) !== -1) {
+                                setDisplayType(source.data[i]);
+                                suggestions.push(source.data[i]);
                             }
                         }
-                        callback(suggestions);
+                        show(suggestions);
                     }
 
-
-                    if (xrefData) {
-
+                    if (source.data) {
                         simpleSearch(query);
                         return;
                     }
 
-                    fetch('https://emby.media/support/xrefmap.yml')
-                        .then(response => response.text())
-                        .then(yaml => {
+                    show([], 'Loading...');
 
-                            xrefData = [];
-
-                            parseXrefData(yaml, xrefData, 'https://emby.media/support/', 'Documentation');
-
-                            fetch('https://dev.emby.media/xrefmap.yml')
-                                .then(response => response.text())
-                                .then(yaml => {
-
-                                    parseXrefData(yaml, xrefData, 'https://dev.emby.media/', 'SDK Documentation');
-
-                                    simpleSearch(query);
-                                })
-                                .catch(error => {
-                                    console.error(error);
-                                });
-
-                        })
-                        .catch(error => {
-                            console.error(error);
-                        });
-
-
+                    loadSource(source).then(() => simpleSearch(query), error => {
+                        console.error(error);
+                        show([], 'Failed to load content');
+                    });
                 }
 
                 config.dataCallback = dataCallback;
 
                 // Define the templates of the autocomplete suggestions dropdown and output text.
-                config.itemTemplate = '<li data-id="{id}">{type}: {name}</li>';
+                config.itemTemplate = '<li data-id="{id}" title="{type}: {name}">{type}: {name}</li>';
                 config.outputTemplate = '<a href="{href}">{displayType}{name}</a> ';
 
                 // Attach autocomplete to the editor.
