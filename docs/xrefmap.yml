@@ -356,6 +356,9 @@ references:
 - uid: Playlist-Manual-Migration
   name: Manage Playlists (Legacy)
   href: articles/Playlist-Manual-Migration.html
+- uid: Playlists
+  name: Playlists
+  href: articles/Playlists.html
 - uid: Plugins
   name: Plugins Overview
   href: articles/Plugins.html

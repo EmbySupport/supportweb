@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Playlists | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/Playlists.html">
+  <meta property="og:title" content="Playlists | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/Playlists.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/Playlists.html","url":"https://emby.media/support/articles/Playlists.html","name":"Playlists","inLanguage":"en","headline":"Playlists","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true}]}</script>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <script type="text/javascript" src="../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../styles/docfx.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+  <meta property="docfx:navrel" content="../toc.html">
+  <meta property="docfx:tocrel" content="toc.html">
+  <meta property="docfx:uid" content="Playlists">
+  
+  <meta property="docfx:rel" content="../">
+  
+  <script type="text/javascript" src="../nav.js"></script>
+  <script type="text/javascript" src="toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Support Home</a></li>
+              <li><a href="Quick-Start.html">Emby Server</a></li>
+              <li><span>Features &amp; Plugins</span></li>
+              <li><a href="Playlists.html">Playlists</a></li>
+              <li><span aria-current="page">Playlists</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Playlists">
+<h1>Playlists</h1>
+
+
+
+<p><a class="xref" href="https://emby.media/learn/articles/libraries-collections/concepts/Library-Playlists.html">Playlists</a> are lists of media items that can be created for playback.</p>
+<h2 id="creating-a-playlist">Creating a Playlist</h2>
+<p>Any media item can added to a playlist, an existing one or a new one to be created. Click on the <strong>...</strong> context menu button on any media entity on the Emby server and you have the option to add to a playlist.</p>
+<p><img src="images/server/playlists1.png" alt="playlists1.png"></p>
+<p>Once you click on &quot;<strong>Add to Playlist</strong>&quot;, you are given the option to select an existing playlist or create a new playlist.</p>
+<p>It is not limited to a specific movie or a music track, in fact, you can select any entity in the libraries and add that to a playlist. e.g. Adding music for a specific artist.</p>
+<p><img src="images/server/playlists2.png" alt="playlists2.png"></p>
+<p>Clicking <strong>Add to Playlist</strong> gives you a dialogue box like this:</p>
+<p><img src="images/server/playlists3.png" alt="playlists3.png"></p>
+<p>This shows a view of the Music playlist created for two artists: Ed Sheeran and Pink Floyd.</p>
+<p><img src="images/server/playlists4.png" alt="playlists4.png"></p>
+<p>The Playlists view now shows the two playlists created in the examples above.</p>
+<p><img src="images/server/playlists5.png" alt="playlists5.png"></p>
+<h2 id="playlist-playback-options">Playlist playback options</h2>
+<p>Items in a playlist can be played shuffled, or as ordered in the playlist. Options are also available for sorting the playback in different ways. The playlist can also be added to Favorites.</p>
+<p>This is an example of a playlist of 3 movies created by selecting individual movies and then using the &quot;<strong>Add to Playlist</strong>&quot; menu option. The playlist was added to <strong>Favorites</strong>.</p>
+<p><img src="images/server/playlists8.png" alt="playlists8.png"></p>
+<h2 id="playlist-sort-options">Playlist sort options</h2>
+<p>This shows the various sort options that are available.</p>
+<p><img src="images/server/playlists9.png" alt="playlists9.png"></p>
+<h2 id="playlist-actions-menu">Playlist Actions Menu</h2>
+<p>The &quot;<strong>...</strong>&quot; context menu button is available for playlists and lists the various actions that can be performed.</p>
+<p><img src="images/server/playlists10.png" alt="playlists10.png"></p>
+<h2 id="removing-an-item-from-a-playlist">Removing an item from a playlist</h2>
+<p>Media items can be removed from a playlist by clicking on the &quot;<strong>...</strong>&quot; menu button for the item when viewing the playlist, and then selecting the <strong>Remove from Playlist</strong> action.</p>
+<p><img src="images/server/playlists11.png" alt="playlists11.png"></p>
+<h2 id="deleting-a-playlist">Deleting a Playlist</h2>
+<p>To delete a playlist, click on the &quot;<strong>...</strong>&quot; menu button for the playlist and select <strong>Delete</strong>.</p>
+<p><img src="images/server/playlists12.png" alt="playlists12.png"></p>
+<h2 id="importing-playlists">Importing Playlists</h2>
+<p>Playlists can be imported into Emby Server by placing the playlist files within the media folders, e.g. a music album playlist file added to the music library folder. This can be an .m3u or .m3u8 file, with the difference being the file encoding, the system default for the .m3u file or UTF-8 encoding for the .m3u8 file. See  <a class="xref" href="https://emby.media/learn/articles/media-files/playlists-and-references/Media-M3U-Playlists.html">M3U Playlists</a>.</p>
+<p>The playlist files, as minimum, contain duration, title and path to the media files. For portability avoid using absolute paths and instead have paths relative to the folder where the playlist file is. See the <a class="xref" href="https://emby.media/learn/articles/media-files/playlists-and-references/Media-M3U-Playlists.html">Relative paths resolve from the playlist folder</a> section in the <strong>M3U Playlists</strong> article.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Make sure that the paths and filenames in the m3u/m3u8 file are correct.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>It is advisable to save a copy of any playlist file that you wish to import.</p>
+</div>
+<h2 id="single-music-album-playlists-with-custom-playlist-posters">Single Music Album Playlists with custom playlist posters</h2>
+<p>The following is an example of adding an m3u8 playlist file for a music album and having a custom poster for the playlist.</p>
+<p><strong>Playlist: Jamiroquai - High Times - The Singles 1992 to 2006.m3u8</strong></p>
+<p>Extract showing the m3u8 file contents for the first 4 tracks</p>
+<pre><code>#EXTM3U
+#EXTINF:229,When You Ganna Learn
+01-When You Ganna Learn.mp3
+#EXTINF:203,Too Young to Die
+02-Too Young To Die.mp3
+#EXTINF:236,Blow Your Mind
+03-Blow Your Mind.mp3
+#EXTINF:217,Emergency on Planet Earth
+04-Emergency On Planet Earth.mp3
+</code></pre>
+<p>and this shows the directory structure and the playlist file and the playlist image with the same name for the poster:</p>
+<pre><code>├───Jamiroquai
+│   └───High Times - The Singles 1992 to 2006
+│           01-When You Ganna Learn.mp3
+│           02-Too Young To Die.mp3
+│           03-Blow Your Mind.mp3
+│           04-Emergency On Planet Earth.mp3
+│           05-Space Cowboy.mp3
+│           06-Virtual Insanity.mp3
+│           07-Cosmic Girl.mp3
+│           08-Alright.mp3
+│           09-Deeper Underground.mp3
+│           10-Canned Heat.mp3
+│           11-Little L.mp3
+│           12-Love Foolosophy.mp3
+│           13-Corner Of The Earth.mp3
+│           14-Feels Like It Should.mp3
+│           15-7 Days In Sunny June.mp3
+│           16-(Don't) Give Hate A Chance.mp3
+│           17-Runaway.mp3
+│           18-Radio.mp3
+│           Jamiroquai - High Times - The Singles 1992 to 2006.jpg
+│           Jamiroquai - High Times - The Singles 1992 to 2006.m3u8
+</code></pre>
+<p>The Music library <strong>Albums</strong> view shows the default poster for this album.</p>
+<p><img src="images/server/playlists6.png" alt="playlists6.png"></p>
+<p>The Playlist has a custom poster which shows in the <strong>Playlists</strong> tab.</p>
+<p><img src="images/server/playlists7.png" alt="playlists7.png"></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Playlists%0A*%20Title%3A%20Playlists%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2FPlaylists.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/Playlists.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../searchIndex.js"></script>
+    <script type="text/javascript" src="../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="docs"></script>
+  </body>
+</html>
